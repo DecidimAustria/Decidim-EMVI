@@ -77,4 +77,3 @@ deploy_staging:
     - "git-push ssh://dokku@$STAGING_SERVER:22/$APP_NAME-staging"
   rules:
     - if: $CI_COMMIT_REF_NAME == $STAGING_BRANCH && $APP_NAME != "" && $STAGING_URL != "" && $STAGING_SERVER != ""
-
