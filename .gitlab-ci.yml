@@ -3,8 +3,23 @@ stages:
   - deploy
 
 variables:
-  APP_NAME: emvi
-  STAGE_APP_NAME: emvi-staging
+  APP_NAME:
+    description: "The name of the app. The pipeline will push to APP_NAME and APP_NAME-staging"
+  LIVE_URL:
+    description: "URL of the live/production app"
+  STAGING_URL:
+    description: "URL of the staging app"
+  LIVE_SERVER:
+    description: "Dokku server to push the live app to"
+  STAGING_SERVER:
+    value: "decidim-dokku1.spreademotions.com"
+    description: "Dokku server to push the staging app to"
+  LIVE_BRANCH:
+    value: "live"
+    description: "Branch to deploy to live environment"
+  STAGING_BRANCH:
+    value: "staging"
+    description: "Branch to deploy to staging environment"
 
 #test:
 #  stage: test
@@ -46,20 +61,20 @@ deploy_live:
   stage: deploy
   environment:
     name: production
-    url: https://emvi.mitgestalten.jetzt/
-  only:
-    - live
+    url: $LIVE_URL
   script:
-    - git-push ssh://dokku@decidim-emvi.spreademotions.com:22/$APP_NAME
+    - "git-push ssh://dokku@$LIVE_SERVER:22/$APP_NAME"
+  rules:
+    - if: $CI_COMMIT_REF_NAME == $LIVE_BRANCH && $APP_NAME != "" && $LIVE_URL != "" && $LIVE_SERVER != ""
 
 deploy_staging:
   image: ilyasemenov/gitlab-ci-git-push
   stage: deploy
   environment:
     name: staging
-    url: http://emvi-staging.decidim-austria.org/
-  only:
-    - staging
+    url: $STAGING_URL
   script:
-    - git-push ssh://dokku@dokku1.decidim-austria.org:22/$STAGE_APP_NAME
+    - "git-push ssh://dokku@$STAGING_SERVER:22/$APP_NAME-staging"
+  rules:
+    - if: $CI_COMMIT_REF_NAME == $STAGING_BRANCH && $APP_NAME != "" && $STAGING_URL != "" && $STAGING_SERVER != ""
 

@@ -5,5 +5,5 @@ RUN sudo apt-get update  && sudo apt-get install -y redis-server apt-transport-h
 USER gitpod
 SHELL ["/bin/bash", "-c"]
 
-RUN cd && /home/gitpod/.rvm/bin/rvm install "ruby-3.0.5"
+RUN cd && rvm pkg install openssl && /home/gitpod/.rvm/bin/rvm install "ruby-3.0.5" --with-openssl-dir=$HOME/.rvm/usr
 
