@@ -1,0 +1,79 @@
+@charset "UTF-8";
+/* 
+NOTO SANS 
+https://fonts.google.com/noto/specimen/Noto+Sans
+main font | menu, headers, body
+*/
+/* noto-sans-regular - latin */
+@font-face {
+    font-family: 'Noto Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('fonts/noto-sans-v27-latin-regular.eot'); /* IE9 Compat Modes */
+    src: local(''),
+         url('fonts/noto-sans-v27-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('fonts/noto-sans-v27-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+         url('fonts/noto-sans-v27-latin-regular.woff') format('woff'), /* Modern Browsers */
+         url('fonts/noto-sans-v27-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('fonts/noto-sans-v27-latin-regular.svg#NotoSans') format('svg'); /* Legacy iOS */
+}
+/* noto-sans-italic - latin */
+@font-face {
+    font-family: 'Noto Sans';
+    font-style: italic;
+    font-weight: 400;
+    font-display: swap;
+    src: url('fonts/noto-sans-v27-latin-italic.eot'); /* IE9 Compat Modes */
+    src: local(''),
+         url('fonts/noto-sans-v27-latin-italic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('fonts/noto-sans-v27-latin-italic.woff2') format('woff2'), /* Super Modern Browsers */
+         url('fonts/noto-sans-v27-latin-italic.woff') format('woff'), /* Modern Browsers */
+         url('fonts/noto-sans-v27-latin-italic.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('fonts/noto-sans-v27-latin-italic.svg#NotoSans') format('svg'); /* Legacy iOS */
+}
+/* noto-sans-500 - latin */
+@font-face {
+    font-family: 'Noto Sans';
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: url('fonts/noto-sans-v27-latin-500.eot'); /* IE9 Compat Modes */
+    src: local(''),
+         url('fonts/noto-sans-v27-latin-500.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('fonts/noto-sans-v27-latin-500.woff2') format('woff2'), /* Super Modern Browsers */
+         url('fonts/noto-sans-v27-latin-500.woff') format('woff'), /* Modern Browsers */
+         url('fonts/noto-sans-v27-latin-500.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('fonts/noto-sans-v27-latin-500.svg#NotoSans') format('svg'); /* Legacy iOS */
+}
+/* noto-sans-600 - latin */
+@font-face {
+    font-family: 'Noto Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+    src: url('fonts/noto-sans-v27-latin-600.eot'); /* IE9 Compat Modes */
+    src: local(''),
+         url('fonts/noto-sans-v27-latin-600.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('fonts/noto-sans-v27-latin-600.woff2') format('woff2'), /* Super Modern Browsers */
+         url('fonts/noto-sans-v27-latin-600.woff') format('woff'), /* Modern Browsers */
+         url('fonts/noto-sans-v27-latin-600.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('fonts/noto-sans-v27-latin-600.svg#NotoSans') format('svg'); /* Legacy iOS */
+}
+
+/* 
+ET Book
+https://edwardtufte.github.io/et-book/
+used on homepage headline
+*/
+@font-face {
+  font-family: "et-book";
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+  src: url("fonts/et-book-roman-old-style-figures.eot");
+  src: url("fonts/et-book-roman-old-style-figures.eot?#iefix") format("embedded-opentype"), 
+        url("fonts/et-book-roman-old-style-figures.woff") format("woff"), 
+        url("fonts/et-book-roman-old-style-figures.ttf") format("truetype"), 
+        url("fonts/et-book-roman-old-style-figures.svg") format("svg");
+}
