@@ -1,0 +1,63 @@
+/* 
+Created: 24.04.2023
+Modified: 24.04.2023
+Author: Piero Chiussi | info@webchroma.de
+
+DECIDIM COLOR VARIABLES
+--alert: #ec5840;
+--alert-rgb: 236,88,64;
+--theme: #ef604d;
+--theme-rgb: 239,96,77;
+--primary: #eb9243;
+--primary-rgb: 235,146,67;
+--success: #57d685;
+--success-rgb: 87,214,133;
+--warning: #ffae00;
+--warning-rgb: 255,174,0;
+--highlight: #be6400;
+--highlight-rgb: 190,100,0;
+--secondary: #467d67;
+--secondary-rgb: 70,125,103;
+--highlight-alternative: #ff5731;
+--highlight-alternative-rgb: 255,87,49;
+
+DECIDIM CARDS
+$card-bg: $white !default;
+$card-secondary-bg: $light-gray-dark;
+$card-border: $border;
+$card-border-radius: $global-radius;
+$card-border-top-width: 8px !default;
+$card-shadow: 0 2px 7px rgba(black, .1);
+$card-id: $medium-gray;
+
+$card-padding-small: 1rem;
+$card-padding: 1.5rem;
+$card-margin-bottom: map-get($grid-column-gutter, medium);
+
+$card-footer-bg: $light-gray-dark;
+
+$card-proposal: var(--proposals);
+$card-action: var(--actions);
+$card-debate: var(--debates);
+$card-meeting: var(--meetings);
+$card-spaces: var(--meetings);
+
+$datetime-bg: var(--primary);
+*/
+$body-font-family: 'Neue Haas Unica Pro', sans-serif, system-ui;
+:root{
+    --app-body-font: #1E1E1E;
+    --app-body-font-rgb: 17, 19, 19;
+    --app-nav-highlight-grey: #1E1E1E;
+    --app-nav-highlight-grey-rgb: 17, 19, 19;
+    --app-primary: var(--primary);
+    --app-primary-rgb: var(--primary-rgb);
+    --app-primary-rgb-dark : darken(var(--app-primary),25%);
+    --app-secondary: var(--secondary);
+    --app-secondary-rgb: var(--secondary-rgb);
+    --app-secondary-rgb-dark : lighten(var(--app-secondary),25%);
+    --app-background: #F2F2F2;
+    --app-background-rgb: 242,242,242;
+    --app-background-even: #FFFFFF;
+    --app-background-even-rgb: 255,255,255;
+}

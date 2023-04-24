@@ -1,0 +1,32 @@
+.alternative-landing.cover-full, .alternative-landing.cover-half, .alternative-landing.tiles, .alternative-landing.stack-horizontal, .alternative-landing.stack-vertical {
+    padding: 4rem 1rem;
+}
+
+.stack-vertical .stack .stack-item{
+    padding:0;
+    flex: 1 1 0px;
+    .stack-image{
+        flex: 0 0 auto;
+        padding:1rem;
+        @include breakpoint(smallmedium){
+            padding:0;
+        }
+    }
+    .stack-body{
+        flex: 1 0 auto;
+        padding:1rem;
+    }
+    .stack-link{
+        flex: 0 0 auto;
+        text-align:center;
+    }
+    @include breakpoint(smallmedium){
+        padding:0;
+    }
+}
+.stack-horizontal .stack-item{
+    border: 1px solid rgb(var(--app-primary-rgb), 1);
+}
+.hero{
+    background-position: left bottom;
+}

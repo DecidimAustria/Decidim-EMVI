@@ -1,0 +1,22 @@
+<% if organization %>
+  <%= link_to decidim.root_url(host: organization.host), "aria-label": t("front_page_link", scope: "decidim.accessibility") do %>
+    <svg width="253" height="75" viewBox="0 0 297 105" fill="inherit" xmlns="http://www.w3.org/2000/svg">
+        <g>
+        <rect x="0" y="52.893" width="49.853" height="5.248" style="fill:rgb(154,205,163);"/>
+        <path d="M39.066,85.849l-4.696,-2.935l51.198,-81.917l4.696,2.935l-51.198,81.917Z" style="fill:rgb(255,213,68);"/>
+        <path d="M83.832,102.065l-4.697,2.935l-51.188,-81.917l4.697,-2.935l51.188,81.917Z" style="fill:rgb(5,186,238);"/>
+        <style>
+            .logoText{
+                font-family: 'Neue Haas Unica Pro', sans-serif, system-ui;
+                font-weight: 400;
+                font-size: 62px;
+                color: rgb(17, 19, 19 , 1);
+            }
+        </style>
+        <text x="45" y="59" class="logoText">Lustenau</text>
+    </g>
+    </svg>
+  <% end %>
+<% else %>
+  <%= Decidim.application_name %>
+<% end %>

@@ -1,20 +1,8 @@
 <div class="mini-footer">
     <div class="row">
-        <a rel="decidim noopener"
-            href="https://european-union.europa.eu/"
-            target="_blank"
-            class="icona">
-            <%= image_pack_tag("media/images/Co-Funded-EU_POS.png", alt: "Co-Funded by the European Union", class: "mitgestalten_logo") %>
-        </a>
-        <a rel="decidim noopener"
-            href="https://diaspora-participation.eu/"
-            target="_blank"
-            class="icona">
-            <%= image_pack_tag("media/images/Emvi_logo_OK.png", alt: "EMVI: Empowering Migrant Voices", class: "mitgestalten_logo") %>
-        </a>
         <% if current_organization.official_img_footer.attached? %>
             <%= link_to current_organization.official_url, class: "icona" do %>
-                <%= image_tag current_organization.attached_uploader(:official_img_footer).path, alt: current_organization.name, class: "mitgestalten_logo" %>
+                <%= image_tag current_organization.attached_uploader(:official_img_footer).path, alt: current_organization.name %>
             <% end %>
         <% end %>
     </div>
@@ -62,8 +50,8 @@
         <a rel="decidim noopener"
             href="https://partizipationsbuero.at/"
             target="_blank"
-            class="icona">
-            <%= image_pack_tag("media/images/mitgestalten-logo.png", alt: "Mitgestalten Partizipiationsbüro", class: "mitgestalten_logo") %>
+            class="footer_logo">
+            <%= image_pack_tag("media/images/mitgestalten-logo.png", alt: "Mitgestalten Partizipiationsbüro") %>
         </a>
     </div>
 </div>

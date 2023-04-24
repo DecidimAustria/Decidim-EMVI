@@ -1,0 +1,132 @@
+
+.card__link:hover, .card__text a:hover, .author-data .author__name:hover{
+    color:rgb(var(--app-primary-rgb), 1);
+    transition: color 0.2s ease-in;
+    text-decoration: none;
+}
+
+.card{
+    background-color: rgb(var(--app-background-even-rgb), 1);
+    box-shadow: 0 0 rgb(var(--app-body-font-rgb),1), 0 0 rgb(var(--app-body-font-rgb),1), 0 10px 15px -3px rgb(var(--app-body-font-rgb),.1), 0 4px 6px -4px rgb(var(--app-body-font-rgb),.1);
+    position: relative;
+}
+
+.card_data{
+    justify-items: space-around;
+}
+
+.card__icondata ul{
+    border-top:unset;
+}
+
+.card-data__item{
+    border-right: unset;
+    margin-right: 0;
+    border-top: unset;
+    margin-top: 0;
+    font-size: 80%;
+}
+
+.card__status{
+    padding:0 0.5rem;
+    .card-data__item{
+        flex: 1 1 0px;
+        justify-content: center;
+        justify-items: center;
+        justify-self: center;
+        svg{
+            height: 1.2rem;
+            width: 1.2rem;
+            margin-right: 0.25rem;
+            color:inherit;
+        }
+        .icon-wrap{
+            span {
+                vertical-align: text-top;
+            }
+        }
+        .text-wrap{
+            display:none;
+        }
+        [data-toggle] span {
+            margin-right: 0;
+        }
+        button.secondary, span, a{
+            color:rgb(var(--app-nav-highlight-grey-rgb), 1);
+        }
+        &:hover{
+            button.secondary, span, a{
+                color:rgb(var(--app-primary-rgb), 1);
+                transition: 0.2s ease-in;
+            }
+        }
+    }
+} 
+
+.card__footer, .card__top {
+    background: none;
+}
+
+.card__footer {
+    border-top: unset;
+}
+
+a .card__title{
+    color:rgb(var(--app-primary-rgb), 1);
+}
+
+a .card__title:hover {
+    text-decoration: none;
+    color:rgb(var(--app-primary-rgb), 1);
+    transition: 0.2s ease-in;
+    text-decoration: none;
+}
+
+.card--process__small:hover{
+    color:inherit;
+}
+
+.card--list__icon{
+    fill:rgb(var(--app-primary-rgb), 1);
+}
+
+ul.card-data{
+    li.card-data__item{
+        font-size: 80%;
+        svg{
+            height: 1.2rem;
+            width: 1.2rem;
+            margin-right: 0.25rem;
+        }
+        .icon-wrap{
+            span {
+                vertical-align: text-top;
+            }
+        }
+        .has-tip{
+            vertical-align: text-top;
+        }
+    }
+}
+
+.card--post{
+    display:flex;
+    padding: 1rem 0.8rem;
+    .card__image__container{
+        flex: 0 0 34%;
+        padding: 0 0.5rem;
+        display:flex;
+        align-items:center;
+    }
+    .card__image{
+        object-fit: unset;
+        max-height:unset;
+    }
+    .card__content{
+        flex: 1 1 66%;
+        .button__posts{
+            margin:1rem 0 0 0;
+            float:right;
+        }
+    }
+}
