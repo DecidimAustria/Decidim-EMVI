@@ -12,7 +12,6 @@ variables:
   LIVE_SERVER:
     description: "Dokku server to push the live app to"
   STAGING_SERVER:
-    value: "decidim-dokku1.spreademotions.com"
     description: "Dokku server to push the staging app to"
   LIVE_BRANCH:
     value: "live"
