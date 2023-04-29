@@ -1826,8 +1826,8 @@ tr-TR:
       widget:
         see_more: Daha fazla gör
   locale:
-    name: İngilizce
-    name_with_error: İngilizce (hata!)
+    name: Türkçe
+    name_with_error: Türkçe (hata!)
   password_validator:
     blacklisted: kara listeye alındı
     domain_included_in_password: bu alan adına çok benziyor
