@@ -1826,8 +1826,8 @@ fa-IR:
       widget:
         see_more: بیشتر ببین
   locale:
-    name: انگلیسی
-    name_with_error: انگلیسی (خطا!)
+    name: فارسی
+    name_with_error:  (خطا!)فارسی
   password_validator:
     blacklisted: در لیست سیاه قرار گرفته است
     domain_included_in_password: بسیار شبیه به این نام دامنه است
