@@ -85,7 +85,9 @@ tr-TR:
             offensive: Irkçılık, cinsiyetçilik, karalamalar, kişisel saldırılar, ölüm tehditleri, intihar talepleri veya her türlü nefret söylemi içerir.
             spam: Tıklama tuzağı, reklam, dolandırıcılık veya komut dosyası botları içerir.
           title: Uygunsuz içeriği bildir
-        show_replies: "%{replies_count} yanıtı göster"
+        show_replies:
+          one: Cevabı göster
+          other: "%{count} yanıtı göster"
         single_comment_link_title: Bağlantıyı al
       comment_order_selector:
         order:
