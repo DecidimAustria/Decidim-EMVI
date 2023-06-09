@@ -187,14 +187,13 @@ GIT
 
 GIT
   remote: https://github.com/DecidimAustria/decidim-module-decidim_awesome
-  revision: 63d7d6bdf738481b659cc25b378e9a2b54abe8a7
-  ref: 63d7d6bdf73
+  revision: df40b3691a64a2c6a21f051006537dae979533ff
+  ref: df40b3691a64a2
   branch: update-to-decidim-0.27
   specs:
-    decidim-decidim_awesome (0.8.3)
-      decidim-admin (>= 0.25.0, < 0.28)
-      decidim-core (>= 0.25.0, < 0.28)
-      rectify (~> 0.13.0)
+    decidim-decidim_awesome (0.9.1)
+      decidim-admin (>= 0.26.0, < 0.28)
+      decidim-core (>= 0.26.0, < 0.28)
       sassc (~> 2.3)
 
 GIT
