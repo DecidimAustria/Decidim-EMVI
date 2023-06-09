@@ -93,7 +93,9 @@ uk:
               прохання про самогубство чи будь-яку форму ненависті.
             spam: Містить клікбейт, рекламу, шахрайство або скрипт-ботів.
           title: Повідомити про невідповідний вміст
-        show_replies: Показати %{replies_count} відповідей
+        show_replies:
+          one: Показати відповідь
+          other: Показати %{count} відповідей
         single_comment_link_title: Отримати посилання
       comment_order_selector:
         order:
