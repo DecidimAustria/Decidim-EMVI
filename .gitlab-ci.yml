@@ -64,7 +64,7 @@ deploy_live:
   script:
     - "git-push ssh://dokku@$LIVE_SERVER:22/$APP_NAME"
   rules:
-    - if: $CI_COMMIT_REF_NAME == $LIVE_BRANCH && $APP_NAME != "" && $LIVE_URL != "" && $LIVE_SERVER != ""
+    - if: $CI_COMMIT_BRANCH == $LIVE_BRANCH && $APP_NAME != "" && $LIVE_URL != "" && $LIVE_SERVER != ""
 
 deploy_staging:
   image: ilyasemenov/gitlab-ci-git-push
@@ -75,4 +75,4 @@ deploy_staging:
   script:
     - "git-push ssh://dokku@$STAGING_SERVER:22/$APP_NAME-staging"
   rules:
-    - if: $CI_COMMIT_REF_NAME == $STAGING_BRANCH && $APP_NAME != "" && $STAGING_URL != "" && $STAGING_SERVER != ""
+    - if: $CI_COMMIT_BRANCH == $STAGING_BRANCH && $APP_NAME != "" && $STAGING_URL != "" && $STAGING_SERVER != ""

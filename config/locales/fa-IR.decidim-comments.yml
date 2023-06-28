@@ -85,7 +85,7 @@ fa-IR:
             offensive: حاوی نژادپرستی، تبعیض جنسی، توهین، حملات شخصی، تهدید به مرگ، درخواست خودکشی یا هر شکلی از سخنان نفرت انگیز است.
             spam: شامل طعمه کلیک، تبلیغات، کلاهبرداری یا ربات های اسکریپت است.
           title: گزارش محتوای نامناسب
-        show_replies: نمایش %{replies_count} پاسخ
+        show_replies: نمایش %{count} پاسخ
         single_comment_link_title: دریافت لینک
       comment_order_selector:
         order:
