@@ -408,7 +408,7 @@ sl:
           origin: 'Organiziral/-a:'
           origin_values:
             all: Vsi
-            official: Države članice in institucije EU
+            official: Uradno srečanje
             participants: Drugi
             user_groups: Skupine
           scope: Področje
