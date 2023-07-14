@@ -2,7 +2,7 @@
 
 source "https://rubygems.org"
 
-ruby RUBY_VERSION
+ruby '3.0.6'
 DECIDIM_VERSION = { git: "https://github.com/DecidimAustria/decidim", branch: 'emvi-0.27.3' }
 
 gem "decidim", DECIDIM_VERSION
