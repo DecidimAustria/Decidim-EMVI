@@ -8,7 +8,8 @@ Sentry.init do |config|
   # We recommend adjusting this value in production.
   config.traces_sample_rate = 1.0
   # or
-  config.traces_sampler = lambda do |context|
-    true
-  end
+  # config.traces_sampler = lambda do |context|
+  #   true
+  # end
+  config.profiles_sample_rate = 1.0
 end

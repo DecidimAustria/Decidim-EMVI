@@ -816,6 +816,7 @@ GEM
       activesupport (>= 5.2)
       sprockets (>= 3.0.0)
     ssrf_filter (1.1.1)
+    stackprof (0.2.25)
     strscan (3.0.6)
     temple (0.10.2)
     terminal-table (3.0.2)
@@ -908,12 +909,13 @@ DEPENDENCIES
   solargraph
   spring (~> 2.0)
   spring-watcher-listen (~> 2.0.0)
+  stackprof
   virtus (~> 1.0.5)
   web-console (~> 4.2)
   wicked_pdf (~> 2.1)
 
 RUBY VERSION
-   ruby 3.0.5p211
+   ruby 3.2.1p31
 
 BUNDLED WITH
    2.3.20
