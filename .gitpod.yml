@@ -7,11 +7,11 @@ image:
 
 tasks:
   - name: server
-    before: rvm --default use "ruby-3.0.5"
+    before: rvm --default use "ruby-3.0.6"
     init: bundle install && yarn install && redis-server --daemonize yes && bin/rails db:create && bin/rails db:migrate && bin/rails db:seed
     command: ./connect_local_db.sh
   #- name: webpacker
-  #  before: rvm --default use "ruby-3.0.5"
+  #  before: rvm --default use "ruby-3.0.6"
   #  command: bin/webpack-dev-server
 vscode:
   extensions:

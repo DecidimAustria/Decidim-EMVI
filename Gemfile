@@ -2,7 +2,7 @@
 
 source "https://rubygems.org"
 
-ruby RUBY_VERSION
+ruby '3.0.6'
 DECIDIM_VERSION = { git: "https://github.com/DecidimAustria/decidim", branch: 'emvi-0.27.3' }
 
 gem "decidim", DECIDIM_VERSION
@@ -29,6 +29,7 @@ gem "puma", ">= 5.0.0"
 
 gem "faker", "~> 2.14"
 
+gem 'stackprof'
 gem "sentry-ruby"
 gem "sentry-rails"
 
