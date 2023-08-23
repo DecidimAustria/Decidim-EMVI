@@ -197,6 +197,14 @@ GIT
       sassc (~> 2.3)
 
 GIT
+  remote: https://github.com/mainio/decidim-module-term_customizer
+  revision: abbf0c69e1bcaafebc5aa4f8da22fdb64ce62149
+  specs:
+    decidim-term_customizer (0.27.0)
+      decidim-admin (~> 0.27.0)
+      decidim-core (~> 0.27.0)
+
+GIT
   remote: https://github.com/ruby-i18n/i18n
   revision: 395aa5e9c0f29ca20af83750fb1c7e01cb07a67b
   branch: master
@@ -893,6 +901,7 @@ DEPENDENCIES
   decidim-consultations!
   decidim-decidim_awesome!
   decidim-dev!
+  decidim-term_customizer!
   easy_translate (~> 0.5.1)
   faker (~> 2.14)
   i18n!
@@ -915,7 +924,7 @@ DEPENDENCIES
   wicked_pdf (~> 2.1)
 
 RUBY VERSION
-   ruby 3.2.1p31
+   ruby 3.0.6p216
 
 BUNDLED WITH
    2.3.20
