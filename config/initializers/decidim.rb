@@ -15,7 +15,7 @@ Decidim.configure do |config|
   #config.available_locales = Rails.application.secrets.decidim[:available_locales].presence || [:en]
   # Or block set it up manually and prevent ENV manipulation:
   # config.available_locales = %w(en ca es)
-  config.available_locales = ["bs", "ca", "cs", "de", "en", "es", "fr", "hr", "it", "nl", "pl", "pt", "ro", "el", "sl", "sr-CS", "tr-TR", "ar-SA", "fa-IR", "uk"]
+  config.available_locales = ["bs", "ca", "cs", "de", "en", "es", "fr", "hr", "it", "nl", "pl", "pt", "ro", "el", "sl", "sr-CS", "tr-TR", "ar-SA", "fa-IR", "uk", "zh-TW"]
 
   # Sets the default locale for new organizations. When creating a new
   # organization from the System area, system admins will be able to overwrite
