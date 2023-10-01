@@ -151,6 +151,7 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a{
     flex-direction: column;
     align-items: flex-start;
     padding-bottom: 1rem;
+    flex-wrap: wrap;
     @include breakpoint(medium){
         align-items: center;
     }
@@ -161,12 +162,15 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a{
     }
     nav{
         flex:1 0 auto;
+        padding:1.5rem 0;
     }
     div{
-        flex:0 0 auto;
+        flex:1 0 auto;
     }
 }
 .topbar__search{
+    margin-left:auto;
+    padding:1.5rem 0;
     input{
         background: var(--emvi-background-hsl);
         border-color: var(--emvi-primary-rgb);
@@ -275,22 +279,16 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a{
 }
 @media print, screen and (min-width: 40em){
     .main-nav ul{
-        display:unset;
-        white-space:normal;
+        flex-wrap: wrap;
+        gap: 1.5rem;
     }
     .main-nav ul > li{
         text-align: left;
         text-align: start;
+        flex: 1 1 auto;
     }
 }
 .main-nav__link{
-    padding:1rem;
-    @include breakpoint(large){
-        padding:1.5rem;
-        &:first-child{
-            padding-left:0;
-        }
-    }
     a{
         color:var(--emvi-nav-highlight-grey-rgb);
         display:unset;
