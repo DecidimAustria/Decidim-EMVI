@@ -6,8 +6,7 @@ ruby '3.0.6'
 DECIDIM_VERSION = { git: "https://github.com/DecidimAustria/decidim", branch: 'emvi-0.27.4' }
 
 gem "decidim", DECIDIM_VERSION
-#gem "decidim-alternative_landing", git: "https://github.com/DecidimAustria/decidim-module-alternative_landing", branch: 'update-to-decidim-0.27'
-gem "decidim-alternative_landing", git: "https://github.com/Platoniq/decidim-module-alternative_landing.git", branch: 'main'
+gem "decidim-alternative_landing", git: "https://github.com/DecidimAustria/decidim-module-alternative_landing", branch: 'update-to-decidim-0.27'
 #gem "decidim-decidim_awesome", git: "https://github.com/DecidimAustria/decidim-module-decidim_awesome", branch: 'update-to-decidim-0.27'
 gem "decidim-decidim_awesome", git: "https://github.com/DecidimAustria/decidim-module-decidim_awesome", branch: 'update-to-decidim-0.27', :ref => 'df40b3691a64a2'
 # gem "decidim-conferences", DECIDIM_VERSION
