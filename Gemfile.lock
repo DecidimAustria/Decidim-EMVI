@@ -176,16 +176,6 @@ GIT
       decidim-core (= 0.27.4)
 
 GIT
-  remote: https://github.com/DecidimAustria/decidim-module-alternative_landing
-  revision: efd1db91197c9a731511031b2104d22a6cf87220
-  branch: update-to-decidim-0.27
-  specs:
-    decidim-alternative_landing (0.2.1)
-      decidim-admin (>= 0.25.0, < 0.28)
-      decidim-core (>= 0.25.0, < 0.28)
-      redcarpet (~> 3.4)
-
-GIT
   remote: https://github.com/DecidimAustria/decidim-module-decidim_awesome
   revision: df40b3691a64a2c6a21f051006537dae979533ff
   ref: df40b3691a64a2
@@ -195,6 +185,16 @@ GIT
       decidim-admin (>= 0.26.0, < 0.28)
       decidim-core (>= 0.26.0, < 0.28)
       sassc (~> 2.3)
+
+GIT
+  remote: https://github.com/Platoniq/decidim-module-alternative_landing.git
+  revision: 1221cce61ea6ae001bdaaf5e73023a61acf3f6b4
+  branch: main
+  specs:
+    decidim-alternative_landing (0.4.0)
+      decidim-admin (>= 0.27.0, < 0.28)
+      decidim-core (>= 0.27.0, < 0.28)
+      redcarpet (~> 3.4)
 
 GIT
   remote: https://github.com/mainio/decidim-module-term_customizer
@@ -283,16 +283,16 @@ GEM
       public_suffix (>= 2.0.2, < 6.0)
     ast (2.4.2)
     aws-eventstream (1.2.0)
-    aws-partitions (1.840.0)
-    aws-sdk-core (3.185.1)
+    aws-partitions (1.848.0)
+    aws-sdk-core (3.186.0)
       aws-eventstream (~> 1, >= 1.0.2)
       aws-partitions (~> 1, >= 1.651.0)
       aws-sigv4 (~> 1.5)
       jmespath (~> 1, >= 1.6.1)
-    aws-sdk-translate (1.59.0)
+    aws-sdk-translate (1.60.0)
       aws-sdk-core (~> 3, >= 3.184.0)
       aws-sigv4 (~> 1.1)
-    aws-sigv4 (1.6.0)
+    aws-sigv4 (1.6.1)
       aws-eventstream (~> 1, >= 1.0.2)
     axe-core-api (4.8.0)
       dumb_delegator
@@ -306,10 +306,10 @@ GEM
       ice_nine (~> 0.11.0)
       thread_safe (~> 0.3, >= 0.3.1)
     backport (1.2.0)
-    base64 (0.1.1)
+    base64 (0.2.0)
     batch-loader (1.5.0)
     bcrypt (3.1.19)
-    benchmark (0.2.1)
+    benchmark (0.3.0)
     better_html (1.0.16)
       actionview (>= 4.0)
       activesupport (>= 4.0)
@@ -319,7 +319,7 @@ GEM
       parser (>= 2.4)
       smart_properties
     bindex (0.8.1)
-    bootsnap (1.16.0)
+    bootsnap (1.17.0)
       msgpack (~> 1.2)
     brakeman (6.0.1)
     browser (2.7.1)
@@ -393,7 +393,7 @@ GEM
       warden (~> 1.2.3)
     devise-i18n (1.12.0)
       devise (>= 4.9.0)
-    devise_invitable (2.0.8)
+    devise_invitable (2.0.9)
       actionmailer (>= 5.0)
       devise (>= 4.6)
     diff-lcs (1.5.0)
@@ -489,7 +489,7 @@ GEM
       rails-i18n
       rainbow (>= 2.2.2, < 4.0)
       terminal-table (>= 1.5.1)
-    icalendar (2.9.0)
+    icalendar (2.10.0)
       ice_cube (~> 0.16)
     ice_cube (0.16.4)
     ice_nine (0.11.2)
@@ -567,7 +567,7 @@ GEM
       strscan
     net-pop (0.1.2)
       net-protocol
-    net-protocol (0.2.1)
+    net-protocol (0.2.2)
       timeout
     net-smtp (0.3.3)
       net-protocol
@@ -635,7 +635,7 @@ GEM
     public_suffix (5.0.3)
     puma (5.6.7)
       nio4r (~> 2.0)
-    racc (1.7.1)
+    racc (1.7.3)
     rack (2.2.8)
     rack-attack (6.7.0)
       rack (>= 1.0, < 4)
@@ -682,7 +682,7 @@ GEM
       rake (>= 12.2)
       thor (~> 1.0)
     rainbow (3.1.1)
-    rake (13.0.6)
+    rake (13.1.0)
     ransack (2.4.2)
       activerecord (>= 5.2.4)
       activesupport (>= 5.2.4)
@@ -747,7 +747,7 @@ GEM
       rubocop-ast (>= 1.17.0, < 2.0)
       ruby-progressbar (~> 1.7)
       unicode-display_width (>= 1.4.0, < 3.0)
-    rubocop-ast (1.29.0)
+    rubocop-ast (1.30.0)
       parser (>= 3.2.1.0)
     rubocop-rails (2.15.2)
       activesupport (>= 4.2.0)
@@ -775,10 +775,10 @@ GEM
       rexml (~> 3.2, >= 3.2.5)
       rubyzip (>= 1.2.2)
     semantic_range (3.0.0)
-    sentry-rails (5.12.0)
+    sentry-rails (5.13.0)
       railties (>= 5.0)
-      sentry-ruby (~> 5.12.0)
-    sentry-ruby (5.12.0)
+      sentry-ruby (~> 5.13.0)
+    sentry-ruby (5.13.0)
       concurrent-ruby (~> 1.0, >= 1.0.2)
     seven_zip_ruby (1.3.0)
     sidekiq (6.5.12)
@@ -836,7 +836,7 @@ GEM
     thread (0.2.2)
     thread_safe (0.3.6)
     tilt (2.3.0)
-    timeout (0.4.0)
+    timeout (0.4.1)
     tomlrb (2.0.3)
     tzinfo (2.0.6)
       concurrent-ruby (~> 1.0)
