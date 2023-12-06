@@ -213,24 +213,23 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a{
         max-width: 220px;
     }
 }
-:dir(rtl){
-    .topbar__search{
-        button {
-            border-radius: 4px 0 0 4px;
-        }
-        &:not(:focus-within){
-            button{
-                border-left: 1px solid var(--emvi-primary-rgb);
-                border-right: 0px;
-            }
-        }
-        input {
-            border-left: 0px;
-            border-right: 1px;
-            border-radius: 0 4px 4px 0;
-        }
+:dir(rtl) {
+    /* navbar.scss */
+    .topbar__search button{
+      border-radius: 4px 0 0 4px;
     }
-} 
+    .topbar__search input {
+      border-radius: 0 4px 4px 0;
+    }
+  
+    /* emvi.scss  */
+    .topbar__search:not(:focus-within) button{
+      border-right: 0px;
+    }
+    .topbar__search input {
+      border-left: 0px;
+    }
+}
 
 .sign-in-icon .icon{
     height:40px;
