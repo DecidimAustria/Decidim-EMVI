@@ -199,8 +199,9 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a{
         button{
           background-color: var(--emvi-background-hsl);
           color: var(--emvi-secondary-rgb);
-          border:1px solid var(--emvi-primary-rgb);
-          border-left:0px;
+          border:1px 1px 1px 0;
+          border-color: var(--emvi-primary-rgb);
+          border-style: solid;
           @include breakpoint(medium){
             background: var(--emvi-background-hsl);
           }
@@ -213,25 +214,23 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a{
         max-width: 220px;
     }
 }
-html[dir=rtl] {
-    /* navbar.scss */
-    .topbar__search button{
-      border-radius: 4px 0 0 4px;
+html[dir=rtl]{
+    .topbar__search{
+        button {
+            border-radius: 4px 0 0 4px;
+        }
+        &:not(:focus-within){
+            button{
+                border:1px 0 1px 1px;
+            }
+        }
+        input {
+            border-left: 0px;
+            border-right: 1px;
+            border-radius: 0 4px 4px 0;
+        }
     }
-    .topbar__search input {
-      border-radius: 0 4px 4px 0;
-    }
-  
-    /* emvi.scss  */
-    .topbar__search:not(:focus-within) button{
-      border-right: 0px;
-      border-left: 1px solid var(--emvi-primary-rgb);
-    }
-    .topbar__search input {
-      border-left: 0px;
-      border-right: 1px solid var(--emvi-primary-rgb);
-    }
-}
+} 
 
 .sign-in-icon .icon{
     height:40px;
