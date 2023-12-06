@@ -225,9 +225,11 @@ html[dir=rtl] {
     /* emvi.scss  */
     .topbar__search:not(:focus-within) button{
       border-right: 0px;
+      border-left: 1px solid var(--emvi-primary-rgb);
     }
     .topbar__search input {
       border-left: 0px;
+      border-right: 1px solid var(--emvi-primary-rgb);
     }
 }
 
