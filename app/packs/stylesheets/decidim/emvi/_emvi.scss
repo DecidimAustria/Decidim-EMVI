@@ -683,5 +683,8 @@ ul.card-data{
 .assemblies{
     #participatory-space-filters{
         display:none;
+        & ~ hr{
+            display:none;
+        }
     }
 }
