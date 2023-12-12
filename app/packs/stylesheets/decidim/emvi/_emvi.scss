@@ -648,36 +648,36 @@ ul.card-data{
 }
 
 .alternative-landing.cover-full, .alternative-landing.cover-half, .alternative-landing.tiles, .alternative-landing.stack-horizontal, .alternative-landing.stack-vertical {
-    padding: 4rem 1rem;
+    padding: 4rem 1rem !important;
 }
 
 .stack-vertical .stack .stack-item{
-    padding:0;
-    flex: 1 1 0px;
+    padding:0 !important;
+    flex: 1 1 0px !important;
     .stack-image{
-        flex: 0 0 auto;
-        padding:1rem;
+        flex: 0 0 auto !important;
+        padding:1rem !important;
         @include breakpoint(smallmedium){
-            padding:0;
+            padding:0 !important;
         }
     }
     .stack-body{
-        flex: 1 0 auto;
-        padding:1rem;
+        flex: 1 0 auto !important;
+        padding:1rem !important;
     }
     .stack-link{
-        flex: 0 0 auto;
-        text-align:center;
+        flex: 0 0 auto !important;
+        text-align:center !important;
     }
     @include breakpoint(smallmedium){
-        padding:0;
+        padding:0 !important;
     }
 }
 .stack-horizontal .stack-item{
-    border: 1px solid var(--emvi-primary-rgb);
+    border: 1px solid var(--emvi-primary-rgb) !important;
 }
 .hero{
-    background-position: left bottom;
+    background-position: left bottom !important;
 }
 
 .assemblies{
