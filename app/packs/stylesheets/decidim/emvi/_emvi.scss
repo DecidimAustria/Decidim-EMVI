@@ -699,8 +699,10 @@ ul.card-data{
 .assemblies{
     #participatory-space-filters{
         display:none;
-        & ~ hr{
-            display:none;
+    }
+    #parent-assemblies{
+        hr{
+            border-bottom: 1px solid transparent;
         }
     }
 }
