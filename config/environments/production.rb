@@ -24,12 +24,6 @@ Rails.application.configure do
   # Apache or NGINX already handles this.
   config.public_file_server.enabled = ENV['RAILS_SERVE_STATIC_FILES'].present?
 
-  # Compress CSS using a preprocessor.
-  # 
-
-  # Do not fallback to assets pipeline if a precompiled asset is missed.
-  
-
   # Enable serving of images, stylesheets, and JavaScripts from an asset server.
   config.asset_host = ENV['RAILS_ASSET_HOST'] if ENV['RAILS_ASSET_HOST'].present?
 
@@ -38,7 +32,8 @@ Rails.application.configure do
   # config.action_dispatch.x_sendfile_header = 'X-Accel-Redirect' # for NGINX
 
   # Store uploaded files on the local file system (see config/storage.yml for options).
-  config.active_storage.service = Rails.application.secrets.dig(:storage, :provider) || :local
+  #config.active_storage.service = Rails.application.secrets.dig(:storage, :provider) || :local
+  config.active_storage.service = :mirror
 
   # Mount Action Cable outside main process or domain.
   # config.action_cable.mount_path = nil
