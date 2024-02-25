@@ -6,6 +6,20 @@ local:
   service: Disk
   root: <%= Rails.root.join("storage") %>
 
+minio:
+  service: S3
+  endpoint: https://cdn.participation.works
+  access_key_id: <%= ENV['MINIO_ACCESS_KEY_ID'] %>
+  secret_access_key: <%= ENV['MINIO_SECRET_ACCESS_KEY'] %>
+  bucket: <%= ENV['MINIO_BUCKET'] %>
+  region: eu-central-1 # just a dummy value, doesn't matter which one
+  force_path_style: true # so that the bucket is part of the path and not the subdomain
+
+mirror:
+  service: Mirror
+  primary: local
+  mirrors: [ minio ]
+
 s3:
   service: S3
   access_key_id: <%= Rails.application.secrets.dig(:storage, :s3, :access_key_id) %>
