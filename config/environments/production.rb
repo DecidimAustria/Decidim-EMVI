@@ -52,6 +52,16 @@ Rails.application.configure do
 
   # Use a different cache store in production.
   # config.cache_store = :mem_cache_store
+  config.cache_store = :redis_cache_store, {
+    url: "redis://myMaster/0",
+    role: "master",
+    password: ENV.fetch("REDIS_CACHE_PASSWORD", nil),
+    sentinels: [
+      { host: "redis-cache-sentinel", port: 26379 },
+      { host: "redis-cache-sentinel-additional", port: 26380 }
+    ],
+    expires_in: 1.day
+  }
 
   # Use a real queuing backend for Active Job (and separate queues per environment).
   # config.active_job.queue_adapter     = :resque

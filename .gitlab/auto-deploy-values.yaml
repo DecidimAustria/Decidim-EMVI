@@ -1,0 +1,288 @@
+service:
+  internalPort: 5000
+containerSecurityContext:
+  allowPrivilegeEscalation: false
+  capabilities:
+    drop: ["ALL"]
+  runAsUser: 1000
+  seccompProfile:
+    type: "RuntimeDefault"
+extraVolumeMounts:
+  - name: secret-volume-root-ca
+    mountPath: /etc/secrets/ca
+  - name: secret-volume-app
+    mountPath: /etc/secrets/app
+extraVolumes:
+  - name: secret-volume-root-ca
+    secret:
+      secretName: postgres-ca
+      defaultMode: 0444
+  - name: secret-volume-app
+    secret:
+      secretName: postgres-app
+      defaultMode: 0444
+extraEnv:
+  - name: DECIDIM_FORCE_SSL
+    value: "false"
+  - name: DECIDIM_ENABLE_HTML_HEADER_SNIPPETS
+    value: "true"
+  - name: RAILS_ENV
+    value: "production"
+  - name: REDIS_PASSWORD
+    valueFrom:
+      secretKeyRef:
+        name: redis-secret
+        key: password
+  - name: REDIS_CACHE_PASSWORD
+    valueFrom:
+      secretKeyRef:
+        name: redis-cache-secret
+        key: password
+  # - name: KINJO_DATABASE_PASSWORD
+  #   valueFrom:
+  #     secretKeyRef:
+  #       name: kinjo-db-app
+  #       key: password
+#   - name: DATABASE_URL
+#     value: >
+#       sslkey=/etc/secrets/app/tls.key
+#       sslcert=/etc/secrets/app/tls.crt
+#       sslrootcert=/etc/secrets/ca/ca.crt
+#       host=kinjo-db-rw
+#       dbname=kinjo
+#       user=app
+#       sslmode=verify-full
+#   - name: DB_HOST
+#     valueFrom:
+#       secretKeyRef:
+#         name: kinjo-db-app
+#         key: host
+#   - name: DB_USER
+#     valueFrom:
+#       secretKeyRef:
+#         name: kinjo-db-app
+#         key: user
+extraEnvFrom:
+  - secretRef:
+      name: postgres-app
+  # - secretRef:
+  #     name: kinjo-db-ca
+prometheus:
+  metrics: true
+livenessProbe:
+  enabled: false
+  path: "/"
+  scheme: "HTTP"
+  initialDelaySeconds: 15
+  timeoutSeconds: 15
+  probeType: "httpGet"
+readinessProbe:
+  enabled: false
+  path: "/"
+  scheme: "HTTP"
+  initialDelaySeconds: 5
+  timeoutSeconds: 3
+  probeType: "httpGet"
+resources:
+ limits:
+   cpu: 8000m
+   memory: 1500Mi
+ requests:
+   cpu: 2000m
+   memory: 1024Mi
+workers:
+  goodjob:
+    replicaCount: 1
+    command:
+      - /cnb/lifecycle/launcher
+      - good_job
+      - start
+    terminationGracePeriodSeconds: 60
+    livenessProbe:
+      path: "/status/connected"
+      port: 7001
+      initialDelaySeconds: 30
+      timeoutSeconds: 3
+      scheme: "HTTP"
+      probeType: "httpGet"
+    readinessProbe:
+      path: "/status/started"
+      port: 7001
+      initialDelaySeconds: 30
+      timeoutSeconds: 3
+      scheme: "HTTP"
+      probeType: "httpGet"
+  # sidekiq:
+  #   replicaCount: 1
+  #   command:
+  #     - /cnb/lifecycle/launcher
+  #     - sidekiq
+  #   preStopCommand:
+  #     - /cnb/lifecycle/launcher
+  #     - sidekiqctl
+  #     - quiet
+  #   terminationGracePeriodSeconds: 60
+  #   livenessProbe:
+  #     path: "/"
+  #     port: 7433
+  #     initialDelaySeconds: 30
+  #     timeoutSeconds: 3
+  #     scheme: "HTTP"
+  #     probeType: "httpGet"
+  #   readinessProbe:
+  #     path: "/"
+  #     port: 7433
+  #     initialDelaySeconds: 30
+  #     timeoutSeconds: 3
+  #     scheme: "HTTP"
+  #     probeType: "httpGet"
+#workers:
+  # worker:
+  #   replicaCount: 1
+  #   image:
+  #     repository: gitlab.example.com/group/project
+  #     tag: stable
+  #     pullPolicy: IfNotPresent
+  #     secrets:
+  #       - name: gitlab-registry
+  #   terminationGracePeriodSeconds: 60
+  #   hostAliases:
+  #   - ip: X.X.X.X
+  #     hostnames:
+  #     - dns1.DOMAIN1
+  #     - dns2.DOMAIN2
+  #   labels:
+  #     worker-type: worker
+  #   command:
+  #   - /bin/herokuish
+  #   - procfile
+  #   - start
+  #   - worker
+  #   nodeSelector: {}
+  #   tolerations: []
+  #   initContainers: []
+  #   livenessProbe:
+  #     path: "/"
+  #     initialDelaySeconds: 15
+  #     timeoutSeconds: 15
+  #     scheme: "HTTP"
+  #     probeType: "httpGet"
+  #     httpHeader:
+  #     - name: "custum-header"
+  #       value: "awesome"
+  #   readinessProbe:
+  #     path: "/"
+  #     initialDelaySeconds: 5
+  #     timeoutSeconds: 3
+  #     scheme: "HTTP"
+  #     probeType: "httpGet"
+  #     httpHeader:
+  #     - name: "custum-header"
+  #       value: "awesome"
+  #   lifecycle:
+  #     preStop:
+  #       exec:
+  #         command: ["/bin/sh", "-c", "sleep 10"]
+  #   preStopCommand:
+  #   - /bin/herokuish
+  #   - procfile
+  #   - start
+  #   - stop_worker
+  #   extraVolumes: []
+  #   extraVolumeMounts: []
+  #   extraEnvFrom: []
+
+#cronjobs:
+  # job:
+  #   schedule: "*/2 * * * *"
+  #   image:
+  #     repository: alpine
+  #     tag: latest
+  #   command: ["/bin/sh"]
+  #   args: ["-c", "echo hello"]
+  #   concurrencyPolicy: Forbid
+  #   failedJobsHistoryLimit: 1
+  #   restartPolicy: OnFailure
+  #   startingDeadlineSeconds: 300
+  #   successfulJobsHistoryLimit: 1
+  #   livenessProbe:
+  #     path: "/"
+  #     initialDelaySeconds: 15
+  #     timeoutSeconds: 15
+  #     scheme: "HTTP"
+  #     probeType: "httpGet"
+  #   readinessProbe:
+  #     path: "/"
+  #     initialDelaySeconds: 5
+  #     timeoutSeconds: 3
+  #     failureThreshold: 3
+  #     periodSeconds: 10
+  #     scheme: "HTTP"
+  #     probeType: "httpGet"
+  #   extraVolumes: []
+  #   extraVolumeMounts: []
+  #   extraEnvFrom: []
+# customResources:
+#   - apiVersion: "traefik.containo.us/v1alpha1"
+#     kind: "IngressRoute"
+#     metadata:
+#       name: "ingress-route"
+#       namespace: "default"
+#     spec:
+#       entryPoints:
+#         - "web"
+#       routes:
+#         - match: "Host(`{{ .Values.envName }}.{{ .Values.envURL }}`)"
+#           kind: "Rule"
+#           services:
+#             - name: "web"
+#               port: {{ .Values.service.internalPort }}
+#               weight: 100
+#       tls:
+#         secretName: "tls-secret"
+#         options:
+#           name: "tls-options"
+#           namespace: "default"
+#           kind: "TLSOptions"
+#           minVersion: "VersionTLS12"
+#
+# customResources:
+#   - apiVersion: postgresql.cnpg.io/v1
+#     kind: Cluster
+#     metadata:
+#       name: kinjo-db
+#     spec:
+#       instances: 3    
+#       # Example of rolling update strategy:
+#       # - unsupervised: automated update of the primary once all
+#       #                 replicas have been upgraded (default)
+#       # - supervised: requires manual supervision to perform
+#       #               the switchover of the primary
+#       primaryUpdateStrategy: unsupervised
+    
+#       # Require 1Gi of space
+#       storage:
+#         storageClass: local-storage
+#         size: 1Gi
+#   - apiVersion: redis.redis.opstreelabs.in/v1beta2
+#     kind: RedisCluster
+#     metadata:
+#       name: redis-cluster
+#     spec:
+#       clusterSize: 3
+#       clusterVersion: v7
+#       podSecurityContext:
+#         runAsUser: 1000
+#         fsGroup: 1000
+#       persistenceEnabled: true
+#       kubernetesConfig:
+#         image: quay.io/opstree/redis:v7.0.12
+#         imagePullPolicy: Always
+#       storage:
+#         volumeClaimTemplate:
+#           spec:
+#             storageClassName: local-storage
+#             accessModes: ["ReadWriteOnce"]
+#             resources:
+#               requests:
+#                 storage: 1Gi
