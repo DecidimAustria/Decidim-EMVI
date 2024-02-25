@@ -37,7 +37,6 @@ gem 'stackprof'
 gem "sentry-ruby"
 gem "sentry-rails"
 
-gem 'sidekiq', '<7'
 gem 'virtus', '~> 1.0.5'
 gem "wicked_pdf", "~> 2.1"
 
@@ -65,3 +64,5 @@ end
 
 group :production do
 end
+
+gem "good_job", "~> 3.25"
