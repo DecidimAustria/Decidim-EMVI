@@ -8,7 +8,7 @@ local:
 
 minio:
   service: S3
-  endpoint: https://cdn.spreademotions.com
+  endpoint: https://cdn.participation.works
   access_key_id: <%= ENV['MINIO_ACCESS_KEY_ID'] %>
   secret_access_key: <%= ENV['MINIO_SECRET_ACCESS_KEY'] %>
   bucket: <%= ENV['MINIO_BUCKET'] %>
