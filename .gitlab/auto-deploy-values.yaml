@@ -93,7 +93,7 @@ resources:
    cpu: 8000m
    memory: 1500Mi
  requests:
-   cpu: 2000m
+   cpu: 500m
    memory: 1024Mi
 workers:
   goodjob:
