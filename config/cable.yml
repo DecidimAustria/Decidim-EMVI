@@ -7,7 +7,7 @@ test:
 production:
   adapter: redis
   url: redis://myMaster/0
-  password: <%= ENV.fetch('REDIS_PASSWORD', nil) %>
+  # password: <%= ENV.fetch('REDIS_PASSWORD', nil) %>
   sentinels:
   - host: redis-sentinel
     port: 26379

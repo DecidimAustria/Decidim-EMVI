@@ -28,16 +28,16 @@ extraEnv:
     value: "true"
   - name: RAILS_ENV
     value: "production"
-  - name: REDIS_PASSWORD
-    valueFrom:
-      secretKeyRef:
-        name: redis-secret
-        key: password
-  - name: REDIS_CACHE_PASSWORD
-    valueFrom:
-      secretKeyRef:
-        name: redis-cache-secret
-        key: password
+  # - name: REDIS_PASSWORD
+  #   valueFrom:
+  #     secretKeyRef:
+  #       name: redis-secret
+  #       key: password
+  # - name: REDIS_CACHE_PASSWORD
+  #   valueFrom:
+  #     secretKeyRef:
+  #       name: redis-cache-secret
+  #       key: password
   - name: DATABASE_URL
     valueFrom:
       secretKeyRef:
@@ -120,16 +120,16 @@ workers:
     extraEnv:
     - name: RAILS_ENV
       value: "production"
-    - name: REDIS_PASSWORD
-      valueFrom:
-        secretKeyRef:
-          name: redis-secret
-          key: password
-    - name: REDIS_CACHE_PASSWORD
-      valueFrom:
-        secretKeyRef:
-          name: redis-cache-secret
-          key: password
+    # - name: REDIS_PASSWORD
+    #   valueFrom:
+    #     secretKeyRef:
+    #       name: redis-secret
+    #       key: password
+    # - name: REDIS_CACHE_PASSWORD
+    #   valueFrom:
+    #     secretKeyRef:
+    #       name: redis-cache-secret
+    #       key: password
     - name: DATABASE_URL
       valueFrom:
         secretKeyRef:
