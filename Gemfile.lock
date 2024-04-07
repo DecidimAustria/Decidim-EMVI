@@ -494,6 +494,7 @@ GEM
     hashdiff (1.0.1)
     hashie (5.0.0)
     highline (2.1.0)
+    hiredis (0.6.3)
     hkdf (0.3.0)
     html-pipeline (2.14.3)
       activesupport (>= 2)
@@ -928,6 +929,7 @@ DEPENDENCIES
   easy_translate (~> 0.5.1)
   faker (~> 2.14)
   good_job (~> 3.25)
+  hiredis
   i18n!
   letter_opener_web (~> 2.0)
   listen (~> 3.1)
@@ -936,6 +938,7 @@ DEPENDENCIES
   net-smtp (~> 0.3.1)
   puma (>= 5.0.0)
   rectify (~> 0.13.0)
+  redis
   sentry-rails
   sentry-ruby
   solargraph
