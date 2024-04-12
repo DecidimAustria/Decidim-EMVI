@@ -33,7 +33,7 @@ Rails.application.configure do
 
   # Store uploaded files on the local file system (see config/storage.yml for options).
   #config.active_storage.service = Rails.application.secrets.dig(:storage, :provider) || :local
-  config.active_storage.service = :mirror
+  config.active_storage.service = :minio
 
   # Mount Action Cable outside main process or domain.
   # config.action_cable.mount_path = nil
