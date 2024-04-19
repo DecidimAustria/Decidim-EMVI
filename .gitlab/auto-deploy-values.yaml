@@ -117,6 +117,13 @@ workers:
       timeoutSeconds: 3
       scheme: "HTTP"
       probeType: "httpGet"
+    resources:
+      limits:
+        cpu: 500m
+        memory: 2048Mi
+      requests:
+        cpu: 50m
+        memory: 500Mi
     extraEnv:
     - name: RAILS_ENV
       value: "production"
