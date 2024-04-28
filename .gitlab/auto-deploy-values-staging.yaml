@@ -114,25 +114,25 @@ affinity:
             values:
             - cloud
 workers:
-  affinity:
-    nodeAffinity:
-        preferredDuringSchedulingIgnoredDuringExecution:
-        # matching weights are added up and higher weight is preferred
-        - weight: 1
-          preference:
-            matchExpressions:
-            - key: servertype
-              operator: In
-              values:
-              - dedicated
-        - weight: 100
-          preference:
-            matchExpressions:
-            - key: servertype
-              operator: In
-              values:
-              - cloud
   goodjob:
+    affinity:
+      nodeAffinity:
+          preferredDuringSchedulingIgnoredDuringExecution:
+          # matching weights are added up and higher weight is preferred
+          - weight: 1
+            preference:
+              matchExpressions:
+              - key: servertype
+                operator: In
+                values:
+                - dedicated
+          - weight: 100
+            preference:
+              matchExpressions:
+              - key: servertype
+                operator: In
+                values:
+                - cloud
     replicaCount: 1
     command:
       - /cnb/lifecycle/launcher
