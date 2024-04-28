@@ -90,7 +90,7 @@ readinessProbe:
   probeType: "httpGet"
 resources:
  limits:
-   cpu: 8000m
+   cpu: 2000m
    memory: 3072Mi
  requests:
    cpu: 500m
@@ -99,14 +99,14 @@ affinity:
   nodeAffinity:
       preferredDuringSchedulingIgnoredDuringExecution:
       # matching weights are added up and higher weight is preferred
-      - weight: 100
+      - weight: 1
         preference:
           matchExpressions:
           - key: servertype
             operator: In
             values:
             - dedicated
-      - weight: 1
+      - weight: 100
         preference:
           matchExpressions:
           - key: servertype
