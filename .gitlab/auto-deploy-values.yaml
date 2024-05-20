@@ -91,10 +91,10 @@ readinessProbe:
 resources:
  limits:
    cpu: 8000m
-   memory: 3072Mi
+   memory: 4096Mi
  requests:
    cpu: 500m
-   memory: 2048Mi
+   memory: 3072Mi
 affinity:
   nodeAffinity:
       preferredDuringSchedulingIgnoredDuringExecution:
@@ -156,7 +156,7 @@ workers:
     resources:
       limits:
         cpu: 500m
-        memory: 2048Mi
+        memory: 3072Mi
       requests:
         cpu: 50m
         memory: 500Mi
