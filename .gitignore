@@ -27,6 +27,7 @@
 !/storage/.keep
 
 /node_modules
+node_modules
 
 /public/assets
 .byebug_history
