@@ -771,7 +771,8 @@ hr:
       all_badges_link: Pogledajte sve dostupne značke.
       badges:
         followers:
-          conditions: Ako budete aktivni i pratite druge, i oni će pratiti vas.
+          conditions:
+          - Ako budete aktivni i pratite druge, i oni će pratiti vas.
           description: Ta se značka dodjeljuje kad postignete određeni broj pratitelja.
             %{organization_name} je društvena i politička mreža; proširite svoju mrežu
             kako biste komunicirali s drugim sudionicima na platformi.

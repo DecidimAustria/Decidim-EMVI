@@ -683,7 +683,8 @@ sl:
       all_badges_link: Prikaži vse značke, ki so na voljo.
       badges:
         followers:
-          conditions: Če boste aktivni in sledili drugim ljudem, vam bodo gotovo tudi drugi sledili.
+          conditions:
+          - Če boste aktivni in sledili drugim ljudem, vam bodo gotovo tudi drugi sledili.
           description: Ko boste dosegli določeno število sledilcev, vam je ta značka zagotovljena. %{organization_name} je družbeno in politično omrežje, ustvarite svojo mrežo za komunikacijo z drugimi ljudmi v platformi.
           description_another: Ta udeleženec ima %{score} sledilcev.
           description_own: Sledi vam %{score} ljudi.
