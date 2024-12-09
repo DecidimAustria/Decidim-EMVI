@@ -2,21 +2,23 @@
 
 source "https://rubygems.org"
 
-ruby '3.0.6'
-DECIDIM_VERSION = { git: "https://github.com/DecidimAustria/decidim", branch: 'emvi-0.27.6' }
+ruby '3.1.5'
+DECIDIM_VERSION = { git: "https://github.com/DecidimAustria/decidim", branch: '0.28.4-live' }
 
 gem "decidim", DECIDIM_VERSION
 #gem "decidim-alternative_landing", git: "https://github.com/DecidimAustria/decidim-module-alternative_landing", branch: 'update-to-decidim-0.27'
-gem "decidim-alternative_landing", git: "https://github.com/Platoniq/decidim-module-alternative_landing.git", branch: 'release/0.27-stable'
+# alternative_landing was disabled because it is not compatible with decidim 0.29
+# gem "decidim-alternative_landing", git: "https://github.com/Platoniq/decidim-module-alternative_landing.git", branch: 'release/0.27-stable'
 #gem "decidim-decidim_awesome", git: "https://github.com/DecidimAustria/decidim-module-decidim_awesome", branch: 'update-to-decidim-0.27'
 #gem "decidim-decidim_awesome", git: "https://github.com/DecidimAustria/decidim-module-decidim_awesome", branch: 'update-to-decidim-0.27', :ref => 'df40b3691a64a2'
-gem "decidim-decidim_awesome", "~> 0.9.2"
+gem "decidim-decidim_awesome", "~> 0.11.2"
 # gem "decidim-conferences", DECIDIM_VERSION
-gem "decidim-consultations", DECIDIM_VERSION
+# consultations does not exist from 0.28
+# gem "decidim-consultations", DECIDIM_VERSION
 # gem "decidim-elections", DECIDIM_VERSION
 # gem "decidim-initiatives", DECIDIM_VERSION
 # gem "decidim-templates", DECIDIM_VERSION
-gem "decidim-term_customizer", git: "https://github.com/mainio/decidim-module-term_customizer", branch: "release/0.27-stable"
+gem "decidim-term_customizer", git: "https://github.com/mainio/decidim-module-term_customizer", branch: "main"
 gem "decidim-amazon_translate"
 
 # Get latest CLDR changes to fix bug with count :zero
@@ -32,7 +34,7 @@ gem "bootsnap", "~> 1.3"
 
 gem "puma", ">= 5.0.0"
 
-gem "faker", "~> 2.14"
+gem "faker", "~> 3.2"
 
 gem 'hiredis'
 gem "redis", :require => ["redis", "redis/connection/hiredis"]
