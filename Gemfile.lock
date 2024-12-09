@@ -170,15 +170,6 @@ GIT
       decidim-core (= 0.28.4)
 
 GIT
-  remote: https://github.com/mainio/decidim-module-term_customizer
-  revision: 9133eea57ebfc4164b640efd1ac6b9ca1628c793
-  branch: main
-  specs:
-    decidim-term_customizer (0.28.0)
-      decidim-admin (~> 0.28.0)
-      decidim-core (~> 0.28.0)
-
-GIT
   remote: https://github.com/ruby-i18n/i18n
   revision: 3b65f6548245411bc9802f5a547954d370b57821
   branch: master
@@ -927,7 +918,6 @@ DEPENDENCIES
   decidim-amazon_translate
   decidim-decidim_awesome (~> 0.11.2)
   decidim-dev!
-  decidim-term_customizer!
   easy_translate (~> 0.5.1)
   faker (~> 3.2)
   good_job (~> 3.25)
