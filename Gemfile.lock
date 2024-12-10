@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/DecidimAustria/decidim
-  revision: c80b1266440ef895ece59d43b5da33261bcebb05
+  revision: 926802b34ccef79834acf808355f33409839ea3d
   branch: 0.28.4-live
   specs:
     decidim (0.28.4)
