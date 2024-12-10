@@ -3,7 +3,8 @@
 source "https://rubygems.org"
 
 ruby '3.1.5'
-DECIDIM_VERSION = { git: "https://github.com/DecidimAustria/decidim", branch: '0.28.4-live' }
+# DECIDIM_VERSION = { git: "https://github.com/DecidimAustria/decidim", branch: '0.28.4-live' }
+DECIDIM_VERSION = "0.28.4"
 
 gem "decidim", DECIDIM_VERSION
 #gem "decidim-alternative_landing", git: "https://github.com/DecidimAustria/decidim-module-alternative_landing", branch: 'update-to-decidim-0.27'
