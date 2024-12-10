@@ -43,3 +43,4 @@ public/sw.js.map
 
 .DS_Store
 tailwind.config.js
+yarn.lock
