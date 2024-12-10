@@ -422,7 +422,7 @@ sl:
           newsletter: Prejmite občasno glasilo z ustreznimi informacijami.
           newsletter_title: Dovoljenje za stik
           nickname_help: Vaš vzdevek v %{organization}
-          password_help: Najmanj %{minimun_characters} znakov, ne sme biti preveč predvidljivo (npr. 123456) ter biti mora drugačno od vašega vzdevka in vašega elektronskega naslova.
+          password_help: Najmanj %{minimum_characters} znakov, ne sme biti preveč predvidljivo (npr. 123456) ter biti mora drugačno od vašega vzdevka in vašega elektronskega naslova.
           sign_in: Prijava
           sign_up: Vpis
           sign_up_as:
@@ -1394,7 +1394,7 @@ sl:
         change_your_password: Spremeni svoje geslo
         confirm_new_password: Potrdi novo geslo
         new_password: Novo geslo
-        password_help: Najmanj %{minimun_characters} znakov, ne sme biti preveč vsakdanje (npr. 123456) ter biti mora drugačno od vašega vzdevka in vašega elektronskega naslova.
+        password_help: Najmanj %{minimum_characters} znakov, ne sme biti preveč vsakdanje (npr. 123456) ter biti mora drugačno od vašega vzdevka in vašega elektronskega naslova.
       new:
         forgot_your_password: Ste pozabili geslo?
         send_me_reset_password_instructions: Pošlji mi navodila za ponastavitev gesla

@@ -1607,7 +1607,7 @@ de:
         change_my_password: Ändere mein Passwort
         confirm_new_password: Bestätige neues Passwort
         new_password: Neues Passwort
-        password_help: "Mindestens %{minimun_characters} Zeichen, nicht zu gewöhnlich (z. B. 123456) und darf nicht Ihr Benutzername oder Ihre E-Mail-Adresse sein."
+        password_help: "Mindestens %{minimum_characters} Zeichen, nicht zu gewöhnlich (z. B. 123456) und darf nicht Ihr Benutzername oder Ihre E-Mail-Adresse sein."
         title: Passwort ändern
       new:
         forgot_your_password: Haben Sie Ihr Passwort vergessen?

@@ -415,7 +415,7 @@ bs:
           newsletter: Povremeno primajte bilten s relevantnim informacijama
           newsletter_title: Dopuštenje za kontakt
           nickname_help: Vaš pseudonim u organizaciji %{organization}
-          password_help: Minimalni broj znakova je %{minimun_characters}, ne smije
+          password_help: Minimalni broj znakova je %{minimum_characters}, ne smije
             biti uobičajena (npr. 123456) i mora se razlikovati od vašeg nadimka i
             adrese e-pošte.
           sign_in: Prijavite se
@@ -1592,7 +1592,7 @@ bs:
         change_your_password: Promijenite lozinku
         confirm_new_password: Potvrdi novu lozinku
         new_password: Nova lozinka
-        password_help: Minimalni broj znakova je %{minimun_characters}, ne smije biti
+        password_help: Minimalni broj znakova je %{minimum_characters}, ne smije biti
           uobičajena (npr. 123456) i mora se razlikovati od vašeg nadimka i adrese
           e-pošte.
       new:

@@ -1635,8 +1635,8 @@ tr-TR:
         change_my_password: Şifremi Değiştir
         confirm_new_password: Yeni şifreyi onayla
         new_password: Yeni Şifre
-        password_help: En az %{minimun_characters} karakter, çok yaygın olmamalı (ör. 123456) ve takma adınızdan ve e-postanızdan farklı olmalıdır.
-        password_help_admin: En az %{minimun_characters} karakter, çok yaygın olmamalı (ör. 123456), takma adınızdan ve e-posta adresinizden farklı olmalı ve eski şifrelerinizden farklı olmalıdır.
+        password_help: En az %{minimum_characters} karakter, çok yaygın olmamalı (ör. 123456) ve takma adınızdan ve e-postanızdan farklı olmalıdır.
+        password_help_admin: En az %{minimum_characters} karakter, çok yaygın olmamalı (ör. 123456), takma adınızdan ve e-posta adresinizden farklı olmalı ve eski şifrelerinizden farklı olmalıdır.
         title: Parola değişimi
       new:
         forgot_your_password: Parolanızı mı unuttunuz?

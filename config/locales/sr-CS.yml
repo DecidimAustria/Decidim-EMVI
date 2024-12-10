@@ -727,7 +727,7 @@ sr-CS:
       failure: Nije vas moguće autentificirati iz %{kind} jer "%{reason}".
     passwords:
       edit:
-        password_help_admin: Najmanje %{minimun_characters} znakova, ne smije biti
+        password_help_admin: Najmanje %{minimum_characters} znakova, ne smije biti
           previše uobičajeno (npr. 123456), mora se razlikovati od vašeg nadimka i
           vaše e-pošte i mora se razlikovati od vaših starih lozinki.
         title: Promjena lozinke
