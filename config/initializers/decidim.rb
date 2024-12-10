@@ -349,6 +349,7 @@ Decidim.configure do |config|
     "img-src": %w(https://cdn.participation.works),
     "connect-src": %w(https://cdn.participation.works),
     "frame-src": %w(www.youtube.com),
+    "script-src": %w(ma.participation.works ma.mitgestalten.jetzt),
   }
 
   # Defines data consent categories and the data stored in each category.
