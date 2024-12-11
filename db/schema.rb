@@ -313,7 +313,7 @@ ActiveRecord::Schema.define(version: 2024_12_09_112154) do
   end
 
   create_table "decidim_awesome_config", force: :cascade do |t|
-    t.string "var"
+    t.jsonb "var"
     t.jsonb "value"
     t.integer "decidim_organization_id"
     t.datetime "created_at", null: false
@@ -514,8 +514,6 @@ ActiveRecord::Schema.define(version: 2024_12_09_112154) do
     t.jsonb "permissions"
     t.datetime "published_at"
     t.string "participatory_space_type", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
     t.index ["participatory_space_id", "participatory_space_type"], name: "index_decidim_components_on_decidim_participatory_space"
   end
 
