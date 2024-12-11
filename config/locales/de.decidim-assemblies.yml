@@ -325,7 +325,7 @@ de:
             json: JSON
       assemblies:
         show:
-          title: Über dieses Organisation
+          title: Über diese Organisation
       assembly_members:
         index:
           members: Mitglieder
