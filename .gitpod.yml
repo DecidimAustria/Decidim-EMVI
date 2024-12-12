@@ -7,8 +7,8 @@ image:
 
 tasks:
   - name: server
-    before: rvm --default use "ruby-3.1.5"
-    init: bundle install && yarn install && redis-server --daemonize yes && bin/rails db:create && bin/rails db:migrate && bin/rails db:seed
+    before: source ~/.nvm/nvm.sh && nvm install 18.17.1 && rvm --default use "ruby-3.1.5"
+    init: bundle install && gem install foreman && npm install && redis-server --daemonize yes && bin/rails db:create && bin/rails db:migrate && bin/rails db:seed
     command: ./connect_local_db.sh
   #- name: webpacker
   #  before: rvm --default use "ruby-3.1.5"
@@ -19,4 +19,3 @@ vscode:
     - eamodio.gitlens
     - akamud.vscode-theme-onedark
     - rebornix.ruby
-
