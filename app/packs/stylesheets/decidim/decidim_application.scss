@@ -104,7 +104,7 @@ footer {
 	.footer_mitgestalten {
 		display: flex;
 		align-items: center;
-		justify-content: space-between;
+		justify-content: center;
 		gap: 32px;
 		margin-right: auto;
 		margin-left: auto;
@@ -117,6 +117,11 @@ footer {
 		@media (min-width: 768px) {
 			max-width: 768px;
 		}
+		@media (min-width: 1024px) {
+			max-width: 1024px;
+			padding-right: 4rem;
+			padding-left: 4rem;
+		}
 		a {
 			span {
 				display: none;
@@ -124,20 +129,28 @@ footer {
 		}
 	}
 	.mini-footer__emvi {
+		flex-wrap: wrap;
+		span,
 		a {
-			flex: 1 1 50%;
-			&:last-child {
-				img {
-					margin-left: auto;
-				}
+			flex: 0 1 40%;
+			img {
+				max-width: 150px;
+				margin-bottom: 16px;
 			}
+			img.eu {
+				max-width: 250px;
+			}
+		}
+		a {
+			display: flex;
+			justify-content: center;
 		}
 	}
 	.footer_mitgestalten {
 		flex-direction: column;
 		gap: 0;
 		img {
-			max-width: 250px;
+			max-width: 150px;
 		}
 	}
 }

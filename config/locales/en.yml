@@ -80,11 +80,11 @@ en:
       not_inside_organization: The file is not attached to any organization
   date:
     formats:
-      decidim_short: "%d/%m/%Y"
-      decidim_short_with_month_name_short: "%d %b %Y"
-      decidim_with_day_and_month_name: "%A %d %b %Y"
-      decidim_with_month_name: "%d %B %Y"
-      decidim_with_month_name_short: "%d %b"
+      decidim_short: '%d/%m/%Y'
+      decidim_short_with_month_name_short: '%d %b %Y'
+      decidim_with_day_and_month_name: '%A %d %b %Y'
+      decidim_with_month_name: '%d %B %Y'
+      decidim_with_month_name_short: '%d %b'
   datetime:
     distance_in_words:
       about_x_hours:
@@ -102,16 +102,16 @@ en:
         other: less than %{count} sec.
       x_days:
         one: 1 day ago
-        other: "%{count} days ago"
+        other: '%{count} days ago'
       x_hours:
         one: 1 hour ago
-        other: "%{count} hours ago"
+        other: '%{count} hours ago'
       x_minutes:
         one: 1 min. ago
-        other: "%{count} min. ago"
+        other: '%{count} min. ago'
       x_seconds:
         one: 1 sec. ago
-        other: "%{count} sec. ago"
+        other: '%{count} sec. ago'
         zero: right now
   decidim:
     accessibility:
@@ -161,93 +161,93 @@ en:
         notification: Admin users need to change their password every %{days} days.
     admin_log:
       area:
-        create: "%{user_name} created the %{resource_name} area"
-        delete: "%{user_name} deleted the %{resource_name} area"
-        update: "%{user_name} updated the %{resource_name} area"
+        create: '%{user_name} created the %{resource_name} area'
+        delete: '%{user_name} deleted the %{resource_name} area'
+        update: '%{user_name} updated the %{resource_name} area'
       area_type:
-        create: "%{user_name} created the %{resource_name} area type"
-        delete: "%{user_name} deleted the %{resource_name} area type"
-        update: "%{user_name} updated the %{resource_name} area type"
+        create: '%{user_name} created the %{resource_name} area type'
+        delete: '%{user_name} deleted the %{resource_name} area type'
+        update: '%{user_name} updated the %{resource_name} area type'
       attachment:
-        create: "%{user_name} created the %{resource_name} attachment"
-        delete: "%{user_name} deleted the %{resource_name} attachment"
-        update: "%{user_name} updated the %{resource_name} attachment"
+        create: '%{user_name} created the %{resource_name} attachment'
+        delete: '%{user_name} deleted the %{resource_name} attachment'
+        update: '%{user_name} updated the %{resource_name} attachment'
       attachment_collection:
-        create: "%{user_name} created the %{resource_name} attachment collection"
-        delete: "%{user_name} deleted the %{resource_name} attachment collection"
-        update: "%{user_name} updated the %{resource_name} attachment collection"
+        create: '%{user_name} created the %{resource_name} attachment collection'
+        delete: '%{user_name} deleted the %{resource_name} attachment collection'
+        update: '%{user_name} updated the %{resource_name} attachment collection'
       category:
-        create: "%{user_name} added the %{resource_name} category to the %{space_name} space"
-        delete: "%{user_name} deleted the %{resource_name} category from the %{space_name} space"
-        update: "%{user_name} updated the %{resource_name} category in the %{space_name} space"
+        create: '%{user_name} added the %{resource_name} category to the %{space_name} space'
+        delete: '%{user_name} deleted the %{resource_name} category from the %{space_name} space'
+        update: '%{user_name} updated the %{resource_name} category in the %{space_name} space'
       component:
-        create: "%{user_name} added the %{resource_name} component to the %{space_name} space"
-        delete: "%{user_name} removed the %{resource_name} component from the %{space_name} space"
-        export_component: "%{user_name} exported the %{resource_name} %{component_name} in %{space_name} as %{format_name}"
-        publish: "%{user_name} published the %{resource_name} component in the %{space_name} space"
-        unpublish: "%{user_name} unpublished the %{resource_name} component from the %{space_name} space"
-        update_permissions_with_space: "%{user_name} updated the permissions of %{resource_name} in %{space_name}"
+        create: '%{user_name} added the %{resource_name} component to the %{space_name} space'
+        delete: '%{user_name} removed the %{resource_name} component from the %{space_name} space'
+        export_component: '%{user_name} exported the %{resource_name} %{component_name} in %{space_name} as %{format_name}'
+        publish: '%{user_name} published the %{resource_name} component in the %{space_name} space'
+        unpublish: '%{user_name} unpublished the %{resource_name} component from the %{space_name} space'
+        update_permissions_with_space: '%{user_name} updated the permissions of %{resource_name} in %{space_name}'
       contextual_help_section:
-        update: "%{user_name} updated the %{resource_name} help section"
+        update: '%{user_name} updated the %{resource_name} help section'
       helpers:
         answers: answers
         comments: comments
         projects: projects
         results: results
       impersonation_log:
-        manage: "%{user_name} has managed %{resource_name} because %{reason}"
+        manage: '%{user_name} has managed %{resource_name} because %{reason}'
       moderation:
-        hide: "%{user_name} hid a resource of type %{resource_type} in the %{space_name} space"
-        unreport: "%{user_name} unreported a resource of type %{resource_type} in the %{space_name} space"
+        hide: '%{user_name} hid a resource of type %{resource_type} in the %{space_name} space'
+        unreport: '%{user_name} unreported a resource of type %{resource_type} in the %{space_name} space'
       newsletter:
-        create: "%{user_name} created the %{resource_name} newsletter"
-        delete: "%{user_name} deleted the %{resource_name} newsletter"
-        deliver: "%{user_name} delivered the %{resource_name} newsletter"
-        update: "%{user_name} updated the %{resource_name} newsletter"
+        create: '%{user_name} created the %{resource_name} newsletter'
+        delete: '%{user_name} deleted the %{resource_name} newsletter'
+        deliver: '%{user_name} delivered the %{resource_name} newsletter'
+        update: '%{user_name} updated the %{resource_name} newsletter'
       oauth_application:
-        create: "%{user_name} created the %{resource_name} OAuth application"
-        delete: "%{user_name} deleted the %{resource_name} OAuth application"
-        update: "%{user_name} updated the %{resource_name} OAuth application"
+        create: '%{user_name} created the %{resource_name} OAuth application'
+        delete: '%{user_name} deleted the %{resource_name} OAuth application'
+        update: '%{user_name} updated the %{resource_name} OAuth application'
       organization:
-        update: "%{user_name} updated the organization settings"
-        update_external_domain: "%{user_name} updated the organization external domains"
+        update: '%{user_name} updated the organization settings'
+        update_external_domain: '%{user_name} updated the organization external domains'
       participatory_space_private_user:
-        create: "%{user_name} invited %{resource_name} to be a private participant"
-        create_via_csv: "%{user_name} invited %{resource_name} via CSV to be a private participant"
-        delete: "%{user_name} removed the participant %{resource_name} as a private participant"
+        create: '%{user_name} invited %{resource_name} to be a private participant'
+        create_via_csv: '%{user_name} invited %{resource_name} via CSV to be a private participant'
+        delete: '%{user_name} removed the participant %{resource_name} as a private participant'
       scope:
-        create: "%{user_name} created the %{resource_name} scope"
-        create_with_parent: "%{user_name} created the %{resource_name} scope inside the %{parent_scope} scope"
-        delete: "%{user_name} deleted the %{resource_name} scope"
-        delete_with_parent: "%{user_name} deleted the %{resource_name} scope inside the %{parent_scope} scope"
-        update: "%{user_name} updated the %{resource_name} scope"
-        update_with_parent: "%{user_name} updated the %{resource_name} scope inside the %{parent_scope} scope"
+        create: '%{user_name} created the %{resource_name} scope'
+        create_with_parent: '%{user_name} created the %{resource_name} scope inside the %{parent_scope} scope'
+        delete: '%{user_name} deleted the %{resource_name} scope'
+        delete_with_parent: '%{user_name} deleted the %{resource_name} scope inside the %{parent_scope} scope'
+        update: '%{user_name} updated the %{resource_name} scope'
+        update_with_parent: '%{user_name} updated the %{resource_name} scope inside the %{parent_scope} scope'
       scope_type:
-        create: "%{user_name} created the %{resource_name} scope type"
-        delete: "%{user_name} deleted the %{resource_name} scope type"
-        update: "%{user_name} updated the %{resource_name} scope type"
+        create: '%{user_name} created the %{resource_name} scope type'
+        delete: '%{user_name} deleted the %{resource_name} scope type'
+        update: '%{user_name} updated the %{resource_name} scope type'
       static_page:
-        create: "%{user_name} created the %{resource_name} static page"
-        delete: "%{user_name} deleted the %{resource_name} static page"
-        update: "%{user_name} updated the %{resource_name} static page"
+        create: '%{user_name} created the %{resource_name} static page'
+        delete: '%{user_name} deleted the %{resource_name} static page'
+        update: '%{user_name} updated the %{resource_name} static page'
       user:
-        block: "%{user_name} blocked user %{resource_name}"
-        invite: "%{user_name} invited the participant %{resource_name} with role: %{role}"
-        officialize: "%{user_name} officialized the participant %{resource_name}"
-        promote: "%{user_name} has promoted %{resource_name}"
-        remove_from_admin: "%{user_name} removed the participant %{resource_name} with role: %{role}"
-        show_email: "%{user_name} retrieved the email of the participant %{resource_name}"
-        transfer: "%{user_name} transfered the participant %{resource_name}"
-        unblock: "%{user_name} unblocked user %{resource_name}"
-        unofficialize: "%{user_name} unofficialized the participant %{resource_name}"
+        block: '%{user_name} blocked user %{resource_name}'
+        invite: '%{user_name} invited the participant %{resource_name} with role: %{role}'
+        officialize: '%{user_name} officialized the participant %{resource_name}'
+        promote: '%{user_name} has promoted %{resource_name}'
+        remove_from_admin: '%{user_name} removed the participant %{resource_name} with role: %{role}'
+        show_email: '%{user_name} retrieved the email of the participant %{resource_name}'
+        transfer: '%{user_name} transfered the participant %{resource_name}'
+        unblock: '%{user_name} unblocked user %{resource_name}'
+        unofficialize: '%{user_name} unofficialized the participant %{resource_name}'
       user_group:
-        reject: "%{user_name} rejected the %{resource_name} group verification"
-        verify: "%{user_name} verified the group %{resource_name}"
-        verify_via_csv: "%{user_name} verified the group %{resource_name} via a CSV file"
+        reject: '%{user_name} rejected the %{resource_name} group verification'
+        verify: '%{user_name} verified the group %{resource_name}'
+        verify_via_csv: '%{user_name} verified the group %{resource_name} via a CSV file'
       user_moderation:
-        unreport: "%{user_name} unreported an %{resource_type} - %{unreported_user_name}"
+        unreport: '%{user_name} unreported an %{resource_type} - %{unreported_user_name}'
     admin_terms_of_use:
-      default_body: "<h2>ADMIN TERMS OF USE</h2><p>We trust you have received the usual lecture from the local System Administrator. It usually boils down to these three things:</p><ol><li>Respect the privacy of others.</li><li>Think before you click.</li><li>With great power comes great responsibility.</li></ol>"
+      default_body: '<h2>ADMIN TERMS OF USE</h2><p>We trust you have received the usual lecture from the local System Administrator. It usually boils down to these three things:</p><ol><li>Respect the privacy of others.</li><li>Think before you click.</li><li>With great power comes great responsibility.</li></ol>'
     alert:
       dismiss: Dismiss notification
     amendments:
@@ -395,7 +395,7 @@ en:
         incomplete:
           cancel: Cancel
           explanation: 'Even though you''re currently authorized with "%{authorization}", we need you to reauthorize because we lack the following data:'
-          invalid_field: "%{field}"
+          invalid_field: '%{field}'
           reauthorize: Reauthorize
           title: Please reauthorize
         missing:
@@ -414,7 +414,7 @@ en:
           ok: Ok
           title: Not authorized
         unconfirmed:
-          confirmation_instructions: 'If you haven''t received the confirmation instructions you can request them again:'
+          confirmation_instructions: "If you haven't received the confirmation instructions you can request them again:"
           explanation_html: In order to perform this action you need to be authorized, before doing that you need to confirm your email <strong>%{email}</strong>.
           request_confirmation_instructions: Request confirmation instructions
           title: Confirm your email
@@ -431,8 +431,8 @@ en:
       hidden_elements_count:
         one: and %{count} more
         other: and %{count} more
-      see_less: "(see less)"
-      see_more: "(see more)"
+      see_less: '(see less)'
+      see_more: '(see more)'
     components:
       component_order_selector:
         no_content: We couldn\'t find any content with this criteria
@@ -585,7 +585,7 @@ en:
           this_application_will_be_able_to: 'This application will be able to:'
           this_application_will_not_be_able_to: 'This application will not be able to:'
           update_profile: Update your profile
-          wants_to_use_your_account_html: "<strong>%{application_name}</strong> wants to use your account"
+          wants_to_use_your_account_html: '<strong>%{application_name}</strong> wants to use your account'
     download_your_data:
       export:
         ready: Ready
@@ -683,7 +683,7 @@ en:
         badge_earned:
           email_intro: Congratulations! You've earned the <a href="%{resource_url}">%{badge_name} badge</a> (level %{current_level}).
           email_outro: You have received this notification because you made activity on our website.
-          email_subject: 'You''ve earned a new badge: %{badge_name}!'
+          email_subject: "You've earned a new badge: %{badge_name}!"
           notification_title: Congratulations! You've earned the <a href="%{resource_path}">%{badge_name} badge</a> (level %{current_level}).
         level_up:
           email_intro: Congratulations! You've reached level %{current_level} on the <a href="%{resource_url}">%{badge_name} badge</a>!
@@ -751,18 +751,18 @@ en:
       resource_endorsed:
         email_intro: '%{endorser_name} %{endorser_nickname}, who you are following, has just endorsed "%{resource_title}" and we think it may be interesting to you. Check it out and contribute:'
         email_outro: You have received this notification because you are following %{endorser_nickname}. You can stop receiving notifications following the previous link.
-        email_subject: "%{endorser_nickname} has performed a new endorsement"
+        email_subject: '%{endorser_nickname} has performed a new endorsement'
         notification_title: The <a href="%{resource_path}">%{resource_title}</a> %{resource_type} has been endorsed by <a href="%{endorser_path}">%{endorser_name} %{endorser_nickname}</a>.
       users:
         profile_updated:
           email_intro: The <a href="%{resource_url}">profile page</a> of %{name} (%{nickname}), who you are following, has been updated.
           email_outro: You have received this notification because you are following %{nickname}. You can stop receiving notifications following the previous link.
-          email_subject: "%{nickname} updated their profile"
+          email_subject: '%{nickname} updated their profile'
           notification_title: The <a href="%{resource_path}">profile page</a> of %{name} (%{nickname}), who you are following, has been updated.
         user_officialized:
           email_intro: Participant %{name} (%{nickname}) has been officialized.
           email_outro: You have received this notification because you are an administrator of the organization.
-          email_subject: "%{name} has been officialized"
+          email_subject: '%{name} has been officialized'
           notification_title: Participant %{name} (%{nickname}) has been officialized.
     export_mailer:
       download_your_data_export:
@@ -790,8 +790,8 @@ en:
       value: Value
     followers:
       followers_count:
-        one: "%{count} follower"
-        other: "%{count} followers"
+        one: '%{count} follower'
+        other: '%{count} followers'
       no_followers: No followers yet.
     following:
       no_followings: Doesn't follow anyone or anything yet.
@@ -856,16 +856,16 @@ en:
       badges:
         followers:
           conditions:
-          - Being active and following other people will surely make other people follow you.
+            - Being active and following other people will surely make other people follow you.
           description: This badge is granted when you reach a certain number of followers. %{organization_name} is a social and political network, weave your web to communicate with other people in the platform.
           description_another: This participant has %{score} followers.
-          description_own: "%{score} people are following you."
+          description_own: '%{score} people are following you.'
           name: Followers
           next_level_in: Get %{score} more people to follow you to reach the next level!
           unearned_another: This participant doesn't have any followers yet.
           unearned_own: You've got no followers yet.
         index:
-          badge_title: "%{name} badge"
+          badge_title: '%{name} badge'
           how: How can you earn it
           page_description: Badges are recognitions to participant actions and progress in the platform. As you start discovering, participating and interacting in the platform, you will earn different badges. Here is the list of badges and some ways you can earn them.
           title: Badges
@@ -982,15 +982,15 @@ en:
         title: Open external link
     log:
       base_presenter:
-        create: "%{user_name} created %{resource_name}"
-        create_with_space: "%{user_name} created %{resource_name} in %{space_name}"
-        delete: "%{user_name} deleted %{resource_name}"
-        delete_with_space: "%{user_name} deleted %{resource_name} in %{space_name}"
-        unknown_action: "%{user_name} performed some action on %{resource_name}"
-        unknown_action_with_space: "%{user_name} performed some action on %{resource_name} in %{space_name}"
-        update: "%{user_name} updated %{resource_name}"
-        update_permissions_with_space: "%{user_name} updated the permissions of %{resource_name} in %{space_name}"
-        update_with_space: "%{user_name} updated %{resource_name} in %{space_name}"
+        create: '%{user_name} created %{resource_name}'
+        create_with_space: '%{user_name} created %{resource_name} in %{space_name}'
+        delete: '%{user_name} deleted %{resource_name}'
+        delete_with_space: '%{user_name} deleted %{resource_name} in %{space_name}'
+        unknown_action: '%{user_name} performed some action on %{resource_name}'
+        unknown_action_with_space: '%{user_name} performed some action on %{resource_name} in %{space_name}'
+        update: '%{user_name} updated %{resource_name}'
+        update_permissions_with_space: '%{user_name} updated the permissions of %{resource_name} in %{space_name}'
+        update_with_space: '%{user_name} updated %{resource_name} in %{space_name}'
       value_types:
         area_presenter:
           not_found: 'The area was not found on the database (ID: %{id})'
@@ -1019,35 +1019,35 @@ en:
         comanagers_new_conversation:
           admin_in_group: You are receiving this because you are an admin in %{group}.
           greeting: Hi, %{recipient}!
-          intro: "%{manager} has started a new conversation in the name of %{group}. Click here to see it:"
+          intro: '%{manager} has started a new conversation in the name of %{group}. Click here to see it:'
           outro: Enjoy decidim!
-          subject: "%{manager} has started a new conversation as a %{group}"
+          subject: '%{manager} has started a new conversation as a %{group}'
         comanagers_new_message:
           admin_in_group: You are receiving this because you are an admin in %{group}.
           greeting: Hi, %{recipient}!
-          intro: "%{manager} has posted new messages in a conversation in the name of %{group}. Click here to see them:"
+          intro: '%{manager} has posted new messages in a conversation in the name of %{group}. Click here to see them:'
           outro: Enjoy decidim!
-          subject: "%{manager} has send new messages as a %{group}"
+          subject: '%{manager} has send new messages as a %{group}'
         new_conversation:
           greeting: Hi, %{recipient}!
-          intro: "%{sender} has started a new conversation with you. Click here to see it:"
+          intro: '%{sender} has started a new conversation with you. Click here to see it:'
           outro: Enjoy decidim!
-          subject: "%{sender} has started a conversation with you"
+          subject: '%{sender} has started a conversation with you'
         new_group_conversation:
           admin_in_group: You are receiving this because you are an admin in %{group}.
           greeting: Hi, %{recipient}!
-          intro: "%{sender} has started a new conversation with the group %{group}. Click here to see it:"
+          intro: '%{sender} has started a new conversation with the group %{group}. Click here to see it:'
           outro: Enjoy decidim!
-          subject: "%{sender} has started a conversation with %{group}"
+          subject: '%{sender} has started a conversation with %{group}'
         new_group_message:
           admin_in_group: You are receiving this because you are an admin in %{group}.
           greeting: Hi, %{recipient}!
-          intro: "%{sender} has posted new messages in a conversation with the group %{group}. Click here to see it:"
+          intro: '%{sender} has posted new messages in a conversation with the group %{group}. Click here to see it:'
           outro: Enjoy decidim!
-          subject: "%{group} have new messages from %{sender}"
+          subject: '%{group} have new messages from %{sender}'
         new_message:
           greeting: Hi, %{recipient}!
-          intro: "%{sender} has posted new messages in your conversation. Click here to see them:"
+          intro: '%{sender} has posted new messages in your conversation. Click here to see them:'
           outro: Enjoy decidim!
           subject: You have new messages from %{sender}
       conversations:
@@ -1365,8 +1365,8 @@ en:
         unfold: Unfold
       results:
         results:
-          one: "%{count} result"
-          other: "%{count} results"
+          one: '%{count} result'
+          other: '%{count} results'
         view_all: View all (%{count})
     security:
       selfxss_warning:
@@ -1453,7 +1453,7 @@ en:
       filter_results_for_category: 'Filter results for category: %{resource}'
       filter_results_for_scope: 'Filter results for scope: %{resource}'
     translation_bar:
-      help_text: "<strong>Notice:</strong> Content might be automatically translated and not be 100% accurate."
+      help_text: '<strong>Notice:</strong> Content might be automatically translated and not be 100% accurate.'
       show_original: Show original text
       show_translated: Show automatically-translated text
     user_activity:
@@ -1478,7 +1478,7 @@ en:
         no_conversations_warning: There are no conversations yet.
         no_results: No results
         participant_with_disabled_message_reception: This participant has disabled message reception
-        time_ago: "%{time} ago"
+        time_ago: '%{time} ago'
       new:
         title: Start a conversation
       reply:
@@ -1518,13 +1518,13 @@ en:
         version_author: Version author
         version_created_at: Version created at
         version_number: Version number
-        version_number_out_of_total: "%{current_version} out of %{total_count}"
+        version_number_out_of_total: '%{current_version} out of %{total_count}'
     version_author:
       show:
         deleted: Deleted participant
     versions:
       resource_version:
-        of_versions: "(of %{number})"
+        of_versions: '(of %{number})'
         see_other_versions: see other versions
         version: Version number %{number}
     versions_list:
@@ -1596,8 +1596,8 @@ en:
         ignore: |-
           If you don't want to accept the invitation, please ignore this email.<br />
           Your account won't be created until you access the link above and set your nickname and password.
-        invited_you_as_admin: "%{invited_by} has invited you as an admin of %{application}. You can accept it through the link below."
-        invited_you_as_private_user: "%{invited_by} has invited you as a private participant of %{application}. You can accept it through the link below."
+        invited_you_as_admin: '%{invited_by} has invited you as an admin of %{application}. You can accept it through the link below.'
+        invited_you_as_private_user: '%{invited_by} has invited you as a private participant of %{application}. You can accept it through the link below.'
         someone_invited_you: Someone has invited you to %{application}. You can accept it through the link below.
         someone_invited_you_as_admin: Someone has invited you as an admin of %{application}, you can accept it through the link below.
         someone_invited_you_as_private_user: Someone has invited you as private participant of %{application}, you can accept it through the link below.
@@ -1635,8 +1635,8 @@ en:
         change_my_password: Change my password
         confirm_new_password: Confirm new password
         new_password: New password
-        password_help: "%{minimum_characters} characters minimum, must not be too common (e.g. 123456) and must be different from your nickname and your email."
-        password_help_admin: "%{minimum_characters} characters minimum, must not be too common (e.g. 123456), must be different from your nickname and your email and must be different from your old passwords."
+        password_help: '%{minimum_characters} characters minimum, must not be too common (e.g. 123456) and must be different from your nickname and your email.'
+        password_help_admin: '%{minimum_characters} characters minimum, must not be too common (e.g. 123456), must be different from your nickname and your email and must be different from your old passwords.'
         title: Password change
       new:
         forgot_your_password: Forgot your password?
@@ -1672,8 +1672,8 @@ en:
         sign_in_with_provider: Sign in with %{provider}
         sign_up: Sign up
       minimum_password_length:
-        one: "(%{count} character minimum)"
-        other: "(%{count} characters minimum)"
+        one: '(%{count} character minimum)'
+        other: '(%{count} characters minimum)'
     unlocks:
       new:
         resend_unlock_instructions: Resend unlock instructions
@@ -1699,7 +1699,7 @@ en:
       not_found: could not be found. Did you sign up previously?
       not_locked: was not locked
       not_saved:
-        one: 'There''s been an error processing your request:'
+        one: "There's been an error processing your request:"
         other: 'There were multiple errors when processing your request:'
       too_many_marks: is using too many consecutive punctuation marks (e.g. ! and ?)
       too_much_caps: is using too many capital letters (over 25% of the text)
@@ -1711,7 +1711,7 @@ en:
         one: At least %{count} character
         other: At least %{count} characters
     required: Required field
-    required_explanation: "* Required fields are marked with an asterisk"
+    required_explanation: '* Required fields are marked with an asterisk'
   invisible_captcha:
     sentence_for_humans: If you are human, ignore this field
     timestamp_error_message: Sorry, that was too quick! Please resubmit.
@@ -1793,11 +1793,11 @@ en:
       offline_banner:
         cache_version_page: Oooops! Your network is offline. This is a previously cached version of the page you're visiting, perhaps the content is not up to date.
       social_media_links:
-        facebook: "%{organization} at Facebook"
-        github: "%{organization} at GitHub"
-        instagram: "%{organization} at Instagram"
-        twitter: "%{organization} at Twitter"
-        youtube: "%{organization} at YouTube"
+        facebook: '%{organization} at Facebook'
+        github: '%{organization} at GitHub'
+        instagram: '%{organization} at Instagram'
+        twitter: '%{organization} at Twitter'
+        youtube: '%{organization} at YouTube'
       timeout_modal:
         body: You have been inactive for %{minutes} minutes. If you continue being inactive, you will be automatically signed out for your own security.
         continue_session: Continue session
@@ -1866,23 +1866,23 @@ en:
     xing: Xing
   time:
     formats:
-      day_of_month: "%b %d"
-      day_of_week: "%a"
-      day_of_week_long: "%a %e"
-      day_of_year: "%d.%m.%y"
-      ddmm: "%d.%m"
-      ddmmyyyy: "%d.%m.%Y"
-      decidim_day_of_year: "%d %B %Y"
-      decidim_short: "%d/%m/%Y %H:%M"
-      default: "%a, %d %b %Y %H:%M:%S %z"
+      day_of_month: '%b %d'
+      day_of_week: '%a'
+      day_of_week_long: '%a %e'
+      day_of_year: '%d.%m.%y'
+      ddmm: '%d.%m'
+      ddmmyyyy: '%d.%m.%Y'
+      decidim_day_of_year: '%d %B %Y'
+      decidim_short: '%d/%m/%Y %H:%M'
+      default: '%a, %d %b %Y %H:%M:%S %z'
       devise:
         mailer:
           invitation_instructions:
-            accept_until_format: "%B %d, %Y %I:%M %p"
-      long: "%B %d, %Y %H:%M"
-      long_dashed: "%Y-%m-%d %H:%M:%S"
-      short: "%d/%m/%Y %H:%M"
-      time_of_day: "%H:%M"
+            accept_until_format: '%B %d, %Y %I:%M %p'
+      long: '%B %d, %Y %H:%M'
+      long_dashed: '%Y-%m-%d %H:%M:%S'
+      short: '%d/%m/%Y %H:%M'
+      time_of_day: '%H:%M'
   versions:
     directions:
       left: Deletions
@@ -1897,14 +1897,16 @@ en:
       option_unified: Unified
   views:
     pagination:
-      first: "&laquo; First"
+      first: '&laquo; First'
       first_title: Link to the first page
       last: Last &raquo;
       last_title: Link to the last page
       next: Next &rsaquo;
       next_title: Link to the next page
       pagination: Pagination
-      previous: "&lsaquo; Prev"
+      previous: '&lsaquo; Prev'
       previous_title: Link to the previous page
       title: 'Page number: '
-      truncate: "&hellip;"
+      truncate: '&hellip;'
+  emvi:
+    eu: Co-funded by the European Union. Views and opinions expressed are however those of the author(s) only and do not necessarily reflect those of the European Union. Neither the European Union can be held responsible for them.

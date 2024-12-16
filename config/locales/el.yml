@@ -37,39 +37,39 @@ el:
       not_inside_organization: Το αρχείο δεν επισυνάπτεται σε κανέναν οργανισμό
   date:
     abbr_month_names:
-    - 
-    - Ιαν
-    - Φεβ
-    - Μάρ
-    - Απρ
-    - Μάιος
-    - Ιούν
-    - Ιούλ
-    - Αύγ
-    - Σέπ
-    - Οκτ
-    - Νοέ
-    - Δεκ
+      -
+      - Ιαν
+      - Φεβ
+      - Μάρ
+      - Απρ
+      - Μάιος
+      - Ιούν
+      - Ιούλ
+      - Αύγ
+      - Σέπ
+      - Οκτ
+      - Νοέ
+      - Δεκ
     formats:
-      decidim_short: "%d/%m/%Y"
-      decidim_short_with_month_name_short: "%d %b %Y"
-      decidim_with_day_and_month_name: "%A %d %b %Y"
-      decidim_with_month_name: "%d %B %Y"
-      decidim_with_month_name_short: "%d %b"
+      decidim_short: '%d/%m/%Y'
+      decidim_short_with_month_name_short: '%d %b %Y'
+      decidim_with_day_and_month_name: '%A %d %b %Y'
+      decidim_with_month_name: '%d %B %Y'
+      decidim_with_month_name_short: '%d %b'
     month_names:
-    - 
-    - Ιανουάριος
-    - Φεβρουάριος
-    - Μάρτιος
-    - Απρίλιος
-    - Μάιος
-    - Ιούνιος
-    - Ιούλιος
-    - Αύγουστος
-    - Σεπτέμβριος
-    - Οκτώβριος
-    - Νοέμβριος
-    - Δεκέμβριος
+      -
+      - Ιανουάριος
+      - Φεβρουάριος
+      - Μάρτιος
+      - Απρίλιος
+      - Μάιος
+      - Ιούνιος
+      - Ιούλιος
+      - Αύγουστος
+      - Σεπτέμβριος
+      - Οκτώβριος
+      - Νοέμβριος
+      - Δεκέμβριος
   datetime:
     distance_in_words:
       about_x_hours:
@@ -90,13 +90,13 @@ el:
         other: Πριν από %{count} ημέρες
       x_hours:
         one: Πριν από 1 ώρα
-        other: "%{count} ώρες πριν"
+        other: '%{count} ώρες πριν'
       x_minutes:
         one: 1 λεπτό. πριν
-        other: "%{count} λεπτά. πριν"
+        other: '%{count} λεπτά. πριν'
       x_seconds:
         one: 1 δευτερόλεπτο. πριν
-        other: "%{count} δευτ. πριν"
+        other: '%{count} δευτ. πριν'
         zero: τώρα αμέσως
   decidim:
     accessibility:
@@ -373,7 +373,7 @@ el:
           meeting_report: Αναφορές εκδηλώσεων
           pending: Εκδηλώσεις με εκκρεμούσα αναφορά
       last_activity:
-        meeting_updated_at_html: "<span>Εκδήλωση επικαιροποιήθηκε στις %{link}</span>"
+        meeting_updated_at_html: '<span>Εκδήλωση επικαιροποιήθηκε στις %{link}</span>'
       meeting_closes:
         edit:
           close: Κλείσιμο εκδήλωσης
@@ -464,10 +464,10 @@ el:
     participatory_spaces:
       highlighted_meetings:
         see_all_button: Προβολή όλων
-        see_all_count: "(δείτε και τις %{count})"
+        see_all_count: '(δείτε και τις %{count})'
       highlighted_proposals:
         see_all_button: Προβολή όλων
-        see_all_count: "(δείτε και τις %{count})"
+        see_all_count: '(δείτε και τις %{count})'
     passwords:
       update:
         error: Παρουσιάστηκε πρόβλημα με την ενημέρωση του κωδικού πρόσβασης
@@ -483,13 +483,13 @@ el:
           proposals: Ιδέες
       proposals:
         edit:
-          gallery_legend: "(Προαιρετικά) Προσθήκη εικόνας στην κάρτα ιδέας"
+          gallery_legend: '(Προαιρετικά) Προσθήκη εικόνας στην κάρτα ιδέας'
         index:
           heading: Μοιραστείτε την ιδέα σας μαζί μας
           subheading1: Μπορείτε να μοιραστείτε τις δικές σας ιδέες και να βρείτε άλλες ιδέες. Συμμετέχετε στη συζήτηση με ένα σχόλιο ή ψηφίστε τις ιδέες που σας αρέσουν ώστε να τις βρουν περισσότεροι άνθρωποι.
         preview:
           announcement_body: Έχετε τη δυνατότητα να ελέγξετε και να τροποποιήσετε την ιδέα σας. Μόλις η ιδέα σας είναι έτοιμη, πατήστε «Δημοσίευση» και θα εμφανιστεί στην πλατφόρμα.
-          announcement_title: "<b>Υπάρχει ένα τελευταίο βήμα που πρέπει να ολοκληρώσετε προτού μπορέσετε να δημοσιεύσετε την ιδέα σας.</b>"
+          announcement_title: '<b>Υπάρχει ένα τελευταίο βήμα που πρέπει να ολοκληρώσετε προτού μπορέσετε να δημοσιεύσετε την ιδέα σας.</b>'
     reported_mailer:
       report:
         content_original_language: Πρωτότυπη γλώσσα περιεχομένου
@@ -649,26 +649,28 @@ el:
     password_repeated: δεν είναι δυνατή η επαναχρησιμοποίηση του παλιού κωδικού πρόσβασης
   time:
     formats:
-      day_of_month: "%b %d"
-      day_of_week: "%ένα"
-      day_of_week_long: "%a %e"
-      day_of_year: "%d.%m.%y"
-      ddmm: "%d.%m"
-      ddmmyyyy: "%d.%m.%Y"
-      decidim_day_of_year: "%d %B %Y"
-      decidim_short: "%d/%m/%Y %H:%M"
-      default: "%a, %d %b %Y %H:%M:%S %z"
+      day_of_month: '%b %d'
+      day_of_week: '%ένα'
+      day_of_week_long: '%a %e'
+      day_of_year: '%d.%m.%y'
+      ddmm: '%d.%m'
+      ddmmyyyy: '%d.%m.%Y'
+      decidim_day_of_year: '%d %B %Y'
+      decidim_short: '%d/%m/%Y %H:%M'
+      default: '%a, %d %b %Y %H:%M:%S %z'
       devise:
         mailer:
           invitation_instructions:
-            accept_until_format: "%B %d, %Y %I:%M %p"
-      long: "%B %d, %Y %H:%M"
-      long_dashed: "%Y-%m-%d %H:%M:%S"
-      short: "%d/%m/%Y %H:%M"
-      time_of_day: "%H:%M"
+            accept_until_format: '%B %d, %Y %I:%M %p'
+      long: '%B %d, %Y %H:%M'
+      long_dashed: '%Y-%m-%d %H:%M:%S'
+      short: '%d/%m/%Y %H:%M'
+      time_of_day: '%H:%M'
   versions:
     dropdown:
       choose_diff_view_mode_menu: Επιλέξτε λειτουργία σύγκρισης
   views:
     pagination:
-      truncate: "&hellip;"
+      truncate: '&hellip;'
+  emvi:
+    eu: Συγχρηματοδοτείται από την Ευρωπαϊκή Ένωση. Οι απόψεις και οι γνώμες που εκφράζονται είναι ωστόσο μόνο αυτές του/των συγγραφέα/συγγραφέων και δεν αντικατοπτρίζουν απαραίτητα εκείνες της Ευρωπαϊκής Ένωσης. Ούτε η Ευρωπαϊκή Ένωση μπορεί να θεωρηθεί υπεύθυνη για αυτές.
