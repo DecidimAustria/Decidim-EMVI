@@ -16,17 +16,20 @@
     </a>
   </div>
   <div class="mini-footer__emvi">
-    <a rel="noopener noreferrer"
+    <span class="text-xs">
+      <a rel="noopener noreferrer"
         href="https://european-union.europa.eu/"
         target="_blank"
         class="icona">
-        <%= image_pack_tag("media/images/Co-Funded-EU_POS.png", alt: "Co-Funded by the European Union") %>
-    </a>
+        <%= image_pack_tag("media/images/Co-Funded-EU_POS.png", alt: "Co-Funded by the European Union", class:'eu') %>
+      </a>
+      <%= t("emvi.eu") %>
+    </span>
     <a rel="noopener noreferrer"
         href="https://diaspora-participation.eu/"
         target="_blank"
         class="icona">
-        <%= image_pack_tag("media/images/Emvi_logo_OK.png", alt: "EMVI: Empowering Migrant Voices") %>
+        <%= image_pack_tag("media/images/EMV-LII_logo.png", alt: "EMVI: Empowering Migrant Voices") %>
     </a>
     <% if current_organization.official_img_footer.attached? %>
         <%= link_to current_organization.official_url, class: "icona" do %>

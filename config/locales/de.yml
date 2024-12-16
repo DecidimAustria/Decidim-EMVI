@@ -79,11 +79,11 @@ de:
       not_inside_organization: Die Datei ist keiner Organisation hinzugefügt
   date:
     formats:
-      decidim_short: "%d/%m/%Y"
-      decidim_short_with_month_name_short: "%d %b %Y"
-      decidim_with_day_and_month_name: "%A, %d. %b %Y"
-      decidim_with_month_name: "%d %B %Y"
-      decidim_with_month_name_short: "%d. %b"
+      decidim_short: '%d/%m/%Y'
+      decidim_short_with_month_name_short: '%d %b %Y'
+      decidim_with_day_and_month_name: '%A, %d. %b %Y'
+      decidim_with_month_name: '%d %B %Y'
+      decidim_with_month_name_short: '%d. %b'
   datetime:
     distance_in_words:
       about_x_hours:
@@ -101,21 +101,21 @@ de:
         other: weniger als %{count} Sekunden
       x_days:
         one: Vor 1 Tag
-        other: "Vor %{count} Tagen"
+        other: 'Vor %{count} Tagen'
       x_hours:
         one: Vor 1 Stunde
-        other: "Vor %{count} Stunden"
+        other: 'Vor %{count} Stunden'
       x_minutes:
         one: Vor 1 Minute
-        other: "Vor %{count} Minuten"
+        other: 'Vor %{count} Minuten'
       x_seconds:
         one: Vor 1 Sekunde
-        other: "Vor %{count} Sekunden"
+        other: 'Vor %{count} Sekunden'
   decidim:
     accessibility:
       external_link: Externer Link
       front_page_link: Zur Startseite gehen
-      logo: "Offizielles Logo von %{organization}"
+      logo: 'Offizielles Logo von %{organization}'
       skip_button: Zu Hauptinhalten überspringen
     account:
       blocked: Dieses Konto wurde wegen Verletzung der Allgemeinen Geschäftsbedingungen gesperrt
@@ -158,88 +158,88 @@ de:
         notification: Administratoren müssen ihr Passwort alle %{days} Tage ändern.
     admin_log:
       area:
-        create: "%{user_name} hat den Bereich %{resource_name} erstellt"
-        delete: "%{user_name} hat den Bereich %{resource_name} gelöscht"
-        update: "%{user_name} hat den Bereich %{resource_name} aktualisiert"
+        create: '%{user_name} hat den Bereich %{resource_name} erstellt'
+        delete: '%{user_name} hat den Bereich %{resource_name} gelöscht'
+        update: '%{user_name} hat den Bereich %{resource_name} aktualisiert'
       area_type:
-        create: "%{user_name} hat den Bereichstyp %{resource_name} erstellt"
-        delete: "%{user_name} hat den Bereichstyp %{resource_name} gelöscht"
-        update: "%{user_name} hat den Bereichstyp %{resource_name} aktualisiert"
+        create: '%{user_name} hat den Bereichstyp %{resource_name} erstellt'
+        delete: '%{user_name} hat den Bereichstyp %{resource_name} gelöscht'
+        update: '%{user_name} hat den Bereichstyp %{resource_name} aktualisiert'
       attachment:
-        create: "%{user_name} hat den Anhang %{resource_name} erstellt"
-        delete: "%{user_name} hat den Anhang %{resource_name} gelöscht"
-        update: "%{user_name} hat den Anhang %{resource_name} aktualisiert"
+        create: '%{user_name} hat den Anhang %{resource_name} erstellt'
+        delete: '%{user_name} hat den Anhang %{resource_name} gelöscht'
+        update: '%{user_name} hat den Anhang %{resource_name} aktualisiert'
       attachment_collection:
-        create: "%{user_name} hat den Ordner %{resource_name} erstellt"
-        delete: "%{user_name} hat den Ordner %{resource_name} gelöscht"
-        update: "%{user_name} hat den Ordner %{resource_name} aktualisiert"
+        create: '%{user_name} hat den Ordner %{resource_name} erstellt'
+        delete: '%{user_name} hat den Ordner %{resource_name} gelöscht'
+        update: '%{user_name} hat den Ordner %{resource_name} aktualisiert'
       category:
-        create: "%{user_name} hat die Kategorie %{resource_name} im Bereich %{space_name} hinzugefügt"
-        delete: "%{user_name} hat die Kategorie %{resource_name} im Bereich %{space_name} gelöscht"
-        update: "%{user_name} hat die Kategorie %{resource_name} im Bereich %{space_name} aktualisiert"
+        create: '%{user_name} hat die Kategorie %{resource_name} im Bereich %{space_name} hinzugefügt'
+        delete: '%{user_name} hat die Kategorie %{resource_name} im Bereich %{space_name} gelöscht'
+        update: '%{user_name} hat die Kategorie %{resource_name} im Bereich %{space_name} aktualisiert'
       component:
-        create: "%{user_name} hat die Komponente %{resource_name} zu %{space_name} hinzugefügt"
-        delete: "%{user_name} hat die Komponente %{resource_name} aus %{space_name} entfernt"
-        export_component: "%{user_name} hat %{resource_name} %{component_name} in %{space_name} als %{format_name} exportiert"
-        publish: "%{user_name} hat die Komponente %{resource_name} in %{space_name} veröffentlicht"
-        unpublish: "%{user_name} hat die Komponente %{resource_name} in %{space_name} auf \"unveröffentlicht\" gesetzt"
-        update_permissions_with_space: "%{user_name} hat die Berechtigungen für %{resource_name} in %{space_name} aktualisiert"
+        create: '%{user_name} hat die Komponente %{resource_name} zu %{space_name} hinzugefügt'
+        delete: '%{user_name} hat die Komponente %{resource_name} aus %{space_name} entfernt'
+        export_component: '%{user_name} hat %{resource_name} %{component_name} in %{space_name} als %{format_name} exportiert'
+        publish: '%{user_name} hat die Komponente %{resource_name} in %{space_name} veröffentlicht'
+        unpublish: '%{user_name} hat die Komponente %{resource_name} in %{space_name} auf "unveröffentlicht" gesetzt'
+        update_permissions_with_space: '%{user_name} hat die Berechtigungen für %{resource_name} in %{space_name} aktualisiert'
       contextual_help_section:
-        update: "%{user_name} hat den Hilfebereich %{resource_name} aktualisiert"
+        update: '%{user_name} hat den Hilfebereich %{resource_name} aktualisiert'
       helpers:
         answers: antworten
         comments: kommentare
         projects: projekte
         results: ergebnisse
       impersonation_log:
-        manage: "%{user_name} hat %{resource_name} verwaltet, weil %{reason}"
+        manage: '%{user_name} hat %{resource_name} verwaltet, weil %{reason}'
       moderation:
-        hide: "%{user_name} hat eine Ressource vom Typ %{resource_type} in %{space_name} versteckt"
-        unreport: "%{user_name} hat die Meldung einer Ressource vom Typ %{resource_type} in %{space_name} aufgehoben"
+        hide: '%{user_name} hat eine Ressource vom Typ %{resource_type} in %{space_name} versteckt'
+        unreport: '%{user_name} hat die Meldung einer Ressource vom Typ %{resource_type} in %{space_name} aufgehoben'
       newsletter:
-        create: "%{user_name} hat den Newsletter %{resource_name} erstellt"
-        delete: "%{user_name} hat den Newsletter %{resource_name} gelöscht"
-        deliver: "%{user_name} hat den Newsletter %{resource_name} abgesendet"
-        update: "%{user_name} hat den Newsletter %{resource_name} aktualisiert"
+        create: '%{user_name} hat den Newsletter %{resource_name} erstellt'
+        delete: '%{user_name} hat den Newsletter %{resource_name} gelöscht'
+        deliver: '%{user_name} hat den Newsletter %{resource_name} abgesendet'
+        update: '%{user_name} hat den Newsletter %{resource_name} aktualisiert'
       oauth_application:
-        create: "%{user_name} hat die OAuth-Applikation %{resource_name} erstellt"
-        delete: "%{user_name} hat die OAuth-Applikation %{resource_name} gelöscht"
-        update: "%{user_name} hat die OAuth-Applikation %{resource_name} aktualisiert"
+        create: '%{user_name} hat die OAuth-Applikation %{resource_name} erstellt'
+        delete: '%{user_name} hat die OAuth-Applikation %{resource_name} gelöscht'
+        update: '%{user_name} hat die OAuth-Applikation %{resource_name} aktualisiert'
       organization:
-        update: "%{user_name} hat die Organisationseinstellungen aktualisiert"
+        update: '%{user_name} hat die Organisationseinstellungen aktualisiert'
       participatory_space_private_user:
-        create: "%{user_name} hat %{resource_name} als privaten Benutzer eingeladen"
-        create_via_csv: "%{user_name} hat %{resource_name} per CSV als privaten Teilnehmer eingeladen"
-        delete: "%{user_name} hat den Benutzer %{resource_name} als privaten Benutzer entfernt"
+        create: '%{user_name} hat %{resource_name} als privaten Benutzer eingeladen'
+        create_via_csv: '%{user_name} hat %{resource_name} per CSV als privaten Teilnehmer eingeladen'
+        delete: '%{user_name} hat den Benutzer %{resource_name} als privaten Benutzer entfernt'
       scope:
-        create: "%{user_name} hat den Bereich %{resource_name} erstellt"
-        create_with_parent: "%{user_name} hat den Bereich %{resource_name} im übergeordneten Bereich %{parent_scope} erstellt"
-        delete: "%{user_name} hat den Bereich %{resource_name} gelöscht"
-        delete_with_parent: "%{user_name} hat den Bereich %{resource_name} aus dem übergeordneten Bereich %{parent_scope} gelöscht"
-        update: "%{user_name} hat den Bereich %{resource_name} aktualisiert"
-        update_with_parent: "%{user_name} hat den Bereich %{resource_name} im übergeordneten Bereich %{parent_scope} aktualisiert"
+        create: '%{user_name} hat den Bereich %{resource_name} erstellt'
+        create_with_parent: '%{user_name} hat den Bereich %{resource_name} im übergeordneten Bereich %{parent_scope} erstellt'
+        delete: '%{user_name} hat den Bereich %{resource_name} gelöscht'
+        delete_with_parent: '%{user_name} hat den Bereich %{resource_name} aus dem übergeordneten Bereich %{parent_scope} gelöscht'
+        update: '%{user_name} hat den Bereich %{resource_name} aktualisiert'
+        update_with_parent: '%{user_name} hat den Bereich %{resource_name} im übergeordneten Bereich %{parent_scope} aktualisiert'
       static_page:
-        create: "%{user_name} hat die statische Seite %{resource_name} erstellt"
-        delete: "%{user_name} hat die statische Seite %{resource_name} gelöscht"
-        update: "%{user_name} hat die statische Seite %{resource_name} aktualisiert"
+        create: '%{user_name} hat die statische Seite %{resource_name} erstellt'
+        delete: '%{user_name} hat die statische Seite %{resource_name} gelöscht'
+        update: '%{user_name} hat die statische Seite %{resource_name} aktualisiert'
       user:
-        block: "%{user_name} hat %{resource_name} blockiert"
-        invite: "%{user_name} hat den Benutzer %{resource_name} mit der Rolle %{role} eingeladen"
-        officialize: "%{user_name} den Benutzer %{resource_name} offiziell anerkannt"
-        promote: "%{user_name} hat %{resource_name} befördert"
-        remove_from_admin: "%{user_name} hat den Benutzer %{resource_name} mit der Rolle %{role} entfernt"
-        show_email: "%{user_name} hat die E-Mail des Teilnehmers %{resource_name} abgerufen"
-        transfer: "%{user_name} hat den Teilnehmer %{resource_name} verschoben"
-        unblock: "%{user_name} hat die Blockierung von %{resource_name} aufgehoben"
-        unofficialize: "%{user_name} hat die offizielle Anerkennung des Benutzers %{resource_name} widerrufen"
+        block: '%{user_name} hat %{resource_name} blockiert'
+        invite: '%{user_name} hat den Benutzer %{resource_name} mit der Rolle %{role} eingeladen'
+        officialize: '%{user_name} den Benutzer %{resource_name} offiziell anerkannt'
+        promote: '%{user_name} hat %{resource_name} befördert'
+        remove_from_admin: '%{user_name} hat den Benutzer %{resource_name} mit der Rolle %{role} entfernt'
+        show_email: '%{user_name} hat die E-Mail des Teilnehmers %{resource_name} abgerufen'
+        transfer: '%{user_name} hat den Teilnehmer %{resource_name} verschoben'
+        unblock: '%{user_name} hat die Blockierung von %{resource_name} aufgehoben'
+        unofficialize: '%{user_name} hat die offizielle Anerkennung des Benutzers %{resource_name} widerrufen'
       user_group:
-        reject: "%{user_name} hat die Gruppen-Verifikation %{resource_name} abgelehnt"
-        verify: "%{user_name} hat die Gruppe %{resource_name} verifiziert"
-        verify_via_csv: "%{user_name} hat die Gruppe %{resource_name} über eine CSV-Datei verifiziert"
+        reject: '%{user_name} hat die Gruppen-Verifikation %{resource_name} abgelehnt'
+        verify: '%{user_name} hat die Gruppe %{resource_name} verifiziert'
+        verify_via_csv: '%{user_name} hat die Gruppe %{resource_name} über eine CSV-Datei verifiziert'
       user_moderation:
-        unreport: "%{user_name} hat die Meldung auf %{resource_type} - %{unreported_user_name} aufgehoben"
+        unreport: '%{user_name} hat die Meldung auf %{resource_type} - %{unreported_user_name} aufgehoben'
     admin_terms_of_use:
-      default_body: "<h2>ADMIN-NUTZUNGSBEDINGUNGEN</h2><p>Wahrscheinlich haben Sie bereits vom lokalen Systemadministrator gehört. Meist lässt das sich auf die folgenden drei Punkte konzentrieren:</p><ol><li>Respektieren Sie die Privatsphäre anderer.</li><li>Denken Sie nach, bevor Sie klicken.</li><li>Große Macht erfordert große Verantwortung.</li></ol>"
+      default_body: '<h2>ADMIN-NUTZUNGSBEDINGUNGEN</h2><p>Wahrscheinlich haben Sie bereits vom lokalen Systemadministrator gehört. Meist lässt das sich auf die folgenden drei Punkte konzentrieren:</p><ol><li>Respektieren Sie die Privatsphäre anderer.</li><li>Denken Sie nach, bevor Sie klicken.</li><li>Große Macht erfordert große Verantwortung.</li></ol>'
     alert:
       dismiss: Benachrichtigung schließen
     amendments:
@@ -387,7 +387,7 @@ de:
         incomplete:
           cancel: Stornieren
           explanation: 'Obwohl Sie derzeit mit "%{authorization}" autorisiert sind, müssen Sie erneut autorisieren, da uns folgende Daten fehlen:'
-          invalid_field: "%{field}"
+          invalid_field: '%{field}'
           reauthorize: Erneut autorisieren
           title: Bitte erneut autorisieren
         missing:
@@ -400,7 +400,7 @@ de:
           title: Die Autorisierung läuft noch
         unauthorized:
           explanation: Leider können Sie diese Aktion nicht ausführen, da einige Ihrer Autorisierungsdaten nicht übereinstimmen.
-          invalid_field: "%{field} Wert %{value} ist nicht gültig."
+          invalid_field: '%{field} Wert %{value} ist nicht gültig.'
           ok: Ok
           title: Nicht berechtigt
         unconfirmed:
@@ -421,8 +421,8 @@ de:
       hidden_elements_count:
         one: und %{count} mehr
         other: und %{count} mehr
-      see_less: "(Weniger anzeigen)"
-      see_more: "(Mehr anzeigen)"
+      see_less: '(Weniger anzeigen)'
+      see_more: '(Mehr anzeigen)'
     components:
       component_order_selector:
         no_content: Wir haben keine Inhalte anhand dieser Kriterien gefunden
@@ -570,7 +570,7 @@ de:
           this_application_will_be_able_to: 'Diese Anwendung wird in der Lage sein:'
           this_application_will_not_be_able_to: 'Diese Anwendung kann nicht:'
           update_profile: Profil aktualisieren
-          wants_to_use_your_account_html: "<strong>%{application_name}</strong> möchte Ihr Konto verwenden"
+          wants_to_use_your_account_html: '<strong>%{application_name}</strong> möchte Ihr Konto verwenden'
     download_your_data:
       export:
         ready: Bereit
@@ -734,18 +734,18 @@ de:
       resource_endorsed:
         email_intro: '%{endorser_name} %{endorser_nickname}, dem Sie folgen, hat gerade "%{resource_title}" unterstützt, und wir denken, das könnte interessant für Sie sein. Schauen Sie es sich an und reden Sie mit:'
         email_outro: Sie haben diese Benachrichtigung erhalten, weil Sie %{endorser_nickname} folgen. Falls Sie keine solchen Benachrichtigungen mehr erhalten möchten, besuchen Sie den obigen Link.
-        email_subject: "%{endorser_nickname} hat eine neue Befürwortung ausgesprochen"
+        email_subject: '%{endorser_nickname} hat eine neue Befürwortung ausgesprochen'
         notification_title: <a href="%{resource_path}">%{resource_title}</a> %{resource_type} wurde von <a href="%{endorser_path}">%{endorser_name} %{endorser_nickname}</a> befürwortet.
       users:
         profile_updated:
           email_intro: Die <a href="%{resource_url}">Profilseite</a> von %{name} (%{nickname}), der Sie folgen, wurde aktualisiert.
           email_outro: Sie haben diese Benachrichtigung erhalten, weil Sie %{nickname} folgen. Falls Sie keine solchen Benachrichtigungen mehr erhalten möchten, besuchen Sie den obigen Link.
-          email_subject: "%{nickname} hat ihr Profil aktualisiert"
+          email_subject: '%{nickname} hat ihr Profil aktualisiert'
           notification_title: Die <a href="%{resource_path}">Profilseite</a> von %{name} (%{nickname}), der Sie folgen, wurde aktualisiert.
         user_officialized:
           email_intro: Teilnehmer %{name} (%{nickname}) wurde offiziell bestätigt.
           email_outro: Sie haben diese Benachrichtigung erhalten, weil Sie ein Administrator der Organisation sind.
-          email_subject: "%{name} wurde offiziell bestätigt"
+          email_subject: '%{name} wurde offiziell bestätigt'
           notification_title: Teilnehmer %{name} (%{nickname}) wurde offiziell bestätigt.
     export_mailer:
       download_your_data_export:
@@ -773,8 +773,8 @@ de:
       value: Wert
     followers:
       followers_count:
-        one: "%{count} Follower"
-        other: "%{count} Follower"
+        one: '%{count} Follower'
+        other: '%{count} Follower'
       no_followers: Noch keine Follower.
     following:
       no_followings: Folgt noch niemandem oder irgendetwas.
@@ -840,13 +840,13 @@ de:
             - Aktiv zu sein und anderen Menschen zu folgen, wird sicherlich andere Menschen dazu bringen, dir zu folgen.
           description: Dieses Abzeichen wird gewährt, wenn Sie eine bestimmte Anzahl von Followern erreichen. %{organization_name} ist ein soziales und politisches Netzwerk, weben Sie Ihr Web, um mit anderen Menschen auf der Plattform zu kommunizieren.
           description_another: Diese*r Benutzer*in hat %{score} Follower.
-          description_own: "%{score} Benutzer*innen folgen dir."
+          description_own: '%{score} Benutzer*innen folgen dir.'
           name: Follower
           next_level_in: Erhalten Sie %{score} weitere Nutzer, die Ihnen folgen, um das nächste Level zu erreichen!
           unearned_another: Dieser Benutzer hat noch keine Follower.
           unearned_own: Sie haben noch keine Follower.
         index:
-          badge_title: "%{name} Abzeichen"
+          badge_title: '%{name} Abzeichen'
           how: Wie kannst du es verdienen?
           page_description: Badges sind Anerkennungen für Aktionen der Teilnehmer und Fortschritt in der Plattform. Wenn Sie auf der Plattform entdecken, teilnehmen und interagieren, verdienen Sie verschiedene Abzeichen. Hier ist die Liste der Abzeichen und einige Möglichkeiten, wie Sie sie verdienen können.
           title: Abzeichen
@@ -963,15 +963,15 @@ de:
         title: Externen Link öffnen
     log:
       base_presenter:
-        create: "%{user_name} hat %{resource_name} erstellt"
-        create_with_space: "%{user_name} hat %{resource_name} in %{space_name} erstellt"
-        delete: "%{user_name} hat %{resource_name} gelöscht"
-        delete_with_space: "%{user_name} hat %{resource_name} in %{space_name} gelöscht"
-        unknown_action: "%{user_name} hat eine Aktion an %{resource_name} ausgeführt"
-        unknown_action_with_space: "%{user_name} hat eine Aktion an %{resource_name} in %{space_name} ausgeführt"
-        update: "%{user_name} hat %{resource_name} aktualisiert"
-        update_permissions_with_space: "%{user_name} hat die Berechtigungen für %{resource_name} in %{space_name} aktualisiert"
-        update_with_space: "%{user_name} hat %{resource_name} in %{space_name} aktualisiert"
+        create: '%{user_name} hat %{resource_name} erstellt'
+        create_with_space: '%{user_name} hat %{resource_name} in %{space_name} erstellt'
+        delete: '%{user_name} hat %{resource_name} gelöscht'
+        delete_with_space: '%{user_name} hat %{resource_name} in %{space_name} gelöscht'
+        unknown_action: '%{user_name} hat eine Aktion an %{resource_name} ausgeführt'
+        unknown_action_with_space: '%{user_name} hat eine Aktion an %{resource_name} in %{space_name} ausgeführt'
+        update: '%{user_name} hat %{resource_name} aktualisiert'
+        update_permissions_with_space: '%{user_name} hat die Berechtigungen für %{resource_name} in %{space_name} aktualisiert'
+        update_with_space: '%{user_name} hat %{resource_name} in %{space_name} aktualisiert'
       value_types:
         area_presenter:
           not_found: 'Der Bereich wurde nicht in der Datenbank gefunden (ID: %{id})'
@@ -1000,35 +1000,35 @@ de:
         comanagers_new_conversation:
           admin_in_group: Sie haben diese Benachrichtigung erhalten, weil Sie ein Administrator von %{group} sind.
           greeting: Hallo, %{recipient}!
-          intro: "%{manager} hat eine Unterhaltung im Namen von %{group} begonnen. Klicken Sie hier, um diese anzuzeigen:"
+          intro: '%{manager} hat eine Unterhaltung im Namen von %{group} begonnen. Klicken Sie hier, um diese anzuzeigen:'
           outro: Viel Spaß mit Decidim!
-          subject: "%{manager} hat eine Unterhaltung als %{group} begonnen"
+          subject: '%{manager} hat eine Unterhaltung als %{group} begonnen'
         comanagers_new_message:
           admin_in_group: Sie haben diese Benachrichtigung erhalten, weil Sie ein Administrator von %{group} sind.
           greeting: Hallo, %{recipient}!
-          intro: "%{manager} hat Nachrichten in einer Unterhaltung im Namen von %{group} gesendet. Klicken Sie hier, um diese anzuzeigen:"
+          intro: '%{manager} hat Nachrichten in einer Unterhaltung im Namen von %{group} gesendet. Klicken Sie hier, um diese anzuzeigen:'
           outro: Viel Spaß mit Decidim!
-          subject: "%{manager} hat neue Nachrichten als %{group} gesendet"
+          subject: '%{manager} hat neue Nachrichten als %{group} gesendet'
         new_conversation:
           greeting: Hallo, %{recipient}!
-          intro: "%{sender} hat eine neue Unterhaltung mit Ihnen begonnen. Klicken Sie hier, um es zu sehen:"
+          intro: '%{sender} hat eine neue Unterhaltung mit Ihnen begonnen. Klicken Sie hier, um es zu sehen:'
           outro: Viel Spaß mit Decidim!
-          subject: "%{sender} hat ein Gespräch mit Ihnen begonnen"
+          subject: '%{sender} hat ein Gespräch mit Ihnen begonnen'
         new_group_conversation:
           admin_in_group: Sie haben diese Benachrichtigung erhalten, weil Sie ein Administrator von %{group} sind.
           greeting: Hallo, %{recipient}!
-          intro: "%{sender} hat eine neue Unterhaltung mit der Gruppe %{group} begonnen. Klicken Sie hier, um diese anzuzeigen:"
+          intro: '%{sender} hat eine neue Unterhaltung mit der Gruppe %{group} begonnen. Klicken Sie hier, um diese anzuzeigen:'
           outro: Viel Spaß mit Decidim!
-          subject: "%{sender} hat eine Unterhaltung mit %{group} begonnen"
+          subject: '%{sender} hat eine Unterhaltung mit %{group} begonnen'
         new_group_message:
           admin_in_group: Sie haben diese Benachrichtigung erhalten, weil Sie ein Administrator von %{group} sind.
           greeting: Hallo, %{recipient}!
-          intro: "%{sender} hat neue Nachrichten in einer Unterhaltung mit der Gruppe %{group} gesendet. Klicken Sie hier, um diese anzuzeigen:"
+          intro: '%{sender} hat neue Nachrichten in einer Unterhaltung mit der Gruppe %{group} gesendet. Klicken Sie hier, um diese anzuzeigen:'
           outro: Viel Spaß mit Decidim!
-          subject: "%{group} hat neue Nachrichten von %{sender}"
+          subject: '%{group} hat neue Nachrichten von %{sender}'
         new_message:
           greeting: Hallo, %{recipient}!
-          intro: "%{sender} hat neue Nachrichten in Ihrer Konversation gepostet. Klicken Sie hier, um sie zu sehen:"
+          intro: '%{sender} hat neue Nachrichten in Ihrer Konversation gepostet. Klicken Sie hier, um sie zu sehen:'
           outro: Viel Spaß mit Decidim!
           subject: Sie haben neue Nachrichten von %{sender}
       conversations:
@@ -1338,8 +1338,8 @@ de:
         unfold: Entfalten
       results:
         results:
-          one: "%{count} Ergebnis"
-          other: "%{count} Ergebnisse"
+          one: '%{count} Ergebnis'
+          other: '%{count} Ergebnisse'
         view_all: Alle anzeigen (%{count})
     security:
       selfxss_warning:
@@ -1426,7 +1426,7 @@ de:
       filter_results_for_category: 'Ergebnisse nach Kategorie filtern: %{resource}'
       filter_results_for_scope: 'Ergebnisse nach Anwendungsbereich filtern: %{resource}'
     translation_bar:
-      help_text: "<strong>Hinweis:</strong> Inhalt könnte automatisch übersetzt werden und nicht 100% korrekt sein."
+      help_text: '<strong>Hinweis:</strong> Inhalt könnte automatisch übersetzt werden und nicht 100% korrekt sein.'
       show_original: Originaltext anzeigen
       show_translated: Automatisch übersetzter Text anzeigen
     user_activity:
@@ -1451,7 +1451,7 @@ de:
         no_conversations_warning: Es gibt noch keine Unterhaltungen.
         no_results: Keine Ergebnisse
         participant_with_disabled_message_reception: Dieser Teilnehmer hat Nachrichten deaktiviert
-        time_ago: "Vor %{time}"
+        time_ago: 'Vor %{time}'
       new:
         title: Eine Unterhaltung beginnen
       reply:
@@ -1491,13 +1491,13 @@ de:
         version_author: Autor dieser Version
         version_created_at: Version erstellt am
         version_number: Versionsnummer
-        version_number_out_of_total: "%{current_version} von %{total_count}"
+        version_number_out_of_total: '%{current_version} von %{total_count}'
     version_author:
       show:
         deleted: Gelöschter Benutzer
     versions:
       resource_version:
-        of_versions: "(von %{number})"
+        of_versions: '(von %{number})'
         see_other_versions: Andere Versionen anzeigen
         version: Versionsnummer %{number}
     versions_list:
@@ -1568,8 +1568,8 @@ de:
         ignore: |-
           Wenn Sie die Einladung nicht annehmen möchten, ignorieren Sie diese E-Mail.<br />
           Ihr Konto wird erst erstellt, wenn Sie auf den obigen Link zugreifen und Ihren Benutzernamen und Ihr Passwort festlegen.
-        invited_you_as_admin: "%{invited_by} hat dich als Admin von %{application}eingeladen. Sie können es über den folgenden Link akzeptieren."
-        invited_you_as_private_user: "%{invited_by} hat dich als privaten Benutzer von %{application}eingeladen. Sie können es über den folgenden Link akzeptieren."
+        invited_you_as_admin: '%{invited_by} hat dich als Admin von %{application}eingeladen. Sie können es über den folgenden Link akzeptieren.'
+        invited_you_as_private_user: '%{invited_by} hat dich als privaten Benutzer von %{application}eingeladen. Sie können es über den folgenden Link akzeptieren.'
         someone_invited_you: Jemand hat dich zu %{application}eingeladen. Sie können es über den folgenden Link akzeptieren.
         someone_invited_you_as_admin: Jemand hat dich als Admin von %{application}eingeladen, du kannst es über den untenstehenden Link akzeptieren.
         someone_invited_you_as_private_user: Jemand hat dich als private_user von %{application}eingeladen, du kannst es über den folgenden Link akzeptieren.
@@ -1607,7 +1607,7 @@ de:
         change_my_password: Ändere mein Passwort
         confirm_new_password: Bestätige neues Passwort
         new_password: Neues Passwort
-        password_help: "Mindestens %{minimum_characters} Zeichen, nicht zu gewöhnlich (z. B. 123456) und darf nicht Ihr Benutzername oder Ihre E-Mail-Adresse sein."
+        password_help: 'Mindestens %{minimum_characters} Zeichen, nicht zu gewöhnlich (z. B. 123456) und darf nicht Ihr Benutzername oder Ihre E-Mail-Adresse sein.'
         title: Passwort ändern
       new:
         forgot_your_password: Haben Sie Ihr Passwort vergessen?
@@ -1643,8 +1643,8 @@ de:
         sign_in_with_provider: Mit %{provider} anmelden
         sign_up: Registrieren
       minimum_password_length:
-        one: "(%{count} Zeichen Minimum)"
-        other: "(%{count} Zeichen Minimum)"
+        one: '(%{count} Zeichen Minimum)'
+        other: '(%{count} Zeichen Minimum)'
     unlocks:
       new:
         resend_unlock_instructions: Erneute Anweisungen zum Entsperren senden
@@ -1680,7 +1680,7 @@ de:
         one: Mindestens %{count} Zeichen
         other: Mindestens %{count} Zeichen
     required: Erforderlich
-    required_explanation: "* Pflichtfelder sind mit einem Stern gekennzeichnet"
+    required_explanation: '* Pflichtfelder sind mit einem Stern gekennzeichnet'
   invisible_captcha:
     sentence_for_humans: Wenn Sie ein Mensch sind, ignorieren Sie dieses Feld
     timestamp_error_message: Entschuldigung, das war zu schnell! Bitte erneut einreichen
@@ -1755,11 +1755,11 @@ de:
       offline_banner:
         cache_version_page: Hoppla! Ihr Netzwerk ist offline. Dies ist eine zuvor gecachte Version der Seite, die Sie besuchen, möglicherweise ist der Inhalt nicht aktuell.
       social_media_links:
-        facebook: "%{organization} auf Facebook"
-        github: "%{organization} auf GitHub"
-        instagram: "%{organization} auf Instagram"
-        twitter: "%{organization} bei Twitter"
-        youtube: "%{organization} auf YouTube"
+        facebook: '%{organization} auf Facebook'
+        github: '%{organization} auf GitHub'
+        instagram: '%{organization} auf Instagram'
+        twitter: '%{organization} bei Twitter'
+        youtube: '%{organization} auf YouTube'
       timeout_modal:
         body: Sie sind seit %{minutes} Minuten inaktiv. Wenn Sie weiterhin inaktiv sind, werden Sie aus Sicherheitsgründen automatisch abgemeldet.
         continue_session: Sitzung fortsetzen
@@ -1828,23 +1828,23 @@ de:
     xing: Xing
   time:
     formats:
-      day_of_month: "%d. %b"
-      day_of_week: "%a"
-      day_of_week_long: "%a %e."
-      day_of_year: "%d.%m.%y"
-      ddmm: "%d.%m"
-      ddmmyyyy: "%d.%m.%Y"
-      decidim_day_of_year: "%d. %B %Y"
-      decidim_short: "%d.%m.%Y %H:%M"
-      default: "%a, %d. %b %Y %H:%M:%S %z"
+      day_of_month: '%d. %b'
+      day_of_week: '%a'
+      day_of_week_long: '%a %e.'
+      day_of_year: '%d.%m.%y'
+      ddmm: '%d.%m'
+      ddmmyyyy: '%d.%m.%Y'
+      decidim_day_of_year: '%d. %B %Y'
+      decidim_short: '%d.%m.%Y %H:%M'
+      default: '%a, %d. %b %Y %H:%M:%S %z'
       devise:
         mailer:
           invitation_instructions:
-            accept_until_format: "%d. %B %Y %H:%M"
-      long: "%d. %B %Y %H:%M"
-      long_dashed: "%d.%m.%Y %H:%M:%S"
-      short: "%d.%m.%Y %H:%M"
-      time_of_day: "%H:%M"
+            accept_until_format: '%d. %B %Y %H:%M'
+      long: '%d. %B %Y %H:%M'
+      long_dashed: '%d.%m.%Y %H:%M:%S'
+      short: '%d.%m.%Y %H:%M'
+      time_of_day: '%H:%M'
   versions:
     directions:
       left: Löschungen
@@ -1859,14 +1859,16 @@ de:
       option_unified: Zusammengefasst
   views:
     pagination:
-      first: "&laquo; zuerst"
+      first: '&laquo; zuerst'
       first_title: Verknüpfung zur ersten Seite
       last: Letzte &raquo;
       last_title: Verknüpfung zur letzten Seite
       next: Nächste &rsaquo;
       next_title: Verknüpfung zur nächsten Seite
       pagination: Paginierung
-      previous: "&lsaquo; Zurück"
+      previous: '&lsaquo; Zurück'
       previous_title: Verknüpfung zur vorherigen Seite
       title: 'Seitenzahl:'
-      truncate: "&hellip;"
+      truncate: '&hellip;'
+  emvi:
+    eu: Kofinanziert durch die Europäische Union. Die geäußerten Ansichten und Meinungen sind jedoch ausschließlich die der Autor(en) und spiegeln nicht unbedingt die der Europäischen Union wider. Weder die Europäische Union kann dafür verantwortlich gemacht werden.

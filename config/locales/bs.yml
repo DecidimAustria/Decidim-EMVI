@@ -7,7 +7,8 @@ bs:
       conversation:
         body: Tijelo
       demographic:
-        attended_before: Jeste li već prisustvovali nekom javnom događanju o Europskoj
+        attended_before:
+          Jeste li već prisustvovali nekom javnom događanju o Europskoj
           uniji (putem interneta ili fizički)?
       group:
         avatar: Avatar
@@ -56,39 +57,39 @@ bs:
       not_inside_organization: Datoteka nije priložena nijednoj organizaciji
   date:
     abbr_month_names:
-    - 
-    - Sij.
-    - Velj.
-    - Ožu.
-    - Tra.
-    - Svi.
-    - Lip.
-    - Srp.
-    - Kol.
-    - Ruj.
-    - Lis.
-    - Stu.
-    - Pro.
+      -
+      - Sij.
+      - Velj.
+      - Ožu.
+      - Tra.
+      - Svi.
+      - Lip.
+      - Srp.
+      - Kol.
+      - Ruj.
+      - Lis.
+      - Stu.
+      - Pro.
     formats:
-      decidim_short: "%d/%m/%Y"
-      decidim_short_with_month_name_short: "%d %b %Y"
-      decidim_with_day_and_month_name: "%A %d %b %Y"
-      decidim_with_month_name: "%d %B %Y"
-      decidim_with_month_name_short: "%d %b"
+      decidim_short: '%d/%m/%Y'
+      decidim_short_with_month_name_short: '%d %b %Y'
+      decidim_with_day_and_month_name: '%A %d %b %Y'
+      decidim_with_month_name: '%d %B %Y'
+      decidim_with_month_name_short: '%d %b'
     month_names:
-    - 
-    - Siječanj
-    - Veljača
-    - Ožujak
-    - Travanj
-    - Svibanj
-    - Lipanj
-    - Srpanj
-    - Kolovoz
-    - Rujan
-    - Listopad
-    - Studeni
-    - Prosinac
+      -
+      - Siječanj
+      - Veljača
+      - Ožujak
+      - Travanj
+      - Svibanj
+      - Lipanj
+      - Srpanj
+      - Kolovoz
+      - Rujan
+      - Listopad
+      - Studeni
+      - Prosinac
   datetime:
     distance_in_words:
       about_x_hours:
@@ -118,12 +119,12 @@ bs:
         other: Prije %{count} sati
       x_minutes:
         one: 1 minuta. prije
-        few: "%{count} min. prije"
-        other: "%{count} min. prije"
+        few: '%{count} min. prije'
+        other: '%{count} min. prije'
       x_seconds:
         one: 1 sek. prije
-        few: "%{count} sek. prije"
-        other: "%{count} sek. prije"
+        few: '%{count} sek. prije'
+        other: '%{count} sek. prije'
         zero: sada
   decidim:
     accessibility:
@@ -132,12 +133,15 @@ bs:
       blocked: Ovaj račun je blokiran zbog kršenja odredbi i uvjeta
       download_your_data_export:
         file_no_exists: Mapa ne postoji
-        notice: Trenutno je u tijeku preuzimanje vaših podataka. Primit ćete e-poruku
+        notice:
+          Trenutno je u tijeku preuzimanje vaših podataka. Primit ćete e-poruku
           kada bude dovršeno.
       email_change:
-        body1: Poslali smo e-poštu na %{unconfirmed_email} da potvrdimo vašu novu
+        body1:
+          Poslali smo e-poštu na %{unconfirmed_email} da potvrdimo vašu novu
           adresu e-pošte.
-        body2: Trebamo li ponovno poslati e-poruku za potvrdu? %{resend_link} ili
+        body2:
+          Trebamo li ponovno poslati e-poruku za potvrdu? %{resend_link} ili
           %{cancel_link}.
         cancel: otkazati
         cancel_error: Nije moguće poništiti promjenu e-pošte.
@@ -151,53 +155,57 @@ bs:
     admin:
       password_change:
         alert: Morate promijeniti lozinku kako biste nastavili dalje
-        notification: Administratori moraju promijeniti svoju lozinku svakih %{days}
+        notification:
+          Administratori moraju promijeniti svoju lozinku svakih %{days}
           dana.
     admin_log:
       area_type:
-        create: "%{user_name} stvorio je tip područja %{resource_name}"
-        delete: "%{user_name} izbrisao je tip područja %{resource_name}"
-        update: "%{user_name} je ažurirao vrstu područja %{resource_name}"
+        create: '%{user_name} stvorio je tip područja %{resource_name}'
+        delete: '%{user_name} izbrisao je tip područja %{resource_name}'
+        update: '%{user_name} je ažurirao vrstu područja %{resource_name}'
       attachment:
-        create: "%{user_name} stvorio je prilog %{resource_name}"
-        delete: "%{user_name} je izbrisao prilog %{resource_name}"
-        update: "%{user_name} ažurirao je prilog %{resource_name}"
+        create: '%{user_name} stvorio je prilog %{resource_name}'
+        delete: '%{user_name} je izbrisao prilog %{resource_name}'
+        update: '%{user_name} ažurirao je prilog %{resource_name}'
       attachment_collection:
-        create: "%{user_name} stvorio je zbirku priloga %{resource_name}"
-        delete: "%{user_name} je izbrisao zbirku priloga %{resource_name}"
-        update: "%{user_name} ažurirao je zbirku priloga %{resource_name}"
+        create: '%{user_name} stvorio je zbirku priloga %{resource_name}'
+        delete: '%{user_name} je izbrisao zbirku priloga %{resource_name}'
+        update: '%{user_name} ažurirao je zbirku priloga %{resource_name}'
       category:
-        create: "%{user_name} dodao je kategoriju %{resource_name} u prostor %{space_name}"
-        delete: "%{user_name} je izbrisao kategoriju %{resource_name} iz prostora
-          %{space_name}"
-        update: "%{user_name} ažurirao je kategoriju %{resource_name} u prostoru %{space_name}"
+        create: '%{user_name} dodao je kategoriju %{resource_name} u prostor %{space_name}'
+        delete:
+          '%{user_name} je izbrisao kategoriju %{resource_name} iz prostora
+          %{space_name}'
+        update: '%{user_name} ažurirao je kategoriju %{resource_name} u prostoru %{space_name}'
       component:
-        export_component: "%{user_name} je izvezao %{resource_name} %{component_name}
-          u %{space_name} kao %{format_name}"
-        update_permissions_with_space: "%{user_name} je ažurirao dopuštenja %{resource_name}
-          u %{space_name}"
+        export_component:
+          '%{user_name} je izvezao %{resource_name} %{component_name}
+          u %{space_name} kao %{format_name}'
+        update_permissions_with_space:
+          '%{user_name} je ažurirao dopuštenja %{resource_name}
+          u %{space_name}'
       contextual_help_section:
-        update: "%{user_name} je ažurirao odjeljak pomoći %{resource_name}"
+        update: '%{user_name} je ažurirao odjeljak pomoći %{resource_name}'
       helpers:
         answers: odgovori
         comments: komentari
         projects: projekti
         results: rezultati
       impersonation_log:
-        manage: "%{user_name} je upravljao %{resource_name} jer je %{reason}"
+        manage: '%{user_name} je upravljao %{resource_name} jer je %{reason}'
       organization:
-        update_external_domain: "%{user_name} je ažurirao vanjske domene organizacije"
+        update_external_domain: '%{user_name} je ažurirao vanjske domene organizacije'
       scope_type:
-        create: "%{user_name} stvorio je tip opsega %{resource_name}"
-        delete: "%{user_name} je izbrisao tip opsega %{resource_name}"
-        update: "%{user_name} je ažurirao vrstu opsega %{resource_name}"
+        create: '%{user_name} stvorio je tip opsega %{resource_name}'
+        delete: '%{user_name} je izbrisao tip opsega %{resource_name}'
+        update: '%{user_name} je ažurirao vrstu opsega %{resource_name}'
       user:
-        block: "%{user_name} je blokirao korisnika %{resource_name}"
-        promote: "%{user_name} je promovirao %{resource_name}"
-        transfer: "%{user_name} premjestio je sudionika %{resource_name}"
-        unblock: "%{user_name} je deblokirao korisnika %{resource_name}"
+        block: '%{user_name} je blokirao korisnika %{resource_name}'
+        promote: '%{user_name} je promovirao %{resource_name}'
+        transfer: '%{user_name} premjestio je sudionika %{resource_name}'
+        unblock: '%{user_name} je deblokirao korisnika %{resource_name}'
       user_moderation:
-        unreport: "%{user_name} nije prijavio %{resource_type} - %{unreported_user_name}"
+        unreport: '%{user_name} nije prijavio %{resource_type} - %{unreported_user_name}'
     application:
       collection:
         documents:
@@ -226,9 +234,10 @@ bs:
     authorization_modals:
       content:
         incomplete:
-          invalid_field: "%{field}"
+          invalid_field: '%{field}'
         ok:
-          title: Bili ste ovlašteni dok ste bili na ovoj stranici. Molimo ponovno
+          title:
+            Bili ste ovlašteni dok ste bili na ovoj stranici. Molimo ponovno
             učitajte stranicu kako biste izvršili svoju radnju
     block_user_mailer:
       notify:
@@ -296,14 +305,16 @@ bs:
     devise:
       sessions:
         user:
-          timed_out: Predugo ste bili neaktivni i automatski ste odjavljeni sa usluge.
+          timed_out:
+            Predugo ste bili neaktivni i automatski ste odjavljeni sa usluge.
             Ako želite nastaviti koristiti uslugu, prijavite se ponovo.
     download_your_data:
       export:
         ready: Spreman
       show:
         download_data: Preuzmite podatke
-        download_data_description: Datoteka koja sadrži sve informacije povezane s
+        download_data_description:
+          Datoteka koja sadrži sve informacije povezane s
           vašim računom bit će poslana na <strong>%{user_email}</strong>. Ova e-poruka
           sadržavat će .zip datoteku i lozinku za njezino otvaranje.<br/><br/>Za raspakiranje
           datoteke trebat će vam <a href="https://www.7-zip.org/"> 7-Zip</a> (za Windows)
@@ -319,29 +330,33 @@ bs:
       drag_and_drop_help: Dodajte slike povlačenjem i ispuštanjem ili lijepljenjem.
     events:
       nickname_event:
-        notification_body: Ispravili smo način na koji se nadimci koriste tako da
+        notification_body:
+          Ispravili smo način na koji se nadimci koriste tako da
           nema duplikata i zato smo uklonili pravilo osjetljivo na velika i mala slova.
           <br/> Vaš nadimak je stvoren nakon drugog s istim imenom, pa smo ga automatski
           preimenovali. Možete ga promijeniti u <a href="%{link_to_account_settings}">postavkama
           računa</a>.
       reports:
         resource_hidden:
-          email_intro: Administrator je uklonio vaš %{resource_type} jer je prijavljen
+          email_intro:
+            Administrator je uklonio vaš %{resource_type} jer je prijavljen
             kao %{report_reasons}.
           email_outro: Primili ste ovu obavijest jer ste autor uklonjenog sadržaja.
           email_subject: Vaš %{resource_type} je uklonjen
-          notification_title: 'Moderator je uklonio vaš sadržaj %{resource_type} jer
+          notification_title:
+            'Moderator je uklonio vaš sadržaj %{resource_type} jer
             je prijavljen zbog %{report_reasons}.</br><i>%{resource_content}</i></br>Objašnjenje
             je u nastavku:'
       users:
         user_officialized:
           email_intro: Sudionik %{name} (%{nickname}) je službeno imenovan.
           email_outro: Primili ste ovu obavijest jer ste administrator organizacije.
-          email_subject: "%{name} je ozvaničen"
+          email_subject: '%{name} je ozvaničen'
           notification_title: Sudionik %{name} (%{nickname}) je službeno imenovan.
     export_mailer:
       download_your_data_export:
-        click_button: 'Kliknite na sljedeću vezu za preuzimanje vaših podataka.<br/>Datoteka
+        click_button:
+          'Kliknite na sljedeću vezu za preuzimanje vaših podataka.<br/>Datoteka
           će biti dostupna do %{date}.<br/>Trebat će vam <a href="https://www.7-zip.org/">7-Zip
           </a> (za Windows), <a href="https://www.keka.io/en/">Keka</a> (za MacOS)
           ili <a href="https://peazip.github .io">PeaZip</a> (za Linux) da biste ga
@@ -349,26 +364,32 @@ bs:
         download: preuzimanje datoteka
     first_created_meeting_mailer:
       notify:
-        boost_instructions: Važno nam je da svaki Europljanin koji to želi pridonese
+        boost_instructions:
+          Važno nam je da svaki Europljanin koji to želi pridonese
           raspravi o našoj zajedničkoj budućnosti. Stoga vas pozivamo da prijatelje,
           članove obitelji i druge građane potaknete da se registriraju na platformi,
           prisustvuju događanjima i izraze svoja mišljenja.
         email_greeting: Poštovani/Poštovana %{user_name},
-        email_intro: hvala na interesu i sudjelovanju. Sa zadovoljstvom vas obavještavamo
+        email_intro:
+          hvala na interesu i sudjelovanju. Sa zadovoljstvom vas obavještavamo
           da je vaše događanje %{link} uspješno objavljeno.
-        email_outro: Cijenimo vaš interes i sudjelovanje. Slobodno nam se obratite
+        email_outro:
+          Cijenimo vaš interes i sudjelovanje. Slobodno nam se obratite
           ako imate bilo kakvih pitanja.
         email_signature: S poštovanjem <br>Moderatorski tim
         more_info: 'Za više pojedinosti pogledajte naš "%{title}": %{link}'
         subject: Hvala što ste pridonijeli  i organizirali događanje.
     first_published_proposal_mailer:
       notify:
-        boost_instructions: 'Povećajte vidljivost ideje tako da je podijelite na društvenim
+        boost_instructions:
+          'Povećajte vidljivost ideje tako da je podijelite na društvenim
           mrežama:'
         email_greeting: Poštovani/Poštovana %{user_name},
-        email_intro: Hvala na interesu i sudjelovanju. Sa zadovoljstvom vas obavještavamo
+        email_intro:
+          Hvala na interesu i sudjelovanju. Sa zadovoljstvom vas obavještavamo
           da je vaša ideja %{link} uspješno objavljena.
-        email_outro: Važno nam je da mnogi mogu sudjelovati u raspravi. Stoga vas
+        email_outro:
+          Važno nam je da mnogi mogu sudjelovati u raspravi. Stoga vas
           pozivamo da potaknete prijatelje, članove obitelji i druge ljude da se registriraju
           na platformu, prisustvuju događajima i daju svoje mišljenje.
         email_signature: S poštovanjem <br>Moderatorski tim
@@ -390,7 +411,8 @@ bs:
       files:
         extension_allowlist: 'Prihvaćeni formati: %{extensions}'
       meetings:
-        attendees_count_help_text: Ne zaboravite navesti ukupan broj sudionika događanja.
+        attendees_count_help_text:
+          Ne zaboravite navesti ukupan broj sudionika događanja.
           Bez obzira na to jesu li sudjelovali fizički, u hibridnom obliku ili putem
           interneta, važno nam je znati koliko je osoba uključeno.
       upload:
@@ -401,7 +423,8 @@ bs:
           cancel: Otkazati
           edit_image: Uredi sliku
           error: Greška!
-          file_size_too_large: 'Veličina datoteke je prevelika! Maksimalna veličina
+          file_size_too_large:
+            'Veličina datoteke je prevelika! Maksimalna veličina
             datoteke: %{megabytes}MB'
           remove: Ukloniti
           replace: Zamijeniti
@@ -418,9 +441,11 @@ bs:
       badges:
         accepted_proposals:
           conditions:
-            '0': Odaberite participativni (tematski) prostor koji vas zanima uz omogućene
+            '0':
+              Odaberite participativni (tematski) prostor koji vas zanima uz omogućene
               reakcije na ideje.
-            '1': Nastojte predlagati ideje koje se mogu primeniti. Veća je verovatnoća
+            '1':
+              Nastojte predlagati ideje koje se mogu primeniti. Veća je verovatnoća
               da će takve ideje biti prihvaćene.
         attended_meetings:
           conditions:
@@ -431,21 +456,25 @@ bs:
             '1': Poduprite one koje vam se sviđaju ili su vam zanimljive.
         proposals:
           conditions:
-            '0': Odaberite participativni (tematski) prostor koji vas zanima uz omogućene
+            '0':
+              Odaberite participativni (tematski) prostor koji vas zanima uz omogućene
               reakcije na ideje.
             '1': Stvori novu ideju
     groups:
       leave:
-        last_admin: Ne možete se ukloniti iz ove grupe jer ste zadnji administrator.
+        last_admin:
+          Ne možete se ukloniti iz ove grupe jer ste zadnji administrator.
           Postavite drugog člana za administratora kako biste napustili grupu.
       roles:
         admin: Administrator
     links:
       invalid_url: Neispravan URL
       warning:
-        body_1: Upravo ćete posjetiti vanjsku poveznicu i želimo da budete oprezni
+        body_1:
+          Upravo ćete posjetiti vanjsku poveznicu i želimo da budete oprezni
           u pogledu sadržaja na vanjskoj stranici.
-        body_2: Provjerite vezu koju namjeravate posjetiti i provjerite prepoznajete
+        body_2:
+          Provjerite vezu koju namjeravate posjetiti i provjerite prepoznajete
           li je kao sigurno mjesto prije nego nastavite.
         cancel: Otkazati
         close_modal: Zatvori modal
@@ -453,8 +482,9 @@ bs:
         title: Otvori vanjsku vezu
     log:
       base_presenter:
-        update_permissions_with_space: "%{user_name} je ažurirao dopuštenja %{resource_name}
-          u %{space_name}"
+        update_permissions_with_space:
+          '%{user_name} je ažurirao dopuštenja %{resource_name}
+          u %{space_name}'
     map:
       static:
         map_service_brand: OpenStreetMap
@@ -476,7 +506,8 @@ bs:
         meetings:
           index:
             meetings: Trenutačna događanja
-            subheading1: Iznesite mišljenje i podijelite ideje na događanjima na internetu
+            subheading1:
+              Iznesite mišljenje i podijelite ideje na događanjima na internetu
               ili uživo u vašoj blizini.
       extra:
         filters:
@@ -485,7 +516,7 @@ bs:
           meeting_report: Izvješća o događanju
           pending: Događanja za koja se čeka izvješće
       last_activity:
-        meeting_updated_at_html: "<span>Događanje ažurirano u %{link}</span>"
+        meeting_updated_at_html: '<span>Događanje ažurirano u %{link}</span>'
       meeting_closes:
         edit:
           close: Zatvori događanje
@@ -547,16 +578,19 @@ bs:
         title: Sastanci
     notification_mailer:
       event_received:
-        no_translation_available: Nažalost, automatski prijevod nije bilo moguće dohvatiti
+        no_translation_available:
+          Nažalost, automatski prijevod nije bilo moguće dohvatiti
           nakon slanja e-pošte. Prijevod originalnog teksta možete pogledati na sljedećoj
           poveznici %{link}.
         original_text: 'Izvorni tekst:'
-        same_language: Sadržaj je objavljen na vašem željenom jeziku (%{language}),
+        same_language:
+          Sadržaj je objavljen na vašem željenom jeziku (%{language}),
           zbog toga se u ovoj e-poruci ne prikazuje automatski prijevod.
         translated_text: 'Automatski preveden tekst:'
     notifications:
       show:
-        missing_event: Ups, ova obavijest pripada stavci koja više nije dostupna.
+        missing_event:
+          Ups, ova obavijest pripada stavci koja više nije dostupna.
           Možete ga odbaciti.
     notifications_digest_mailer:
       header:
@@ -566,19 +600,23 @@ bs:
       intro:
         daily: 'Ovo su obavijesti od prošlog dana na temelju aktivnosti koje pratite:'
         weekly: 'Ovo su obavijesti od prošlog tjedna na temelju aktivnosti koje pratite:'
-      outro: Primili ste ove obavijesti jer pratite ovaj sadržaj ili njegove autore.
+      outro:
+        Primili ste ove obavijesti jer pratite ovaj sadržaj ili njegove autore.
         Možete ih prestati pratiti s njihovih odgovarajućih stranica.
       see_more: Pogledajte više obavijesti
       subject: Ovo je sažetak vaše pošte
     notifications_settings:
       show:
         administrators: Administratori
-        allow_push_notifications: Primajte push obavijesti da saznate što se događa
+        allow_push_notifications:
+          Primajte push obavijesti da saznate što se događa
           kada niste na platformi. Možete ih isključiti bilo kada.
-        email_on_moderations: Želim primiti e-poruku svaki put kada se nešto ili netko
+        email_on_moderations:
+          Želim primiti e-poruku svaki put kada se nešto ili netko
           prijavi za moderiranje.
         notification_settings:
-          close_meeting_reminder: Želim primati podsjetnike e-poštom o neobjavljenim
+          close_meeting_reminder:
+            Želim primati podsjetnike e-poštom o neobjavljenim
             izvješćima zatvorenih sastanaka
         notifications_sending_frequencies:
           daily: Dnevno
@@ -587,7 +625,8 @@ bs:
           weekly: Tjedni
         notifications_sending_frequency: Koliko često želite primati obavijesti e-poštom?
         push_notifications: Push obavijesti
-        push_notifications_reminder: Da biste primali obavijesti s platforme, prvo
+        push_notifications_reminder:
+          Da biste primali obavijesti s platforme, prvo
           ih morate dopustiti u postavkama preglednika.
     offline:
       show:
@@ -622,10 +661,10 @@ bs:
     participatory_spaces:
       highlighted_meetings:
         see_all_button: Prikaži sve
-        see_all_count: "(prikaži sve %{count})"
+        see_all_count: '(prikaži sve %{count})'
       highlighted_proposals:
         see_all_button: Prikaži sve
-        see_all_count: "(prikaži sve %{count})"
+        see_all_count: '(prikaži sve %{count})'
     passwords:
       update:
         error: Došlo je do problema prilikom ažuriranja lozinke
@@ -641,17 +680,20 @@ bs:
           proposals: Ideje
       proposals:
         edit:
-          gallery_legend: "(Nije obvezno) Dodaj sliku u karticu za ideje"
+          gallery_legend: '(Nije obvezno) Dodaj sliku u karticu za ideje'
         index:
           heading: Podijelite ideju s nama
-          subheading1: Uz to što možete podijeliti svoje ideje, možete pronaći i druge
+          subheading1:
+            Uz to što možete podijeliti svoje ideje, možete pronaći i druge
             ideje iz cijele Europe. Pridružite se raspravi komentarom ili glasajte
             za ideje koje vam se sviđaju kako bi ih više ljudi vidjelo.
         preview:
-          announcement_body: Ovdje možete pregledati i izmijeniti ideju. Nakon što
+          announcement_body:
+            Ovdje možete pregledati i izmijeniti ideju. Nakon što
             ideja bude spremna, kliknite “Objavi” i ideja će se pojaviti na platformi.
-          announcement_title: "<b>Prije objave ideje potrebno je dovršiti još jedan
-            korak.</b>"
+          announcement_title:
+            '<b>Prije objave ideje potrebno je dovršiti još jedan
+            korak.</b>'
     reported_mailer:
       report:
         content_original_language: Izvorni jezik sadržaja
@@ -659,7 +701,8 @@ bs:
         see_report: Vidi izvješće
     security:
       selfxss_warning:
-        description: Ova funkcija preglednika je namijenjena programerima i ne biste
+        description:
+          Ova funkcija preglednika je namijenjena programerima i ne biste
           trebali ništa lijepiti ovdje ako se to od vas zatraži. Lijepljenje sadržaja
           u ovaj prozor može ugroziti vašu privatnost i dati hakerima pristup vašem
           računu.
@@ -673,9 +716,11 @@ bs:
         already_reported: Ovaj sadržaj je već prijavljen i pregledat će ga administrator.
         close: Zatvoriti
         description: Što je neprikladno kod korisnika?
-        does_not_belong: Promiče nezakonite aktivnosti, prijetnje samoubojstvom, osobne
+        does_not_belong:
+          Promiče nezakonite aktivnosti, prijetnje samoubojstvom, osobne
           informacije ili nešto drugo čemu prema vašem mišljenju ovdje nije mjesto.
-        offensive: Promiče rasizam, seksizam, uvrede, osobne napade, prijetnje smrću,
+        offensive:
+          Promiče rasizam, seksizam, uvrede, osobne napade, prijetnje smrću,
           pomoć pri samoubojstvu ili bilo koji oblik govora mržnje.
         report: izvješće
         spam: Promiče poveznice mamce, reklame, prijevare ili skriptne botove.
@@ -727,13 +772,15 @@ bs:
       failure: Nije vas moguće autentificirati iz %{kind} jer "%{reason}".
     passwords:
       edit:
-        password_help_admin: Najmanje %{minimum_characters} znakova, ne smije biti
+        password_help_admin:
+          Najmanje %{minimum_characters} znakova, ne smije biti
           previše uobičajeno (npr. 123456), mora se razlikovati od vašeg nadimka i
           vaše e-pošte i mora se razlikovati od vaših starih lozinki.
         title: Promjena lozinke
   errors:
     messages:
-      allowed_file_content_types: 'dopuštene su samo datoteke sa sljedećim ekstenzijama:
+      allowed_file_content_types:
+        'dopuštene su samo datoteke sa sljedećim ekstenzijama:
         %{types}'
       content_type_allowlist_error: vrsta datoteke nije važeća
       not_saved:
@@ -751,15 +798,18 @@ bs:
             type: Tip
           items:
             _session_id:
-              description: Omogućuje web stranicama da zapamte korisnika unutar web
+              description:
+                Omogućuje web stranicama da zapamte korisnika unutar web
                 stranice kada se kreću između web stranica.
               service: Ova web stranica
             decidim-consent:
-              description: Pohranjuje informacije o kolačićima koje korisnik dopušta
+              description:
+                Pohranjuje informacije o kolačićima koje korisnik dopušta
                 na ovoj web stranici.
               service: Ova web stranica
             pwaInstallPromptSeen:
-              description: Pohranjuje status ako je korisnik već vidio obavijest o
+              description:
+                Pohranjuje status ako je korisnik već vidio obavijest o
                 instalaciji progresivne web aplikacije (PWA).
               service: Ova web stranica
           types:
@@ -768,7 +818,8 @@ bs:
         dialog:
           accept_all: Prihvatiti sve
           accept_only_essential: Prihvatite samo bitno
-          description: Na našoj web stranici koristimo kolačiće kako bismo poboljšali
+          description:
+            Na našoj web stranici koristimo kolačiće kako bismo poboljšali
             performanse i sadržaj stranice. Kolačići nam omogućuju pružanje individualnijeg
             korisničkog iskustva i kanala društvenih medija.
           settings: postavke
@@ -777,25 +828,30 @@ bs:
           accept_all: Prihvatiti sve
           accept_only_essential: Prihvatite samo bitno
           analytics:
-            description: Ovi se kolačići koriste za mjerenje i analizu publike web
+            description:
+              Ovi se kolačići koriste za mjerenje i analizu publike web
               stranice kako bi se poboljšala web stranica.
             title: Analitika i statistika
-          description: Koristimo kolačiće kako bismo osigurali osnovne funkcionalnosti
+          description:
+            Koristimo kolačiće kako bismo osigurali osnovne funkcionalnosti
             web stranice i poboljšali vaše online iskustvo. U bilo kojem trenutku
             možete konfigurirati i prihvatiti korištenje kolačića te izmijeniti svoje
             opcije pristanka.
           essential:
-            description: Ovi kolačići omogućuju ključnu funkcionalnost web stranice
+            description:
+              Ovi kolačići omogućuju ključnu funkcionalnost web stranice
               i pomažu u zaštiti njezinih korisnika. Automatski se spremaju u preglednik
               i ne mogu se onemogućiti.
             title: Bitno
           marketing:
-            description: Ovi kolačići prikupljaju informacije o tome kako koristite
+            description:
+              Ovi kolačići prikupljaju informacije o tome kako koristite
               web stranicu i mogu se koristiti za pružanje personaliziranijeg marketinga
               na različitim web stranicama koje koristite.
             title: Marketing
           preferences:
-            description: Ovi kolačići omogućuju web stranici da zapamti odabire koje
+            description:
+              Ovi kolačići omogućuju web stranici da zapamti odabire koje
               ste napravili u prošlosti na ovoj web stranici kako bi korisnicima web
               stranice pružili personaliziranije iskustvo.
             title: Postavke
@@ -805,7 +861,8 @@ bs:
         warning:
           all_categories: svi kolačići
           change_settings: Promijenite postavke kolačića
-          consent_required: Morate omogućiti %{categories} kako biste vidjeli ovaj
+          consent_required:
+            Morate omogućiti %{categories} kako biste vidjeli ovaj
             sadržaj.
       footer:
         data_consent_settings: Postavke kolačića
@@ -815,10 +872,12 @@ bs:
       language_chooser:
         eu_languages: Službeni jezici EU-a
       offline_banner:
-        cache_version_page: oooops! Vaša mreža je izvan mreže. Ovo je prethodno spremljena
+        cache_version_page:
+          oooops! Vaša mreža je izvan mreže. Ovo je prethodno spremljena
           verzija stranice koju posjećujete, možda sadržaj nije ažuran.
       timeout_modal:
-        body: Bili ste neaktivni %{minutes} minuta. Ako nastavite biti neaktivni,
+        body:
+          Bili ste neaktivni %{minutes} minuta. Ako nastavite biti neaktivni,
           bit ćete automatski odjavljeni radi vlastite sigurnosti.
         continue_session: Nastavak sesije
         sign_out: Odjavi se
@@ -859,26 +918,28 @@ bs:
     xing: Xing
   time:
     formats:
-      day_of_month: "%b %d"
-      day_of_week: "%a"
-      day_of_week_long: "%a %e"
-      day_of_year: "%d.%m.%y"
-      ddmm: "%d.%m"
-      ddmmyyyy: "%d.%m.%Y"
-      decidim_day_of_year: "%d %B %Y"
-      decidim_short: "%d/%m/%Y %H:%M"
-      default: "%a, %d %b %Y %H:%M:%S %z"
+      day_of_month: '%b %d'
+      day_of_week: '%a'
+      day_of_week_long: '%a %e'
+      day_of_year: '%d.%m.%y'
+      ddmm: '%d.%m'
+      ddmmyyyy: '%d.%m.%Y'
+      decidim_day_of_year: '%d %B %Y'
+      decidim_short: '%d/%m/%Y %H:%M'
+      default: '%a, %d %b %Y %H:%M:%S %z'
       devise:
         mailer:
           invitation_instructions:
-            accept_until_format: "%B %d, %Y %I:%M %p"
-      long: "%B %d, %Y %H:%M"
-      long_dashed: "%Y-%m-%d %H:%M:%S"
-      short: "%d/%m/%Y %H:%M"
-      time_of_day: "%H:%M"
+            accept_until_format: '%B %d, %Y %I:%M %p'
+      long: '%B %d, %Y %H:%M'
+      long_dashed: '%Y-%m-%d %H:%M:%S'
+      short: '%d/%m/%Y %H:%M'
+      time_of_day: '%H:%M'
   versions:
     dropdown:
       choose_diff_view_mode_menu: Odaberite način usporedbe
   views:
     pagination:
-      truncate: "&hellip;"
+      truncate: '&hellip;'
+  emvi:
+    eu: Su-financirano od strane Europske unije. Stavovi i mišljenja izražena su isključivo stavovi autora i ne odražavaju nužno stavove Europske unije. Europska unija ne može biti odgovorna za njih.

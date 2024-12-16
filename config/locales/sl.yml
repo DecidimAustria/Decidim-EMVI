@@ -247,3 +247,5 @@ sl:
         logged_in_as: Prijavljeni kot %{user}
       wrapper:
         unfold: Razgrni
+  emvi:
+    eu: So-financirano s strani Evropske unije. Mnenja in stališča, izražena tukaj, so izključno avtorjeva in ne odražajo nujno stališč Evropske unije. Evropska unija ne more biti odgovorna za njih.
