@@ -957,7 +957,7 @@ bs:
     members:
       no_members: Ova skupina još nema nijednog člana.
     menu:
-      help: O konferenciji
+      help: Pomoć
     messaging:
       conversation_mailer:
         comanagers_new_conversation:

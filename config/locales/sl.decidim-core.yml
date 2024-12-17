@@ -838,7 +838,7 @@ sl:
     members:
       no_members: Ta skupina še nima članov.
     menu:
-      help: O Konferenci
+      help: Pomoč
       proceses: Teme
     messaging:
       conversation_mailer:
