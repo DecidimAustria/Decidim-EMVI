@@ -384,7 +384,7 @@ el:
           proposals: Προτάσεις
     participatory_spaces:
       highlighted_proposals:
-        see_all: Δείτε όλες τις ιδέες (%{count})
+        see_all: Δείτε όλες τις ιδέες
     proposals:
       actions:
         answer_proposal: Απάντηση στην πρόταση

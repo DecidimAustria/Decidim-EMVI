@@ -385,7 +385,7 @@ fa-IR:
         title: پشتیبانی می کند
     participatory_spaces:
       highlighted_proposals:
-        see_all: مشاهده همه پیشنهادات (%{count})
+        see_all: مشاهده همه پیشنهادات
     proposals:
       actions:
         answer_proposal: جواب پیشنهاد

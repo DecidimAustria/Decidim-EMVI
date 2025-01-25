@@ -783,7 +783,7 @@ bs:
     participatory_spaces:
       highlighted_meetings:
         past_meetings: Prošla događanja
-        see_all: Pogledajte sva događanja (%{count})
+        see_all: Pogledajte sva događanja
         upcoming_meetings: Nadolazeći događaji
       upcoming_meeting_for_card:
         upcoming_meeting: Nadolazeći sastanak

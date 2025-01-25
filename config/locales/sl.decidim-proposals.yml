@@ -340,7 +340,7 @@ sl:
           proposals: Predlogi
     participatory_spaces:
       highlighted_proposals:
-        see_all: Glej vse zamisli (%{count})
+        see_all: Glej vse zamisli
     proposals:
       actions:
         answer_proposal: Odgovori na predlog

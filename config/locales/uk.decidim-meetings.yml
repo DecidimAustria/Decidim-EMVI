@@ -762,7 +762,7 @@ uk:
     participatory_spaces:
       highlighted_meetings:
         past_meetings: Минулі зустрічі
-        see_all: Переглянути всі зустрічі (%{count})
+        see_all: Переглянути всі зустрічі
         upcoming_meetings: Найближчі зустрічі
       upcoming_meeting_for_card:
         upcoming_meeting: Майбутня зустріч

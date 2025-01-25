@@ -652,7 +652,7 @@ tr-TR:
     participatory_spaces:
       highlighted_meetings:
         past_meetings: Geçmiş toplantılar
-        see_all: Tüm toplantıları görün (%{count})
+        see_all: Tüm toplantıları görün
         upcoming_meetings: Yaklaşan toplantılar
       upcoming_meeting_for_card:
         upcoming_meeting: Yaklaşan toplantı

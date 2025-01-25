@@ -493,7 +493,7 @@ hr:
           proposals: Prijedlozi
     participatory_spaces:
       highlighted_proposals:
-        see_all: Pogledajte sve ideje (%{count})
+        see_all: Pogledajte sve ideje
     proposals:
       actions:
         answer_proposal: Odgovori na prijedlog

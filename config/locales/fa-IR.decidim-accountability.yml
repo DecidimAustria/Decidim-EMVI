@@ -270,7 +270,7 @@ fa-IR:
         title: نتایج
     participatory_spaces:
       highlighted_results:
-        see_all: مشاهده همه نتایج (%{count})
+        see_all: مشاهده همه نتایج
     resource_links:
       included_projects:
         result_project: پروژه هایی که در این نتیجه گنجانده شده اند

@@ -283,7 +283,7 @@ sr-CS:
         title: Rezultati
     participatory_spaces:
       highlighted_results:
-        see_all: Vidi sve rezultate (%{count})
+        see_all: Vidi sve rezultate
     resource_links:
       included_projects:
         result_project: Projekti uključeni u ovaj rezultat

@@ -429,7 +429,7 @@ ar-SA:
     participatory_spaces:
       highlighted_meetings:
         past_meetings: الاجتماعات السابقة
-        see_all: شاهد الكل (%{count})
+        see_all: شاهد الكل
         upcoming_meetings: الاجتماعات القادمة
       upcoming_meeting_for_card:
         upcoming_meeting: الاجتماع القادم

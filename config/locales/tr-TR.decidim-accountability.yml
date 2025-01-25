@@ -270,7 +270,7 @@ tr-TR:
         title: Sonuçlar
     participatory_spaces:
       highlighted_results:
-        see_all: Tüm sonuçları görün (%{count})
+        see_all: Tüm sonuçları görün
     resource_links:
       included_projects:
         result_project: Bu sonuca dahil olan projeler

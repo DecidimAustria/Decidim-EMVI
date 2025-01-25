@@ -652,7 +652,7 @@ fa-IR:
     participatory_spaces:
       highlighted_meetings:
         past_meetings: جلسات گذشته
-        see_all: مشاهده همه جلسات (%{count})
+        see_all: مشاهده همه جلسات
         upcoming_meetings: جلسات آتی
       upcoming_meeting_for_card:
         upcoming_meeting: جلسه آتی

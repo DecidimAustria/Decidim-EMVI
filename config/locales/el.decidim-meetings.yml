@@ -685,7 +685,7 @@ el:
     participatory_spaces:
       highlighted_meetings:
         past_meetings: Προηγούμενες εκδηλώσεις
-        see_all: Δείτε όλες τις εκδηλώσεις (%{count})
+        see_all: Δείτε όλες τις εκδηλώσεις
         upcoming_meetings: Προσεχείς εκδηλώσεις
       upcoming_meeting_for_card:
         upcoming_meeting: Προσεχής συνεδρίαση

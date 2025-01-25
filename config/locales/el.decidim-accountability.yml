@@ -270,7 +270,7 @@ el:
         title: Αποτελέσματα
     participatory_spaces:
       highlighted_results:
-        see_all: Δείτε όλα τα αποτελέσματα (%{count})
+        see_all: Δείτε όλα τα αποτελέσματα
     resource_links:
       included_projects:
         result_project: Έργα που περιλαμβάνονται σε αυτό το αποτέλεσμα

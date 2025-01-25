@@ -248,7 +248,7 @@ ar-SA:
         title: النتائج
     participatory_spaces:
       highlighted_results:
-        see_all: عرض كل النتائج (%{count})
+        see_all: عرض كل النتائج
     resource_links:
       included_projects:
         result_project: المشاريع المدرجة في هذه النتيجة

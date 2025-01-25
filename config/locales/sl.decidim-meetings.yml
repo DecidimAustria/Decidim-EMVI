@@ -527,7 +527,7 @@ sl:
     participatory_spaces:
       highlighted_meetings:
         past_meetings: Pretekli dogodki
-        see_all: Glej vse dogodke (%{count})
+        see_all: Glej vse dogodke
         upcoming_meetings: Prihajajoči dogodki
       upcoming_meeting_for_card:
         upcoming_meeting: Prihajajoči sestanek

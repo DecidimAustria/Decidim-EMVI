@@ -488,7 +488,7 @@ uk:
         title: Підтримує
     participatory_spaces:
       highlighted_proposals:
-        see_all: Переглянути всі пропозиції (%{count})
+        see_all: Переглянути всі пропозиції
     proposals:
       actions:
         answer_proposal: Відповідь на пропозицію

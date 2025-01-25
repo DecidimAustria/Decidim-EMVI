@@ -360,7 +360,7 @@ de:
         title: Unterstützer
     participatory_spaces:
       highlighted_proposals:
-        see_all: Alle anzeigen (%{count})
+        see_all: Alle anzeigen
     proposals:
       actions:
         answer_proposal: Vorschlag beantworten

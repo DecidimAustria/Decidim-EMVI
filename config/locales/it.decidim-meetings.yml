@@ -586,7 +586,7 @@ it:
     participatory_spaces:
       highlighted_meetings:
         past_meetings: Incontri passati
-        see_all: Vedi tutto (%{count})
+        see_all: Vedi tutto
         upcoming_meetings: Prossimi incontri
       upcoming_meeting_for_card:
         upcoming_meeting: Prossimo incontro
