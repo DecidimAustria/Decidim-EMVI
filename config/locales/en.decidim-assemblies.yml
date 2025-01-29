@@ -223,9 +223,9 @@ en:
           name: Member
           positions:
             other: Other
-            president: President
-            secretary: Secretary
-            vice_president: Vice president
+            president: Elected Member
+            secretary: Elected Member
+            vice_president: Elected Member
         assembly_user_role:
           fields:
             email: Email
