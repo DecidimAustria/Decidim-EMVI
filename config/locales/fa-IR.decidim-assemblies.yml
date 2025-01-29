@@ -223,9 +223,9 @@ fa-IR:
           name: عضو
           positions:
             other: دیگر
-            president: رئيس جمهور
-            secretary: دبیر، منشی
-            vice_president: معاون رئيس جمهور
+            president: عضو منتخب
+            secretary: عضو منتخب
+            vice_president: عضو منتخب 
         assembly_user_role:
           fields:
             email: پست الکترونیک

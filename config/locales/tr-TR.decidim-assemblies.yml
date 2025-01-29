@@ -223,9 +223,9 @@ tr-TR:
           name: Üye
           positions:
             other: Diğer
-            president: Başkan
-            secretary: Sekreter
-            vice_president: Başkan Vekili
+            president: seçilmiş danışma kurulu üyesi 
+            secretary: seçilmiş danışma kurulu üyesi 
+            vice_president: seçilmiş danışma kurulu üyesi 
         assembly_user_role:
           fields:
             email: E-posta
