@@ -2,3 +2,6 @@
 
 User-agent: Amazonbot               # Amazon's user agent
 Disallow: /            # disallow this directory
+
+User-agent: GPTBot
+Disallow: /
