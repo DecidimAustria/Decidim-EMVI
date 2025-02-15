@@ -5,3 +5,7 @@ Disallow: /            # disallow this directory
 
 User-agent: GPTBot
 Disallow: /
+
+User-agent: AwarioRssBot
+User-agent: AwarioSmartBot
+Disallow: /

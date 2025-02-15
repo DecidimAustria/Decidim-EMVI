@@ -144,6 +144,7 @@ workers:
       port: 7001
       initialDelaySeconds: 60
       timeoutSeconds: 10
+      periodSeconds: 30
       scheme: "HTTP"
       probeType: "httpGet"
     readinessProbe:
@@ -151,6 +152,7 @@ workers:
       port: 7001
       initialDelaySeconds: 60
       timeoutSeconds: 10
+      periodSeconds: 30
       scheme: "HTTP"
       probeType: "httpGet"
     resources:
