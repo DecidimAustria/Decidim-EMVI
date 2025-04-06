@@ -2,7 +2,7 @@
 
 source "https://rubygems.org"
 
-ruby '3.1.5'
+ruby '3.1.6'
  DECIDIM_VERSION = { git: "https://github.com/DecidimAustria/decidim", branch: '0.28-live' }
 #DECIDIM_VERSION = { git: "https://github.com/DecidimAustria/decidim", branch: '0.28.4-live' }
 # DECIDIM_VERSION = "0.28.4"
@@ -25,7 +25,7 @@ gem "decidim-amazon_translate"
 
 # Get latest CLDR changes to fix bug with count :zero
 # remove when this commit gets released in a version https://github.com/ruby-i18n/i18n/commit/c78ca610b64712037e5726adeaf7b84fa96eded9
-gem "i18n", git: "https://github.com/ruby-i18n/i18n", branch: "master"
+gem "i18n", "~> 1.6"
 
 gem "aws-sdk-translate", '~> 1'
 gem 'aws-sdk-s3'
