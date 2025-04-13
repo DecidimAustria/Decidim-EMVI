@@ -34,8 +34,6 @@ gem 'aws-sdk-s3'
 
 gem "bootsnap", "~> 1.3"
 
-gem "concurrent-ruby", "1.3.4"
-
 gem "puma", ">= 5.0.0"
 
 gem "faker", "~> 3.2"
