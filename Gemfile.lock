@@ -338,7 +338,7 @@ GEM
     date_validator (0.12.0)
       activemodel (>= 3)
       activesupport (>= 3)
-    decidim-amazon_translate (0.3.0)
+    decidim-amazon_translate (0.3.1)
       aws-sdk-translate (~> 1.59)
       decidim-core (>= 0.27.0, < 0.29)
     decidim-decidim_awesome (0.11.4)
