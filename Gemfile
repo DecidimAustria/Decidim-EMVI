@@ -2,8 +2,8 @@
 
 source "https://rubygems.org"
 
-ruby '3.1.7'
- DECIDIM_VERSION = { git: "https://github.com/DecidimAustria/decidim", branch: '0.28-live' }
+ruby '3.2.7'
+ DECIDIM_VERSION = { git: "https://github.com/DecidimAustria/decidim", branch: '0.29-live' }
 #DECIDIM_VERSION = { git: "https://github.com/DecidimAustria/decidim", branch: '0.28.4-live' }
 # DECIDIM_VERSION = "0.28.4"
 
@@ -13,7 +13,7 @@ gem "decidim", DECIDIM_VERSION
 # gem "decidim-alternative_landing", git: "https://github.com/Platoniq/decidim-module-alternative_landing.git", branch: 'release/0.27-stable'
 #gem "decidim-decidim_awesome", git: "https://github.com/DecidimAustria/decidim-module-decidim_awesome", branch: 'update-to-decidim-0.27'
 #gem "decidim-decidim_awesome", git: "https://github.com/DecidimAustria/decidim-module-decidim_awesome", branch: 'update-to-decidim-0.27', :ref => 'df40b3691a64a2'
-gem "decidim-decidim_awesome", "~> 0.11.2"
+gem "decidim-decidim_awesome", "~> 0.12.0"
 # gem "decidim-conferences", DECIDIM_VERSION
 # consultations does not exist from 0.28
 # gem "decidim-consultations", DECIDIM_VERSION
@@ -65,8 +65,6 @@ group :development do
   gem "letter_opener_web", "~> 2.0"
   gem "listen", "~> 3.1"
   gem "solargraph"
-  gem "spring", "~> 2.0"
-  gem "spring-watcher-listen", "~> 2.0.0"
   gem "web-console", "~> 4.2"
 end
 
