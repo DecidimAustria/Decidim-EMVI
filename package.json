@@ -5,6 +5,9 @@
     "@decidim/browserslist-config": "file:packages/browserslist-config",
     "@decidim/core": "file:packages/core",
     "@decidim/webpacker": "file:packages/webpacker",
+    "@fullcalendar/core": "^4.4.2",
+    "@fullcalendar/daygrid": "^4.4.2",
+    "@fullcalendar/timegrid": "^4.4.2",
     "@rails/actioncable": "^6.1.710",
     "codemirror": "^5.65.19",
     "europa": "^4.0.0",
@@ -26,12 +29,12 @@
     "extends @decidim/browserslist-config"
   ],
   "devDependencies": {
-    "@babel/eslint-parser": "^7.27.0",
-    "@babel/plugin-transform-classes": "^7.25.9",
-    "@babel/plugin-transform-regenerator": "^7.27.0",
-    "@babel/plugin-transform-runtime": "^7.26.10",
-    "@babel/preset-env": "^7.26.9",
-    "@babel/preset-react": "^7.26.3",
+    "@babel/eslint-parser": "^7.27.1",
+    "@babel/plugin-transform-classes": "^7.27.1",
+    "@babel/plugin-transform-regenerator": "^7.27.1",
+    "@babel/plugin-transform-runtime": "^7.27.1",
+    "@babel/preset-env": "^7.27.1",
+    "@babel/preset-react": "^7.27.1",
     "@decidim/dev": "file:packages/dev",
     "@decidim/eslint-config": "file:packages/eslint-config",
     "@decidim/prettier-config": "file:packages/prettier-config",
@@ -46,3 +49,4 @@
     "yarn": "~1.22.1"
   }
 }
+
