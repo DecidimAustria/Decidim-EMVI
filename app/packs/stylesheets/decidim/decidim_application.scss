@@ -36,51 +36,50 @@ header {
 		justify-self: center;
 
 		@media (min-width: 768px) {
-		grid-column: 5 / span 3;
-		justify-self: start;
+			grid-column: 5 / span 3;
 		}
 
 		@media (min-width: 1024px) {
-		grid-column: 7 / span 2;
-		justify-self: start;
+			grid-column: 7 / span 2;
+			justify-self: start;
 		}
 
 		font-size: 0.8rem !important;
 
 		.main-footer__language-container {
-		@apply relative;
+			@apply relative;
 
-		.main-footer__language-trigger {
-			@apply flex cursor-pointer items-center gap-1 rounded border px-2 py-1.5 font-semibold text-[0.8rem] leading-5;
-			border-color: rgb(var(--secondary-rgb) / var(--tw-text-opacity, 1));
-			color: rgb(var(--secondary-rgb) / var(--tw-text-opacity, 1));
+			.main-footer__language-trigger {
+				@apply flex cursor-pointer items-center gap-1 rounded border px-2 py-1.5 font-semibold text-[0.8rem] leading-5;
+				border-color: rgb(var(--secondary-rgb) / var(--tw-text-opacity, 1));
+				color: rgb(var(--secondary-rgb) / var(--tw-text-opacity, 1));
 
-			svg {
-			fill: rgb(var(--secondary-rgb) / var(--tw-text-opacity, 1));
+				svg {
+					fill: rgb(var(--secondary-rgb) / var(--tw-text-opacity, 1));
 
-			&:last-of-type {
-				@apply ml-auto block;
-			}
-			}
-			&[aria-expanded='true']{
-				@apply rounded-b-none;
-			}
-			&[aria-expanded='true'] > svg:first-of-type {
-			@apply block;
+					&:last-of-type {
+						@apply ml-auto block;
+					}
+				}
+				&[aria-expanded='true']{
+					@apply rounded-b-none;
+				}
+				&[aria-expanded='true'] > svg:first-of-type {
+					@apply block;
+				}
+
+				span {
+					color: rgb(var(--secondary-rgb) / var(--tw-text-opacity, 1));
+					font-size: 0.8rem !important;
+				}
 			}
 
-			span {
-			color: rgb(var(--secondary-rgb) / var(--tw-text-opacity, 1));
-			font-size: 0.8rem !important;
+			.main-footer__language {
+				@apply absolute left-0 top-full w-full rounded-sm rounded-t-none border-x border-b border-primary bg-white;
+				li{
+					@apply text-primary hover:text-white;
+				}
 			}
-		}
-
-		.main-footer__language {
-			@apply absolute left-0 top-full w-full rounded-sm rounded-t-none border-x border-b border-primary bg-white;
-			li{
-				@apply text-primary hover:text-white;
-			}
-		}
 		}
 	}
 }
