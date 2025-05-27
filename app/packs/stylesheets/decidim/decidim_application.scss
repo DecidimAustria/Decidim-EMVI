@@ -53,7 +53,7 @@ header {
 				@apply flex cursor-pointer items-center gap-1 rounded border px-2 py-1.5 font-semibold text-[0.8rem] leading-5;
 				border-color: rgb(var(--secondary-rgb) / var(--tw-text-opacity, 1));
 				color: rgb(var(--secondary-rgb) / var(--tw-text-opacity, 1));
-				@media (max-width: 425px) {
+				@media (max-width: 424px) {
 					span:first-of-type{
 						display:none;
 					}
