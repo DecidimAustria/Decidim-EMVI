@@ -25,8 +25,8 @@ header {
 		grid-column-start: 3;
 
 		@media (min-width: 1024px) {
-		grid-column: 4 / span 3;
-		justify-self: center;
+			grid-column: 4 / span 3;
+			justify-self: center;
 		}
 	}
 	.main-bar__languagemenu {
@@ -53,7 +53,11 @@ header {
 				@apply flex cursor-pointer items-center gap-1 rounded border px-2 py-1.5 font-semibold text-[0.8rem] leading-5;
 				border-color: rgb(var(--secondary-rgb) / var(--tw-text-opacity, 1));
 				color: rgb(var(--secondary-rgb) / var(--tw-text-opacity, 1));
-
+				@media (max-width: 425px) {
+					span:first-of-type{
+						display:none;
+					}
+				}
 				svg {
 					fill: rgb(var(--secondary-rgb) / var(--tw-text-opacity, 1));
 
@@ -74,7 +78,10 @@ header {
 				}
 			}
 			#dropdown-menu-language-chooser{
-				@apply min-w[100px];
+				min-width: 100px;
+				@media (min-width: 425px) {
+					min-width: unset;
+				}
 				.main-footer__language {
 					@apply absolute left-0 top-full w-full rounded-sm rounded-t-none border-x border-b border-primary bg-white;
 					li{
@@ -96,7 +103,10 @@ header {
 }
 
 h1.title-decorator{
-  @apply break-all 2xl:break-normal;
+	@apply break-all 2xl:break-normal;
+}
+span[data-external-link]{
+	display: none;
 }
 
 footer {
