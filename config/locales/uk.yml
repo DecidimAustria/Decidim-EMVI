@@ -2429,8 +2429,8 @@ uk:
       widget:
         see_more: Побачити більше
   locale:
-    name: англійська
-    name_with_error: англійська (помилка!)
+    name: українською
+    name_with_error: українською (помилка!)
   password_validator:
     blacklisted: знаходиться в чорному списку
     domain_included_in_password: занадто схоже на це доменне ім’я
