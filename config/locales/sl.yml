@@ -21,6 +21,12 @@ sl:
     models:
       decidim/proposals/proposal/other: Zamisel
   date:
+    buttons:
+      close: Zapri
+      select: Izberi
+    formats:
+      help:
+        date_format: 'Format: dd/mm/yyyy'
     abbr_month_names:
     - 
     - Jan
