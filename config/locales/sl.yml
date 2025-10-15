@@ -55,6 +55,15 @@ sl:
     - Oktober
     - November
     - December
+  time:
+    buttons:
+      close: Close
+      reset: Reset
+      select: Select
+    formats:
+      help:
+        time_format: 'Format: hh:mm'
+      tooltip: "%d-%m-%Y %H:%M %p %Z (GMT %:z)"
   decidim:
     account:
       show:
