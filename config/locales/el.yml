@@ -50,7 +50,12 @@ el:
       - Οκτ
       - Νοέ
       - Δεκ
+    buttons:
+      close: Κλείσιμο
+      select: Επιλέγω
     formats:
+      help:
+        date_format: 'Μορφή: ηη/μμ/εεεε'
       decidim_short: '%d/%m/%Y'
       decidim_short_with_month_name_short: '%d %b %Y'
       decidim_with_day_and_month_name: '%A %d %b %Y'
@@ -648,7 +653,13 @@ el:
     nickname_included_in_password: μοιάζει πολύ με το ψευδώνυμό σας
     password_repeated: δεν είναι δυνατή η επαναχρησιμοποίηση του παλιού κωδικού πρόσβασης
   time:
+    buttons:
+      close: Κλείσιμο
+      reset: Επαναφορά
+      select: Επιλογή
     formats:
+      help:
+        time_format: 'Μορφή: ΗΗ:μμ'
       day_of_month: '%b %d'
       day_of_week: '%ένα'
       day_of_week_long: '%a %e'
