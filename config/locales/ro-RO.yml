@@ -74,12 +74,19 @@ ro:
     errors:
       not_inside_organization: Fișierul nu este atașat niciunei organizații
   date:
+    buttons:
+      close: Închide
+      select: Selectează data
     formats:
+      help:
+        date_format: 'Format: zz/ll/aaaa'
       decidim_short: "%d/%m/%Y"
       decidim_short_with_month_name_short: "%d %b %Y"
       decidim_with_day_and_month_name: "%A %d %b %Y"
       decidim_with_month_name: "%d %B %Y"
       decidim_with_month_name_short: "%d %b"
+      order: d-m-y
+      separator: "/"
   datetime:
     distance_in_words:
       half_a_minute: jumătate de minut
@@ -1664,7 +1671,13 @@ ro:
     whatsapp_web: WhatsApp
     xing: Xing
   time:
+    buttons:
+      close: Închide
+      reset: Resetează
+      select: Selectează
     formats:
+      help:
+        time_format: 'Format: hh:mm'
       day_of_month: "%b %d"
       day_of_week: "%a"
       day_of_week_long: "%a %e"

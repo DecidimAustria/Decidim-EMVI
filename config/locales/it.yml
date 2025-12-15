@@ -81,6 +81,8 @@ it:
       decidim_with_day_and_month_name: "%A %d %b %Y"
       decidim_with_month_name: "%d %B %Y"
       decidim_with_month_name_short: "%d %b"
+      order: d-m-y
+      separator: "/"
   decidim:
     accessibility:
       external_link: Collegamento esterno

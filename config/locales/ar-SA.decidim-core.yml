@@ -77,12 +77,19 @@ ar-SA:
     'false': 'لا'
     'true': 'نعم'
   date:
+    buttons:
+      close: "إغلاق"
+      select: "تحديد"
     formats:
       decidim_short: "%d/%m/%Y"
       decidim_short_with_month_name_short: "%d %b %Y"
       decidim_with_day_and_month_name: "%A %d %b %Y"
       decidim_with_month_name: "%d %B %Y"
       decidim_with_month_name_short: "%d %b"
+      help:
+        date_format: 'التنسيق: يوم/شهر/سنة'
+      order: d-m-y
+      separator: "/"
   decidim:
     accessibility:
       external_link: الرابط الخارجي
@@ -1342,6 +1349,10 @@ ar-SA:
     whatsapp_web: واتساب
     xing: شينغ
   time:
+    buttons:
+      close: "إغلاق"
+      reset: "إعادة تعيين"
+      select: "تحديد"
     formats:
       day_of_month: "%b %d"
       day_of_week: "%a"
@@ -1354,6 +1365,10 @@ ar-SA:
           invitation_instructions:
             accept_until_format: "%B %d، %Y %I:%M %p"
       time_of_day: "%H:%M"
+      help:
+        time_format: 'التنسيق: ساعة:دقيقة'
+      order: d-m-y
+      separator: "/"
   versions:
     directions:
       left: المحذوفات

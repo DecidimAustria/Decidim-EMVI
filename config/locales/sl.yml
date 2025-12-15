@@ -27,6 +27,8 @@ sl:
     formats:
       help:
         date_format: 'Format: dd/mm/yyyy'
+      order: d-m-y
+      separator: "/"
     abbr_month_names:
     - 
     - Jan

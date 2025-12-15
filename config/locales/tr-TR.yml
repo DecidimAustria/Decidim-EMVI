@@ -79,12 +79,19 @@ tr-TR:
       file_size_too_large: Dosya boyutu çok büyük
       not_inside_organization: Dosya herhangi bir kuruluşa bağlı değil
   date:
+    buttons:
+      close: Kapat
+      select: Seç
     formats:
+      help:
+        date_format: 'Format: gg/aa/yyyy'
       decidim_short: "%d/%d/%Y"
       decidim_short_with_month_name_short: "%d %b %Y"
       decidim_with_day_and_month_name: "%A %d %b %Y"
       decidim_with_month_name: "%d %B %Y"
       decidim_with_month_name_short: "%d %b"
+      order: d-m-y
+      separator: "/"
   datetime:
     distance_in_words:
       about_x_hours:
@@ -1865,7 +1872,13 @@ tr-TR:
     whatsapp_web: Naber
     xing: Xing
   time:
+    buttons:
+      close: Kapat
+      reset: Sıfırla
+      select: Seçmek
     formats:
+      help:
+        time_format: 'Format: hh:mm'
       day_of_month: "%b %d"
       day_of_week: "%A"
       day_of_week_long: "%a %e"
