@@ -9,3 +9,12 @@ Disallow: /
 User-agent: AwarioRssBot
 User-agent: AwarioSmartBot
 Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: SemrushBot-BA
+Disallow: /
+
+User-agent: SiteAuditBot
+Disallow: /
