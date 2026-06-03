@@ -364,6 +364,7 @@ sl:
             participate: Sodeluj
             participate_in: Sodeluj v procesu %{resource_name}
             see_all_processes: Prikaži vse procese
+            see_all_spaces: Prikaži vse procese
       participatory_process_steps:
         index:
           back_to_process: Nazaj na stran procesa
