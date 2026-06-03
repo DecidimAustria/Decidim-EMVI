@@ -358,6 +358,7 @@ sl:
         home:
           highlighted_processes:
             active_processes: Teme
+            active_spaces: O tem procesu
             active_step: Aktivna faza
             more_information: Več informacij
             participate: Sodeluj
