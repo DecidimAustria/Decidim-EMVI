@@ -347,8 +347,10 @@ sl:
         home:
           highlighted_assemblies:
             active_assemblies: Aktivne skupščine
+            active_spaces: Aktivne skupščine
             assemblies_button_title: Povezava na stran skupščin, ki prikazuje vse skupščine
             see_all_assemblies: Prikaži vse skupščine
+            see_all_spaces: Prikaži vse skupščine
         user_profile:
           member_of:
             member_of: Član
