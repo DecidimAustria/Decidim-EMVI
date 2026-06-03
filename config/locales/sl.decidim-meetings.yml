@@ -97,7 +97,7 @@ sl:
       meetings:
         actions:
           join: Pridruži se
-        name: Dogodki, ki trenutno potekajo
+        name: Dogodki
         settings:
           global:
             announcement: Obvestilo
