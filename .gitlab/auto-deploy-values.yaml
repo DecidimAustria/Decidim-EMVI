@@ -1,5 +1,9 @@
 service:
   internalPort: 5000
+ingress:                                                                                                                                                                            
+    className: traefik                                                            
+    annotations:
+      cert-manager.io/cluster-issuer: letsencrypt-traefik
 containerSecurityContext:
   allowPrivilegeEscalation: false
   capabilities:
