@@ -1,0 +1,8 @@
+# BuildKit trial: build images without deploying them to Kubernetes.
+include:
+  - component: gitlab.webface.at/components/rails-deploy/pipeline@buildkit
+    inputs:
+      ruby-version: "3.2.7"
+      node-version: "18.17.1"
+      build-feature-branches: true
+      deploy: false
