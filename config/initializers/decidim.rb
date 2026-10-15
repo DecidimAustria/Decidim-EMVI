@@ -48,7 +48,7 @@ Decidim.configure do |config|
   # config.maps = {
   #   provider: :here,
   #   api_key: Rails.application.secrets.maps[:api_key],
-  #   static: { url: "https://image.maps.ls.hereapi.com/mia/1.6/mapview" }
+  #   static: { url: "https://image.maps.hereapi.com/mia/v3/base/mc/overlay" }
   # }
   #
   # == OpenStreetMap (OSM) services ==
@@ -97,7 +97,7 @@ Decidim.configure do |config|
   config.maps = {
     provider: :here,
     api_key: ENV["MAPS_API_KEY"],
-    static: { url: "https://image.maps.ls.hereapi.com/mia/1.6/mapview" }
+    static: { url: "https://image.maps.hereapi.com/mia/v3/base/mc/overlay" }
   }
 
   # Geocoder configurations if you want to customize the default geocoding
@@ -118,7 +118,7 @@ Decidim.configure do |config|
     dynamic_provider = Rails.application.secrets.maps[:dynamic_provider]
     dynamic_url = Rails.application.secrets.maps[:dynamic_url]
     static_url = Rails.application.secrets.maps[:static_url]
-    static_url = "https://image.maps.ls.hereapi.com/mia/1.6/mapview" if static_provider == "here" && static_url.blank?
+    static_url = "https://image.maps.hereapi.com/mia/v3/base/mc/overlay" if static_provider == "here" && static_url.blank?
     config.maps = {
       provider: static_provider,
       api_key: Rails.application.secrets.maps[:static_api_key],
