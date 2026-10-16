@@ -1,0 +1,8 @@
+# Upstream 0.30.9 still uses data_portability_path, but the view supplies
+# download_your_data_path. Keep this correction when leaving the framework fork.
+pl:
+  decidim:
+    pages:
+      terms_of_service:
+        refuse:
+          modal_body: 'Jeśli odmówisz, nie będziesz mógł/mogła korzystać z platformy, możesz <a href="%{download_your_data_path}">pobrać swoje dane</a> i/lub <a href="%{delete_path}">usunąć konto</a>.'

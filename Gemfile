@@ -2,8 +2,8 @@
 
 source "https://rubygems.org"
 
-ruby '3.2.7'
- DECIDIM_VERSION = { git: "https://github.com/DecidimAustria/decidim", branch: '0.29-live' }
+ruby '3.3.12'
+ DECIDIM_VERSION = { git: "https://github.com/DecidimAustria/decidim", branch: '0.30-live' }
 #DECIDIM_VERSION = { git: "https://github.com/DecidimAustria/decidim", branch: '0.28.4-live' }
 # DECIDIM_VERSION = "0.28.4"
 
@@ -13,7 +13,7 @@ gem "decidim", DECIDIM_VERSION
 # gem "decidim-alternative_landing", git: "https://github.com/Platoniq/decidim-module-alternative_landing.git", branch: 'release/0.27-stable'
 #gem "decidim-decidim_awesome", git: "https://github.com/DecidimAustria/decidim-module-decidim_awesome", branch: 'update-to-decidim-0.27'
 #gem "decidim-decidim_awesome", git: "https://github.com/DecidimAustria/decidim-module-decidim_awesome", branch: 'update-to-decidim-0.27', :ref => 'df40b3691a64a2'
-gem "decidim-decidim_awesome", "~> 0.12.0"
+gem "decidim-decidim_awesome", "~> 0.13.0"
 # gem "decidim-conferences", DECIDIM_VERSION
 # consultations does not exist from 0.28
 # gem "decidim-consultations", DECIDIM_VERSION
@@ -54,9 +54,9 @@ group :development, :test do
   gem "byebug", "~> 11.0", platform: :mri
 
   gem "brakeman"
-  gem "net-imap", "~> 0.2.3"
+  gem "net-imap", "~> 0.4.25"
   gem "net-pop", "~> 0.1.1"
-  gem "net-smtp", "~> 0.3.1"
+  gem "net-smtp", "~> 0.5.0"
   gem "decidim-dev", DECIDIM_VERSION
 end
 
