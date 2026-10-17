@@ -38,8 +38,8 @@ node_modules
 # Ignore public uploads
 public/uploads
 public/decidim-packs
-public/sw.js
-public/sw.js.map
+/public/sw.js*
+/app/views/static/api/docs/
 
 .DS_Store
 tailwind.config.js

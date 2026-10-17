@@ -139,7 +139,8 @@ workers:
                 - cloud
     replicaCount: 1
     command:
-      - /cnb/lifecycle/launcher
+      - bundle
+      - exec
       - good_job
       - start
     terminationGracePeriodSeconds: 60

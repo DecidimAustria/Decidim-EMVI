@@ -1,0 +1,10 @@
+include:
+  - component: gitlab.webface.at/components/rails-deploy/pipeline@4407075d811337c775f4512d696d50cdcd7aade5
+    inputs:
+      ruby-version: "3.3.12"
+      node-version: "22.14.0"
+      eslint-command: npx --no-install eslint --config packages/eslint-config/index.js app/packs config/webpack --format json --output-file tmp/code-quality/eslint.json
+      stylelint-command: npx --no-install stylelint --config packages/stylelint-config/index.js "app/**/*.{css,scss}" --formatter json --output-file tmp/code-quality/stylelint.json
+      build-engine: buildkit
+      build-feature-branches: true
+      deploy: true
