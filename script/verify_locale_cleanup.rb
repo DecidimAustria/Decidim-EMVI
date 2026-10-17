@@ -149,6 +149,10 @@ class EmviLocaleCleanupTest < Minitest::Test
     end
   end
 
+  def test_german_homepage_statistics_heading
+    assert_equal "Aktueller Zustand von graz", I18n.t("decidim.pages.home.statistics.headline", locale: :de, organization: "graz")
+  end
+
   def test_polish_terms_and_german_editorial_corrections
     assert_includes I18n.t("decidim.pages.terms_of_service.refuse.modal_body", locale: :pl, download_your_data_path: "/download-data", delete_path: "/delete-account"), 'href="/download-data"'
     assert_equal "Neue Organisation", I18n.t("decidim.admin.assemblies.new.title", locale: :de)

@@ -85,6 +85,15 @@ locales.each do |locale|
     changes << { locale: locale, key: key, removed_parameters: extra }
   end
 end
+# Upstream 0.30.9 accidentally contains Romanian text in the German locale.
+# Removing the stock 0.27 override exposes it, although its interpolation is valid.
+key = "decidim.pages.home.statistics.headline"
+fixed = "Aktueller Zustand von %{organization}"
+unless I18n.t(key, locale: :de) == fixed
+  target = key.split(".")[0...-1].reduce(repairs["de"] ||= {}) { |hash, part| hash[part] ||= {} }
+  target[key.split(".").last] = fixed
+  changes << { locale: "de", key: key, reason: "Romanian text in upstream German locale" }
+end
 if ENV["WRITE_LOCALE_FIXES"] == "1" && changes.any?
   serialized = YAML.dump(repairs.sort.to_h, line_width: -1)
   abort "YAML roundtrip failed" unless YAML.safe_load(serialized, aliases: true) == repairs

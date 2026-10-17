@@ -12,7 +12,7 @@ This removes **48,396 copied strings** across 225 changed files; **82 files beco
 
 ## Reviewed 0.30 interpolation repairs
 
-`zz.emvi_030_compatibility.yml` holds **116 targeted overrides in 17 languages**, including repairs to outdated upstream translations that reappear after removing the copied files. The `zz` filename loads them after the old application locale files. The full configured set of 22 EMVI languages is used during testing; it must be set before Rails boot so lazy-loaded regional translations are actually included.
+`zz.emvi_030_compatibility.yml` holds **117 targeted overrides in 17 languages**, including repairs to outdated upstream translations that reappear after removing the copied files. The `zz` filename loads them after the old application locale files. The full configured set of 22 EMVI languages is used during testing; it must be set before Rails boot so lazy-loaded regional translations are actually included.
 
 The reviewed call contracts cover:
 
@@ -46,6 +46,12 @@ bundle exec rails runner script/verify_locale_cleanup.rb
 bundle exec rails runner script/fix_locale_interpolations.rb
 ```
 
-The locale suite passed **7 tests and 102,428 assertions**. It independently checks deleted values against the historical tags, remaining custom values against the pre-cleanup commit, YAML type preservation, important EMVI/Polish text, and real 0.30 interpolation bindings in all 22 languages. A second repair-generator run proposes zero corrections. The existing synthetic upgrade suite also passed again: 9 tests, 81 assertions, including public rendering, taxonomies and group authorship. The isolated PostgreSQL server was stopped afterward; no live data was used.
+The locale suite passed **8 tests and 102,429 assertions**. It independently checks deleted values against the historical tags, remaining custom values against the pre-cleanup commit, YAML type preservation, important EMVI/Polish text, and real 0.30 interpolation bindings in all 22 languages. A second repair-generator run proposes zero corrections. The existing synthetic upgrade suite also passed again: 9 tests, 81 assertions, including public rendering, taxonomies and group authorship. The isolated PostgreSQL server was stopped afterward; no live data was used.
 
 After the MR build/scans pass, merge for another staging deployment. Verify visible labels and actual affected features in the enabled tenant languages, especially bs, hr, sr-CS, tr-TR, ar-SA, fa-IR, el, sl, uk and Polish. Login and upload testing remains with Alex. This preparation sends no notifications and performs no browser login or upload. No schema migration is added by this MR.
+
+## German statistics heading follow-up
+
+After MR !260 was merged, staging exposed a wrong-language upstream translation: Decidim 0.30.9 ships `Starea curentă a %{organization}` under `de.decidim.pages.home.statistics.headline`. The identical old German stock entry had previously masked this upstream defect and was removed during cleanup. Interpolation checks alone did not detect the Romanian wording.
+
+A targeted application override restores the previous `Aktueller Zustand von %{organization}` wording. The repair generator now reproduces this exception and a runtime regression assertion checks the exact German heading with the organization name (`Aktueller Zustand von graz`). No staging configuration or organization language setting is changed.
