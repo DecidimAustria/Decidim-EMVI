@@ -1,0 +1,13 @@
+---
+de:
+  emvi:
+    berlin_district_map:
+      name: Berliner Bezirkskarte
+      title: Überschrift
+      introduction: Beschreibung (HTML für Absätze und Zeilenumbrüche möglich)
+en:
+  emvi:
+    berlin_district_map:
+      name: Berlin district map
+      title: Heading
+      introduction: Description (HTML paragraphs and line breaks supported)

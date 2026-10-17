@@ -1,0 +1,12 @@
+<section id="berlin-district-map" class="home__section berlin-district-map">
+  <link rel="stylesheet" href="/berlin-district-map/map-v1.css">
+  <div class="content-block__title justify-center text-center">
+    <h2 class="h2 decorator text-center"><%= ERB::Util.html_escape(title.to_s) %></h2>
+  </div>
+  <div class="berlin-map-introduction"><%= introduction %></div>
+  <div class="berlin-map-content">
+    <%= render :map %>
+    <%= render :district_list %>
+  </div>
+  <script src="/berlin-district-map/map-v1.js" defer></script>
+</section>

@@ -44,3 +44,6 @@ public/decidim-packs
 .DS_Store
 tailwind.config.js
 yarn.lock
+
+# Local Berlin map conversion backups
+/berlin-map-backup*.json
