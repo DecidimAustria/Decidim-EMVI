@@ -1,0 +1,4 @@
+<% form.fields_for :settings, form.object.settings do |settings_fields| %>
+  <%= settings_fields.translated :text_field, :title, label: t("emvi.berlin_district_map.title") %>
+  <%= settings_fields.translated :text_area, :introduction, label: t("emvi.berlin_district_map.introduction"), rows: 6 %>
+<% end %>

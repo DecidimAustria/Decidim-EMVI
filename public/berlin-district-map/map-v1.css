@@ -1,0 +1,22 @@
+/* Reviewed Berlin homepage component. Bump the asset version after changes. */
+#berlin-district-map .berlin-map-content { position: relative; }
+#berlin-district-map .berlin-map-introduction { padding: 4rem 0; text-align: center; }
+#berlin-district-map #berlinCard { display: none; width: 100%; height: auto; }
+#berlin-district-map .districts path { fill: var(--fillcolor); cursor: pointer; }
+#berlin-district-map svg text { font-family: inherit; font-size: .9rem; letter-spacing: .1rem; text-transform: uppercase; font-weight: 600; pointer-events: none; }
+#berlin-district-map .districtList { text-align: center; margin-top: 2rem; }
+#berlin-district-map .districtList .landesbeirat { display: inline-block; padding: .5rem 0; border-bottom: 1px solid rgb(var(--primary-rgb)); }
+#berlin-district-map .districtList > div { margin: 1rem auto; width: fit-content; }
+#berlin-district-map .districtList ul { display: grid; grid-template-columns: 1fr 1fr; gap: 0 .5rem; list-style: none; padding: 0; margin: 0; }
+#berlin-district-map .districtList li { text-align: left; padding: .5rem .25rem; overflow-wrap: anywhere; border-bottom: 1px solid rgb(var(--primary-rgb)); }
+@media (min-width: 47.9rem) {
+  #berlin-district-map #berlinCard { display: block; }
+  #berlin-district-map .districtList { display: none; }
+  #berlin-district-map .districts path { stroke: #d9d9d9; fill: transparent; }
+  #berlin-district-map svg a:hover path,
+  #berlin-district-map svg a:focus path { fill: var(--fillcolor); stroke: currentColor; }
+  #berlin-district-map svg a:focus-visible path { stroke-width: 3px; }
+}
+@media (prefers-reduced-motion: no-preference) {
+  #berlin-district-map .districts path { transition: fill 150ms ease-out; }
+}
