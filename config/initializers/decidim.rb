@@ -494,7 +494,12 @@ if Decidim.module_installed? :elections
   end
 end
 
-Rails.application.config.i18n.available_locales = Decidim.available_locales
+# Upstream regional files (e.g. ar-SA.yml) can declare their base locale (ar).
+# I18n otherwise discards these translations while loading, before fallbacks run.
+# Keep Decidim's selectable languages unchanged; only allow I18n to load parents.
+Rails.application.config.i18n.available_locales = Decidim.available_locales.flat_map do |locale|
+  [locale.to_s, locale.to_s.split("-").first]
+end.uniq
 Rails.application.config.i18n.default_locale = Decidim.default_locale
 
 # Inform Decidim about the assets folder

@@ -149,6 +149,18 @@ class EmviLocaleCleanupTest < Minitest::Test
     end
   end
 
+  def test_regional_language_names_load_their_base_translations
+    chooser = Object.new.extend(Decidim::LanguageChooserHelper)
+    assert_equal "العربية", chooser.locale_name(:"ar-SA")
+    A::LOCALES.select { |locale| locale.include?("-") }.each do |locale|
+      assert_includes I18n.available_locales.map(&:to_s), locale.split("-").first
+    end
+    assert_equal A::LOCALES.sort, Decidim.available_locales.map(&:to_s).sort
+    key = "decidim.pages.home.hero.welcome"
+    assert_equal I18n.t(key, locale: :ar, organization: "EMVI"), I18n.t(key, locale: :"ar-SA", organization: "EMVI")
+    refute_equal I18n.t(key, locale: :en, organization: "EMVI"), I18n.t(key, locale: :"ar-SA", organization: "EMVI")
+  end
+
   def test_german_homepage_statistics_heading
     assert_equal "Aktueller Zustand von graz", I18n.t("decidim.pages.home.statistics.headline", locale: :de, organization: "graz")
   end

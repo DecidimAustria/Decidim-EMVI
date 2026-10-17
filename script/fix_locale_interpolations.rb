@@ -29,6 +29,7 @@ end
   end
 end
 import_success = {
+  "ar-SA" => "تم استيراد المقترحات بنجاح.",
   "bs" => "Prijedlozi su uspješno uvezeni.", "hr" => "Prijedlozi su uspješno uvezeni.",
   "sr-CS" => "Prijedlozi su uspješno uvezeni.", "sl" => "Predlogi so bili uspešno uvoženi.",
   "fa-IR" => "پیشنهادها با موفقیت وارد شدند.", "uk" => "Пропозиції успішно імпортовано."

@@ -1,4 +1,31 @@
 ---
+ar-SA:
+  decidim:
+    debates:
+      actions:
+        new: نقاش جديد
+    components:
+      add_comment_form:
+        account_message: سجل الدخول بحسابك
+    proposals:
+      admin:
+        proposals_imports:
+          create:
+            success: تم استيراد المقترحات بنجاح.
+    sortitions:
+      sortitions:
+        show:
+          candidate_proposals_info: 'تم تنفيذ التصنيف بين المقترحات التالية (%{taxonomy_labels}) ، مع المعرفات التالية (بالخط العريض للمقترحات المختارة)  '
+    events:
+      debates:
+        create_debate_event:
+          space_followers:
+            email_intro: |-
+              مرحبا،
+              نقاش الجديدة "%{resource_title}" تم إنشاؤها على %{participatory_space_title} مساحة المشاركة، والتحقق من ذلك والمساهمة:
+            email_outro: لقد تلقيت هذا الإشعار لأنك تتابع مساحة المشاركة %{participatory_space_title} . يمكنك إيقاف تلقي الإخطارات باتباع الرابط السابق.
+            email_subject: مناقشة جديدة "%{resource_title}" في %{participatory_space_title}
+            notification_title: تم إنشاء المناقشة <a href="%{resource_path}">%{resource_title}</a> في <a href="%{participatory_space_url}">%{participatory_space_title}</a>.
 bs:
   decidim:
     debates:
