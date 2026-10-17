@@ -4,7 +4,6 @@ uk:
     attributes:
       agenda:
         description: опис
-        duration: Тривалість
         title: Назва
       close_meeting:
         attendees_count: Кількість присутніх
@@ -16,10 +15,8 @@ uk:
         proposal_ids: Пропозиції, створені на зустрічі
         video_url: URL відео
       meeting:
-        address: Адреса
         available_slots: Доступні слоти для цієї зустрічі
         customize_registration_email: Налаштування електронної пошти для реєстрації
-        decidim_category_id: Категорія
         decidim_scope_id: Область застосування
         decidim_user_group_id: Група користувачів
         description: опис
@@ -29,17 +26,11 @@ uk:
         location_hints: Підказки щодо розташування
         online_meeting_url: URL-адреса онлайн-зустрічі
         organizer_gid: Створити як
-        organizer_id: Організатор
-        private_meeting: Приватна зустріч
-        registration_email_custom_content: Спеціальний вміст електронної пошти для
-          реєстрації
+        registration_email_custom_content: Спеціальний вміст електронної пошти для реєстрації
         registration_form_enabled: Форма реєстрації включена
-        registration_terms: Умови реєстрації
         registration_url: URL-адреса реєстрації
         registrations_enabled: Реєстрації включені
         show_embedded_iframe: Показати вбудований iframe для цієї URL-адреси
-        start_time: Час початку
-        title: Назва
         transparent: Прозорий
         type_of_meeting: Тип
     errors:
@@ -47,33 +38,25 @@ uk:
         meeting:
           attributes:
             iframe_embed_type:
-              not_embeddable: Цю URL-адресу не можна вставити на сторінку зустрічі
-                чи події в прямому ефірі
+              not_embeddable: Цю URL-адресу не можна вставити на сторінку зустрічі чи події в прямому ефірі
         meeting_agenda:
           attributes:
             base:
-              too_many_minutes: Тривалість пунктів перевищує тривалість зустрічі на
-                %{count} хвилин
-              too_many_minutes_child: Тривалість дочірнього пункту порядку денного
-                перевищує тривалість батьківського пункту порядку денного "%{parent_title}"
-                на %{count} хвилин
+              too_many_minutes: Тривалість пунктів перевищує тривалість зустрічі на %{count} хвилин
+              too_many_minutes_child: Тривалість дочірнього пункту порядку денного перевищує тривалість батьківського пункту порядку денного "%{parent_title}" на %{count} хвилин
         meeting_registration_invite:
           attributes:
             email:
               already_invited: Цей обліковий запис електронної пошти вже запрошено
     models:
       decidim/meetings/close_meeting_event: Зустріч закрита
-      decidim/meetings/create_meeting_event: Зустріч
       decidim/meetings/meeting_registrations_enabled_event: Реєстрації включені
-      decidim/meetings/meeting_registrations_over_percentage_event: Кількість реєстрацій
-        перевищує ліміт
+      decidim/meetings/meeting_registrations_over_percentage_event: Кількість реєстрацій перевищує ліміт
       decidim/meetings/upcoming_meeting_event: Майбутня зустріч
       decidim/meetings/update_meeting_event: Зустріч оновлена
   activerecord:
     models:
       decidim/meetings/meeting:
-        one: Зустріч
-        few: Зустрічі
         many: Зустрічі
         other: Зустрічі
       decidim/meetings/minutes:
@@ -129,26 +112,20 @@ uk:
         actions:
           comment: коментар
           join: Приєднуйтесь
-        name: Зустрічі
         settings:
           global:
-            announcement: Оголошення
             comments_enabled: Коментарі ввімкнено
-            comments_max_length: Максимальна довжина коментарів (залиште 0 для значення
-              за умовчанням)
+            comments_max_length: Максимальна довжина коментарів (залиште 0 для значення за умовчанням)
             creation_enabled_for_participants: Учасники можуть створювати зустрічі
             default_registration_terms: Стандартні умови реєстрації
             enable_pads_creation: Увімкнути створення панелей
             maps_enabled: Карти ввімкнено
             registration_code_enabled: Реєстраційний код увімкнено
-            resources_permissions_enabled: Для кожної зустрічі можна встановити дозволи
-              на дії
+            resources_permissions_enabled: Для кожної зустрічі можна встановити дозволи на дії
             scope_id: Область застосування
             scopes_enabled: Області ввімкнено
-            terms_and_conditions_url_for_meeting_creators: URL-адреса положень та
-              умов для авторів зустрічей
+            terms_and_conditions_url_for_meeting_creators: URL-адреса положень та умов для авторів зустрічей
           step:
-            announcement: Оголошення
             comments_blocked: Коментарі заблоковано
             creation_enabled_for_participants: Створення наради учасниками ввімкнено
             creation_enabled_for_user_groups: Увімкнено створення нарад групами користувачів
@@ -156,78 +133,47 @@ uk:
       meetings:
         meeting_closed:
           affected_user:
-            email_intro: 'Вашу зустріч "%{resource_title}" закрито. Ви можете прочитати
-              висновки на його сторінці:'
-            email_outro: Ви отримали це сповіщення, оскільки організували зустріч
-              "%{resource_title}".
+            email_intro: 'Вашу зустріч "%{resource_title}" закрито. Ви можете прочитати висновки на його сторінці:'
+            email_outro: Ви отримали це сповіщення, оскільки організували зустріч "%{resource_title}".
             email_subject: Засідання «%{resource_title}» закрито
-            notification_title: Зустріч <a href="%{resource_path}">%{resource_title}</a>
-              закрита.
+            notification_title: Зустріч <a href="%{resource_path}">%{resource_title}</a> закрита.
           follower:
-            email_intro: 'Засідання «%{resource_title}» закрито. Ви можете прочитати
-              висновки на його сторінці:'
-            email_outro: Ви отримали це сповіщення, оскільки стежите за нарадою "%{resource_title}".
-              Ви можете скасувати підписку за попереднім посиланням.
+            email_intro: 'Засідання «%{resource_title}» закрито. Ви можете прочитати висновки на його сторінці:'
+            email_outro: Ви отримали це сповіщення, оскільки стежите за нарадою "%{resource_title}". Ви можете скасувати підписку за попереднім посиланням.
             email_subject: Засідання «%{resource_title}» закрито
-            notification_title: Зустріч <a href="%{resource_path}">%{resource_title}</a>
-              закрита.
+            notification_title: Зустріч <a href="%{resource_path}">%{resource_title}</a> закрита.
         meeting_created:
           button_text: Зареєструватися на зустріч
-          email_intro: Зустріч "%{resource_title}" додано до "%{participatory_space_title}",
-            за якою ви стежите.
-          email_outro: Ви отримали це сповіщення, тому що стежите за "%{participatory_space_title}".
-            Ви можете скасувати підписку за попереднім посиланням.
+          email_intro: Зустріч "%{resource_title}" додано до "%{participatory_space_title}", за якою ви стежите.
+          email_outro: Ви отримали це сповіщення, тому що стежите за "%{participatory_space_title}". Ви можете скасувати підписку за попереднім посиланням.
           email_subject: Нову зустріч додано до %{participatory_space_title}
-          notification_title: Зустріч <a href="%{resource_path}">%{resource_title}</a>
-            додано до %{participatory_space_title}
+          notification_title: Зустріч <a href="%{resource_path}">%{resource_title}</a> додано до %{participatory_space_title}
         meeting_registration_confirmed:
-          notification_title: Вашу реєстрацію на зустріч <a href="%{resource_url}">%{resource_title}</a>
-            підтверджено. Ваш реєстраційний код %{registration_code}.
+          notification_title: Вашу реєстрацію на зустріч <a href="%{resource_url}">%{resource_title}</a> підтверджено. Ваш реєстраційний код %{registration_code}.
         meeting_registrations_over_percentage:
-          email_intro: Виділені слоти для зустрічі "%{resource_title}" перевищують
-            %{percentage}%.
-          email_outro: Ви отримали це сповіщення, оскільки ви є адміністратором місця
-            для участі в зустрічі.
-          email_subject: Виділені слоти для зустрічі "%{resource_title}" перевищують
-            %{percentage}%
-          notification_title: Виділені слоти для зустрічі <a href="%{resource_path}">%{resource_title}</a>
-            перевищують %{percentage}%.
+          email_intro: Виділені слоти для зустрічі "%{resource_title}" перевищують %{percentage}%.
+          email_outro: Ви отримали це сповіщення, оскільки ви є адміністратором місця для участі в зустрічі.
+          email_subject: Виділені слоти для зустрічі "%{resource_title}" перевищують %{percentage}%
+          notification_title: Виділені слоти для зустрічі <a href="%{resource_path}">%{resource_title}</a> перевищують %{percentage}%.
         meeting_updated:
-          email_intro: 'Зустріч "%{resource_title}" оновлено. Ви можете прочитати
-            нову версію на її сторінці:'
-          email_outro: Ви отримали це сповіщення, оскільки стежите за нарадою "%{resource_title}".
-            Ви можете скасувати підписку за попереднім посиланням.
+          email_intro: 'Зустріч "%{resource_title}" оновлено. Ви можете прочитати нову версію на її сторінці:'
+          email_outro: Ви отримали це сповіщення, оскільки стежите за нарадою "%{resource_title}". Ви можете скасувати підписку за попереднім посиланням.
           email_subject: Зустріч "%{resource_title}" оновлено
-          notification_title: Зустріч <a href="%{resource_path}">%{resource_title}</a>
-            оновлено.
+          notification_title: Зустріч <a href="%{resource_path}">%{resource_title}</a> оновлено.
         registration_code_validated:
-          email_intro: Ваш реєстраційний код "%{registration_code}" для зустрічі "%{resource_title}"
-            підтверджено.
-          email_outro: Ви отримали це сповіщення, оскільки ваш реєстраційний код для
-            зустрічі "%{resource_title}" підтверджено.
-          email_subject: Ваш реєстраційний код "%{registration_code}" для зустрічі
-            "%{resource_title}" підтверджено
-          notification_title: Ваш реєстраційний код "%{registration_code}" для зустрічі
-            <a href="%{resource_path}">%{resource_title}</a> підтверджено.
+          email_intro: Ваш реєстраційний код "%{registration_code}" для зустрічі "%{resource_title}" підтверджено.
+          email_outro: Ви отримали це сповіщення, оскільки ваш реєстраційний код для зустрічі "%{resource_title}" підтверджено.
+          email_subject: Ваш реєстраційний код "%{registration_code}" для зустрічі "%{resource_title}" підтверджено
         registrations_enabled:
-          email_intro: 'Зустріч "%{resource_title}" увімкнула реєстрацію. Ви можете
-            зареєструватися на його сторінці:'
-          email_outro: Ви отримали це сповіщення, оскільки стежите за нарадою "%{resource_title}".
-            Ви можете скасувати підписку за попереднім посиланням.
+          email_intro: 'Зустріч "%{resource_title}" увімкнула реєстрацію. Ви можете зареєструватися на його сторінці:'
+          email_outro: Ви отримали це сповіщення, оскільки стежите за нарадою "%{resource_title}". Ви можете скасувати підписку за попереднім посиланням.
           email_subject: Зустріч "%{resource_title}" увімкнула реєстрацію.
-          notification_title: Зустріч <a href="%{resource_path}">%{resource_title}</a>
-            увімкнула реєстрацію.
+          notification_title: Зустріч <a href="%{resource_path}">%{resource_title}</a> увімкнула реєстрацію.
         upcoming_meeting:
-          email_intro: Зустріч "%{resource_title}" розпочнеться менш ніж за 48 годин.
-          email_outro: Ви отримали це сповіщення, оскільки стежите за нарадою "%{resource_title}".
-            Ви можете скасувати підписку за попереднім посиланням.
-          email_subject: Зустріч "%{resource_title}" розпочнеться менш ніж за 48 годин.
-          notification_title: Зустріч <a href="%{resource_path}">%{resource_title}</a>
-            розпочнеться менш ніж за 48 годин.
+          email_outro: Ви отримали це сповіщення, оскільки стежите за нарадою "%{resource_title}". Ви можете скасувати підписку за попереднім посиланням.
     forms:
       meetings:
-        attendees_count_help_text: Не забудьте вказати загальну кількість учасників
-          вашої зустрічі, будь то особиста, онлайн чи гібридна.
+        attendees_count_help_text: Не забудьте вказати загальну кількість учасників вашої зустрічі, будь то особиста, онлайн чи гібридна.
     gamification:
       badges:
         attended_meetings:
@@ -237,33 +183,21 @@ uk:
           description_another: Цей учасник відвідав %{score} зустрічей.
           description_own: Ви відвідали %{score} зустрічей.
           name: Відвідував засідання
-          next_level_in: Відвідайте ще %{score} зустрічей, щоб досягти наступного
-            рівня!
+          next_level_in: Відвідайте ще %{score} зустрічей, щоб досягти наступного рівня!
           unearned_another: Цей учасник ще не відвідав жодної зустрічі.
           unearned_own: Ви ще не були на жодній зустрічі.
     meetings:
       actions:
-        agenda: Порядок денний
         attachment_collections: Папки
         attachments: Додатки
-        close: Закрити
-        confirm_destroy: Ви впевнені, що хочете видалити цю зустріч?
-        destroy: Видалити
-        edit: Редагувати
         invalid_destroy:
           proposals_count:
             one: 'Нараду неможливо знищити, оскільки з нею пов’язано пропозицію %{count}:'
-            few: 'Зустріч не може бути знищена, оскільки з нею пов’язано %{count}
-              пропозицій:'
-            many: 'Зустріч не може бути знищена, оскільки з нею пов’язано %{count}
-              пропозицій:'
-            other: 'Зустріч не може бути знищена, оскільки з нею пов’язано %{count}
-              пропозицій:'
+            few: 'Зустріч не може бути знищена, оскільки з нею пов’язано %{count} пропозицій:'
+            many: 'Зустріч не може бути знищена, оскільки з нею пов’язано %{count} пропозицій:'
+            other: 'Зустріч не може бути знищена, оскільки з нею пов’язано %{count} пропозицій:'
         manage_poll: Керувати опитуванням
         new: Нова зустріч
-        preview: Попередній перегляд
-        registrations: Реєстрації
-        title: Дії
       admin:
         agenda:
           agenda_item:
@@ -280,32 +214,22 @@ uk:
             up: вгору
           create:
             invalid: Виникла проблема зі створенням цього порядку денного
-            success: Порядок денний успішно створено
           edit:
-            title: Редагувати порядок денний
             update: оновлення
           form:
             add_agenda_item: Додати пункт порядку денного
             agenda_items: Пункти порядку денного
-            end_date: Дата закінчення
-            start_date: Дата початку
           new:
-            create: Створити
             title: Новий порядок денний
           update:
             invalid: Виникла проблема з оновленням цього порядку денного
-            success: Порядок денний успішно оновлено
         exports:
           answers: Відповіді
           meeting_comments: Коментарі
           meetings: Зустрічі
-          registrations: Реєстрації
         invite_join_meeting_mailer:
           invite:
-            decline: Відхилити запрошення
-            invited_you_to_join_a_meeting: "%{invited_by} запросив вас приєднатися
-              до зустрічі о %{application}. Ви можете відхилити або прийняти це за
-              посиланнями нижче."
+            invited_you_to_join_a_meeting: "%{invited_by} запросив вас приєднатися до зустрічі о %{application}. Ви можете відхилити або прийняти це за посиланнями нижче."
             join: Приєднатися до зустрічі "%{meeting_title}"
         invites:
           create:
@@ -314,9 +238,7 @@ uk:
           form:
             attendee_type: Тип учасника
             existing_user: Існуючий учасник
-            invite: Запросити
-            invite_explanation: Учасник буде запрошений приєднатися до зустрічі та
-              організації.
+            invite_explanation: Учасник буде запрошений приєднатися до зустрічі та організації.
             non_user: Неіснуючий учасник
             select_user: Виберіть учасника
           index:
@@ -326,14 +248,11 @@ uk:
               rejected: Відхилено
               sent: Надісланий
             filter_by: Фільтрувати за
-            invite_attendee: Запросити учасника
             invites: Запрошує
-            registrations_disabled: Ви не можете запросити учасника, оскільки реєстрацію
-              вимкнено.
+            registrations_disabled: Ви не можете запросити учасника, оскільки реєстрацію вимкнено.
             search: Пошук
         meeting_closes:
           edit:
-            close: Закрити
             title: Близька зустріч
         meeting_copies:
           form:
@@ -344,43 +263,29 @@ uk:
             success: Зустріч успішно закрита
           create:
             invalid: Під час створення цієї зустрічі виникла проблема
-            success: Нараду успішно створено. Зауважте, що це ще не опубліковано,
-              вам потрібно опублікувати його вручну.
+            success: Нараду успішно створено. Зауважте, що це ще не опубліковано, вам потрібно опублікувати його вручну.
           destroy:
             invalid:
               proposals_count:
-                one: Нараду неможливо знищити, оскільки з нею пов’язано пропозицію
-                  %{count}
+                one: Нараду неможливо знищити, оскільки з нею пов’язано пропозицію %{count}
                 few: Нараду неможливо знищити, оскільки з нею пов’язано %{count} пропозицій
-                many: Нараду неможливо знищити, оскільки з нею пов’язано %{count}
-                  пропозицій
-                other: Нараду неможливо знищити, оскільки з нею пов’язано %{count}
-                  пропозицій
+                many: Нараду неможливо знищити, оскільки з нею пов’язано %{count} пропозицій
+                other: Нараду неможливо знищити, оскільки з нею пов’язано %{count} пропозицій
             success: Зустріч успішно видалена
           edit:
             title: Редагувати зустріч
             update: оновлення
           form:
             address_help: 'Адреса: використовується Geocoder для визначення місцезнаходження'
-            disclaimer: 'Відмова від відповідальності: використовуючи зовнішню систему
-              реєстрації, ви усвідомлюєте, що організатори %{organization} не несуть
-              відповідальності за дані, надані користувачами зовнішньому сервісу.'
-            location_help: 'Розташування: повідомлення, спрямоване користувачам із
-              зазначенням місця зустрічі'
-            location_hints_help: 'Підказки щодо розташування: додаткова інформація.
-              Приклад: поверх будівлі, якщо це особиста зустріч, або пароль зустрічі,
-              якщо це онлайн-зустріч з обмеженим доступом.'
-            online_meeting_url_help: 'Посилання: дозвольте учасникам підключитися
-              безпосередньо до вашої зустрічі'
-            registration_url_help: 'Посилання: дозвольте учасникам переходити на зовнішній
-              сервіс, який ви використовуєте для реєстрації'
+            disclaimer: 'Відмова від відповідальності: використовуючи зовнішню систему реєстрації, ви усвідомлюєте, що організатори %{organization} не несуть відповідальності за дані, надані користувачами зовнішньому сервісу.'
+            location_help: 'Розташування: повідомлення, спрямоване користувачам із зазначенням місця зустрічі'
+            location_hints_help: 'Підказки щодо розташування: додаткова інформація. Приклад: поверх будівлі, якщо це особиста зустріч, або пароль зустрічі, якщо це онлайн-зустріч з обмеженим доступом.'
+            online_meeting_url_help: 'Посилання: дозвольте учасникам підключитися безпосередньо до вашої зустрічі'
+            registration_url_help: 'Посилання: дозвольте учасникам переходити на зовнішній сервіс, який ви використовуєте для реєстрації'
             select_a_meeting_type: Виберіть тип зустрічі
             select_a_registration_type: Виберіть тип реєстрації
             select_an_iframe_access_level: Виберіть рівень доступу iframe
-            show_embedded_iframe_help: 'Лише кілька служб дозволяють вставляти в зустріч
-              або подію в прямому ефірі з таких доменів: %{domains}'
-          index:
-            title: Зустрічі
+            show_embedded_iframe_help: 'Лише кілька служб дозволяють вставляти в зустріч або подію в прямому ефірі з таких доменів: %{domains}'
           new:
             create: Створити
             title: Створити зустріч
@@ -392,48 +297,34 @@ uk:
             down: вниз
             remove: видалити
             service: Сервіс
-            title: Назва
             up: вгору
-          services:
-            add_service: Додати послугу
-            services: Послуги
           unpublish:
             invalid: Під час скасування публікації цієї зустрічі виникла проблема
             success: Публікацію зустрічі скасовано
           update:
             invalid: Виникла проблема з оновленням цієї зустрічі
-            success: Зустріч успішно оновлено
         meetings_poll:
           form:
             title: Редагувати анкету опитування для %{questionnaire_for}
           update:
             invalid: Під час оновлення цього опитування зустрічі виникла проблема
             success: Опитування зустрічі успішно оновлено
-        models:
-          meeting:
-            name: Зустріч
         registrations:
           edit:
             save: зберегти
             validate: Перевірити
             validate_registration_code: Підтвердьте реєстраційний код
           form:
-            available_slots_help: Залиште значення 0, якщо у вас є необмежена кількість
-              слотів.
-            invites: Запрошення
-            recommendation_message: З міркувань конфіденційності ми рекомендуємо вам
-              видалити цю форму запису, коли вона вам більше не потрібна. За замовчуванням
-              це 3 місяці після завершення зустрічі.
-            registration_email_help: Цей текст з’явиться посередині електронного листа
-              з підтвердженням реєстрації. Відразу після реєстраційного коду.
+            available_slots_help: Залиште значення 0, якщо у вас є необмежена кількість слотів.
+            recommendation_message: З міркувань конфіденційності ми рекомендуємо вам видалити цю форму запису, коли вона вам більше не потрібна. За замовчуванням це 3 місяці після завершення зустрічі.
+            registration_email_help: Цей текст з’явиться посередині електронного листа з підтвердженням реєстрації. Відразу після реєстраційного коду.
             registration_form: Реєстраційний формуляр
             registrations_count:
               one: Була реєстрація %{count}.
               few: Було %{count} реєстрацій.
               many: Було %{count} реєстрацій.
               other: Було %{count} реєстрацій.
-            reserved_slots_help: Залиште значення 0, якщо у вас немає зарезервованих
-              слотів
+            reserved_slots_help: Залиште значення 0, якщо у вас немає зарезервованих слотів
             reserved_slots_less_than: Має бути менше або дорівнювати %{count}
             title: Реєстрації
           update:
@@ -443,20 +334,10 @@ uk:
             invalid: Цей реєстраційний код недійсний.
             success: Реєстраційний код успішно перевірено.
       admin_log:
-        invite:
-          create: "%{user_name} запросив %{attendee_name} приєднатися до зустрічі
-            %{resource_name} у просторі %{space_name}"
-          deleted: "%{user_name} скасував запрошення %{attendee_name} приєднатися
-            до зустрічі %{resource_name} у просторі %{space_name}"
-          update: "%{user_name} запросив %{attendee_name} приєднатися до зустрічі
-            %{resource_name} у просторі %{space_name}"
         meeting:
           close: "%{user_name} закрив зустріч %{resource_name} у групі %{space_name}"
           create: "%{user_name} створив зустріч %{resource_name} у просторі %{space_name}"
-          delete: "%{user_name} видалив зустріч %{resource_name} у просторі %{space_name}"
-          export_registrations: "%{user_name} експортував реєстрації зустрічі %{resource_name}
-            у простір %{space_name}"
-          update: "%{user_name} оновив зустріч %{resource_name} у просторі %{space_name}"
+          export_registrations: "%{user_name} експортував реєстрації зустрічі %{resource_name} у простір %{space_name}"
           value_types:
             organizer_presenter:
               not_found: 'Організатора не знайдено в базі (ID: %{id})'
@@ -475,20 +356,13 @@ uk:
         copy_calendar_url: Копія
         copy_calendar_url_clarification: Копіювати URL-адресу календаря в буфер обміну
         copy_calendar_url_copied: Скопійовано!
-        copy_calendar_url_description: Ви можете переглянути всі опубліковані зустрічі
-          у своїй програмі-календарі або в постачальника. Скопіюйте та вставте цю
-          URL-адресу у свій календар за допомогою параметра «Додати новий календар
-          із URL-адреси».
-        copy_calendar_url_explanation: Зверніть увагу, що ви експортуєте вибірку зустрічей,
-          оскільки є активні фільтри. Якщо ви хочете експортувати їх усі, спочатку
-          скиньте всі фільтри.
+        copy_calendar_url_description: Ви можете переглянути всі опубліковані зустрічі у своїй програмі-календарі або в постачальника. Скопіюйте та вставте цю URL-адресу у свій календар за допомогою параметра «Додати новий календар із URL-адреси».
+        copy_calendar_url_explanation: Зверніть увагу, що ви експортуєте вибірку зустрічей, оскільки є активні фільтри. Якщо ви хочете експортувати їх усі, спочатку скиньте всі фільтри.
         copy_calendar_url_message: URL-адресу успішно скопійовано в буфер обміну.
         export_calendar: Експорт календаря
       close_meeting_reminder_mailer:
         close_meeting_reminder:
-          body: Зустріч <a href="%{meeting_path}">"%{meeting_title}"</a> очікує на
-            закриття. Будь ласка, додайте звіт про зустріч за допомогою кнопки «Закрити
-            зустріч».
+          body: Зустріч <a href="%{meeting_path}">"%{meeting_title}"</a> очікує на закриття. Будь ласка, додайте звіт про зустріч за допомогою кнопки «Закрити зустріч».
           greetings: Вітаємо,<br/>%{organization_name}<br/><a href="%{organization_url}">%{organization_url}</a>
           hello: Привіт %{username},
           subject: Тепер ви можете завершити зустріч звітом на платформі %{organization_name}
@@ -510,8 +384,7 @@ uk:
       iframe_embed_type:
         embed_in_meeting_page: Вставити на сторінку зустрічі
         none: Жодного
-        open_in_live_event_page: Відкрити на сторінці події в прямому ефірі (з додатковими
-          опитуваннями)
+        open_in_live_event_page: Відкрити на сторінці події в прямому ефірі (з додатковими опитуваннями)
         open_in_new_tab: Відкрити URL-адресу в новій вкладці
       last_activity:
         meeting_updated_at_html: "<span>Зустріч оновлено о %{link}</span>"
@@ -522,9 +395,6 @@ uk:
           close: закрити
           questions: Питання
       mailer:
-        invite_join_meeting_mailer:
-          invite:
-            subject: Запрошення приєднатися до зустрічі
         registration_mailer:
           confirmation:
             subject: Реєстрацію на вашу зустріч підтверджено
@@ -559,8 +429,6 @@ uk:
         filters:
           activity: Моя діяльність
           all: все
-          category: Категорія
-          date: Дата
           date_values:
             all: все
             past: минуле
@@ -584,51 +452,35 @@ uk:
           close_modal: Закрити модальний
           filter: фільтр
           filter_by: Фільтрувати за
-          unfold: Розгорнути
         form:
           address_help: 'Адреса: використовується Geocoder для визначення місцезнаходження'
-          available_slots_help: Залиште значення 0, якщо у вас є необмежена кількість
-            слотів
+          available_slots_help: Залиште значення 0, якщо у вас є необмежена кількість слотів
           create_as: Створити зустріч як
-          disclaimer: 'Відмова від відповідальності: використовуючи зовнішню систему
-            реєстрації, ви усвідомлюєте, що організатори %{organization} не несуть
-            відповідальності за дані, надані користувачами зовнішньому сервісу.'
-          location_help: 'Розташування: повідомлення, спрямоване користувачам із зазначенням
-            місця зустрічі'
-          location_hints_help: 'Підказки щодо розташування: додаткова інформація.
-            Приклад: поверх будівлі, якщо це особиста зустріч, або пароль зустрічі,
-            якщо це онлайн-зустріч з обмеженим доступом.'
-          online_meeting_url_help: 'Посилання: дозвольте учасникам підключитися безпосередньо
-            до вашої зустрічі'
-          registration_url_help: 'Посилання: дозвольте учасникам переходити на зовнішній
-            сервіс, який ви використовуєте для реєстрації'
+          disclaimer: 'Відмова від відповідальності: використовуючи зовнішню систему реєстрації, ви усвідомлюєте, що організатори %{organization} не несуть відповідальності за дані, надані користувачами зовнішньому сервісу.'
+          location_help: 'Розташування: повідомлення, спрямоване користувачам із зазначенням місця зустрічі'
+          location_hints_help: 'Підказки щодо розташування: додаткова інформація. Приклад: поверх будівлі, якщо це особиста зустріч, або пароль зустрічі, якщо це онлайн-зустріч з обмеженим доступом.'
+          online_meeting_url_help: 'Посилання: дозвольте учасникам підключитися безпосередньо до вашої зустрічі'
+          registration_url_help: 'Посилання: дозвольте учасникам переходити на зовнішній сервіс, який ви використовуєте для реєстрації'
           select_a_category: Виберіть категорію
           select_a_meeting_type: Виберіть тип зустрічі
           select_a_registration_type: Виберіть тип реєстрації
           select_an_iframe_access_level: Виберіть рівень доступу iframe
-          show_embedded_iframe_help: 'Лише кілька служб дозволяють вставляти в зустріч
-            або подію в прямому ефірі з таких доменів: %{domains}'
+          show_embedded_iframe_help: 'Лише кілька служб дозволяють вставляти в зустріч або подію в прямому ефірі з таких доменів: %{domains}'
         index:
           click_here: Переглянути всі зустрічі
           new_meeting: Нова зустріч
           see_all: Переглянути всі зустрічі
           see_all_withdrawn: Переглянути всі скасовані зустрічі
-          text_banner: Ви переглядаєте список зустрічей, відкликаних їх авторами.
-            %{go_back_link}.
+          text_banner: Ви переглядаєте список зустрічей, відкликаних їх авторами. %{go_back_link}.
         meeting_minutes:
           related_information: Пов'язана інформація
         meetings:
-          no_meetings_warning: Жодна зустріч не відповідає вашим критеріям пошуку
-            або немає жодної запланованої зустрічі.
-          upcoming_meetings_warning: Наразі немає запланованих зустрічей, але тут
-            ви можете знайти список усіх минулих зустрічей.
+          no_meetings_warning: Жодна зустріч не відповідає вашим критеріям пошуку або немає жодної запланованої зустрічі.
+          upcoming_meetings_warning: Наразі немає запланованих зустрічей, але тут ви можете знайти список усіх минулих зустрічей.
         new:
           back: Назад
           create: Створити
           title: Створіть свою зустріч
-        registration_confirm:
-          cancel: Скасувати
-          confirm: Підтвердити
         show:
           attendees: Підраховують присутніх
           back: Повернутися до списку
@@ -642,12 +494,10 @@ uk:
           leave: Скасувати реєстрацію
           leave_confirmation: Ви впевнені, що бажаєте скасувати реєстрацію на цю зустріч?
           link_available_soon: Посилання скоро стане доступним
-          link_closed: Посилання для приєднання до зустрічі буде доступне за кілька
-            хвилин до її початку
+          link_closed: Посилання для приєднання до зустрічі буде доступне за кілька хвилин до її початку
           live_event: Ця зустріч відбувається прямо зараз
           meeting_minutes: Протокол засідання
-          micro_camera_permissions_warning: Коли ви натиснете на кнопку нижче, вас
-            запитають дозволи на мікрофон і/або камеру, і ви приєднаєтеся до відеоконференції
+          micro_camera_permissions_warning: Коли ви натиснете на кнопку нижче, вас запитають дозволи на мікрофон і/або камеру, і ви приєднаєтеся до відеоконференції
           no_slots_available: Немає доступних слотів
           organizations: Відвідування організацій
           registration_code_help_text: Ваш реєстраційний код
@@ -659,12 +509,9 @@ uk:
             few: Залишилося %{count} слотів
             many: Залишилося %{count} слотів
             other: Залишилося %{count} слотів
-          view: Переглянути
           visit_finished: Переглянути минулу зустріч
-          withdraw_btn_hint: Ви можете скасувати зустріч, якщо передумаєте. Зустріч
-            не видаляється, вона з'явиться в списку відкликаних зустрічей.
-          withdraw_confirmation_html: Ви впевнені, що хочете скасувати цю зустріч?<br><br>
-            <strong>Ця акція не може бути скасована!</strong>
+          withdraw_btn_hint: Ви можете скасувати зустріч, якщо передумаєте. Зустріч не видаляється, вона з'явиться в списку відкликаних зустрічей.
+          withdraw_confirmation_html: Ви впевнені, що хочете скасувати цю зустріч?<br><br> <strong>Ця акція не може бути скасована!</strong>
           withdraw_meeting: Зняти зустріч
         update:
           invalid: Виникла проблема з оновленням зустрічі.
@@ -675,7 +522,6 @@ uk:
         invite:
           fields:
             email: Електронна пошта
-            name: Ім'я
             sent_at: Надіслано о
             status: Статус
           status:
@@ -685,19 +531,15 @@ uk:
         meeting:
           fields:
             closed: ЗАЧИНЕНО
-            end_time: Дата закінчення
             id: ID
             map: Карта
             official_meeting: Офіційна зустріч
-            start_time: Дата початку
-            title: Назва
       polls:
         questions:
           closed_question:
             question_results: Результати запитань
           index:
-            empty_questions: Під час цієї зустрічі буде надіслано кілька запитань,
-              на які ви зможете відповісти. Вони відображатимуться тут.
+            empty_questions: Під час цієї зустрічі буде надіслано кілька запитань, на які ви зможете відповісти. Вони відображатимуться тут.
           index_admin:
             admin_dashboard: Інформаційна панель адміністратора
             edit: Редагувати в панелі адміністратора
@@ -719,11 +561,8 @@ uk:
           few: і ще %{count} людей
           many: і ще %{count} людей
           other: і ще %{count} людей
-      read_more: "(читати далі)"
       registration_mailer:
         confirmation:
-          confirmed_html: Вашу реєстрацію на зустріч <a href="%{url}">%{title}</a>
-            підтверджено.
           details: Деталі зустрічі ви знайдете у вкладенні.
           registration_code: Ваш реєстраційний код %{code}.
       registration_type:
@@ -733,8 +572,7 @@ uk:
       registrations:
         create:
           invalid: Виникла проблема з приєднанням до цієї зустрічі.
-          success: Ви успішно приєдналися до зустрічі. Оскільки ви зареєструвалися
-            на цю зустріч, ви отримаєте сповіщення, якщо на ній будуть оновлення.
+          success: Ви успішно приєдналися до зустрічі. Оскільки ви зареєструвалися на цю зустріч, ви отримаєте сповіщення, якщо на ній будуть оновлення.
         decline_invitation:
           invalid: Під час відхилення запрошення виникла проблема.
           success: Ви успішно відхилили запрошення.
@@ -746,7 +584,6 @@ uk:
         in_person: Особисто
         online: Онлайн
       types:
-        private_meeting: Приватна зустріч
         transparent: Прозорий
         withdraw: Вилучено
       versions:
@@ -761,7 +598,6 @@ uk:
         title: Зустрічі
     participatory_spaces:
       highlighted_meetings:
-        past_meetings: Минулі зустрічі
         see_all: Переглянути всі зустрічі
         upcoming_meetings: Найближчі зустрічі
       upcoming_meeting_for_card:
@@ -775,7 +611,3 @@ uk:
         proposal_meeting: 'Відповідні зустрічі:'
     statistics:
       meetings_count: Зустрічі
-  devise:
-    mailer:
-      join_meeting:
-        subject: Запрошення приєднатися до зустрічі

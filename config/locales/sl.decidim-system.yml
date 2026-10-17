@@ -18,25 +18,13 @@ sl:
     system:
       actions:
         confirm_destroy: Ali res želite izbrisati to?
-        destroy: Izbriši
-        edit: Uredi
         new: Novo
-        save: Shrani
-        title: Dejanja
       admins:
         create:
           error: Pri ustvarjanju novega skrbnika se je pojavila težava.
           success: Skrbnik je bil uspešno ustvarjen.
         destroy:
           success: Skrbnik je bil uspešno izbrisan.
-        edit:
-          title: Uredi skrbnika
-          update: Posodobi
-        index:
-          title: Skrbniki
-        new:
-          create: Ustvari
-          title: Nov skrbnik
         update:
           error: Pri posodobitvi tega skrbnika se je pojavila težava.
           success: Skrbnik je bil uspešno posodobljen.
@@ -45,16 +33,12 @@ sl:
           content: Dodajte smiselno vsebino na statično stran %{page} na skrbniški nadzorni plošči.
           title: Privzeti naslov za %{page}
       menu:
-        admins: Skrbniki
-        dashboard: Nadzorna plošča
         oauth_applications: Aplikacije OAuth
-        organizations: Organizacije
       models:
         admin:
           fields:
             created_at: Ustvarjeno ob
             email: E-naslov
-          name: Skrbnik
           validations:
             email_uniqueness: že obstaja drug skrbnik z istim e-naslovom
         oauth_application:
@@ -64,14 +48,10 @@ sl:
             organization_name: Organizacija
           name: Aplikacija OAuth
         organization:
-          actions:
-            save_and_invite: Ustvari organizacijo in povabi skrbnika
           fields:
             created_at: Ustvarjeno ob
-            name: Ime
             omniauth_settings: Nastavitve Omniauth
             smtp_settings: Nastavitve SMTP
-          name: Organizacija
       oauth_applications:
         create:
           error: Pri ustvarjanju te aplikacije se je pojavila težava.
@@ -99,8 +79,6 @@ sl:
           success: Organizacija je bila uspešno ustvarjena.
         edit:
           secondary_hosts_hint: Vsako od njih vstavite v novo vrstico.
-        index:
-          title: Organizacije
         new:
           reference_prefix_hint: Referenčna predpona se izključno uporablja za identifikacijo virov v vseh organizacijah.
           secondary_hosts_hint: Vsako od njih vstavite v novo vrstico

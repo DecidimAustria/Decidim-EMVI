@@ -4,45 +4,22 @@ sl:
     attributes:
       area:
         area_type: Vrsta območja
-        name: Ime
-        organization: Organizacija
-      area_type:
-        name: Ime
-        organization: Organizacija
-        plural: Množina
       attachment:
-        attachment_collection_id: Mapa
-        description: Opis
-        file: Datoteka
         title: Ime priloge ali slike
-      attachment_collection:
-        description: Opis
-        name: Ime
       category:
-        description: Opis
-        name: Ime
         parent_id: Nadrejeni element
       component:
-        name: Ime
         published_at: Objavljeno ob
         weight: Teža
-      id: ID
-      newsletter:
-        body: Telo
-        subject: Zadeva
       organization:
         address: Ime gostitelja SMTP
-        alert_color: Opozorilo
-        badges_enabled: Omogoči značke
         comments_max_length: Največja dolžina komentarjev (za privzeto vrednost pusti 0)
         cta_button_path: Pot gumba za poziv k ukrepanju
         cta_button_text: Besedilo gumba za poziv k ukrepanju
         customize_welcome_notification: Prilagodi pozdravno sporočilo
         default_locale: Privzeta območna nastavitev
-        description: Opis
         enable_omnipresent_banner: Prikaži vseprisotno pasico
         facebook_handler: Upravljalnik omrežja Facebook
-        favicon: Ikona
         from: Iz elektronskega naslova
         github_handler: Upravljalnik storitve GitHub
         header_snippets: Izrezki glave
@@ -52,21 +29,14 @@ sl:
         highlighted_content_banner_action_title: Naslov interaktivnega gumba
         highlighted_content_banner_action_url: URL interaktivnega gumba
         highlighted_content_banner_enabled: Prikaži pasico označene vsebine
-        highlighted_content_banner_image: Slika
-        highlighted_content_banner_short_description: Kratek opis
-        highlighted_content_banner_title: Naslov
         instagram_handler: Upravljalnik omrežja Instagram
-        logo: Logotip
         machine_translation_display_priority: Prednost prikaza strojnega prevoda
         machine_translation_display_priority_original: Najprej izvirno besedilo
         machine_translation_display_priority_translation: Najprej prevedeno besedilo
-        name: Ime
         official_img_footer: Noga uradnega logotipa
         official_img_header: Glava uradnega logotipa
         official_url: Uradni URL organizacije
-        omnipresent_banner_short_description: Kratek opis
         omnipresent_banner_title: Naslov
-        omnipresent_banner_url: URL
         password: Geslo
         port: Vrata
         primary_color: Primarna
@@ -76,76 +46,43 @@ sl:
         send_welcome_notification: Pošlji pozdravno sporočilo
         show_statistics: Prikaži statistiko
         success_color: Postopek uspešen
-        time_zone: Časovni pas
         tos_version: Različica pogojev uporabe
         twitter_handler: Upravljalnik omrežja Twitter
         user_groups_enabled: Omogoči skupine
         user_name: Uporabniško ime
-        warning_color: Opozorilo
         welcome_notification_body: Telo pozdravnega sporočila
         welcome_notification_subject: Zadeva pozdravnega sporočila
         youtube_handler: Upravljalnik omrežja YouTube
       scope:
-        code: Koda
-        name: Ime
-        organization: Organizacija
         parent_id: Nadrejeni element
         scope_type: Vrsta področja
         scope_type_id: Vrsta področja
-      scope_type:
-        name: Ime
-        organization: Organizacija
-        plural: Množina
       static_page:
         changed_notably: Prišlo je do znatnih sprememb.
-        content: Vsebina
-        organization: Organizacija
         show_in_footer: Pokaži v nogi
         slug: Polje dinamičnih podatkov URL
         title: Naslov
         weight: Teža
       static_page_topic:
-        description: Opis
         show_in_footer: Pokaži v nogi
         title: Naslov
         weight: Teža
-      user_group_csv_verification:
-        file: Datoteka
-    errors:
-      models:
-        organization:
-          attributes:
-            official_img_footer:
-              allowed_file_content_types: Neveljavna slikovna datoteka
-            official_img_header:
-              allowed_file_content_types: Neveljavna slikovna datoteka
   activerecord:
     attributes:
       decidim/static_page:
-        content: Vsebina
         slug: Polje dinamičnih podatkov URL
         title: Naslov
       doorkeeper/application:
         authorize_url: Dovoli URL
-        client_id: ID odjemalca
-        client_secret: Skrivnost odjemalca
-        organization_name: Ime organizacije
         organization_url: URL organizacije
         redirect_uri: Preusmeritveni URI
         site: Spletišče
   decidim:
     admin:
       actions:
-        add: Dodaj
-        browse: Brskaj
         export: Izvozi
         manage: Upravljaj
-        new: Novo %{name}
-        per_page: Na stran
-        permissions: Dovoljenja
-        reject: Zavrni
         share: Deli
-        verify: Preveri
       admin_terms_of_use:
         accept:
           error: Pri sprejemu pogojev uporabe za skrbnika je prišlo do napake.
@@ -309,8 +246,6 @@ sl:
           values:
             'false': Objavljeno
             'true': Umaknjeno
-        scope_id_eq:
-          label: Področje
         search_label: Išči
         search_placeholder:
           name_or_nickname_or_email_cont: Išči %{collection} po elektronskem naslovu, imenu ali vzdevku.
@@ -380,7 +315,6 @@ sl:
         newsletters: Glasila
         participants: Udeleženci
         scope_types: Vrste področij
-        scopes: Področja
         settings: Nastavitve
         static_pages: Strani
         user_groups: Skupine
@@ -502,7 +436,6 @@ sl:
           confirm_delete: Ali res želite izbrisati to glasilo?
           followers: sledilci
           has_been_sent_to: 'Poslano:'
-          no_scopes: Ni področij
           not_sent: Ni poslano
           participants: udeleženci
           segmented_to: 'Segmentirano v %{subject}:'
@@ -583,7 +516,6 @@ sl:
           update: Posodobi
         form:
           colors:
-            colors_title: Barve organizacije
             header_snippets_help: S tem poljem dodajajte stvari v glavo HTML. Najpogostejša uporaba je vključitev storitev tretje stranke, za katere so potrebni dodaten javaskript ali prekrivni slogi (CSS). Lahko ga uporabite tudi za dodajanje dodatnih metaoznak v HTML. Upoštevajte, da bo to prikazano le na javnih straneh in ne v oddelku skrbnika.
           cta_button_path_help: 'Lahko prepišete povezavo gumba za poziv k ukrepanju na domači strani. Tu uporabite delne poti, ne polnih URL-jev. Sprejema črke, številke, črte in poševnice, mora pa se začeti s črko. Gumb za poziv k ukrepanju je prikazan na domači strani med pozdravnim besedilom in opisom. Primer: %{url}'
           cta_button_text_help: Lahko prepišete besedilo gumba za poziv k ukrepanju na domači strani za vsak jezik, ki je na voljo v vaši organizaciji. Če ni določeno, se uporabi privzeta vrednost. Gumb za poziv k ukrepanju je prikazan na domači strani med pozdravnim besedilom in opisom.
@@ -638,7 +570,6 @@ sl:
           update: Posodobi
         new:
           create: Ustvari vrsto področja
-          title: Novo področje
         update:
           error: Pri posodobitvi te vrste področja se je pojavila težava.
           success: Vrsta področja je bila uspešno posodobljena.

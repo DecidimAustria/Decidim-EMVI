@@ -1,12 +1,5 @@
 ---
 sl:
-  activerecord:
-    models:
-      decidim/pages/page:
-        few: Strani
-        one: Stran
-        other: Strani
-        two: Strani
   decidim:
     admin_log:
       page:

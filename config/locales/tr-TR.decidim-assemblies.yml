@@ -5,68 +5,47 @@ tr-TR:
       assemblies_setting:
         enable_organization_chart: Kuruluş şemasını etkinleştir
       assembly:
-        area_id: Alan
         assembly_type: Montaj tipi
         assembly_type_other: Montaj tipi diğer
         banner_image: Afiş resmi
-        closing_date: Kapanış tarihi
-        closing_date_reason: Kapanış tarihi nedeni
         composition: Kompozisyon
-        copy_categories: Kategorileri kopyala
-        copy_components: Bileşenleri kopyala
         copy_features: Kopyalama özellikleri
-        created_by: Tarafından yaratıldı
         created_by_other: Başkaları tarafından oluşturuldu
-        creation_date: Tarih oluşturuldu
         decidim_area_id: Alan
-        decidim_assemblies_type_id: Montaj tipi
         decidim_scope_id: Kapsam
         description: Tanım
         developer_group: Organizatör grubu
         domain: İhtisas
         duration: Süre
-        facebook: Facebook
-        github: GitHub
-        hashtag: Başlık etiketi
         hero_image: Ev resmi
         included_at: dahil
         instagram: instagram
         internal_organisation: Dahili organizasyon
         is_transparent: şeffaf
         local_area: organizasyon alanı
-        meta_scope: Kapsam meta verileri
         parent_id: üst grup
         participatory_processes_ids: İlgili katılımcı süreçler
         participatory_scope: neye karar verildi
         participatory_structure: nasıl karar verilir
-        private_space: Özel alan
         promoted: Vurgulanan
         published_at: yayınlandı
         purpose_of_action: Eylemin amacı
         scope_id: Kapsam
         scopes_enabled: Kapsamlar etkinleştirildi
-        short_description: Kısa Açıklama
-        show_statistics: İstatistikleri göster
         slug: URL bilgisi
-        special_features: Özel özellikler
         subtitle: Alt yazı
         target: kimler katılır
-        title: Başlık
         twitter: twitter
         weight: sipariş pozisyonu
         youtube: Youtube
       assembly_member:
-        birthday: Doğum günü
         birthplace: doğum yeri
         ceased_date: durdurulan tarih
         designation_date: atama tarihi
-        full_name: Ad Soyad
-        gender: Cinsiyet
         non_user_avatar: avatarı
         position: Konum
         user_id: Kullanıcı veya grup
       assembly_user_role:
-        email: E-posta
         name: İsim
         role: rol
     errors:
@@ -102,7 +81,6 @@ tr-TR:
           not_published: yayınlanmadı
           private: Özel
           public: Halk
-          published: Yayınlanan
         new:
           create: Yaratmak
           title: Yeni montaj
@@ -116,7 +94,6 @@ tr-TR:
       assemblies_settings:
         update:
           error: Ayarlar güncellenirken bir sorun oluştu.
-          success: Ayarlar başarıyla güncellendi.
       assemblies_types:
         create:
           error: Yeni bir derleme türü oluşturulurken bir sorun oluştu.
@@ -140,7 +117,6 @@ tr-TR:
           success: Montaj başarıyla içe aktarıldı.
         new:
           import: İçe aktarmak
-          select: Hangi verileri içe aktarmak istediğinizi seçin
           title: Montajı içe aktar
       assembly_members:
         create:
@@ -188,31 +164,17 @@ tr-TR:
           label: Montaj tipi
       menu:
         assemblies: Montajlar
-        assemblies_settings: Ayarlar
         assemblies_submenu:
           assembly_admins: Derleme yöneticileri
-          assembly_members: Üyeler
-          attachment_collections: Klasörler
-          attachment_files: Dosyalar
-          attachments: Ekler
-          categories: Kategoriler
-          components: Bileşenler
-          info: Bilgi
           moderations: Moderasyonlar
-          private_users: Özel kullanıcılar
         assemblies_types: Montaj türleri
       models:
         assemblies_types:
           fields:
             created_at: oluşturuldu
-            title: Başlık
         assembly:
           fields:
             created_at: oluşturuldu
-            private: Özel
-            promoted: Vurgulanan
-            published: Yayınlanan
-            title: Başlık
           name: Toplantı
         assembly_member:
           fields:
@@ -220,15 +182,12 @@ tr-TR:
             designation_date: atama tarihi
             full_name: İsim
             position: Konum
-          name: Üye
           positions:
-            other: Diğer
-            president: seçilmiş danışma kurulu üyesi 
-            secretary: seçilmiş danışma kurulu üyesi 
-            vice_president: seçilmiş danışma kurulu üyesi 
+            president: seçilmiş danışma kurulu üyesi
+            secretary: seçilmiş danışma kurulu üyesi
+            vice_president: seçilmiş danışma kurulu üyesi
         assembly_user_role:
           fields:
-            email: E-posta
             name: İsim
             role: rol
           name: Derleme yöneticisi
@@ -270,29 +229,20 @@ tr-TR:
         assemblies:
           form:
             announcement_help: Buraya yazacağınız yazı montaj bilgilerinin hemen altında kullanıcıya gösterilecektir.
-            duration: Süre
             duration_help: Bu derlemenin süresi sınırlıysa, bitiş tarihini seçin. Aksi takdirde, belirsiz olarak görünecektir.
-            filters: Filtreler
             images: Görüntüler
             included_at_help: Bu montajın platforma eklendiği tarihi seçin. Oluşturma tarihi ile aynı olmak zorunda değildir.
             metadata: Meta veriler
-            other: Diğer
             select_a_created_by: Oluşturan seçin
             select_an_area: Bir Alan Seçin
             select_an_assembly_type: Bir montaj türü seçin
             select_parent_assembly: Üst derlemeyi seçin
             slug_help: 'URL bilgileri, bu derlemeye işaret eden URL''leri oluşturmak için kullanılır. Yalnızca harfleri, sayıları ve kısa çizgileri kabul eder ve bir harfle başlamalıdır. Örnek: %{url}'
-            social_handlers: Sosyal
-            title: Genel bilgi
-            visbility: görünürlük
         assemblies_settings:
           edit:
             update: Güncelleme
           form:
             title: Montajlar için ayarlar
-        assemblies_types:
-          form:
-            title: Başlık
         assembly_copies:
           form:
             slug_help: 'URL bilgileri, bu derlemeye işaret eden URL''leri oluşturmak için kullanılır. Yalnızca harfleri, sayıları ve kısa çizgileri kabul eder ve bir harfle başlamalıdır. Örnek: %{url}'
@@ -308,7 +258,6 @@ tr-TR:
             non_user: katılımcı olmayan
             non_user_avatar_help: Kişileri üye olarak yayınlamadan önce onaylarını almalısınız.
             select_a_position: bir pozisyon seçin
-            select_user: Bir katılımcı seçin
             user_type: katılımcı türü
           index:
             filter:
@@ -320,40 +269,27 @@ tr-TR:
         content_blocks:
           highlighted_assemblies:
             max_results: Gösterilecek maksimum öğe sayısı
-        new_import:
-          accepted_types:
-            json: JSON
       assemblies:
         show:
           title: Bu montaj hakkında
-      assembly_members:
-        index:
-          members: Üyeler
       assembly_types:
         commission: komisyon
         consultative_advisory: Danışma/Danışma
         executive: Yönetici
-        government: Devlet
-        others: Diğerleri
         participatory: katılımcı
-        working_group: Çalışma Grubu
       content_blocks:
         highlighted_assemblies:
           name: Vurgulanan montajlar
       created_by:
         city_council: Belediye Meclisi
-        others: Diğerleri
         public: Halk
       filter:
         all: Her türlü
         commission: komisyon
         consultative_advisory: Danışma/Danışma
         executive: Yönetici
-        government: Devlet
         help: 'Göstermek:'
-        others: Diğerleri
         participatory: katılımcı
-        working_group: Çalışma Grubu
       index:
         title: Montajlar
       last_activity:
@@ -364,25 +300,15 @@ tr-TR:
             active_assemblies: Aktif montajlar
             assemblies_button_title: Tüm montajları görüntüleyen Montajlar sayfasına bağlantı
             see_all_assemblies: Tüm montajları görün
-        user_profile:
-          member_of:
-            member_of: Üyesi
       show:
-        area: Alan
         assembly_type: Montaj tipi
         children: Montajlar
-        closing_date: Kapanış tarihi
         composition: Kompozisyon
         created_by: Tarafından yaratıldı
         creation_date: Tarih oluşturuldu
         developer_group: Organizatör grubu
-        duration: Süre
         included_at: dahil
-        indefinite_duration: Belirsiz
         internal_organisation: Dahili organizasyon
-        is_transparent:
-          'false': opak
-          'true': şeffaf
         local_area: organizasyon alanı
         participatory_scope: neye karar verildi
         participatory_structure: nasıl karar verilir
@@ -391,15 +317,11 @@ tr-TR:
         read_less: Az oku
         read_more: Devamını oku
         related_participatory_processes: İlgili katılımcı süreçler
-        scope: Kapsam
-        social_networks: Sosyal ağlar
         social_networks_title: Montajı ziyaret edin
         target: kimler katılır
     assembly_members:
       assembly_member:
         designated_on: Belirlenmiş
-      index:
-        title: Üyeler
     events:
       assemblies:
         create_assembly_member:
@@ -411,7 +333,6 @@ tr-TR:
         role_assigned:
           email_intro: '"%{resource_title}" montajı için %{role} olarak atandınız.'
           email_outro: '"%{resource_title}" topluluğunun %{role} üyesi olduğunuz için bu bildirimi aldınız.'
-          email_subject: '"%{resource_title}" için %{role} olarak atandınız.'
           notification_title: <a href="%{resource_url}">%{resource_title}</a> montajı için %{role} olarak atandınız.
     help:
       participatory_spaces:
@@ -437,30 +358,15 @@ tr-TR:
         related_assemblies: İlgili derlemeler
     statistics:
       assemblies_count: Montajlar
-  errors:
-    messages:
-      cannot_be_blank: boş bırakılamaz
   layouts:
     decidim:
       assemblies:
-        assembly:
-          more_info: Daha fazla bilgi
-          take_part: Yer almak
         index:
           children: 'Montajlar:'
-          organizational_chart: Organizasyon şeması
           promoted_assemblies: Vurgulanan montajlar
-          reset_chart: Sıfırla
         order_by_assemblies:
           assemblies:
             one: "%{count} derlemeleri"
             other: "%{count} derlemeleri"
-        promoted_assembly:
-          more_info: Daha fazla bilgi
-          take_part: Yer almak
       assembly_navigation:
-        assembly_member_menu_item: Üyeler
         assembly_menu_item: montaj
-      assembly_widgets:
-        show:
-          take_part: Yer almak

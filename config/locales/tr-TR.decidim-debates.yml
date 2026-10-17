@@ -3,28 +3,19 @@ tr-TR:
   activemodel:
     attributes:
       debate:
-        category_id: Kategori
         closed_at: kapalı
-        conclusions: Sonuçlar
-        decidim_category_id: Kategori
         description: Tanım
-        end_time: Biter
-        information_updates: Bilgi güncellemeleri
         instructions: katılım talimatları
         scope_id: Kapsam
         start_time: başlar
-        title: Başlık
         user_group_id: Şu şekilde tartışma oluştur
     models:
-      decidim/debates/close_debate_event: Tartışma kapandı
       decidim/debates/create_debate_event: Çekişme
-      decidim/debates/creation_disabled_event: Tartışmalar devre dışı bırakıldı
       decidim/debates/creation_enabled_event: Tartışma oluşturma etkinleştirildi
   activerecord:
     models:
       decidim/debates/debate:
         one: Çekişme
-        other: Tartışmalar
   decidim:
     components:
       debates:
@@ -32,140 +23,86 @@ tr-TR:
           comment: Yorum
           create: Yaratmak
           endorse: onaylamak
-        name: Tartışmalar
         settings:
           global:
             announcement: Duyuru
             comments_enabled: Yorumlar etkinleştirildi
             comments_max_length: Açıklamaların maksimum uzunluğu (Varsayılan değer olarak 0 bırakın)
-            scope_id: Kapsam
-            scopes_enabled: Kapsamlar etkinleştirildi
           step:
             announcement: Duyuru
-            comments_blocked: Yorumlar engellendi
             creation_enabled: Katılımcılar tartışmalar oluşturabilir
-            endorsements_blocked: Onaylar engellendi
-            endorsements_enabled: Onaylar etkinleştirildi
     debates:
       actions:
         close: Kapalı
         confirm_destroy: Emin misin?
         destroy: Silmek
         edit: Düzenlemek
-        new: Yeni %{name}
         title: Hareketler
       admin:
         debate_closes:
           edit:
             close: Kapalı
-            title: Tartışmayı kapat
         debates:
           create:
             invalid: Tartışma oluşturulurken bir sorun oluştu.
-            success: Tartışma başarıyla oluşturuldu.
-          destroy:
-            success: Tartışma başarıyla silindi.
-          edit:
-            title: Tartışmayı düzenle
-            update: Tartışmayı güncelle
           form:
             debate_type: tartışma türü
             finite: Sonlu (Başlangıç ve bitiş zamanları ile)
             open: Açık (Başlangıç veya bitiş zamanı yok)
-          index:
-            title: Tartışmalar
-          new:
-            create: Tartışma oluştur
-            title: Yeni tartışma
           update:
             invalid: Bu tartışma güncellenirken bir sorun oluştu.
-            success: Tartışma başarıyla güncellendi.
-        exports:
-          comments: Yorumlar
         models:
           debate:
             name: Çekişme
       admin_log:
         debate:
-          close: "%{user_name}, %{space_name} alanındaki %{resource_name} tartışmasını kapattı"
           create: "%{user_name}, %{space_name} alanında %{resource_name} tartışmasını yarattı"
-          update: "%{user_name}, %{space_name} alanındaki %{resource_name} tartışmasını güncelledi"
-      debate_m:
-        commented_time_ago: "%{time} önce yorumlandı"
       debates:
         close:
           invalid: Tartışma kapatılırken bir sorun oluştu.
           success: Tartışma başarıyla kapatıldı.
         close_debate_modal:
           close: Kapalı
-          description: Bu tartışmanın özeti veya sonucu nedir?
-          send: Tartışmayı kapat
         closed: Kapalı
         count:
           debates_count:
-            one: "%{count} tartışma"
             other: "%{count} tartışmalar"
         create:
           invalid: Tartışma oluşturulurken bir sorun oluştu.
-          success: Tartışma başarıyla oluşturuldu.
         debate:
           participate: Katılmak
         edit:
-          back: Geri
           save: Değişiklikleri Kaydet
           title: Tartışmayı düzenle
         filters:
           activity: Benim etkinliğim
           all: Tüm
-          category: Kategori
           category_prompt: bir kategori seç
           commented: yorum yaptı
           my_debates: tartışmalarım
-          official: Resmi
           origin: Menşei
           participants: Katılımcılar
-          scope: Kapsam
           search: Aramak
           state: Durum
-          state_values:
-            closed: Kapalı
-            open: Açık
-          user_groups: Gruplar
         filters_small_view:
           close_modal: Modeli kapat
           filter: filtre
           filter_by: Tarafından filtre
           unfold: açmak
-        form:
-          select_a_category: Lütfen bir kategori seçin
-        index:
-          new_debate: Yeni tartışma
         new:
-          back: Geri
           create: Yaratmak
-          title: Yeni tartışma
         orders:
           commented: En çok yorumlanan
           label: 'Tartışmaları şuna göre sırala:'
           random: Rastgele sıra
-          recent: En yeni
           updated: Yakın zamanda güncellendi
         show:
-          back: Listeye geri dön
-          close_debate: Tartışmayı kapat
-          date: Tarih
-          debate_closed: Kapalı
           debate_conclusions_are: 'Tartışma %{date}''da şu sonuçlarla kapandı:'
           edit_conclusions: Sonuçları düzenle
-          edit_debate: Tartışmayı düzenle
-          groups_count: Gruplar
           last_comment_by: Son yorum yapan
           no_comments_yet: henüz yorum yok
-          open: Açık tartışma
-          participants_count: Katılımcılar
         update:
           invalid: Tartışma güncellenirken bir sorun oluştu.
-          success: Tartışma başarıyla güncellendi.
         versions:
           debates:
             back_to_resource: tartışmaya geri dön
@@ -176,13 +113,6 @@ tr-TR:
       last_activity:
         debate_updated_at_html: "<span>Tartışma şu tarihte güncellendi: %{link}</span>"
         new_debate_at_html: "<span>%{link}'da yeni tartışma</span>"
-      models:
-        debate:
-          fields:
-            end_time: Bitiş tarihi
-            official_debate: Resmi tartışma
-            start_time: Başlangıç tarihi
-            title: Başlık
     events:
       debates:
         create_debate_event:
@@ -214,29 +144,23 @@ tr-TR:
           affected_user:
             email_intro: '"%{resource_title}" tartışması kapandı. Sonuçları sayfasından okuyabilirsiniz:'
             email_outro: Bu bildirimi "%{resource_title}" tartışmasını takip ettiğiniz için aldınız. Bir önceki linkten takibi bırakabilirsiniz.
-            email_subject: '"%{resource_title}" tartışması kapatıldı'
             notification_title: <a href="%{resource_path}">%{resource_title}</a> tartışması kapandı.
           follower:
             email_intro: '"%{resource_title}" tartışması kapandı. Sonuçları sayfasından okuyabilirsiniz:'
             email_outro: Bu bildirimi "%{resource_title}" tartışmasını takip ettiğiniz için aldınız. Bir önceki linkten takibi bırakabilirsiniz.
-            email_subject: '"%{resource_title}" tartışması kapatıldı'
             notification_title: <a href="%{resource_path}">%{resource_title}</a> tartışması kapandı.
     gamification:
       badges:
         commented_debates:
           conditions:
           - Katılmak için açık bir tartışma seçin
-          description: Bu rozet, yorumlarınızı bırakarak farklı tartışmalara aktif olarak katıldığınızda verilir.
           description_another: Bu katılımcı %{score} tartışmalarında yer aldı.
           description_own: "%{score} tartışmalarına katıldınız."
-          name: Tartışmalar
           next_level_in: Bir sonraki seviyeye geçmek için %{score} tartışmaya daha katılın!
           unearned_another: Bu katılımcı henüz herhangi bir tartışmada yer almadı.
           unearned_own: Henüz herhangi bir tartışmaya katılmadınız.
     metrics:
       debates:
         description: Oluşturulan tartışma sayısı
-        object: tartışmalar
-        title: Tartışmalar
     statistics:
       debates_count: Tartışmalar

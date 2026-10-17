@@ -69,10 +69,8 @@ sr-CS:
         participatory_process:
           attributes:
             document:
-              allowed_file_content_types: 'Nevažeća vrsta dokumenta. Dopuštene su
-                samo datoteke sa sljedećim ekstenzijama: %{types}'
-              invalid_document_type: 'Vrsta dokumenta nije valjana. Prihvaćeni su
-                formati: %{valid_mime_types}'
+              allowed_file_content_types: 'Nevažeća vrsta dokumenta. Dopuštene su samo datoteke sa sljedećim ekstenzijama: %{types}'
+              invalid_document_type: 'Vrsta dokumenta nije valjana. Prihvaćeni su formati: %{valid_mime_types}'
     models:
       decidim/participatory_process_step_activated_event: Faza je aktivirana
       decidim/participatory_process_step_changed_event: Faza je promijenjena
@@ -233,8 +231,7 @@ sr-CS:
           create: Stvori
           title: Nova faza participativnog procesa
         ordering:
-          error: Došlo je do problema pri promjeni redoslijeda faza participativnog
-            procesa.
+          error: Došlo je do problema pri promjeni redoslijeda faza participativnog procesa.
         update:
           error: Došlo je do problema pri ažuriranju faze participativnog procesa.
           success: Faza participativnog procesa uspješno je ažurirana.
@@ -270,14 +267,12 @@ sr-CS:
           create: Stvori
           title: Novi administrator participativnog procesa
         update:
-          error: Došlo je do problema pri ažuriranju administratora participativnog
-            procesa.
+          error: Došlo je do problema pri ažuriranju administratora participativnog procesa.
           success: Administrator participativnog procesa uspješno je ažuriran.
       participatory_processes:
         create:
           error: Došlo je do problema pri stvaranju novog participativnog procesa.
-          success: Participativni proces uspješno je stvoren. Sada konfigurirajte
-            njegove faze.
+          success: Participativni proces uspješno je stvoren. Sada konfigurirajte njegove faze.
         edit:
           update: Ažuriraj
         index:
@@ -320,78 +315,40 @@ sr-CS:
         create: "%{user_name} je stvorio skupinu participativnog procesa %{resource_name}"
         update: "%{user_name} je ažurirao skupinu participativnog procesa %{resource_name}"
       participatory_process_step:
-        activate: "%{user_name} je aktivirao fazu %{resource_name} u participativnom
-          procesu %{space_name}"
-        create: "%{user_name} je stvorio fazu %{resource_name} u participativnom procesu
-          %{space_name}"
-        delete: "%{user_name} je izbrisao fazu %{resource_name} u participativnom
-          procesu %{space_name}"
-        update: "%{user_name} je ažurirao fazu %{resource_name} u participativnom
-          procesu %{space_name}"
+        activate: "%{user_name} je aktivirao fazu %{resource_name} u participativnom procesu %{space_name}"
+        create: "%{user_name} je stvorio fazu %{resource_name} u participativnom procesu %{space_name}"
+        delete: "%{user_name} je izbrisao fazu %{resource_name} u participativnom procesu %{space_name}"
+        update: "%{user_name} je ažurirao fazu %{resource_name} u participativnom procesu %{space_name}"
       participatory_process_type:
         create: "%{user_name} stvorio je tip participativnog procesa %{resource_name}"
         delete: "%{user_name} izbrisao je %{resource_name} participativni tip procesa"
         update: "%{user_name} je ažurirao %{resource_name} tip participativnog procesa"
       participatory_process_user_role:
-        create: "%{user_name} je pozvao sudionika %{resource_name} u participativni
-          proces %{space_name}"
-        delete: "%{user_name} je uklonio sudionika %{resource_name} iz participativnog
-          procesa %{space_name}"
-        update: "%{user_name} je promijenio ulogu sudionika %{resource_name} u participativnom
-          procesu %{space_name}"
+        create: "%{user_name} je pozvao sudionika %{resource_name} u participativni proces %{space_name}"
+        delete: "%{user_name} je uklonio sudionika %{resource_name} iz participativnog procesa %{space_name}"
+        update: "%{user_name} je promijenio ulogu sudionika %{resource_name} u participativnom procesu %{space_name}"
     events:
       participatory_process:
         role_assigned:
-          email_intro: Dodijeljena vam je uloga %{role} u participativnom procesu
-            "%{resource_title}".
-          email_outro: Primili ste ovu obavijest jer ste %{role} participativnog procesa
-            "%{resource_title}".
+          email_intro: Dodijeljena vam je uloga %{role} u participativnom procesu "%{resource_title}".
+          email_outro: Primili ste ovu obavijest jer ste %{role} participativnog procesa "%{resource_title}".
           email_subject: Dodijeljena vam je uloga %{role} u "%{resource_title}".
-          notification_title: Dodijeljena vam je uloga %{role} u participativnom procesu
-            <a href="%{resource_url}">%{resource_title}</a>.
+          notification_title: Dodijeljena vam je uloga %{role} u participativnom procesu <a href="%{resource_url}">%{resource_title}</a>.
         step_activated:
-          email_intro: 'Faza %{resource_title} sada je aktivna za participativni prostor
-            %{participatory_space_title}. Možete ih vidjeti na stranici:'
-          email_outro: Primili ste ovu obavijest jer pratite participativni prostor
-            %{participatory_space_title}. Klikom na prethodnu poveznicu možete zaustaviti
-            primanje obavijesti.
+          email_intro: 'Faza %{resource_title} sada je aktivna za participativni prostor %{participatory_space_title}. Možete ih vidjeti na stranici:'
+          email_outro: Primili ste ovu obavijest jer pratite participativni prostor %{participatory_space_title}. Klikom na prethodnu poveznicu možete zaustaviti primanje obavijesti.
           email_subject: Ažuriranje participativnog prostora %{participatory_space_title}
-          notification_title: Faza %{resource_title} sada je aktivna za participativni
-            prostor <a href="%{resource_path}">%{participatory_space_title}</a>
+          notification_title: Faza %{resource_title} sada je aktivna za participativni prostor <a href="%{resource_path}">%{participatory_space_title}</a>
         step_changed:
-          email_intro: 'Ažurirani su datumi za fazu %{resource_title} u participativnom
-            prostoru %{participatory_space_title}. Možete ih vidjeti na stranici:'
-          email_outro: Primili ste ovu obavijest jer pratite participativni prostor
-            %{participatory_space_title}. Klikom na prethodnu poveznicu možete zaustaviti
-            primanje obavijesti.
+          email_intro: 'Ažurirani su datumi za fazu %{resource_title} u participativnom prostoru %{participatory_space_title}. Možete ih vidjeti na stranici:'
+          email_outro: Primili ste ovu obavijest jer pratite participativni prostor %{participatory_space_title}. Klikom na prethodnu poveznicu možete zaustaviti primanje obavijesti.
           email_subject: Ažuriranje participativnog prostora %{participatory_space_title}
-          notification_title: Ažurirani su datumi za fazu <a href="%{resource_path}">%{resource_title}</a>
-            u participativnom prostoru <a href="%{participatory_space_url}">%{participatory_space_title}</a>.
+          notification_title: Ažurirani su datumi za fazu <a href="%{resource_path}">%{resource_title}</a> u participativnom prostoru <a href="%{participatory_space_url}">%{participatory_space_title}</a>.
     help:
       participatory_spaces:
         participatory_processes:
-          contextual: "<p><strong>Participativni proces</strong> niz je participativnih
-            aktivnosti (npr. početno popunjavanje ankete, zatim davanje prijedloga,
-            rasprava o njima uživo ili na virtualnim sastancima i naposljetku određivanje
-            njihova prioriteta) kako bi se utvrdila i donijela odluka o određenoj
-            temi.</p> <p>Primjeri participativnih procesa jesu: proces izbora članova
-            odbora (u kojem se kandidature prvo predstavljaju, zatim se o njima raspravlja
-            i naposljetku se odabire jedna kandidatura), participativni proračuni
-            (gdje se daju i ekonomski vrednuju prijedlozi te se o njima glasa s obzirom
-            na raspoloživa sredstva), proces strateškog planiranja, zajednička izrada
-            uredbe ili norme, oblikovanje urbanog prostora ili izrada plana javne
-            politike.</p>\n"
-          page: "<p><strong>Participativni proces</strong> niz je participativnih
-            aktivnosti (npr. početno popunjavanje ankete, zatim davanje prijedloga,
-            rasprava o njima uživo ili na virtualnim sastancima i naposljetku određivanje
-            njihova prioriteta) kako bi se utvrdila i donijela odluka o određenoj
-            temi.</p> <p>Primjeri participativnih procesa jesu: proces izbora članova
-            odbora (u kojem se kandidature prvo predstavljaju, zatim se o njima raspravlja
-            i naposljetku se odabire jedna kandidatura), participativni proračuni
-            (gdje se daju i ekonomski vrednuju prijedlozi te se o njima glasa s obzirom
-            na raspoloživa sredstva), proces strateškog planiranja, zajednička izrada
-            uredbe ili norme, oblikovanje urbanog prostora ili izrada plana javne
-            politike.</p>\n"
+          contextual: "<p><strong>Participativni proces</strong> niz je participativnih aktivnosti (npr. početno popunjavanje ankete, zatim davanje prijedloga, rasprava o njima uživo ili na virtualnim sastancima i naposljetku određivanje njihova prioriteta) kako bi se utvrdila i donijela odluka o određenoj temi.</p> <p>Primjeri participativnih procesa jesu: proces izbora članova odbora (u kojem se kandidature prvo predstavljaju, zatim se o njima raspravlja i naposljetku se odabire jedna kandidatura), participativni proračuni (gdje se daju i ekonomski vrednuju prijedlozi te se o njima glasa s obzirom na raspoloživa sredstva), proces strateškog planiranja, zajednička izrada uredbe ili norme, oblikovanje urbanog prostora ili izrada plana javne politike.</p>\n"
+          page: "<p><strong>Participativni proces</strong> niz je participativnih aktivnosti (npr. početno popunjavanje ankete, zatim davanje prijedloga, rasprava o njima uživo ili na virtualnim sastancima i naposljetku određivanje njihova prioriteta) kako bi se utvrdila i donijela odluka o određenoj temi.</p> <p>Primjeri participativnih procesa jesu: proces izbora članova odbora (u kojem se kandidature prvo predstavljaju, zatim se o njima raspravlja i naposljetku se odabire jedna kandidatura), participativni proračuni (gdje se daju i ekonomski vrednuju prijedlozi te se o njima glasa s obzirom na raspoloživa sredstva), proces strateškog planiranja, zajednička izrada uredbe ili norme, oblikovanje urbanog prostora ili izrada plana javne politike.</p>\n"
           title: Što je participativni proces?
     log:
       value_types:
@@ -421,8 +378,6 @@ sr-CS:
           target: Tko sudjeluje
         participatory_processes:
           name: Participacijski procesi
-        stats:
-          name: Statistika
         title:
           meta_scope: Opseg
           name: Naslov, opis i hashtag
@@ -446,9 +401,7 @@ sr-CS:
             json: JSON
         participatory_process_copies:
           form:
-            slug_help: 'URL slugovi upotrebljavaju se za generiranje URL-ova koji
-              upućuju na ovaj proces. Dopušteni su samo slova, brojke i crtice, prvi
-              znak mora biti slovo. Primjer: %{url}'
+            slug_help: 'URL slugovi upotrebljavaju se za generiranje URL-ova koji upućuju na ovaj proces. Dopušteni su samo slova, brojke i crtice, prvi znak mora biti slovo. Primjer: %{url}'
         participatory_process_groups:
           form:
             metadata: Metapodaci
@@ -457,19 +410,14 @@ sr-CS:
         participatory_process_imports:
           form:
             document_legend: Dodaj dokument
-            slug_help: 'URL slugovi upotrebljavaju se za generiranje URL-ova koji
-              upućuju na ovaj proces. Dopušteni su samo slova, brojke i crtice, prvi
-              znak mora biti slovo. Primjer: %{url}'
+            slug_help: 'URL slugovi upotrebljavaju se za generiranje URL-ova koji upućuju na ovaj proces. Dopušteni su samo slova, brojke i crtice, prvi znak mora biti slovo. Primjer: %{url}'
         participatory_process_steps:
           form:
-            cta_path_help: 'Upotrijebite djelomične putove, a ne potpune URL-ove.
-              Dopušteni su slova, brojke, crtice i kose crte, prvi znak mora biti
-              slovo. U suprotnom gumb neće biti prikazan. Primjer: %{url}'
+            cta_path_help: 'Upotrijebite djelomične putove, a ne potpune URL-ove. Dopušteni su slova, brojke, crtice i kose crte, prvi znak mora biti slovo. U suprotnom gumb neće biti prikazan. Primjer: %{url}'
             cta_text_help: U suprotnom gumb neće biti prikazan.
         participatory_processes:
           form:
-            announcement_help: Tekst koji unesete ovdje prikazat će se korisniku desno
-              ispod informacija o procesu.
+            announcement_help: Tekst koji unesete ovdje prikazat će se korisniku desno ispod informacija o procesu.
             duration: Trajanje
             filters: Filtri
             images: Slike
@@ -477,14 +425,11 @@ sr-CS:
             few: Ostalo
             other: Ostalo
             related_processes: Povezani procesi
-            scope_type_max_depth_help: Ograničite dubinu filtra za temu; filtar će
-              prikazati vrste teme od općih prema odabranima.
+            scope_type_max_depth_help: Ograničite dubinu filtra za temu; filtar će prikazati vrste teme od općih prema odabranima.
             select_an_area: Odaberite područje
             select_participatory_process_type: Odaberite vrstu procesa
             select_process_group: Odaberite skupinu procesa
-            slug_help: 'URL slugovi upotrebljavaju se za generiranje URL-ova koji
-              upućuju na ovaj proces. Dopušteni su samo slova, brojke i crtice, prvi
-              znak mora biti slovo. Primjer: %{url}'
+            slug_help: 'URL slugovi upotrebljavaju se za generiranje URL-ova koji upućuju na ovaj proces. Dopušteni su samo slova, brojke i crtice, prvi znak mora biti slovo. Primjer: %{url}'
             title: Opće informacije
             visbility: Vidljivost
       content_blocks:
@@ -524,8 +469,7 @@ sr-CS:
           explanations:
             no_active: Nema aktivnih procesa
             no_active_nor_upcoming: Nema aktivnih ni predstojećih procesa
-            no_active_nor_upcoming_callout: Nema aktivnih ni predstojećih procesa.
-              Ovdje je popis prošlih procesa.
+            no_active_nor_upcoming_callout: Nema aktivnih ni predstojećih procesa. Ovdje je popis prošlih procesa.
           filter_by: Pokazati
           names:
             active: Aktivno

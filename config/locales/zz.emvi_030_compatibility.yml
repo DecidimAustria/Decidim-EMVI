@@ -1,0 +1,393 @@
+---
+bs:
+  decidim:
+    debates:
+      actions:
+        new: Nova rasprava
+    admin:
+      organization_appearance:
+        form:
+          colors:
+            colors_warning_html: Upozorenje! Promjena ovih boja može prekinuti kontraste pristupačnosti. Kontrast po svom izboru možete provjeriti s <a href="https://webaim.org/resources/contrastchecker">WebAIM Contrast Checkerom</a> ili drugim sličnim alatima.
+    components:
+      add_comment_form:
+        account_message: Prijavite se svojim računom
+    meetings:
+      close_meeting_reminder_mailer:
+        close_meeting_reminder:
+          subject: 'Zatvori događanje: %{meeting_title}'
+      registration_mailer:
+        confirmation:
+          confirmed_html: Vaša prijava za događanje <a href="%{url}">%{title}</a> je potvrđena.
+    proposals:
+      admin:
+        proposals_imports:
+          create:
+            success: Prijedlozi su uspješno uvezeni.
+    sortitions:
+      sortitions:
+        show:
+          candidate_proposals_info: Razvrstavanje je provedeno između sljedećih prijedloga (%{taxonomy_labels}), sa sljedećim ID-ovima (podebljani odabrani prijedlozi)
+    events:
+      debates:
+        create_debate_event:
+          space_followers:
+            email_intro: |-
+              Bok,
+              Nova debata "%{resource_title}" stvorena je na prostoru za sudjelovanje %{participatory_space_title}, pogledajte je i doprinesite:
+            email_outro: Primili ste ovu obavijest jer pratite prostor za sudjelovanje %{participatory_space_title}. Možete prestati primati obavijesti slijedeći prethodnu poveznicu.
+            email_subject: Nova debata "%{resource_title}" na %{participatory_space_title}
+            notification_title: Rasprava o <a href="%{resource_path}">%{resource_title}</a> stvorena je <a href="%{participatory_space_url}">%{participatory_space_title}</a>.
+    budgets:
+      admin:
+        projects:
+          update_selected:
+            invalid:
+              selected: 'Ovi projekti već su odabrani za provedbu: %{errored}.'
+              unselected: 'Ovi projekti već su poništeni iz implementacije: %{errored}.'
+            success:
+              selected: 'Ovi projekti su uspješno odabrani za implementaciju: %{successful}.'
+              unselected: 'Ovi su projekti uspješno poništeni iz implementacije: %{successful}.'
+cs:
+  decidim:
+    admin:
+      organization_appearance:
+        form:
+          colors:
+            colors_warning_html: Varování! Změna těchto barev může narušit kontrasty přístupnosti. Můžete zkontrolovat kontrast výběru s <a href="https://webaim.org/resources/contrastchecker">kontrolou kontrastu WebAIM Contrast Checker</a> nebo jinými podobnými nástroji.
+    participatory_spaces:
+      highlighted_meetings:
+        see_all: Zobrazit všechny
+      highlighted_results:
+        see_all: Zobrazit všechny výsledky
+de:
+  decidim:
+    admin:
+      imports:
+        notice: "%{count} %{resource_name} erfolgreich importiert."
+      organization_appearance:
+        form:
+          colors:
+            colors_warning_html: Warnung! Das Ändern dieser Farben kann die für Barrierefreiheit notwendigen Kontraste brechen. Sie können den Kontrast Ihrer Wahl mit <a href="https://webaim.org/resources/contrastchecker">WebAIM Contrast Checker</a> oder ähnlichen Tools überprüfen.
+el:
+  decidim:
+    debates:
+      actions:
+        new: Create new debate
+    admin:
+      organization_appearance:
+        form:
+          colors:
+            colors_warning_html: Προειδοποίηση! Η αλλαγή αυτών των χρωμάτων μπορεί να σπάσει τις αντιθέσεις προσβασιμότητας. Μπορείτε να ελέγξετε την αντίθεση της επιλογής σας με το <a href="https://webaim.org/resources/contrastchecker">WebAIM Contrast Checker</a> ή άλλα παρόμοια εργαλεία.
+    components:
+      add_comment_form:
+        account_message: Συνδεθείτε με τον λογαριασμό σας
+    meetings:
+      close_meeting_reminder_mailer:
+        close_meeting_reminder:
+          subject: 'Κλείσιμο εκδήλωσης: %{meeting_title}'
+    sortitions:
+      sortitions:
+        show:
+          candidate_proposals_info: Η ταξινόμηση πραγματοποιήθηκε μεταξύ των παρακάτω προτάσεων (%{taxonomy_labels}), με τα ακόλουθα αναγνωριστικά (με έντονους χαρακτήρες οι επιλεγμένες προτάσεις)
+    events:
+      debates:
+        create_debate_event:
+          space_followers:
+            email_intro: |-
+              Γεια,
+              Δημιουργήθηκε μια νέα συζήτηση "%{resource_title}" σχετικά με τον συμμετοχικό χώρο %{participatory_space_title}, ελέγξτε τον και συνεισφέρετε:
+            email_outro: Έχετε λάβει αυτήν την ειδοποίηση επειδή ακολουθείτε τον συμμετοχικό χώρο %{participatory_space_title}. Μπορείτε να σταματήσετε να λαμβάνετε ειδοποιήσεις ακολουθώντας τον προηγούμενο σύνδεσμο.
+            email_subject: Νέα συζήτηση "%{resource_title}" στο %{participatory_space_title}
+            notification_title: Η συζήτηση <a href="%{resource_path}">%{resource_title}</a> δημιουργήθηκε στις <a href="%{participatory_space_url}">%{participatory_space_title}</a>.
+    budgets:
+      admin:
+        projects:
+          update_selected:
+            invalid:
+              selected: 'Αυτά τα έργα έχουν ήδη επιλεγεί για υλοποίηση: %{errored}.'
+              unselected: 'Αυτά τα έργα είχαν ήδη αποεπιλεγεί από την υλοποίηση: %{errored}.'
+            success:
+              selected: 'Αυτά τα έργα επιλέχθηκαν με επιτυχία για υλοποίηση: %{successful}.'
+              unselected: 'Αυτά τα έργα καταργήθηκαν με επιτυχία από την υλοποίηση: %{successful}.'
+fa-IR:
+  decidim:
+    debates:
+      actions:
+        new: بحث جدید
+    admin:
+      organization_appearance:
+        form:
+          colors:
+            colors_warning_html: هشدار! تغییر این رنگ ها می تواند تضادهای دسترسی را از بین ببرد. می توانید کنتراست انتخابی خود را با <a href="https://webaim.org/resources/contrastchecker">WebAIM Contrast Checker</a> یا سایر ابزارهای مشابه بررسی کنید.
+    components:
+      add_comment_form:
+        account_message: با حساب خود وارد شوید
+    meetings:
+      close_meeting_reminder_mailer:
+        close_meeting_reminder:
+          subject: 'جلسه بسته: %{meeting_title}'
+    proposals:
+      admin:
+        proposals_imports:
+          create:
+            success: پیشنهادها با موفقیت وارد شدند.
+    sortitions:
+      sortitions:
+        show:
+          candidate_proposals_info: مرتب‌سازی بین پیشنهادات زیر انجام شد (%{taxonomy_labels})، با شناسه‌های زیر (پیشنهادهای انتخابی به صورت پررنگ)
+    events:
+      debates:
+        create_debate_event:
+          space_followers:
+            email_intro: |-
+              سلام،
+              یک بحث جدید "%{resource_title}" در فضای مشارکتی %{participatory_space_title} ایجاد شده است، آن را بررسی کنید و مشارکت کنید:
+            email_outro: شما این اعلان را دریافت کرده اید زیرا فضای مشارکتی %{participatory_space_title} را دنبال می کنید. می توانید از طریق پیوند قبلی دریافت اعلان ها را متوقف کنید.
+            email_subject: مناظره جدید "%{resource_title}" در %{participatory_space_title}
+            notification_title: بحث <a href="%{resource_path}">%{resource_title}</a> در <a href="%{participatory_space_url}">%{participatory_space_title}</a> ایجاد شد.
+    budgets:
+      admin:
+        projects:
+          update_selected:
+            invalid:
+              selected: 'این پروژه ها قبلاً برای اجرا انتخاب شده بودند: %{errored}.'
+              unselected: 'این پروژه‌ها قبلاً از پیاده‌سازی انتخاب نشده بودند: %{errored}.'
+            success:
+              selected: 'این پروژه ها با موفقیت برای اجرا انتخاب شدند: %{successful}.'
+              unselected: 'این پروژه ها با موفقیت از پیاده سازی حذف شدند: %{successful}.'
+hr:
+  decidim:
+    debates:
+      actions:
+        new: Nova rasprava
+    admin:
+      organization_appearance:
+        form:
+          colors:
+            colors_warning_html: Upozorenje! Promjena ovih boja može prekinuti kontraste pristupačnosti. Kontrast po svom izboru možete provjeriti s <a href="https://webaim.org/resources/contrastchecker">WebAIM Contrast Checkerom</a> ili drugim sličnim alatima.
+    components:
+      add_comment_form:
+        account_message: Prijavite se svojim računom
+    meetings:
+      close_meeting_reminder_mailer:
+        close_meeting_reminder:
+          subject: 'Zatvori događanje: %{meeting_title}'
+      registration_mailer:
+        confirmation:
+          confirmed_html: Vaša prijava za događanje <a href="%{url}">%{title}</a> je potvrđena.
+    proposals:
+      admin:
+        proposals_imports:
+          create:
+            success: Prijedlozi su uspješno uvezeni.
+    sortitions:
+      sortitions:
+        show:
+          candidate_proposals_info: Razvrstavanje je provedeno između sljedećih prijedloga (%{taxonomy_labels}), sa sljedećim ID-ovima (podebljani odabrani prijedlozi)
+    events:
+      debates:
+        create_debate_event:
+          space_followers:
+            email_intro: |-
+              Bok,
+              Nova debata "%{resource_title}" stvorena je na prostoru za sudjelovanje %{participatory_space_title}, pogledajte je i doprinesite:
+            email_outro: Primili ste ovu obavijest jer pratite prostor za sudjelovanje %{participatory_space_title}. Možete prestati primati obavijesti slijedeći prethodnu poveznicu.
+            email_subject: Nova debata "%{resource_title}" na %{participatory_space_title}
+            notification_title: Rasprava o <a href="%{resource_path}">%{resource_title}</a> stvorena je <a href="%{participatory_space_url}">%{participatory_space_title}</a>.
+    budgets:
+      admin:
+        projects:
+          update_selected:
+            invalid:
+              selected: 'Ovi projekti već su odabrani za provedbu: %{errored}.'
+              unselected: 'Ovi projekti već su poništeni iz implementacije: %{errored}.'
+            success:
+              selected: 'Ovi projekti su uspješno odabrani za implementaciju: %{successful}.'
+              unselected: 'Ovi su projekti uspješno poništeni iz implementacije: %{successful}.'
+it:
+  decidim:
+    admin:
+      imports:
+        notice: "%{count} %{resource_name} importati con successo."
+nl:
+  decidim:
+    participatory_spaces:
+      highlighted_meetings:
+        see_all: Alle vergaderingen bekijken
+      highlighted_results:
+        see_all: Bekijk alle resultaten
+pl:
+  decidim:
+    participatory_spaces:
+      highlighted_meetings:
+        see_all: Zobacz wszystkie spotkania
+      highlighted_results:
+        see_all: Zobacz wszystkie wyniki
+pt:
+  decidim:
+    participatory_spaces:
+      highlighted_meetings:
+        see_all: Ver todos
+      highlighted_results:
+        see_all: Ver todos os resultados
+ro:
+  decidim:
+    admin:
+      imports:
+        notice: "%{count} %{resource_name} importate cu succes."
+ru:
+  decidim:
+    participatory_spaces:
+      highlighted_meetings:
+        see_all: Посмотреть все
+sl:
+  decidim:
+    components:
+      add_comment_form:
+        account_message: Vpišite se s svojim računom
+    proposals:
+      admin:
+        proposals_imports:
+          create:
+            success: Predlogi so bili uspešno uvoženi.
+sr-CS:
+  decidim:
+    debates:
+      actions:
+        new: Nova rasprava
+    admin:
+      organization_appearance:
+        form:
+          colors:
+            colors_warning_html: Upozorenje! Promjena ovih boja može prekinuti kontraste pristupačnosti. Kontrast po svom izboru možete provjeriti s <a href="https://webaim.org/resources/contrastchecker">WebAIM Contrast Checkerom</a> ili drugim sličnim alatima.
+    components:
+      add_comment_form:
+        account_message: Prijavite se svojim računom
+    meetings:
+      close_meeting_reminder_mailer:
+        close_meeting_reminder:
+          subject: 'Zatvori događanje: %{meeting_title}'
+      registration_mailer:
+        confirmation:
+          confirmed_html: Vaša prijava za događanje <a href="%{url}">%{title}</a> je potvrđena.
+    proposals:
+      admin:
+        proposals_imports:
+          create:
+            success: Prijedlozi su uspješno uvezeni.
+    sortitions:
+      sortitions:
+        show:
+          candidate_proposals_info: Razvrstavanje je provedeno između sljedećih prijedloga (%{taxonomy_labels}), sa sljedećim ID-ovima (podebljani odabrani prijedlozi)
+    events:
+      debates:
+        create_debate_event:
+          space_followers:
+            email_intro: |-
+              Bok,
+              Nova debata "%{resource_title}" stvorena je na prostoru za sudjelovanje %{participatory_space_title}, pogledajte je i doprinesite:
+            email_outro: Primili ste ovu obavijest jer pratite prostor za sudjelovanje %{participatory_space_title}. Možete prestati primati obavijesti slijedeći prethodnu poveznicu.
+            email_subject: Nova debata "%{resource_title}" na %{participatory_space_title}
+            notification_title: Rasprava o <a href="%{resource_path}">%{resource_title}</a> stvorena je <a href="%{participatory_space_url}">%{participatory_space_title}</a>.
+    budgets:
+      admin:
+        projects:
+          update_selected:
+            invalid:
+              selected: 'Ovi projekti već su odabrani za provedbu: %{errored}.'
+              unselected: 'Ovi projekti već su poništeni iz implementacije: %{errored}.'
+            success:
+              selected: 'Ovi projekti su uspješno odabrani za implementaciju: %{successful}.'
+              unselected: 'Ovi su projekti uspješno poništeni iz implementacije: %{successful}.'
+tr-TR:
+  decidim:
+    admin:
+      organization_appearance:
+        form:
+          colors:
+            colors_warning_html: Uyarı! Bu renkleri değiştirmek, erişilebilirlik kontrastlarını bozabilir. Seçtiğiniz kontrastı <a href="https://webaim.org/resources/contrastchecker">WebAIM Contrast Checker</a> veya benzeri araçlarla kontrol edebilirsiniz.
+    components:
+      add_comment_form:
+        account_message: hesabınızla oturum açın
+    meetings:
+      close_meeting_reminder_mailer:
+        close_meeting_reminder:
+          subject: 'Close meeting: %{meeting_title}'
+    sortitions:
+      sortitions:
+        show:
+          candidate_proposals_info: Sıralama, aşağıdaki kimliklerle (seçilen teklifler kalın harflerle) aşağıdaki teklifler (%{taxonomy_labels}) arasında gerçekleştirildi.
+    events:
+      debates:
+        create_debate_event:
+          space_followers:
+            email_intro: |-
+              MERHABA,
+              %{participatory_space_title} katılımcı alanında yeni bir "%{resource_title}" tartışması oluşturuldu, inceleyin ve katkıda bulunun:
+            email_outro: Bu bildirimi, %{participatory_space_title} katılımcı alanını takip ettiğiniz için aldınız. Önceki bağlantıyı izleyerek bildirim almayı durdurabilirsiniz.
+            email_subject: '%{participatory_space_title}''de yeni tartışma "%{resource_title}"'
+            notification_title: <a href="%{resource_path}">%{resource_title}</a> tartışması <a href="%{participatory_space_url}">%{participatory_space_title}</a> tarihinde oluşturuldu.
+    budgets:
+      admin:
+        projects:
+          update_selected:
+            invalid:
+              selected: 'Bu projeler zaten uygulama için seçildi: %{errored}.'
+              unselected: 'Bu projeler zaten uygulamadan seçili değildi: %{errored}.'
+            success:
+              selected: 'Bu projeler uygulama için başarıyla seçildi: %{successful}.'
+              unselected: 'Bu projelerin uygulamadaki seçimi başarıyla kaldırıldı: %{successful}.'
+uk:
+  decidim:
+    debates:
+      actions:
+        new: Нові дебати
+    admin:
+      organization_appearance:
+        form:
+          colors:
+            colors_warning_html: УВАГА! Зміна цих кольорів може порушити контрасти доступності. Ви можете перевірити контрастність за вашим вибором за допомогою <a href="https://webaim.org/resources/contrastchecker">WebAIM Contrast Checker</a> або інших подібних інструментів.
+    components:
+      add_comment_form:
+        account_message: Увійдіть за допомогою свого облікового запису
+    meetings:
+      close_meeting_reminder_mailer:
+        close_meeting_reminder:
+          subject: 'Близька зустріч: %{meeting_title}'
+    proposals:
+      admin:
+        proposals_imports:
+          create:
+            success: Пропозиції успішно імпортовано.
+    sortitions:
+      sortitions:
+        show:
+          candidate_proposals_info: Сортування було проведено серед наступних пропозицій (%{taxonomy_labels}), з наступними ідентифікаторами (жирним виділено вибрані пропозиції)
+    events:
+      debates:
+        create_debate_event:
+          space_followers:
+            email_intro: |-
+              Привіт,
+              Нове обговорення "%{resource_title}" було створено на просторі для участі %{participatory_space_title}, перегляньте його та додайте:
+            email_outro: Ви отримали це сповіщення, оскільки стежите за простором участі %{participatory_space_title}. Перейти до сповіщень можна за попереднім посиланням.
+            email_subject: Нові дебати "%{resource_title}" на %{participatory_space_title}
+            notification_title: Обговорення <a href="%{resource_path}">%{resource_title}</a> було створено <a href="%{participatory_space_url}">%{participatory_space_title}</a>.
+    budgets:
+      admin:
+        projects:
+          update_selected:
+            invalid:
+              selected: 'Ці проекти вже були відібрані для реалізації: %{errored}.'
+              unselected: 'Ці проекти вже скасовано для реалізації: %{errored}.'
+            success:
+              selected: 'Ці проекти були успішно відібрані для реалізації: %{successful}.'
+              unselected: 'Ці проекти успішно скасовано для реалізації: %{successful}.'
+zh-TW:
+  decidim:
+    participatory_spaces:
+      highlighted_meetings:
+        see_all: 檢視所有會議
+      highlighted_results:
+        see_all: 檢視所有結果

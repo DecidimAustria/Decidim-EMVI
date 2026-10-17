@@ -2,8 +2,6 @@
 sl:
   activemodel:
     attributes:
-      answer:
-        body: Odgovor
       question:
         max_choices: Največje število izbir
         question_type: Vrsta
@@ -37,7 +35,6 @@ sl:
           answers:
             actions:
               back: Nazaj na odzive
-              export: Izvozi
               show: Pokaži odgovore
             empty: Ni še odgovorov
             export:

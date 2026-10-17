@@ -3,14 +3,10 @@ tr-TR:
   activemodel:
     attributes:
       answer:
-        body: Cevap
-        choices: Seçenekler
         selected_choices: Seçilen seçenekler
       question:
-        max_choices: Maksimum seçenek sayısı
         question_type: Tip
       questionnaire_question:
-        mandatory: Zorunlu
         max_characters: Karakter sınırı (sınır yoksa 0'a bırakın)
     errors:
       models:
@@ -22,7 +18,6 @@ tr-TR:
               too_long: çok uzun
             choices:
               missing: tam değil
-              too_many: çok fazla
         questionnaire:
           request_invalid: İstek işlenirken bir hata oluştu. Lütfen tekrar deneyin
   decidim:
@@ -31,55 +26,39 @@ tr-TR:
         models:
           components:
             description: Tanım
-            tos: Kullanım Şartları
         questionnaires:
           actions:
             back: sorulara geri dön
-            show: Yanıtları göster
           answer_option:
-            answer_option: Cevap seçeneği
-            free_text: Ücretsiz Metin
             remove: Kaldırmak
             statement: İfade
           answers:
             actions:
               back: Yanıtlara geri dön
               export: İhracat
-              show: Cevapları göster
             empty: Henüz cevap yok
             export:
               answer:
                 title: 'Yanıt #%{number}'
             export_response:
               title: anket_user_answers_%{token}
-            index:
-              title: "%{total} toplam yanıt"
             show:
               title: 'Cevap #%{number}'
           display_condition:
-            answer_option: Cevap seçeneği
-            condition_question: Soru
-            condition_type: Durum
             condition_types:
               answered: cevaplandı
               equal: Eşit
-              match: Metin içerir
               not_answered: cevaplanmadı
-              not_equal: Eşit değil
             condition_value: Dahil edilen metin
             display_condition: Ekran koşulu
             mandatory: Bu koşul, diğer koşulların durumu ne olursa olsun her zaman karşılanmalıdır.
             remove: Kaldırmak
-            save_warning: Görüntüleme koşullarını yapılandırmadan önce formu kaydetmeyi unutmayın
-            select_answer_option: Cevap seçeneğini seçin
             select_condition_question: Bir soru seç
-            select_condition_type: Bir koşul türü seçin
           edit:
             save: Kaydetmek
             title: Anketi düzenle
           form:
             add_question: soru ekle
-            add_separator: Ayırıcı ekle
             add_title_and_description: Başlık ve açıklama ekleyin
             already_answered_warning: Form zaten bazı kullanıcılar tarafından yanıtlanmıştır, bu nedenle sorularını değiştiremezsiniz.
             collapse: Tüm soruları daralt
@@ -93,23 +72,16 @@ tr-TR:
             statement: İfade
           question:
             add_answer_option: Yanıt seçeneği ekle
-            add_display_condition: Görüntü koşulu ekle
-            add_display_condition_info: Görüntüleme koşullarını yapılandırmak için formu kaydedin
-            add_matrix_row: Satır ekle
             any: Herhangi
             collapse: Yıkılmak
             description: Tanım
-            down: Aşağı
             expand: Genişletmek
-            question: Soru
             remove: Kaldırmak
             statement: İfade
             up: Yukarı
           separator:
-            down: Aşağı
             remove: Kaldırmak
             separator: Ayırıcı
-            up: Yukarı
           title_and_description:
             collapse: Yıkılmak
             description: Tanım
@@ -135,13 +107,8 @@ tr-TR:
           resize_to_fit: Bu resim, %{dimensions}'a sığacak şekilde yeniden boyutlandırılacak.
       question_types:
         files: Dosyalar
-        long_answer: Uzun cevap
         matrix_multiple: Matris (Birden çok seçenek)
-        matrix_single: Matris (Tek seçenek)
         multiple_option: çoklu seçenek
-        short_answer: Kısa cevap
-        single_option: Tek seçenek
-        sorting: Sıralama
         title_and_description: Başlık ve açıklama
       questionnaire_answer_presenter:
         download_attachment: Eki indir
@@ -150,8 +117,6 @@ tr-TR:
           invalid: Form yanıtlanırken bir sorun oluştu.
           max_choices_alert: Seçilen çok fazla seçenek var
           success: Form başarıyla yanıtlandı.
-        question:
-          max_choices: 'Maksimum seçenek: %{n}'
         show:
           answer_questionnaire:
             anonymous_user_message: Formu yanıtlamak için <a href="%{sign_in_link}">hesabınızla oturum açın</a> veya <a href="%{sign_up_link}">kaydolun</a>.
@@ -160,33 +125,21 @@ tr-TR:
           of_total_steps: "%{total_steps}'ın"
           questionnaire_answered:
             body: Bu formu zaten yanıtladınız.
-            title: Zaten cevaplandı
           questionnaire_closed:
             body: Form kapatılmıştır ve cevap verilememektedir.
             title: form kapatıldı
           questionnaire_for_private_users:
-            body: Form yalnızca özel kullanıcılar tarafından kullanılabilir
             title: form kapatıldı
-          questionnaire_js_disabled:
-            body: Bu formun bazı özellikleri devre dışı bırakılacak. Deneyiminizi iyileştirmek için lütfen tarayıcınızda JavaScript'i etkinleştirin.
-            title: JavaScript devre dışı
-          questionnaire_not_published:
-            body: Bu form henüz yayınlanmadı.
           tos_agreement: Katılarak Hizmet Şartlarını kabul etmiş olursunuz
       step_navigation:
         show:
           are_you_sure: Bu işlem geri alınamaz ve yanıtlarınızı düzenleyemezsiniz. Emin misin?
-          back: Geri
           continue: Devam etmek
           submit: Göndermek
       user_answers_serializer:
-        body: Cevap
         completion: tamamlama
         created_at: cevaplandı
         id: Yanıt Kimliği
         ip_hash: IP Karması
-        question: Soru
-        registered: Kayıtlı
         session_token: kullanıcı tanımlayıcı
         unregistered: kayıtsız
-        user_status: Kullanıcı durumu

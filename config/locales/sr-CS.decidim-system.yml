@@ -60,8 +60,7 @@ sr-CS:
           current_organizations: Trenutne organizacije
       default_pages:
         placeholders:
-          content: Dodajte smisleni sadržaj na statičnu stranicu %{page} na nadzornoj
-            ploči administratora.
+          content: Dodajte smisleni sadržaj na statičnu stranicu %{page} na nadzornoj ploči administratora.
           title: Zadani naslov za %{page}
       menu:
         admins: Administratori
@@ -124,30 +123,18 @@ sr-CS:
           secondary_hosts_hint: Unesite svaki od njih u novi red
         file_upload_settings:
           content_types:
-            admin_hint: Ovi MIME tipovi dopušteni su za učitavanje odjeljka administratora.
-              Administratori bi trebali biti svjesni rizika pri učitavanju nekih formata
-              dokumenata, tako da možete očekivati da će biti oprezniji pri učitavanju
-              datoteka.
-            default_hint: Ovi MIME tipovi dopušteni su svim korisnicima prema zadanim
-              postavkama.
-            intro_html: Za MIME tipove dodajete zamjenske znakove sa zvjezdicom, npr.
-              <code>image/*</code> .
+            admin_hint: Ovi MIME tipovi dopušteni su za učitavanje odjeljka administratora. Administratori bi trebali biti svjesni rizika pri učitavanju nekih formata dokumenata, tako da možete očekivati da će biti oprezniji pri učitavanju datoteka.
+            default_hint: Ovi MIME tipovi dopušteni su svim korisnicima prema zadanim postavkama.
+            intro_html: Za MIME tipove dodajete zamjenske znakove sa zvjezdicom, npr. <code>image/*</code> .
             title: Dopuštene MIME vrste
           file_extensions:
-            admin_hint: Ove ekstenzije datoteka dopuštene su za prijenos odjeljka
-              administratora. Administratori bi trebali biti svjesni rizika pri učitavanju
-              nekih formata dokumenata, tako da možete očekivati da će biti oprezniji
-              pri učitavanju datoteka.
-            default_hint: Ovi su datotečni nastavci prema zadanim postavkama dopušteni
-              svim korisnicima.
-            image_hint: Ove ekstenzije datoteka dopuštene su za bilo koju vrstu učitavanja
-              slika.
+            admin_hint: Ove ekstenzije datoteka dopuštene su za prijenos odjeljka administratora. Administratori bi trebali biti svjesni rizika pri učitavanju nekih formata dokumenata, tako da možete očekivati da će biti oprezniji pri učitavanju datoteka.
+            default_hint: Ovi su datotečni nastavci prema zadanim postavkama dopušteni svim korisnicima.
+            image_hint: Ove ekstenzije datoteka dopuštene su za bilo koju vrstu učitavanja slika.
             title: Dopušteni nastavci datoteka
           file_sizes:
-            avatar_hint: megabajti (MB). Ovo ograničenje veličine datoteke koristi
-              se za prijenos slike avatara.
-            default_hint: megabajti (MB). Ovo ograničenje veličine datoteke zadano
-              je i koristi se za sva učitavanja datoteka osim ako nije drugačije navedeno.
+            avatar_hint: megabajti (MB). Ovo ograničenje veličine datoteke koristi se za prijenos slike avatara.
+            default_hint: megabajti (MB). Ovo ograničenje veličine datoteke zadano je i koristi se za sva učitavanja datoteka osim ako nije drugačije navedeno.
             title: Maksimalne veličine datoteka
           intro: |
             Budite posebno oprezni kada razmišljate o promjeni ovih postavki. Što manje dopustite, to bolje.
@@ -155,35 +142,27 @@ sr-CS:
         index:
           title: organizacije
         new:
-          reference_prefix_hint: Prefiks reference koristi se za jedinstvenu identifikaciju
-            resursa u cijeloj organizaciji
+          reference_prefix_hint: Prefiks reference koristi se za jedinstvenu identifikaciju resursa u cijeloj organizaciji
           secondary_hosts_hint: Unesite svaki od njih u novi red
           title: Nova organizacija
         omniauth_settings:
           decidim:
             client_id: ID klijenta
             client_secret: Tajna klijenta
-            site_url: URL stranice
-          enabled: Omogućeno
-          enabled_by_default: Ovaj je pružatelj usluga omogućen prema zadanim postavkama.
-            Može se uređivati, ali ne i onemogućiti.
+          enabled_by_default: Ovaj je pružatelj usluga omogućen prema zadanim postavkama. Može se uređivati, ali ne i onemogućiti.
           facebook:
             app_id: ID aplikacije
             app_secret: Tajna aplikacije
           google_oauth2:
             client_id: ID klijenta
             client_secret: Tajna klijenta
-          icon: Ikona
-          icon_path: Put ikone
           twitter:
-            api_key: API ključ
             api_secret: API tajna
         smtp_settings:
           fieldsets:
             sender: Pošiljatelj
           instructions:
-            from_label: 'Pošiljatelj e-pošte bit će: "naziv-vaše-organizacije <vaša-organizacija@example.org>".
-              Ostavite prazno za korištenje ''Adrese e-pošte'' kao oznake'
+            from_label: 'Pošiljatelj e-pošte bit će: "naziv-vaše-organizacije <vaša-organizacija@example.org>". Ostavite prazno za korištenje ''Adrese e-pošte'' kao oznake'
           placeholder:
             from_email: vaša-organizacija@example.org
             from_label: naziv-vaše-organizacije
@@ -193,12 +172,10 @@ sr-CS:
         users_registration_mode:
           disabled: Pristup je moguć samo s vanjskim računima
           enabled: Dopustite sudionicima da se registriraju i prijave
-          existing: Ne dopustite sudionicima da se registriraju, ali dopustite postojećim
-            sudionicima da se prijave
+          existing: Ne dopustite sudionicima da se registriraju, ali dopustite postojećim sudionicima da se prijave
       shared:
         notices:
-          no_organization_warning_html: Morate stvoriti organizaciju da biste započeli.
-            Obavezno pročitajte %{guide} prije nastavka.
+          no_organization_warning_html: Morate stvoriti organizaciju da biste započeli. Obavezno pročitajte %{guide} prije nastavka.
           our_getting_started_guide: naš vodič za početak
       titles:
         dashboard: Nadzorna ploča

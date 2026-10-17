@@ -3,31 +3,14 @@ el:
   activemodel:
     attributes:
       collaborative_draft:
-        address: Διεύθυνση
-        body: Σώμα
-        category_id: Κατηγορία
         decidim_scope_id: Πεδίο
-        has_address: Έχει διεύθυνση
         scope_id: Πεδίο
-        state: Κατάσταση
-        title: Τίτλος
         user_group_id: Δημιουργία συνεργατικού προσχεδίου ως
       proposal:
-        address: Διεύθυνση
-        answer: Απάντηση
-        answered_at: Απαντήθηκε στις
         automatic_hashtags: Τα hashtag προστίθενται αυτόματα
-        body: Σώμα
-        category_id: Κατηγορία
         decidim_scope_id: Πεδίο
-        has_address: Έχει διεύθυνση
         scope_id: Πεδίο
-        state: Κατάσταση
-        suggested_hashtags: Προτεινόμενα hashtag
-        title: Τίτλος
-        user_group_id: Δημιουργία πρότασης ως
       proposal_answer:
-        answer: Απάντηση
         cost: Κόστος
         cost_report: Αναφορά κόστους
         execution_period: Περίοδος εκτέλεσης
@@ -35,9 +18,7 @@ el:
         copy_proposals: Κατανοώ ότι με την ενέργεια αυτή θα εισαχθούν όλες οι προτάσεις από το επιλεγμένο στοιχείο στο τρέχον και ότι αυτή η ενέργεια είναι μη αναστρέψιμη.
         origin_component_id: Στοιχείο για την αντιγραφή των προτάσεων από
       proposals_import:
-        import_proposals: Εισαγωγή προτάσεων
         keep_answers: Κρατήστε κατάσταση και απαντήσεις
-        keep_authors: Διατήρηση αρχικών συντακτών
       valuation_assignment:
         admin_log:
           valuator_role_id: Όνομα αξιολογητή
@@ -75,26 +56,16 @@ el:
       decidim/proposals/accepted_proposal_event: Η πρόταση έγινε δεκτή
       decidim/proposals/admin/update_proposal_category_event: Η κατηγορία της πρότασης άλλαξε
       decidim/proposals/admin/update_proposal_scope_event: Το πεδίο της πρότασης άλλαξε
-      decidim/proposals/creation_enabled_event: Η δημιουργία πρότασης ενεργοποιήθηκε
       decidim/proposals/endorsing_enabled_event: Η έγκριση πρότασης ενεργοποιήθηκε
       decidim/proposals/evaluating_proposal_event: Η πρόταση βρίσκεται στο στάδιο της αξιολόγησης
       decidim/proposals/proposal_mentioned_event: Έγινε αναφορά στην πρόταση
-      decidim/proposals/publish_proposal_event: Η πρόταση δημοσιεύτηκε
-      decidim/proposals/rejected_proposal_event: Η πρόταση απορρίφθηκε
       decidim/proposals/voting_enabled_event: Η ψηφοφορία για την πρόταση ενεργοποιήθηκε
   activerecord:
     models:
       decidim/proposals/collaborative_draft:
         one: Συνεργατικό σχέδιο
         other: Συνεργατικά σχέδια
-      decidim/proposals/proposal:
-        one: Πρόταση
-        other: Προτάσεις
-      decidim/proposals/proposal_note:
-        one: Σημείωση
-        other: Σημειώσεις
       decidim/proposals/proposal_vote:
-        one: Υποστήριξη
         other: Δηλώσεις υποστήριξης
   decidim:
     admin:
@@ -129,25 +100,17 @@ el:
     components:
       proposals:
         actions:
-          amend: Τροποποίηση
           comment: Σχόλιο
-          create: Δημιουργία
           endorse: Έγκριση
-          vote: Υποστήριξη
           vote_comment: Ψηφίστε σχόλιο
-          withdraw: Απόσυρση
         name: Ιδέες
         settings:
           global:
             allow_card_image: Να επιτρέπεται εικόνα κάρτας
-            amendments_enabled: Οι τροποποιήσεις ενεργοποιήθηκαν
             amendments_enabled_help: Εάν είναι ενεργές, διαμορφώστε τις δυνατότητες Τροποποίησης για κάθε βήμα.
             amendments_wizard_help_text: Κείμενο βοήθειας του Οδηγού τροποποιήσεων
-            announcement: Ανακοίνωση
-            attachments_allowed: Να επιτρέπονται τα συνημμένα
             can_accumulate_supports_beyond_threshold: Μπορεί να συγκεντρώνει υποστηρικτές πέρα από το όριο
             collaborative_drafts_enabled: Τα συνεργατικά προσχέδια ενεργοποιήθηκαν
-            comments_enabled: Τα σχόλια ενεργοποιήθηκαν
             comments_max_length: Μέγιστο μήκος σχολίων (για την προεπιλεγμένη τιμή πληκτρολογήστε «0»)
             default_sort_order: Προεπιλεγμένη ταξινόμηση πρότασης
             default_sort_order_help: Προεπιλογή σημαίνει ότι εάν είναι ενεργοποιημένες οι υποστηρίξεις, οι προτάσεις θα εμφανίζονται ταξινομημένες κατά τυχαία σειρά, και εάν οι υποστηρίξεις είναι αποκλεισμένες, τότε θα ταξινομούνται με τις πιο υποστηριζόμενες.
@@ -164,8 +127,6 @@ el:
             minimum_votes_per_user: Ελάχιστος αριθμός υποστηρικτών ανά χρήστη
             new_proposal_body_template: Υπόδειγμα σώματος νέας πρότασης
             new_proposal_body_template_help: Μπορείτε να ορίσετε προσυμπληρωμένο κείμενο για τις νέες Προτάσεις
-            new_proposal_help_text: Κείμενο βοήθειας νέας πρότασης
-            official_proposals_enabled: Οι επίσημες προτάσεις ενεργοποιήθηκαν
             participatory_texts_enabled: Τα συμμετοχικά κείμενα ενεργοποιήθηκαν
             participatory_texts_enabled_readonly: Δεν είναι δυνατή η αλληλεπίδραση με αυτήν τη ρύθμιση, εάν υφίστανται υπάρχουσες προτάσεις. Δημιουργήστε ένα νέο «Στοιχείο προτάσεων», εάν θέλετε να ενεργοποιήσετε αυτήν τη δυνατότητα, ή απορρίψτε όλες τις εισαγόμενες προτάσεις στο μενού «Συμμετοχικά κείμενα», εάν θέλετε να την απενεργοποιήσετε.
             proposal_answering_enabled: Οι απαντήσεις στην πρόταση ενεργοποιήθηκαν
@@ -174,32 +135,24 @@ el:
             proposal_edit_time_choices:
               infinite: Επιτρέψτε την επεξεργασία προτάσεων για άπειρο χρονικό διάστημα
               limited: Να επιτρέπεται η επεξεργασία των προτάσεων εντός συγκεκριμένου χρονικού πλαισίου
-            proposal_length: Μέγιστο μήκος σώματος πρότασης
-            proposal_limit: Όριο πρότασης ανά συμμετέχοντα
             proposal_wizard_step_1_help_text: Κείμενο βοήθειας για το βήμα «Δημιουργία» του Οδηγού προτάσεων
             proposal_wizard_step_2_help_text: Κείμενο βοήθειας για το βήμα «Σύγκριση» του Οδηγού προτάσεων
             proposal_wizard_step_3_help_text: Επανεξέταση
             proposal_wizard_step_4_help_text: Κείμενο βοήθειας για το βήμα «Δημοσίευση» του Οδηγού προτάσεων
-            resources_permissions_enabled: Μπορούν να οριστούν δικαιώματα ενεργειών για κάθε πρόταση
             scope_id: Πεδίο εφαρμογής
             scopes_enabled: Τα πεδία είναι ενεργοποιημένα
             threshold_per_proposal: Κατώτατο όριο ανά πρόταση
             vote_limit: Όριο υποστηρικτών ανά συμμετέχοντα
           step:
             amendment_creation_enabled: Η δημιουργία τροποποιήσεων ενεργοποιήθηκε
-            amendment_creation_enabled_help: Ο συμμετέχων μπορεί να τροποποιήσει προτάσεις.
             amendment_promotion_enabled: Η προώθηση τροποποιήσεων ενεργοποιήθηκε
             amendment_promotion_enabled_help: Οι συντάκτες της διόρθωσης θα μπορούν να προωθούν σε πρόταση τη διόρθωση που απορρίφθηκε.
             amendment_reaction_enabled: Η αντίδραση σε τροποποιήσεις ενεργοποιήθηκε
             amendment_reaction_enabled_help: Οι συντάκτες της πρότασης θα μπορούν να αποδέχονται ή να απορρίπτουν τις διορθώσεις του συμμετέχοντος.
-            amendments_visibility: Ορατότητα τροποποιήσεων
             amendments_visibility_choices:
-              all: Οι τροποποιήσεις είναι ορατές σε όλους
               participants: Οι τροποποιήσεις είναι ορατές μόνο στους συντάκτες τους
             amendments_visibility_help: Εάν ενεργοποιηθεί η επιλογή «Οι τροποποιήσεις είναι ορατές μόνο στους συντάκτες τους», ο συμμετέχων θα πρέπει να συνδεθεί για να δει τις τροποποιήσεις που έγιναν.
-            announcement: Ανακοίνωση
             answers_with_costs: Ενεργοποίηση κόστους στις απαντήσεις σε προτάσεις
-            automatic_hashtags: Προστέθηκαν hashtag σε όλες τις προτάσεις
             comments_blocked: Τα σχόλια απενεργοποιήθηκαν
             creation_enabled: Η δημιουργία πρότασης ενεργοποιήθηκε
             creation_enabled_readonly: Αυτή η ρύθμιση απενεργοποιείται όταν ενεργοποιείτε τη λειτουργία Συμμετοχικών κειμένων. Για να ανεβάσετε προτάσεις ως συμμετοχικό κείμενο κάντε κλικ στο κουμπί Συμμετοχικά Κείμενα και ακολουθήστε τις οδηγίες.
@@ -363,7 +316,6 @@ el:
           unearned_own: Δεν έχετε δημιουργήσει καμία ιδέα ακόμη.
     metrics:
       accepted_proposals:
-        description: Αριθμός προτάσεων που έγιναν δεκτές
         object: ιδέες
         title: Προτάσεις που έγιναν δεκτές
       endorsements:
@@ -371,7 +323,6 @@ el:
         object: εγκρίσεις
         title: Εγκρίσεις
       proposals:
-        description: Αριθμός προτάσεων
         object: ιδέες
         title: Ιδέες
       votes:
@@ -389,18 +340,13 @@ el:
       actions:
         answer_proposal: Απάντηση στην πρόταση
         edit_proposal: Επεξεργασία ιδέας
-        import: Εισαγωγή από άλλο στοιχείο
         new: Νέα ιδέα
         participatory_texts: Συμμετοχικά κείμενα
         show: Προβολή ιδέας
-        title: Ενέργειες
       admin:
-        actions:
-          preview: Προεπισκόπηση
         exports:
           comments: Σχόλια
           proposal_comments: Σχόλια
-          proposals: Προτάσεις
         imports:
           help:
             answers: |
@@ -431,24 +377,16 @@ el:
           title:
             answers: Απαντήσεις πρότασης εισαγωγής
             proposals: Εισαγωγικές προτάσεις
-        models:
-          proposal:
-            name: Πρόταση
         participatory_texts:
           bulk-actions:
             are_you_sure: Είστε βέβαιοι ότι θέλετε να απορρίψετε ολόκληρο το προσχέδιο συμμετοχικού κειμένου;
-            discard_all: Απόρριψη όλων
-            import_doc: Εισαγωγή εγγράφου
           discard:
             success: Όλα τα προσχέδια συμμετοχικού κειμένου απορρίφθηκαν.
           import:
-            invalid: Η φόρμα δεν είναι έγκυρη!
             invalid_file: Το αρχείο περιέχει κάποιο σφάλμα. Προσπαθήστε να επεξεργαστείτε το περιεχόμενο του αρχείου και επαναλάβετε τη μεταφόρτωσή του.
             success: Συγχαρητήρια, οι ακόλουθες ενότητες μετατράπηκαν σε προτάσεις. Μπορείτε πλέον να τις αναθεωρήσετε και να τις προσαρμόσετε πριν από τη δημοσίευση.
           index:
             info_1: Οι ακόλουθες ενότητες μετατράπηκαν σε προτάσεις. Μπορείτε πλέον να τις αναθεωρήσετε και να τις προσαρμόσετε πριν από τη δημοσίευση.
-            publish_document: Δημοσίευση εγγράφου
-            save_draft: Αποθήκευση προσχεδίου
             title: Προεπισκόπηση συμμετοχικού κειμένου
           new_import:
             accepted_mime_types:
@@ -456,41 +394,24 @@ el:
               odt: ODT
             bottom_hint: "(Θα μπορείτε να κάνετε προεπισκόπηση και ταξινόμηση των ενοτήτων του εγγράφου)"
             document_legend: 'Προσθέστε ένα έγγραφο μικρότερο από 2 MB, κάθε ενότητα σε βάθος έως 3 επιπέδων θα αναλυθεί σε προτάσεις. Οι υποστηριζόμενες μορφές είναι: %{valid_mime_types}'
-            title: Προσθήκη εγγράφου
             upload_document: Μεταφόρτωση εγγράφου
-          publish:
-            invalid: Δεν ήταν δυνατή η δημοσίευση προτάσεων
-            success: Όλες οι προτάσεις έχουν δημοσιευτεί
-          sections:
-            article: "<em>Άρθρο</em>"
-            section: "<em>Ενότητα:</em> <strong>%{title}</strong>"
-            sub-section: "<em>Υποενότητα:</em> %{title}"
           update:
             success: Το συμμετοχικό κείμενο επικαιροποιήθηκε με επιτυχία.
         proposal_answers:
           form:
             accepted: Έγινε δεκτό
-            answer_proposal: Απάντηση
             evaluating: Υπό αξιολόγηση
             not_answered: Δεν απαντήθηκε
             rejected: Έχει απορριφθεί
-            title: Απάντηση για την πρόταση %{title}
         proposal_notes:
           create:
             error: Παρουσιάστηκε πρόβλημα κατά τη δημιουργία αυτής της σημείωσης πρότασης
-            success: Η σημείωση πρότασης δημιουργήθηκε με επιτυχία
-          form:
-            note: Σημείωση
-            submit: Υποβολή
           leave_your_note: Προσθέστε τη σημείωσή σας
-          title: Ιδιωτικές σημειώσεις
         proposals:
           answer:
             invalid: Παρουσιάστηκε πρόβλημα κατά την απάντηση σε αυτήν την πρόταση
-            success: Η πρόταση απαντήθηκε με επιτυχία
           create:
             invalid: Παρουσιάστηκε πρόβλημα κατά τη δημιουργία αυτής της πρότασης
-            success: Η πρόταση δημιουργήθηκε με επιτυχία
           edit:
             title: Επικαιροποίηση πρότασης
             update: Επικαιροποίηση
@@ -501,52 +422,26 @@ el:
             select_a_category: Επιλέξτε κατηγορία
             select_a_meeting: Επιλέξτε συνεδρίαση
           index:
-            actions: Ενέργειες
             assign_to_valuator: Ανάθεση σε αξιολογητή
             assign_to_valuator_button: Ανάθεση
-            cancel: Ακύρωση
-            change_category: Αλλαγή κατηγορίας
             change_scope: Αλλαγή πεδίου
-            merge: Συγχώνευση σε νέο
-            merge_button: Συγχώνευση
-            publish: Δημοσίευση
-            publish_answers: Δημοσίευση απαντήσεων
-            select_component: Επιλέξτε στοιχείο
-            selected: επιλέχθηκε
-            split: Διαχωρισμός προτάσεων
-            split_button: Διαχωρισμός
-            title: Προτάσεις
             unassign_from_valuator: Ακύρωση ανάθεσης σε αξιολογητή
             unassign_from_valuator_button: Ακύρωση ανάθεσης
             update: Επικαιροποίηση
             update_scope_button: Επικαιροποίηση πεδίου
-          new:
-            create: Δημιουργία
-            title: Δημιουργία πρότασης
           publish_answers:
-            number_of_proposals: Θα δημοσιευτούν απαντήσεις για %{number} προτάσεις.
             select_a_proposal: Επιλέξτε πρόταση
           show:
             amendments_count: Αριθμός τροποποιήσεων
             assigned_valuators: Αξιολογητές με ανάθεση
-            authors: Συντάκτες
-            body: Σώμα
             comments_count: Αριθμός σχολίων
-            comments_negative_count: Κατά
             comments_neutral_count: Ουδέτερο
             comments_positive_count: Υπέρ
-            created_at: Ημερομηνία δημιουργίας
-            documents: Έγγραφα
             endorsements_count: Αριθμός εγκρίσεων
             endorsements_ranking: Κατάταξη κατά έγκριση
             endorsers: Υπεύθυνοι έγκρισης
-            link: Σύνδεσμος
             n_more_endorsers:
               one: και 1 ακόμη
-              other: και %{count} ακόμη
-            photos: Φωτογραφίες
-            proposals: Προτάσεις
-            ranking: "%{ranking} από %{total}"
             related_meetings: Σχετικές συνεδριάσεις
             remove_assignment: Κατάργηση ανάθεσης
             remove_assignment_confirmation: Είστε βέβαιοι ότι θέλετε να καταργήσετε τον αξιολογητή από αυτήν την πρόταση;
@@ -566,12 +461,9 @@ el:
         proposals_imports:
           create:
             invalid: Παρουσιάστηκε πρόβλημα κατά την εισαγωγή των προτάσεων
-            success: "%{number} προτάσεις εισήχθηκαν με επιτυχία"
           new:
-            create: Εισαγωγή προτάσεων
             no_components: Δεν υπάρχουν στοιχεία προτάσεων σε αυτόν τον συμμετοχικό χώρο από τον οποίο μπορούν να εισαχθούν οι προτάσεις.
             select_component: Επιλέξτε στοιχείο
-            select_states: Ελέγξτε την κατάσταση των προτάσεων προς εισαγωγή
             title: Εισαγωγικές προτάσεις
         proposals_merges:
           create:
@@ -591,8 +483,6 @@ el:
       admin_log:
         proposal:
           answer: Ο χρήστης %{user_name} απάντησε στην πρόταση %{resource_name} στον χώρο %{space_name}
-          create: Ο χρήστης %{user_name} δημιούργησε την πρόταση %{resource_name} στον χώρο %{space_name} ως επίσημη πρόταση
-          publish_answer: Ο χρήστης %{user_name} δημοσίευσε την απάντηση στην πρόταση %{resource_name} στον χώρο %{space_name}
           update: Ο χρήστης %{user_name} επικαιροποίησε την επίσημη πρόταση %{resource_name} στον χώρο %{space_name}
         proposal_note:
           create: Ο χρήστης %{user_name} πρόσθεσε μια ιδιωτική σημείωση στην πρόταση %{resource_name} στον χώρο %{space_name}
@@ -602,29 +492,17 @@ el:
       answers:
         accepted: Έγινε δεκτό
         evaluating: Υπό αξιολόγηση
-        not_answered: Δεν απαντήθηκε
         rejected: Έχει απορριφθεί
-        withdrawn: Αποσύρθηκε
       application_helper:
-        filter_category_values:
-          all: Όλα
         filter_origin_values:
-          all: Όλα
           meetings: Εκδηλώσεις
           official: Επίσημος
           participants: Πολίτες
-          user_groups: Ομάδες
-        filter_scope_values:
-          all: Όλα
         filter_state_values:
           accepted: Έγινε δεκτό
-          all: Όλα
           evaluating: Υπό αξιολόγηση
-          not_answered: Δεν απαντήθηκε
           rejected: Έχει απορριφθεί
         filter_type_values:
-          all: Όλα
-          amendments: Τροποποιήσεις
           proposals: Ιδέες
       collaborative_drafts:
         collaborative_draft:
@@ -632,7 +510,6 @@ el:
             error: Παρουσιάστηκε πρόβλημα κατά τη διαγραφή του συνεργατικού προσχεδίου.
             irreversible_action_modal:
               body: Μετά τη δημοσίευση του προσχεδίου ως πρότασης, το προσχέδιο δεν θα είναι πλέον επεξεργάσιμο. Η πρόταση δεν θα δέχεται νέους συντάκτες ή συμμετοχές.
-              cancel: Ακύρωση
               ok: Δημοσίευση ως πρότασης
               title: Η παρακάτω ενέργεια είναι μη αναστρέψιμη
             success: Το συνεργατικό σχέδιο δημοσιεύτηκε επιτυχώς ως πρόταση.
@@ -641,7 +518,6 @@ el:
             error: Παρουσιάστηκε πρόβλημα κατά το κλείσιμο του συνεργατικού προσχεδίου.
             irreversible_action_modal:
               body: Μετά το κλείσιμο του προσχεδίου, το προσχέδιο δεν θα είναι πλέον επεξεργάσιμο. Το προσχέδιο δεν θα δέχεται νέους συντάκτες ή συμμετοχές.
-              cancel: Ακύρωση
               ok: Απόσυρση του συνεργατικού σχεδίου
               title: Η παρακάτω ενέργεια είναι μη αναστρέψιμη
             success: Το συνεργατικό προσχέδιο αποσύρθηκε με επιτυχία.
@@ -661,72 +537,44 @@ el:
           success: Το συνεργατικό προσχέδιο δημιουργήθηκε με επιτυχία.
         edit:
           attachment_legend: "(Προαιρετικό) Προσθήκη συνημμένου"
-          back: Πίσω
           select_a_category: Επιλέξτε κατηγορία
-          send: Αποστολή
           title: Επεξεργασία συνεργατικού προσχεδίου
         filters:
-          all: Όλα
-          amendment: Τροποποιήσεις
-          category: Κατηγορία
           open: Σε εκκρεμότητα
           published: Έχει δημοσιευτεί
           related_to: Σχετικά με
           scope: Πεδίο
-          search: Αναζήτηση
-          state: Κατάσταση
-          withdrawn: Αποσύρθηκε
         filters_small_view:
           close_modal: Κλείσιμο αποκλειστικού παραθύρου διαλόγου
-          filter: Φίλτρο
-          filter_by: Φιλτράρισμα κατά
           unfold: Ανάπτυξη
         new:
           add_file: Προσθήκη αρχείου
           edit_file: Επεξεργασία αρχείου
-          send: Συνέχεια
           title: Δημιουργήστε το συνεργατικό προσχέδιό σας
         new_collaborative_draft_button:
           new_collaborative_draft: Νέο συνεργατικό προσχέδιο
         orders:
-          label: 'Ταξινόμηση προσχεδίων κατά:'
           most_contributed: Μεγαλύτερη συμβολή
           random: Τυχαία σειρά
-          recent: Πρόσφατα
         requests:
           accepted_request:
             error: Δεν ήταν δυνατή η αποδοχή ως συνεργαζόμενου. Δοκιμάστε ξανά αργότερα.
             success: Ο χρήστης @%{user} έγινε δεκτός ως συνεργαζόμενος με επιτυχία
           access_requested:
-            error: Δεν ήταν δυνατή η ολοκλήρωση του αιτήματός σας. Δοκιμάστε ξανά αργότερα.
             success: Το αίτημά σας για συνεργασία εστάλη με επιτυχία
-          collaboration_requests:
-            accept_request: Αποδοχή
-            reject_request: Απόρριψη
-            title: Αιτήματα συνεργασίας
           rejected_request:
             error: Δεν ήταν δυνατή η απόρριψη ως συνεργαζόμενου/-ης. Δοκιμάστε ξανά αργότερα.
             success: Ο χρήστης @%{user} απορρίφθηκε ως συνεργαζόμενος/-η με επιτυχία
         show:
-          back: Πίσω
           edit: Επεξεργασία συνεργατικού προσχεδίου
-          final_proposal: τελική πρόταση
-          final_proposal_help_text: Αυτό το προσχέδιο ολοκληρώθηκε. Δείτε την τελική πρόταση
-          hidden_authors_count:
-            one: και %{count} ακόμη άτομο
-            other: και %{count} ακόμη άτομα
           info-message: Πρόκειται για ένα <strong>συνεργατικό προσχέδιο</strong> για μια πρόταση. Αυτό σημαίνει ότι μπορείτε να βοηθήσετε τους συντάκτες του να διαμορφώσουν την πρόταση χρησιμοποιώντας την ενότητα σχολίων παρακάτω ή να τη βελτιώσετε απευθείας, ζητώντας πρόσβαση για να την επεξεργαστείτε. Μόλις οι συντάκτες σάς εκχωρήσουν πρόσβαση, θα μπορείτε να κάνετε αλλαγές σε αυτό το προσχέδιο.
-          publish: Δημοσίευση
           publish_info: Δημοσιεύστε αυτήν την έκδοση του προσχεδίου ή
-          published_proposal: δημοσιευμένη πρόταση
           request_access: Αίτηση πρόσβασης
-          requested_access: Ζητήθηκε πρόσβαση
           version_history: εμφάνιση του ιστορικού εκδόσεων για την πρόταση
           withdraw: αποσύρετε το προσχέδιο
         states:
           open: Σε εκκρεμότητα
           published: Έχει δημοσιευτεί
-          withdrawn: Αποσύρθηκε
         update:
           error: Παρουσιάστηκε πρόβλημα κατά την αποθήκευση του συνεργατικού προσχεδίου.
           success: Το συνεργατικό προσχέδιο επικαιροποιήθηκε με επιτυχία.
@@ -761,42 +609,24 @@ el:
       models:
         collaborative_draft:
           fields:
-            authors: Συντάκτες
-            comments: Σχόλια
             contributions: Συμμετοχές
         proposal:
           fields:
-            category: Κατηγορία
-            comments: Σχόλια
-            id: Αναγνωριστικό
-            notes: Σημειώσεις
-            official_proposal: Επίσημη πρόταση
-            published_answer: Δημοσιευμένη απάντηση
-            published_at: Δημοσιεύτηκε στις
             scope: Πεδίο
-            state: Κατάσταση
-            title: Τίτλος
             valuator: Αξιολογητής
             valuators: Αξιολογητές
-            votes: Ψήφοι
       new:
         limit_reached: Δεν μπορείτε να δημιουργήσετε νέες προτάσεις, καθώς έχετε υπερβεί το όριο.
       participatory_text_proposal:
         alternative_title: Δεν υπάρχουν συμμετοχικά κείμενα αυτήν τη στιγμή
-        buttons:
-          amend: Τροποποίηση
-          comment: Σχόλιο
-          comments: Σχόλια
       proposal_votes:
         create:
           error: Παρουσιάστηκε πρόβλημα κατά την υποστήριξη της πρότασης.
       proposals:
         compare:
-          continue: Συνέχεια
           no_similars_found: Μπράβο! Δεν βρέθηκαν παρόμοιες ιδέες
           title: Σύγκριση με παρόμοιες ιδέες
         complete:
-          send: Αποστολή
           title: Ολοκληρώστε την ιδέα σας
         count:
           proposals_count:
@@ -809,33 +639,24 @@ el:
           add_documents: Προσθήκη εγγράφων
           add_image: Προσθέστε εικόνα
           attachment_legend: "(Προαιρετικό) Προσθήκη εικόνας"
-          back: Πίσω
           edit_documents: Επεξεργασία εγγράφων
           edit_image: Επεξεργασία εικόνας
           select_a_category: Επιλέξτε κατηγορία
           send: Προεπισκόπηση
-          title: Επεξεργασία πρότασης
         edit_draft:
           discard: Απόρριψη αυτού του σχεδίου
           discard_confirmation: Είστε βέβαιοι ότι θέλετε να απορρίψετε αυτό το προσχέδιο ιδέας;
-          send: Προεπισκόπηση
           title: Επεξεργασία προσχεδίου ιδέας
         filters:
           activity: Ιδέες
-          all: Όλα
-          amendment_type: Τύπος
-          category: Κατηγορία
           my_proposals: Οι ιδέες μου
-          origin: Προέλευση
           related_to: Συναφή
           scope: Πεδίο
           search: Ιδέες
           state: Κατηγορία
-          type: Τύπος
           voted: Έχουν υποστηριχθεί
         filters_small_view:
           close_modal: Κλείσιμο αποκλειστικού παραθύρου διαλόγου
-          filter: Φίλτρο
           filter_by: Ιδέα
           unfold: Ανάπτυξη
         index:
@@ -845,13 +666,10 @@ el:
           see_all: Προβολή όλων των ιδεών
           see_all_withdrawn: Εμφάνιση όλων των ιδεών που αποσύρθηκαν
           text_banner: Βλέπετε τον κατάλογο των ιδεών που αποσύρθηκαν από τους συντάκτες τους. %{go_back_link} για επιστροφή στο ευρετήριο ιδεών.
-          view_proposal: Προβολή πρότασης
         linked_proposals:
           proposal_votes:
-            one: υποστήριξη
             other: δηλώσεις υποστήριξης
         new:
-          send: Συνέχεια
           title: Δημιουργήστε την ιδέα σας
         orders:
           label: Ταξινόμηση ιδεών ανά
@@ -861,10 +679,7 @@ el:
           most_voted: Περισσότερο υποστηριζόμενες
           random: Τυχαία σειρά
           recent: Πιο πρόσφατες
-          with_more_authors: Με περισσότερους συντάκτες
         participatory_texts:
-          index:
-            document_index: Ευρετήριο εγγράφων
           view_index:
             see_index: Βλ. ευρετήριο
         placeholder:
@@ -874,55 +689,33 @@ el:
           proposal_edit_before_minutes:
             one: Θα έχετε στη διάθεσή σας %{count} επιπλέον λεπτά για επεξεργασία μετά τη δημοσίευσή της, εάν χρειαστεί να κάνετε και άλλες αλλαγές.
             other: Θα έχετε στη διάθεσή σας %{count} επιπλέον λεπτά για επεξεργασία μετά τη δημοσίευσή της, εάν χρειαστεί να κάνετε και άλλες αλλαγές.
-          publish: Δημοσίευση
           title: Δημοσίευση της ιδέας σας
-        proposal:
-          creation_date: 'Δημιουργία: %{date}'
-          view_proposal: Προβολή πρότασης
         proposals:
           empty: Δεν υπάρχει καμία ιδέα ακόμη
           empty_filters: Δεν υπάρχουν ιδέες που να πληρούν αυτά τα κριτήρια
         show:
-          answer: Απάντηση
-          back_to: Επιστροφή σε
           back_to_list: Επιστροφή στον κατάλογο
           changes_at_title: Τροποποίηση του "%{title}"
-          comments: Σχόλια
           edit_proposal: Επεξεργασία ιδέας
           endorsements_list: Εγκρίθηκε από
-          estimated_cost: Εκτιμώμενο κόστος
-          hidden_endorsers_count:
-            one: και %{count} ακόμη άτομο
-            other: και %{count} ακόμη άτομα
           link_to_collaborative_draft_help_text: Η πρόταση αυτή είναι το αποτέλεσμα ενός συνεργατικού σχεδίου. Ελέγξτε το ιστορικό
           link_to_collaborative_draft_text: Εμφάνιση του συνεργατικού προσχεδίου
           link_to_promoted_emendation_help_text: Η πρόταση αυτή είναι μια προωθημένη διόρθωση
-          link_to_promoted_emendation_text: Δείτε τη διόρθωση που απορρίφθηκε.
-          link_to_proposal_from_emendation_help_text: Αυτή είναι μια διόρθωση που απορρίφθηκε
           link_to_proposal_from_emendation_text: Προβολή της Ιδέας
           proposal_accepted_reason: 'Η πρόταση έγινε δεκτή, επειδή:'
           proposal_in_evaluation_reason: Η πρόταση αυτή βρίσκεται στο στάδιο της αξιολόγησης
           proposal_rejected_reason: 'Η πρόταση απορρίφθηκε, επειδή:'
-          read_less: Διαβάστε λιγότερα
-          read_more: Διαβάστε περισσότερα
-          report: Αναφορά
           withdraw_btn_hint: Ας σημειωθεί ότι η ιδέα θα εξακολουθήσει να εμφανίζεται στον κατάλογο των αποσυρθεισών ιδεών και δεν θα διαγραφεί οριστικά.
           withdraw_confirmation_html: Είστε βέβαιοι ότι θέλετε να αποσύρετε αυτή την ιδέα; <br><br><strong>Αυτή η ενέργεια δεν μπορεί να ακυρωθεί!</strong>
           withdraw_proposal: Απόσυρση ιδέας
-        tags:
-          changed_from: "(άλλαξε από <u>%{previous_name}</u> από έναν διαχειριστή)"
         update:
           title: Επικαιροποίηση ιδέας
         vote_button:
-          already_voted: Υποστηρίζεται ήδη
-          already_voted_hover: Απόσυρση υποστήριξης
           maximum_votes_reached: Επιτεύχθηκε το όριο υποστήριξης
           no_votes_remaining: Δεν απομένουν δηλώσεις υποστήριξης
-          vote: Υποστήριξη
           votes_blocked: Η υποστήριξη απενεργοποιήθηκε
         votes_count:
           count:
-            one: Υποστήριξη
             other: Δηλώσεις υποστήριξης
           most_popular_proposal: Δημοφιλέστερη ιδέα
           need_more_votes: Χρειάζονται περισσότερες δηλώσεις υποστήριξης
@@ -933,8 +726,6 @@ el:
             description: Πρέπει να κατανείμετε τουλάχιστον %{votes} δηλώσεις υποστήριξης σε διαφορετικές προτάσεις.
             given_enough_votes: Έχετε δώσει αρκετές δηλώσεις υποστήριξης.
             supports_remaining: Πρέπει να υποστηρίξετε %{remaining_votes} προτάσεις για να ληφθούν υπόψη οι δηλώσεις υποστήριξής σας.
-          proposal_limit:
-            description: Μπορείτε να δημιουργήσετε έως και %{limit} προτάσεις.
           threshold_per_proposal:
             description: "- Για να επικυρωθούν οι ιδέες, πρέπει να λάβουν %{limit} εγκρίσεις·"
           title: 'Οι εγκρίσεις υπόκεινται στους ακόλουθους κανόνες:'
@@ -943,7 +734,6 @@ el:
             left: Υπόλοιπο
             votes: Δηλώσεις υποστήριξης
         wizard_aside:
-          back: Πίσω
           back_from_step_1: Επιστροφή στις προτάσεις
           back_from_step_2: Επιστροφή στις προτάσεις
           back_from_step_3: Επιστροφή στη σύγκριση ιδεών
@@ -953,21 +743,15 @@ el:
           current_step: Τρέχον βήμα
           see_steps: εμφάνιση βημάτων
           step_1: Δημιουργήστε την ιδέα σας
-          step_2: Σύγκριση
           step_3: Οριστικοποίηση
           step_4: Δημοσιεύστε την ιδέα σας
-          step_of: Βήμα %{current_step_num} από %{total_steps}
           title: Βήματα δημιουργίας ιδέας
       proposals_picker:
         choose_proposals: Επιλογή ιδέες
-        close: Κλείσιμο
-        more_proposals: Υπάρχουν %{number} ακόμη προτάσεις. Περιορίστε την αναζήτησή σας για να τις εντοπίσετε.
         no_proposals: Δεν υπάρχουν ιδέες που να συμφωνούν με τα κριτήρια αναζήτησης ή δεν υπάρχει καμία ιδέα.
       publish:
         error: Παρουσιάστηκε πρόβλημα κατά τη δημοσίευση της ιδέας.
         success: Η ιδέα δημοσιεύτηκε με επιτυχία.
-      publish_answers:
-        success: Οι απαντήσεις των προτάσεων δημοσιεύτηκαν με επιτυχία.
       update:
         error: Παρουσιάστηκε πρόβλημα κατά την αποθήκευση της πρότασης.
         success: Η ιδέα επικαιροποιήθηκε με επιτυχία.
@@ -977,18 +761,12 @@ el:
       versions:
         collaborative_drafts:
           back_to_resource: Επιστροφή στο συνεργατικό προσχέδιο
-        index:
-          title: Εκδόσεις
-        proposals:
-          back_to_resource: Επιστροφή στην πρόταση
       withdraw:
         errors:
           has_supports: Η πρόταση αυτή δεν μπορεί να αποσυρθεί διότι έχει ήδη δηλώσεις υποστήριξης.
     resource_links:
       copied_from_component:
         proposal_proposal: Σχετικές ιδέες
-      included_projects:
-        project_result: 'Αποτελέσματα που εμφανίζονται σε αυτό το έργο:'
       included_proposals:
         proposal_project: 'Πρόταση που εμφανίζεται σε αυτά τα έργα:'
         proposal_result: 'Πρόταση που εμφανίζεται σε αυτά τα αποτελέσματα:'

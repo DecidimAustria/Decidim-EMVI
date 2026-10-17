@@ -15,12 +15,9 @@ tr-TR:
         confirm_destroy: Bu gönderiyi silmek istediğinizden emin misiniz?
         destroy: Silmek
         edit: Düzenlemek
-        new: Yeni posta
         title: Hareketler
       admin:
         models:
-          components:
-            body: Vücut
           post:
             name: Postalamak
         posts:
@@ -31,12 +28,10 @@ tr-TR:
             success: Gönderi başarıyla silindi
           edit:
             save: Güncelleme
-            title: Gönderiyi düzenle
           index:
             title: Gönderiler
           new:
             create: Yaratmak
-            title: Gönderi oluştur
           update:
             invalid: Gönderi kaydedilirken bir sorun oluştu.
             success: Gönderi başarıyla kaydedildi
@@ -50,18 +45,13 @@ tr-TR:
       models:
         post:
           fields:
-            author: Yazar
-            body: Vücut
             created_at: oluşturuldu
             official_blog_post: Resmi gönderi
             title: başlık
       posts:
         show:
-          back: Listeye geri dön
-          comments: Yorumlar
           view: Görüş
         sidebar_blog:
-          comments: yorumlar
           most_commented_posts: En çok yorum yapılan gönderiler
       read_more: Devamını oku
     components:
@@ -70,7 +60,6 @@ tr-TR:
           create: Yaratmak
           destroy: Silmek
           update: Güncelleme
-        name: Blog
         settings:
           global:
             announcement: Duyuru
@@ -78,7 +67,6 @@ tr-TR:
             comments_max_length: Açıklamaların maksimum uzunluğu (Varsayılan değer olarak 0 bırakın)
           step:
             announcement: Duyuru
-            comments_blocked: Yorumlar engellendi
             endorsements_blocked: Onaylar engellendi
             endorsements_enabled: Onaylar etkinleştirildi
     events:

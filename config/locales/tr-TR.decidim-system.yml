@@ -3,29 +3,15 @@ tr-TR:
   activemodel:
     attributes:
       oauth_application:
-        name: OAuth Uygulama Adı
         organization_logo: Organizasyon logosu (kare)
         organization_name: organizasyon
-        organization_url: Kuruluş URL'si
         redirect_uri: Yönlendirme URI'sı
       organization:
         address: SMTP ana bilgisayar adı
-        from_email: E-posta adresi
-        from_label: Etiket
-        password: Şifre
         port: Liman
-        user_name: Kullanıcı adı
       organization_file_uploads:
-        allowed_content_types:
-          admin: Yönetici MIME türleri
-          default: Varsayılan MIME türleri
         allowed_file_extensions:
-          admin: Yönetici dosya uzantıları
-          default: Varsayılan dosya uzantıları
           image: Resim dosyası uzantıları
-        maximum_file_size:
-          avatar: Avatar dosya boyutu
-          default: Varsayılan dosya boyutu
     errors:
       models:
         oauth_application:
@@ -35,106 +21,61 @@ tr-TR:
   decidim:
     system:
       actions:
-        confirm_destroy: Bunu silmek istediğinizden emin misiniz?
         destroy: Silmek
         edit: Düzenlemek
-        new: Yeni
         save: Kaydetmek
         title: Hareketler
       admins:
-        create:
-          error: Yeni bir yönetici oluşturulurken bir sorun oluştu.
-          success: Yönetici başarıyla oluşturuldu
-        destroy:
-          success: Yönetici başarıyla silindi
         edit:
           title: yöneticiyi düzenle
           update: Güncelleme
-        index:
-          title: Yöneticiler
         new:
           create: Yaratmak
-          title: Yeni yönetici
-        update:
-          error: Bu yönetici güncellenirken bir sorun oluştu.
-          success: Yönetici başarıyla güncellendi
       dashboard:
         show:
           current_organizations: Mevcut kuruluşlar
-      default_pages:
-        placeholders:
-          content: Lütfen yönetici panosundaki %{page} statik sayfasına anlamlı içerik ekleyin.
-          title: "%{page} için varsayılan başlık"
       menu:
-        admins: Yöneticiler
         dashboard: Gösterge Paneli
-        oauth_applications: OAuth uygulamaları
-        organizations: Organizasyonlar
       models:
         admin:
           fields:
             created_at: oluşturuldu
-            email: E-posta
           name: yönetici
-          validations:
-            email_uniqueness: aynı e-postaya sahip başka bir yönetici zaten var
         oauth_application:
           fields:
             created_at: oluşturuldu
             name: OAuth uygulama adı
             organization_name: organizasyon
-          name: OAuth uygulaması
         organization:
           actions:
             save_and_invite: Kuruluş oluştur ve yöneticiyi davet et
           fields:
             created_at: oluşturuldu
-            file_upload_settings: Dosya yükleme ayarları
             name: İsim
-            omniauth_settings: Omniauth ayarları
-            smtp_settings: SMTP ayarları
-          name: organizasyon
       oauth_applications:
         create:
           error: Bu uygulama oluşturulurken bir sorun oluştu.
-          success: Uygulama başarıyla oluşturuldu.
         destroy:
           error: Bu uygulama yok edilirken bir sorun oluştu.
-          success: Uygulama başarıyla yok edildi.
         edit:
           save: Kaydetmek
-          title: Uygulamayı düzenle
-        form:
-          select_organization: Bir kuruluş seçin
-        index:
-          confirm_delete: Bu uygulamayı silmek istediğinizden emin misiniz?
-          title: OAuth uygulamaları
         new:
           save: Kaydetmek
-          title: Yeni uygulama
         update:
           error: Bu uygulama güncellenirken bir sorun oluştu.
-          success: Uygulama başarıyla güncellendi.
       organizations:
         advanced_settings:
           hide: Gelişmiş ayarları gizle
           show: Gelişmiş ayarları göster
         create:
           error: Yeni bir kuruluş oluşturulurken bir sorun oluştu.
-          success: Kuruluş başarıyla oluşturuldu.
-        edit:
-          secondary_hosts_hint: Her birini yeni bir satıra girin
         file_upload_settings:
           content_types:
             admin_hint: Bu MIME türlerine, yönetici bölümü yüklemeleri için izin verilir. Yönetici kullanıcılar, bazı belge biçimlerini yüklerken karşılaşılabilecek risklerin farkında olmalıdır, dolayısıyla dosya yüklemelerinde daha dikkatli olmalarını bekleyebilirsiniz.
-            default_hint: Bu MIME türlerine varsayılan olarak tüm kullanıcılar için izin verilir.
             intro_html: MIME türleri için yıldız karakterli joker karakterler eklersiniz, örneğin <code>image/*</code> .
-            title: İzin verilen MIME türleri
           file_extensions:
             admin_hint: Bu dosya uzantılarına, yönetici bölümü yüklemeleri için izin verilir. Yönetici kullanıcılar, bazı belge biçimlerini yüklerken karşılaşılabilecek risklerin farkında olmalıdır, dolayısıyla dosya yüklemelerinde daha dikkatli olmalarını bekleyebilirsiniz.
-            default_hint: Bu dosya uzantılarına varsayılan olarak tüm kullanıcılar için izin verilir.
             image_hint: Bu dosya uzantılarına her tür resim yüklemesi için izin verilir.
-            title: İzin verilen dosya uzantıları
           file_sizes:
             avatar_hint: Megabayt (MB). Bu dosya boyutu sınırı, avatar resim yüklemeleri için kullanılır.
             default_hint: Megabayt (MB). Bu dosya boyutu sınırı, aksi belirtilmedikçe tüm dosya yüklemeleri için kullanılan varsayılan değerdir.
@@ -142,19 +83,13 @@ tr-TR:
           intro: |
             Lütfen bu ayarları değiştirmeyi düşünürken ekstra dikkatli olun. Ne kadar az izin verirseniz o kadar iyi.
             Belirli dosya uzantılarına veya MIME türlerine izin verilmesi, sistem kullanıcılarını güvenlik risklerine maruz bırakabilir ve ayrıca web sitesinin erişilebilirliğini etkileyebilir.
-        index:
-          title: Organizasyonlar
         new:
           reference_prefix_hint: Referans öneki, tüm kuruluştaki kaynakları benzersiz bir şekilde tanımlamak için kullanılır.
-          secondary_hosts_hint: Her birini yeni bir satıra girin
-          title: Yeni organizasyon
         omniauth_settings:
           decidim:
             client_id: Müşteri Kimliği
             client_secret: müşteri sırrı
-            site_url: Site URL'si
           enabled: Etkinleştirilmiş
-          enabled_by_default: Bu sağlayıcı varsayılan olarak etkindir. Düzenlenebilir ancak devre dışı bırakılamaz.
           facebook:
             app_id: Uygulama kimliği
             app_secret: Uygulama sırrı
@@ -164,19 +99,13 @@ tr-TR:
           icon: simge
           icon_path: Simge yolu
           twitter:
-            api_key: API anahtarı
             api_secret: API sırrı
         smtp_settings:
-          fieldsets:
-            sender: Gönderen
           instructions:
             from_label: 'E-posta göndereni şöyle olacaktır: "kuruluşunuzun-adı <kuruluşunuz@example.org>". ''E-posta adresini'' etiket olarak kullanmak için boş bırakın'
           placeholder:
             from_email: kuruluşunuz@example.org
             from_label: kuruluşunuzun-adı
-        update:
-          error: Bu kuruluş güncellenirken bir sorun oluştu.
-          success: Kuruluş başarıyla güncellendi.
         users_registration_mode:
           disabled: Erişim sadece harici hesaplarla yapılabilir.
           enabled: Katılımcıların kaydolmasına ve oturum açmasına izin ver
@@ -184,6 +113,5 @@ tr-TR:
       shared:
         notices:
           no_organization_warning_html: Başlamak için bir organizasyon oluşturmalısınız. Devam etmeden önce %{guide}'ı okuduğunuzdan emin olun.
-          our_getting_started_guide: başlangıç kılavuzumuz
       titles:
         dashboard: Gösterge Paneli

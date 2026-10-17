@@ -2,7 +2,6 @@
 sl:
   activemodel:
     models:
-      decidim/comments/comment_by_followed_user_event: Komentar
       decidim/comments/comment_created_event: Komentar
       decidim/comments/reply_created_event: Odgovor na komentar
       decidim/comments/user_group_mentioned_event: Omemba

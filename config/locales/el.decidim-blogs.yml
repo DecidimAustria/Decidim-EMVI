@@ -1,8 +1,5 @@
 ---
 el:
-  activemodel:
-    models:
-      decidim/blogs/create_post_event: Νέα ανάρτηση ιστολογίου
   activerecord:
     models:
       decidim/blogs/post:
@@ -11,27 +8,19 @@ el:
   decidim:
     blogs:
       actions:
-        author_id: Δημιουργία ανάρτησης ως
         confirm_destroy: Είστε σίγουροι ότι θέλετε να διαγράψετε αυτήν την ανάρτηση;
         destroy: Διαγράφω
-        edit: Επεξεργασία
         new: Νέα ανάρτηση
-        title: Ενέργειες
       admin:
         models:
-          components:
-            body: Σώμα
           post:
             name: Θέση
         posts:
           create:
             invalid: Παρουσιάστηκε πρόβλημα με τη δημιουργία αυτής της ανάρτησης
             success: Η ανάρτηση δημιουργήθηκε με επιτυχία
-          destroy:
-            success: Η ανάρτηση διαγράφηκε με επιτυχία
           edit:
             save: Εκσυγχρονίζω
-            title: Επεξεργασία ανάρτησης
           index:
             title: Αναρτήσεις
           new:
@@ -39,7 +28,6 @@ el:
             title: Δημιουργία ανάρτησης
           update:
             invalid: Παρουσιάστηκε πρόβλημα με την αποθήκευση της ανάρτησης.
-            success: Η ανάρτηση αποθηκεύτηκε με επιτυχία
       admin_log:
         post:
           create: Ο %{user_name} δημιούργησε την ανάρτηση ιστολογίου %{resource_name} στο %{space_name}
@@ -50,35 +38,24 @@ el:
       models:
         post:
           fields:
-            author: Συντάκτης
-            body: Σώμα
             created_at: Δημιουργήθηκε στο
             official_blog_post: Επίσημη ανάρτηση
-            title: τίτλος
       posts:
         show:
           back: Πίσω στη λίστα
-          comments: Σχόλια
           view: Θέα
         sidebar_blog:
-          comments: σχόλια
           most_commented_posts: Οι αναρτήσεις με τα περισσότερα σχόλια
-      read_more: Διαβάστε περισσότερα
     components:
       blogs:
         actions:
           create: Δημιουργώ
           destroy: Διαγράφω
           update: Εκσυγχρονίζω
-        name: Ιστολόγιο
         settings:
           global:
-            announcement: Ανακοίνωση
-            comments_enabled: Τα σχόλια ενεργοποιήθηκαν
             comments_max_length: Μέγιστο μήκος σχολίων (Αφήστε 0 για την προεπιλεγμένη τιμή)
           step:
-            announcement: Ανακοίνωση
-            comments_blocked: Τα σχόλια αποκλείστηκαν
             endorsements_blocked: Οι εγκρίσεις αποκλείστηκαν
             endorsements_enabled: Οι εγκρίσεις ενεργοποιήθηκαν
     events:
@@ -88,5 +65,3 @@ el:
           email_outro: Έχετε λάβει αυτήν την ειδοποίηση επειδή ακολουθείτε το "%{participatory_space_title}". Μπορείτε να το καταργήσετε από τον προηγούμενο σύνδεσμο.
           email_subject: Νέα ανάρτηση δημοσιεύτηκε στο %{participatory_space_title}
           notification_title: Η ανάρτηση <a href="%{resource_path}">%{resource_title}</a> δημοσιεύτηκε στο %{participatory_space_title}
-    statistics:
-      posts_count: Αναρτήσεις

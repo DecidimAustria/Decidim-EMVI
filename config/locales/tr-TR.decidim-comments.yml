@@ -2,17 +2,12 @@
 tr-TR:
   activemodel:
     models:
-      decidim/comments/comment_by_followed_user_event: Yorum
-      decidim/comments/comment_created_event: Yorum
       decidim/comments/comment_upvoted_event: yorum oylandı
       decidim/comments/reply_created_event: Yorum yanıtı
       decidim/comments/user_group_mentioned_event: Değinmek
       decidim/comments/user_mentioned_event: Değinmek
   activerecord:
     models:
-      decidim/comments/comment:
-        one: Yorum
-        other: Yorumlar
       decidim/comments/comment_vote:
         one: Oy
         other: oylar
@@ -32,21 +27,13 @@ tr-TR:
         update:
           error: Yorum güncellenirken bir sorun oluştu.
       comments_count: yorum sayısı
-      comments_title: Yorumlar
       last_activity:
         new_comment_at_html: "<span>%{link}'da yeni yorum</span>"
       view: Görüş
-      votes:
-        create:
-          error: Yorum oylanırken bir sorun oluştu.
     components:
       add_comment_form:
         account_message: Yorumunuzu eklemek için <a href="%{sign_in_url}">hesabınızla oturum açın</a> veya <a href="%{sign_up_url}">kaydolun</a>.
         form:
-          body:
-            label: Yorum
-            placeholder: Bunun hakkında ne düşünüyorsun?
-          form_error: Metin zorunludur ve %{length} karakterden uzun olamaz.
           submit: Göndermek
           user_group_id:
             label: olarak yorumla
@@ -58,28 +45,20 @@ tr-TR:
           neutral_selected: Bu konu hakkındaki görüşünüz tarafsızdır
           positive: Pozitif
           positive_selected: Bu konu hakkındaki görüşünüz olumlu
-        remaining_characters: "%{count} karakter kaldı"
-        remaining_characters_1: "%{count} karakter kaldı"
         title: yorumunu ekle
       comment:
         alignment:
           against: Aykırı
-          in_favor: Lehine
         confirm_destroy: Bu yorumu silmek istediğinizden emin misiniz?
         delete: Silmek
         deleted_at: Yorum %{date} tarihinde silindi
         deleted_user: Silinen katılımcı
         edit: Düzenlemek
         edited: düzenlendi
-        hide_replies: Yanıtları gizle
         moderated_at: Yorum %{date}'da yönetildi
         reply: Cevap vermek
         report:
-          action: Rapor
-          already_reported: Bu içerik zaten bildirildi ve bir yönetici tarafından incelenecek.
           close: Kapalı
-          description: Bu içerik uygunsuz mu?
-          details: Ek Yorumlar
           reasons:
             does_not_belong: Yasa dışı faaliyetler, intihar tehditleri, kişisel bilgiler veya %{organization_name}'a ait olmadığını düşündüğünüz başka şeyler içerir.
             offensive: Irkçılık, cinsiyetçilik, karalamalar, kişisel saldırılar, ölüm tehditleri, intihar talepleri veya her türlü nefret söylemi içerir.
@@ -89,26 +68,13 @@ tr-TR:
           one: Cevabı göster
           other: "%{count} yanıtı göster"
         single_comment_link_title: Bağlantıyı al
-      comment_order_selector:
-        order:
-          best_rated: En çok oy alan
-          most_discussed: En çok tartışılan
-          older: Daha eski
-          recent: Son
-        title: 'Tarafından sipariş:'
       comment_thread:
         title: "%{authorName} ile görüşme"
       comments:
         blocked_comments_for_unauthorized_user_warning: Şu anda yorum yapmak için onaylanmanız gerekiyor, ancak öncekileri okuyabilirsiniz.
         blocked_comments_for_user_warning: Şu anda yorum yapamazsınız, ancak öncekileri okuyabilirsiniz.
-        blocked_comments_warning: Yorumlar şu anda devre dışı, ancak öncekileri okuyabilirsiniz.
-        comment_details_title: Yorum ayrıntıları
         loading: Yorumlar yükleniyor...
         single_comment_warning: <a href="%{url}">Tüm yorumları görüntüle</a>
-        single_comment_warning_title: Tek bir yorum görüyorsunuz
-        title:
-          one: "%{count} yorum"
-          other: "%{count} yorum"
       down_vote_button:
         text: bu yoruma katılmıyorum
       edit_comment_modal_form:
@@ -154,7 +120,6 @@ tr-TR:
           email_subject: "%{author_name}, %{resource_title}'deki yorumunuzu yanıtladı"
           notification_title: <a href="%{author_path}">%{author_name} %{author_nickname}</a>, yorumunuzu <a href="%{resource_path}">%{resource_title}</a> içinde yanıtladı
         user_group_mentioned:
-          email_intro: Ait olduğunuz bir gruptan bahsedildi
           email_outro: Bu bildirimi, %{resource_title}'de adı geçen %{group_name} grubunun bir üyesi olduğunuz için aldınız.
           email_subject: "%{resource_title}'da %{group_name} üyesi olarak sizden bahsedildi"
           notification_title: <a href="%{resource_path}">%{resource_title}</a>'de <a href="%{author_path}">%{author_name} %{author_nickname}</a> tarafından <a href="%{group_path}">%{group_name} %{group_nickname}</a'nın bir üyesi olarak bahsedilmiştir. >
@@ -163,11 +128,6 @@ tr-TR:
           email_outro: Bu bildirimi, %{resource_title}'da sizden bahsedildiği için aldınız.
           email_subject: "%{resource_title} içinde sizden bahsedildi"
           notification_title: <a href="%{resource_path}">%{resource_title}</a>'de <a href="%{author_path}">%{author_name} %{author_nickname}</a> tarafından bahsedilmiştir.
-    metrics:
-      comments:
-        description: Katılımcılar tarafından oluşturulan yorum sayısı
-        object: yorumlar
-        title: Yorumlar
   errors:
     messages:
       cannot_have_comments: yorum olamaz

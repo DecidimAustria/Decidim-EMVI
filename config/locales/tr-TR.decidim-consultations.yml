@@ -4,79 +4,44 @@ tr-TR:
     attributes:
       consultation:
         banner_image: Afiş resmi
-        decidim_highlighted_scope_id: Vurgulanan kapsam
         description: Tanım
-        end_voting_date: Oylama biter
         introductory_image: tanıtım resmi
-        introductory_video_url: Tanıtım videosu URL'si
-        questions: Sorular
         slug: URL bilgisi
         start_voting_date: oylama başlıyor
-        subtitle: Alt yazı
-        title: Başlık
       question:
         banner_image: Afiş resmi
-        decidim_scope_id: Belediye alanı
-        hashtag: Başlık etiketi
         hero_image: Ev resmi
-        i_frame_url: Harici oylama sistemi URL'si
-        instructions: Oylama için ek talimatlar
-        max_votes: Maksimum oy sayısı
         min_votes: Minimum oy sayısı
         origin_scope: Kapsam
-        origin_title: Menşei
         origin_url: Kaynak URL
         participatory_scope: katılımcı kapsam
         promoter_group: Organizatör grubu
         question_context: Bağlam
-        reference: Referans
-        scope: Belediye alanı
         slug: URL bilgisi
-        subtitle: Alt yazı
         vote: Harici oylama sistemi
         what_is_decided: neye karar verildi
-      response:
-        decidim_consultations_response_group_id: Grup
     errors:
       models:
         question:
           attributes:
             max_votes:
               lower_than_min: Maksimum oy sayısı minimum sayıdan yüksek veya eşit olmalıdır.
-      vote:
-        decidim_consultations_response_id:
-          not_found: Yanıt bulunamadı.
   activerecord:
-    errors:
-      models:
-        decidim/consultations/vote:
-          attributes:
-            question:
-              invalid_num_votes: Oy sayısı geçersiz
     models:
       decidim/consultation:
         one: Danışma
-        other: istişareler
-      decidim/consultations/question:
-        one: Soru
-        other: Sorular
       decidim/consultations/response:
         one: Cevap
-        other: Tepkiler
       decidim/consultations/vote:
-        one: Oy
         other: oylar
   decidim:
     admin:
       actions:
         back_to_responses: Yanıtlara geri dön
-        new_consultation: Yeni danışma
         new_question: yeni soru
         new_response: Yeni yanıt
         new_response_group: Yeni Grup
-        publish_results: Sonuçları yayınla
         response_groups: Yanıt gruplarını yönet
-        unpublish_results: Sonuçları yayından kaldır
       consultation_publications:
         create:
           error: Bu danışma yayınlanırken bir sorun oluştu.
@@ -100,81 +65,46 @@ tr-TR:
           update: Güncelleme
         form:
           slug_help: 'URL ekleri, bu danışmaya işaret eden URL''leri oluşturmak için kullanılır. Yalnızca harfleri, sayıları ve kısa çizgileri kabul eder ve bir harfle başlamalıdır. Örnek: %{url}'
-          title: Genel bilgi
         index:
           not_published: yayınlanmadı
-          published: Yayınlanan
         new:
           create: Yaratmak
-          title: Yeni danışma
         results:
           not_visible: Sonuçlar istişare kapandığında hazır olacak
-          participants: "%{count} katılımcı"
-          total_votes: 'Toplam: %{count} oy'
         update:
           error: Bu danışma güncellenirken bir sorun oluştu.
-          success: Danışma başarıyla güncellendi.
       menu:
         consultations: istişareler
-        consultations_submenu:
-          info: Bilgi
-          questions: Sorular
-          results: Sonuçlar
         questions_submenu:
-          attachments: Ekler
-          categories: Kategoriler
-          components: Bileşenler
           configuration: Yapılandırma
-          consultation: Danışma
-          info: Bilgi
           responses: Tepkiler
       models:
         consultation:
           fields:
             created_at: oluşturuldu
-            published: Yayınlanan
-            title: Başlık
           name:
-            one: Danışma
             other: istişareler
         question:
           fields:
             created_at: oluşturuldu
-            published: Yayınlanan
-            title: Başlık
-          name:
-            one: Soru
-            other: Sorular
         response:
           fields:
             created_at: oluşturuldu
-            response_group: Grup
-            title: Başlık
           name:
             one: Cevap
-            other: Tepkiler
       question_configuration:
-        disable_external_voting: Lütfen gelişmiş yapılandırmalar için harici oylamayı devre dışı bırakın
         form:
           help: Bir katılımcının seçebileceği maksimum yanıt sayısını artırarak çoktan seçmeli sorular oluşturun. Varsayılan maksimum değer 1'dir, yani yalnızca bir yanıt oylanabilir.
-          title: Gelişmiş yapılandırma
       question_publications:
         create:
           error: Bu soru yayınlanırken bir sorun oluştu.
-          success: Soru başarıyla yayınlandı.
         destroy:
           error: Bu soru yayından kaldırılırken bir sorun oluştu.
-          success: Soru başarıyla yayından kaldırıldı.
       questions:
         create:
           error: Yeni bir soru oluşturulurken bir sorun oluştu.
-          success: Soru başarıyla oluşturuldu.
-        destroy:
-          success: Soru başarıyla silindi.
         edit:
           update: Güncelleme
-        form:
-          title: Genel bilgi
         index:
           not_published: yayınlanmadı
           published: Yayınlanan
@@ -183,7 +113,6 @@ tr-TR:
           title: yeni soru
         update:
           error: Bu soru güncellenirken bir sorun oluştu.
-          success: Soru başarıyla güncellendi.
       response_groups:
         create:
           error: Yeni bir yanıt grubu oluşturulurken bir sorun oluştu.
@@ -201,30 +130,21 @@ tr-TR:
           title: Yeni yanıt grubu
         update:
           error: Bu yanıt güncellenirken bir sorun oluştu.
-          success: Yanıt başarıyla güncellendi.
       responses:
         create:
           error: Yeni bir yanıt oluşturulurken bir sorun oluştu.
-          success: Yanıt başarıyla oluşturuldu.
         destroy:
           error: Yanıt kaldırılırken bir sorun oluştu.
-          success: Yanıt başarıyla silindi.
         edit:
           update: Güncelleme
-        form:
-          title: Genel bilgi
         new:
           create: Yaratmak
-          title: Yeni yanıt
         update:
           error: Bu yanıt güncellenirken bir sorun oluştu.
-          success: Yanıt başarıyla güncellendi.
       titles:
         consultations: istişareler
-        questions: Sorular
         response_groups: Yanıt Grupları
         responses: Tepkiler
-        results: Sonuçlar
     consultations:
       admin:
         content_blocks:
@@ -232,32 +152,20 @@ tr-TR:
             max_results: Gösterilecek maksimum öğe sayısı
       consultation:
         start_voting_date: oylama başlıyor
-        view_results: Sonuçları Görüntüle
-      consultation_card:
-        view_results: Sonuçları Görüntüle
       consultations:
         orders:
           label: 'Danışmaları şuna göre sırala:'
-          random: Rastgele
-          recent: En yeni
-        show:
-          dates: Tarih
       content_blocks:
         highlighted_consultations:
           name: Vurgulanan istişareler
       count:
         title:
-          one: "%{count} danışma"
           other: "%{count} istişareler"
       filters:
-        active: Aktif
         all: Tüm
         date: Tarih
-        finished: Bitti
         search: Aramak
-        upcoming: Yaklaşan
       filters_small_view:
-        close_modal: Pencereyi kapat
         filter: filtre
         filter_by: Tarafından filtre
         unfold: açmak
@@ -266,20 +174,15 @@ tr-TR:
       index:
         title: istişareler
       last_activity:
-        new_consultation: Yeni danışma
         new_question_at_html: "<span>%{link}'da yeni soru</span>"
       pages:
         home:
           highlighted_consultations:
-            active_consultations: Aktif istişareler
-            see_all_consultations: Tüm istişarelere bakın
             voting_ends_in:
               one: Oylama <strong>yarın</strong> sona eriyor
               other: Oylama <strong>%{count} gün</strong> içinde sona eriyor
             voting_ends_today: Oylama <strong>bugün</strong> sona eriyor
       question:
-        take_part: Yer almak
-        view_results: Sonuçları Görüntüle
         votes_out_of:
           one: oy kullanmamak
           other: dışında oylar
@@ -288,13 +191,11 @@ tr-TR:
           minimum_votes_per_user:
             description: Katılımcılar, farklı seçenekler arasında en az %{votes} oy dağıtabilir.
           title: Bu soruda izin verilen yerlerde birden fazla seçenek
-          total_participants: Oylamaya toplam %{count} kişi katıldı.
           vote_limit:
             description: Katılımcılar en fazla %{limit} seçeneğe oy verebilir.
         voting_rules:
           minimum_votes_per_user:
             description: Farklı seçenekler arasında en az %{votes} oy dağıtmalısınız.
-          title: 'Oylama aşağıdaki kurallara tabidir:'
           vote_limit:
             description: En fazla %{limit} seçeneğe oy verebilirsiniz.
             left: Geriye kalan
@@ -304,21 +205,11 @@ tr-TR:
           error: Soru oylanırken bir sorun oluştu
           success: Görüşmenin sonuna kadar değiştirebilirsiniz. Sadece son oy kabul edilecektir.
           title_error: Oylama hatası!
-          title_success: Oy başarıyla kaydedildi
-      regular_questions:
-        title: Bu danışma için sorular
       show:
-        badge_name:
-          finished: Bitti
-          open: Açık
-          open_votes: Açık oylar
-          published_results: Sonuçlar yayınlandı
         footer_button_text:
           debate: Çekişme
           view: Görüş
           view_results: Sonuçları Görüntüle
-          vote: Oy
-        unspecified: Belirtilmemiş
     help:
       participatory_spaces:
         consultations:
@@ -328,34 +219,21 @@ tr-TR:
     menu:
       consultations: istişareler
     questions:
-      next_button: Sonraki soru
-      previous_button: Önceki soru
-      results:
-        title: Sonuçlar
       show:
         read_more: Devamını oku
       statistics:
         assistants_count_title: asistanlar
-        comments_count_title: Yorumlar
-        meetings_count_title: Toplantılar
         supports_count_title: oylar
-      technical_info:
-        technical_data: Teknik veri
       vote_button:
         already_voted: Zaten oy verildi
         already_voted_hover: Oyu iptal et
         starting_from: "%{date}'dan başlayarak"
-        verification_required: Oy vermek için hesabınızı doğrulayın
-        vote: Oy
       vote_modal:
         close_modal: Modeli kapat
-        contextual_help: Lütfen bir seçenek seçin.
         title: 'Danışma: soru oylama'
       vote_modal_confirm:
         change: Değiştirmek
         close_modal: Modeli kapat
-        confirm: Onaylamak
-        contextual_help: Lütfen seçilen seçeneği onaylayın.
         title: 'Danışma: oyu onayla'
     resources:
       consultations:
@@ -369,8 +247,5 @@ tr-TR:
     decidim:
       consultation_voting_data:
         start_voting_date: oylama başlıyor
-      question_components:
-        question_menu_item: Soru
       question_header:
-        back_to_consultation: Tüm istişarelere bakın
         back_to_question: soruya geri dön

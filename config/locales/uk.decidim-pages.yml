@@ -3,22 +3,10 @@ uk:
   activerecord:
     models:
       decidim/pages/page:
-        one: Сторінка
         few: сторінки
         many: сторінки
         other: сторінки
   decidim:
-    admin_log:
-      page:
-        update: "%{user_name} оновив сторінку %{resource_name} у %{space_name}"
-    components:
-      pages:
-        name: Сторінка
-        settings:
-          global:
-            announcement: Оголошення
-          step:
-            announcement: Оголошення
     pages:
       admin:
         models:
@@ -27,10 +15,8 @@ uk:
         pages:
           edit:
             save: оновлення
-            title: Редагувати сторінку
           update:
             invalid: Під час збереження сторінки виникла проблема.
-            success: Сторінку успішно збережено.
       home:
         hero:
           participate_title: Беріть участь у процесах платформи

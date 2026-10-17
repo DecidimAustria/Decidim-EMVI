@@ -3,49 +3,26 @@ el:
   activemodel:
     attributes:
       participatory_process:
-        announcement: Ανακοίνωση
         area_id: Περιοχή
         banner_image: Εικόνα πλαισίου
-        copy_categories: Αντιγραφή κατηγοριών
-        copy_components: Αντιγραφή στοιχείων
-        copy_steps: Αντιγραφή βημάτων
         decidim_area_id: Περιοχή
-        description: Περιγραφή
-        developer_group: Ομάδα προώθησης
-        domain: Τομέας
-        end_date: Ημερομηνία λήξης
-        hashtag: Hashtag
-        hero_image: Εικόνα αρχικής σελίδας
         local_area: Περιοχή οργανισμού
         meta_scope: Μεταδεδομένα πεδίου
-        participatory_process_group_id: Ομάδα διαδικασιών
         participatory_scope: Τι αποφασίζεται
-        participatory_structure: Πώς αποφασίζεται
-        promoted: Προωθήθηκε
-        published_at: Δημοσιεύτηκε στις
-        related_process_ids: Σχετικές διαδικασίες
         scope_id: Πεδίο
         scope_type_max_depth_id: Βάθος φίλτρου πεδίου
         scopes_enabled: Τα πεδία έχουν ενεργοποιηθεί
-        short_description: Σύντομη περιγραφή
         show_metrics: Εμφάνιση δεικτών μέτρησης
         show_statistics: Εμφάνιση στατιστικών στοιχείων
         slug: Τελικό τμήμα URL
-        start_date: Ημερομηνία έναρξης
-        subtitle: Υπότιτλος
-        target: Ποιος συμμετέχει
-        title: Τίτλος
         weight: Θέση παραγγελίας
       participatory_process_group:
-        description: Περιγραφή
         developer_group: Ομάδα υποστηρικτών
         group_url: Δικτυακός τόπος
         hashtag: Hashtag
-        hero_image: Εικόνα
         local_area: Περιοχή οργάνωσης
         meta_scope: Μεταδεδομένα εμβέλειας
         name: Όνομα
-        participatory_process_ids: Σχετικές διαδικασίες
         participatory_scope: Τι αποφασίζεται
         participatory_structure: Πώς αποφασίζεται
         target: Ποιος συμμετέχει
@@ -53,17 +30,8 @@ el:
       participatory_process_step:
         cta_path: Διαδρομή παρότρυνσης για δράση
         cta_text: Κείμενο παρότρυνσης για δράση
-        description: Περιγραφή
-        end_date: Ημερομηνία λήξης
-        short_description: Σύντομη περιγραφή
-        start_date: Ημερομηνία έναρξης
-        title: Τίτλος
       participatory_process_type:
         title: Τίτλος
-      participatory_process_user_role:
-        email: Email
-        name: Όνομα
-        role: Ρόλος
     errors:
       models:
         participatory_process:
@@ -71,9 +39,6 @@ el:
             document:
               allowed_file_content_types: 'Μη έγκυρος τύπος εγγράφου. Επιτρέπονται μόνο αρχεία με τις ακόλουθες επεκτάσεις: %{types}'
               invalid_document_type: 'Μη έγκυρος τύπος εγγράφου. Αποδεκτές μορφές: %{valid_mime_types}'
-    models:
-      decidim/participatory_process_step_activated_event: Η φάση ενεργοποιήθηκε
-      decidim/participatory_process_step_changed_event: Η φάση άλλαξε
   activerecord:
     models:
       decidim/participatory_process:
@@ -82,57 +47,28 @@ el:
       decidim/participatory_process_group:
         one: Ομάδα συμμετοχικής διαδικασίας
         other: Ομάδες συμμετοχικής διαδικασίας
-      decidim/participatory_process_step:
-        one: Φάση
-        other: Φάσεις
   decidim:
     admin:
       actions:
-        activate: Ενεργοποίηση
-        configure: Διαμόρφωση
-        confirm_destroy: Επιβεβαίωση διαγραφής
-        destroy: Διαγραφή
         duplicate: Αντίγραφο
-        edit: Επεξεργασία
-        filter:
-          all_processes: Εμφάνιση όλων των διαδικασιών
-          process_groups: Ομάδες διαδικασιών
-        import_process: Εισαγωγή
-        new_process: Νέα διαδικασία
         new_process_group: Νέα ομάδα
-        new_process_step: Νέα φάση
         new_process_type: Νέος τύπος διαδικασίας
         new_process_user_role: Νέος διαχειριστής
-        preview: Προεπισκόπηση
-        publish: Δημοσίευση
         resend_invitation: Εκ νέου αποστολή πρόσκλησης
-        unpublish: Κατάργηση δημοσίευσης
       menu:
         participatory_process_groups: Ομάδες
         participatory_process_groups_submenu:
           info: Πληροφορίες
           landing_page: Σελίδα προορισμού
         participatory_process_types: Τύποι διαδικασίας
-        participatory_processes: Διαδικασίες
         participatory_processes_submenu:
-          attachment_collections: Φάκελοι
-          attachment_files: Αρχεία
-          attachments: Συνημμένα
-          categories: Κατηγορίες
-          components: Στοιχεία
-          info: Πληροφορίες
-          moderations: Εποπτεύσεις
-          private_users: Ιδιωτικοί συμμετέχοντες
           process_admins: Διαχειριστές διαδικασίας
-          steps: Φάσεις
       models:
         participatory_process:
           fields:
-            created_at: Δημιουργήθηκε στις
             private: Ιδιωτική
             promoted: Επισημασμένη
             published: Δημοσιευμένη
-            title: Τίτλος
           name: Συμμετοχική διαδικασία
         participatory_process_group:
           fields:
@@ -140,10 +76,6 @@ el:
             title: Τίτλος
           name: Ομάδα διαδικασίας
         participatory_process_step:
-          fields:
-            end_date: Ημερομηνία λήξης
-            start_date: Ημερομηνία έναρξης
-            title: Τίτλος
           name: Φάση συμμετοχικής διαδικασίας
         participatory_process_type:
           fields:
@@ -153,13 +85,9 @@ el:
         participatory_process_user_role:
           fields:
             email: ΗΛΕΚΤΡΟΝΙΚΗ ΔΙΕΥΘΥΝΣΗ
-            name: Όνομα
-            role: Ρόλος
           name: Διαχειριστής συμμετοχικής διαδικασίας
           roles:
-            admin: Διαχειριστής
             collaborator: Συνεργαζόμενος
-            moderator: Επόπτης
             valuator: Αξιολογητής
         user:
           fields:
@@ -167,7 +95,6 @@ el:
             invitation_sent_at: Η πρόσκληση εστάλη στις
       participatory_process_copies:
         new:
-          copy: Αντιγραφή
           select: Επιλογή των δεδομένων για τα οποία θέλετε να δημιουργήσετε αντίγραφο
           title: Δημιουργία διπλοτύπου
       participatory_process_group_landing_page:
@@ -185,7 +112,6 @@ el:
           title: Επεξεργασία ομάδας
           update: Επικαιροποίηση
         new:
-          create: Δημιουργία
           title: Νέα ομάδα
         update:
           error: Παρουσιάστηκε πρόβλημα κατά την επικαιροποίηση αυτής της ομάδας!
@@ -195,7 +121,6 @@ el:
           error: Παρουσιάστηκε πρόβλημα κατά την εισαγωγή αυτής της συμμετοχικής διαδικασίας.
           success: Η συμμετοχική διαδικασία εισήχθη με επιτυχία.
         new:
-          import: Εισαγωγή
           select: Επιλογή των δεδομένων που θέλετε να εισαγάγετε
           title: Εισαγωγή συμμετοχικής διαδικασίας
       participatory_process_publications:
@@ -213,19 +138,12 @@ el:
         create:
           error: Παρουσιάστηκε πρόβλημα κατά τη δημιουργία νέας φάσης συμμετοχικής διαδικασίας.
           success: Η φάση συμμετοχικής διαδικασίας δημιουργήθηκε με επιτυχία.
-        default_title: Εισαγωγή
         destroy:
-          error:
-            active_step: Δεν είναι δυνατή η διαγραφή της ενεργής φάσης.
-            last_step: Δεν είναι δυνατή η διαγραφή της τελευταίας φάσης μιας διαδικασίας.
           success: Η φάση συμμετοχικής διαδικασίας διαγράφηκε με επιτυχία.
         edit:
           title: Επεξεργασία φάσης συμμετοχικής διαδικασίας
           update: Επικαιροποίηση
-        index:
-          steps_title: Φάσεις
         new:
-          create: Δημιουργία
           title: Νέα φάση συμμετοχικής διαδικασίας
         ordering:
           error: Παρουσιάστηκε πρόβλημα κατά την αναδιάταξη αυτών των φάσεων της συμμετοχικής διαδικασίας.
@@ -261,7 +179,6 @@ el:
         index:
           process_admins_title: Διαχειριστές συμμετοχικής διαδικασίας
         new:
-          create: Δημιουργία
           title: Νέος διαχειριστής συμμετοχικής διαδικασίας
         update:
           error: Παρουσιάστηκε πρόβλημα κατά την επικαιροποίηση διαχειριστή για αυτήν τη συμμετοχική διαδικασία.
@@ -278,7 +195,6 @@ el:
           public: Δημόσια
           published: Δημοσιευμένη
         new:
-          create: Δημιουργία
           title: Νέα συμμετοχική διαδικασία
         update:
           error: Παρουσιάστηκε πρόβλημα κατά την επικαιροποίηση αυτής της συμμετοχικής διαδικασίας.
@@ -356,9 +272,6 @@ el:
         description: Αριθμός συμμετοχικών διαδικασιών στον οργανισμό
         object: συμμετοχικές διαδικασίες
         title: Συμμετοχικές διαδικασίες
-    participatory_process:
-      show:
-        related_assemblies: Σχετικές συνελεύσεις
     participatory_process_groups:
       content_blocks:
         html_1:
@@ -410,7 +323,6 @@ el:
             visibility: Ορατότητα
         participatory_process_imports:
           form:
-            document_legend: Προσθήκη εγγράφου
             slug_help: 'Χρησιμοποιούνται τελικά τμήματα URL για τη δημιουργία των URL που κατευθύνουν σε αυτήν τη διαδικασία. Επιτρέπονται μόνο γράμματα, αριθμοί και παύλες, ενώ ο πρώτος χαρακτήρας πρέπει να είναι γράμμα. Παράδειγμα: %{url}'
         participatory_process_steps:
           form:
@@ -419,19 +331,11 @@ el:
         participatory_processes:
           form:
             announcement_help: Το κείμενο που εισάγετε εδώ θα εμφανίζεται στον χρήστη ακριβώς κάτω από τις πληροφορίες διαδικασίας.
-            duration: Διάρκεια
-            filters: Φίλτρα
-            images: Εικόνες
-            metadata: Μεταδεδομένα
-            other: Άλλο
-            related_processes: Σχετικές διαδικασίες
             scope_type_max_depth_help: Περιορίστε το βάθος του φίλτρου πεδίου. Το φίλτρο θα εμφανίζει από γενικές πληροφορίες έως τον επιλεγμένο τύπο πεδίου.
             select_an_area: Επιλέξτε περιοχή
             select_participatory_process_type: Επιλέξτε έναν τύπο διαδικασίας
             select_process_group: Επιλέξτε μια ομάδα διαδικασίας
             slug_help: 'Χρησιμοποιούνται τελικά τμήματα URL για τη δημιουργία των URL που κατευθύνουν σε αυτήν τη διαδικασία. Επιτρέπονται μόνο γράμματα, αριθμοί και παύλες, ενώ ο πρώτος χαρακτήρας πρέπει να είναι γράμμα. Παράδειγμα: %{url}'
-            title: Γενικές πληροφορίες
-            visbility: Ορατότητα
       content_blocks:
         highlighted_processes:
           name: Επισημασμένα θέματα
@@ -443,9 +347,6 @@ el:
         home:
           highlighted_processes:
             active_processes: Θέματα
-            active_step: Ενεργή φάση
-            more_information: Περισσότερες πληροφορίες
-            participate: Συμμετοχή
             participate_in: Συμμετοχή στη διαδικασία %{resource_name}
             see_all_processes: Εμφάνιση όλων των διαδικασιών
       participatory_process_steps:
@@ -458,25 +359,13 @@ el:
             active:
               one: 1 Θέματα που συζητάμε
               other: Θέματα που συζητάμε
-            all:
-              one: 1 διαδικασία
-              other: "%{count} διαδικασίες"
-            past:
-              one: 1 προηγούμενη διαδικασία
-              other: "%{count} προηγούμενες διαδικασίες"
-            upcoming:
-              one: 1 προσεχής διαδικασία
-              other: "%{count} προσεχείς διαδικασίες"
           explanations:
-            no_active: Δεν υπάρχουν ενεργές διαδικασίες
             no_active_nor_upcoming: Δεν υπάρχουν ενεργές ή προσεχείς διαδικασίες
             no_active_nor_upcoming_callout: Δεν υπάρχουν ενεργές ή προσεχείς διαδικασίες. Αυτή είναι η λίστα των προηγούμενων διαδικασιών.
           filter_by: προβολή
           names:
-            active: Ενεργές
             all: Όλες
             past: Παρελθούσες
-            upcoming: Προσεχείς
           see: 'Πηγή:'
         index:
           loading: Φόρτωση αποτελεσμάτων…
@@ -485,17 +374,10 @@ el:
       show:
         area: Περιοχή
         belongs_to_group: Αυτή η διαδικασία ανήκει σε
-        dates: Ημερομηνίες
-        developer_group: Ομάδα προώθησης
-        end_date: Ημερομηνία λήξης
         local_area: Περιοχή οργανισμού
         participatory_scope: Τι αποφασίζεται
-        participatory_structure: Πώς αποφασίζεται
         private_space: Πρόκειται για ιδιωτική διαδικασία
-        related_processes: Σχετικές διαδικασίες
         scope: Πεδίο
-        start_date: Ημερομηνία έναρξης
-        target: Ποιος συμμετέχει
         unspecified: Δεν προσδιορίζεται
       statistics:
         answers_count: Απαντήσεις
@@ -522,30 +404,23 @@ el:
         participatory_process_group:
           browse: Περιήγηση
           browse_resource: Περιήγηση σε ομάδα διαδικασίας %{resource_name}
-          processes_count: 'Διαδικασίες:'
       participatory_process_widgets:
         show:
-          active_step: Ενεργή φάση
           take_part: Συμμετοχή
       participatory_processes:
-        index:
-          promoted_processes: Επισημασμένες διαδικασίες
         participatory_process:
           active_step: 'Παρούσα φάση:'
-          more_info: Περισσότερες πληροφορίες
           more_info_about: Περισσότερες πληροφορίες σχετικά με το θέμα %{resource_name}
           take_part: Λάβετε μέρος στο θέμα %{resource_name}
           take_part_in: Λάβετε μέρος στο θέμα %{resource_name}
         promoted_process:
           active_step: 'Παρούσα φάση:'
-          more_info: Περισσότερες πληροφορίες
           more_info_about: Περισσότερες πληροφορίες σχετικά με το θέμα%{resource_name}
           take_part: Συμμετοχή
           take_part_in: Λάβετε μέρος στη διαδικασία %{resource_name}
         promoted_process_group:
           more_info: Περισσότερες πληροφορίες
       process_header_steps:
-        step: Φάση %{current} από %{total}
         view_steps: Φάσεις επεξεργασίας
       process_navigation:
         process_menu_item: Σχετικά με το θέμα

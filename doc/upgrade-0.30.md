@@ -1,5 +1,7 @@
 # EMVI upgrade to 0.30.9
 
+Current rollout status, 2026-10-17: MR !259 is merged and staging runs 0.30.9. The twelve staging release tasks completed after explicit authorization; Alex waived a fresh staging backup. Production remains on 0.29.7. The preparation observations below are historical; see `staging-0.30.md` for the verified staging results.
+
 Prepared and validated on 2026-10-16 on `upgrade/emvi-0.30`. Alex subsequently authorized committing/pushing the application branch and opening a draft MR to run the first upgrade build. Infrastructure preparation remains local and unapplied; no upgrade deployment has occurred. Both live environments still run 0.29.7.
 
 ## Baseline and scope

@@ -3,28 +3,19 @@ el:
   activemodel:
     attributes:
       debate:
-        category_id: Κατηγορία
         closed_at: Κλειστό στις
         conclusions: συμπεράσματα
-        decidim_category_id: Κατηγορία
-        description: Περιγραφή
         end_time: Τελειώνει στις
-        information_updates: Ενημερώσεις πληροφοριών
-        instructions: Οδηγίες συμμετοχής
         scope_id: Πεδίο εφαρμογής
         start_time: Αρχίζει στις
-        title: Τίτλος
-        user_group_id: Δημιουργία συζήτησης ως
     models:
       decidim/debates/close_debate_event: Η συζήτηση έκλεισε
       decidim/debates/create_debate_event: Δημόσια συζήτηση
-      decidim/debates/creation_disabled_event: Οι συζητήσεις απενεργοποιήθηκαν
       decidim/debates/creation_enabled_event: Η δημιουργία συζητήσεων ενεργοποιήθηκε
   activerecord:
     models:
       decidim/debates/debate:
         one: Δημόσια συζήτηση
-        other: Συζητήσεις
   decidim:
     components:
       debates:
@@ -32,17 +23,12 @@ el:
           comment: Σχόλιο
           create: Δημιουργώ
           endorse: Εγκρίνω
-        name: Συζητήσεις
         settings:
           global:
-            announcement: Ανακοίνωση
-            comments_enabled: Τα σχόλια ενεργοποιήθηκαν
             comments_max_length: Μέγιστο μήκος σχολίων (Αφήστε 0 για την προεπιλεγμένη τιμή)
             scope_id: Πεδίο εφαρμογής
             scopes_enabled: Τα πεδία είναι ενεργοποιημένα
           step:
-            announcement: Ανακοίνωση
-            comments_blocked: Τα σχόλια αποκλείστηκαν
             creation_enabled: Οι συμμετέχοντες μπορούν να δημιουργήσουν συζητήσεις
             endorsements_blocked: Οι εγκρίσεις αποκλείστηκαν
             endorsements_enabled: Οι εγκρίσεις ενεργοποιήθηκαν
@@ -51,9 +37,7 @@ el:
         close: Κλείσε
         confirm_destroy: Είσαι σίγουρος?
         destroy: Διαγράφω
-        edit: Επεξεργασία
         new: Νέο %{name}
-        title: Ενέργειες
       admin:
         debate_closes:
           edit:
@@ -62,24 +46,12 @@ el:
         debates:
           create:
             invalid: Παρουσιάστηκε πρόβλημα κατά τη δημιουργία της συζήτησης.
-            success: Η συζήτηση δημιουργήθηκε με επιτυχία.
-          destroy:
-            success: Η συζήτηση διαγράφηκε με επιτυχία.
-          edit:
-            title: Επεξεργασία συζήτησης
-            update: Ενημέρωση συζήτησης
           form:
             debate_type: Τύπος συζήτησης
             finite: Πεπερασμένο (Με χρόνους έναρξης και λήξης)
             open: Ανοιχτό (Δεν υπάρχουν ώρες έναρξης ή λήξης)
-          index:
-            title: Συζητήσεις
-          new:
-            create: Δημιουργία συζήτησης
-            title: Νέα συζήτηση
           update:
             invalid: Παρουσιάστηκε πρόβλημα κατά την ενημέρωση αυτής της συζήτησης.
-            success: Η συζήτηση ενημερώθηκε με επιτυχία.
         exports:
           comments: Σχόλια
         models:
@@ -101,13 +73,8 @@ el:
           description: Ποια είναι η περίληψη ή το συμπέρασμα αυτής της συζήτησης;
           send: Κλείσιμο συζήτησης
         closed: Κλειστό
-        count:
-          debates_count:
-            one: "%{count} συζήτηση"
-            other: "%{count} συζητήσεις"
         create:
           invalid: Παρουσιάστηκε πρόβλημα κατά τη δημιουργία της συζήτησης.
-          success: Η συζήτηση δημιουργήθηκε με επιτυχία.
         debate:
           participate: Συμμετέχω
         edit:
@@ -117,15 +84,12 @@ el:
         filters:
           activity: Η δραστηριότητά μου
           all: Ολα
-          category: Κατηγορία
           category_prompt: Επιλέξτε μία κατηγορία
           commented: Σχολιάστηκε
           my_debates: Οι συζητήσεις μου
           official: Επίσημος
-          origin: Προέλευση
           participants: Συμμετέχοντες
           scope: Πεδίο εφαρμογής
-          search: Αναζήτηση
           state: Κατάσταση
           state_values:
             closed: Κλειστό
@@ -133,17 +97,11 @@ el:
           user_groups: Ομάδες
         filters_small_view:
           close_modal: Κλείστε το modal
-          filter: Φίλτρο
-          filter_by: Φιλτράρισμα κατά
           unfold: Ξεδιπλώνονται
         form:
           select_a_category: Επιλέξτε μια κατηγορία
-        index:
-          new_debate: Νέα συζήτηση
         new:
-          back: Πίσω
           create: Δημιουργώ
-          title: Νέα συζήτηση
         orders:
           commented: Τα περισσότερα σχόλια
           label: Παραγγελία συζητήσεων από
@@ -153,7 +111,6 @@ el:
         show:
           back: Πίσω στη λίστα
           close_debate: Κλείσιμο συζήτησης
-          date: Ημερομηνία
           debate_closed: Κλειστό
           debate_conclusions_are: 'Η συζήτηση έκλεισε στις %{date} με τα εξής συμπεράσματα:'
           edit_conclusions: Επεξεργασία συμπερασμάτων
@@ -175,14 +132,6 @@ el:
           back_to_resource: Επιστρέψτε στη συζήτηση
       last_activity:
         debate_updated_at_html: "<span>Η συζήτηση ενημερώθηκε στις %{link}</span>"
-        new_debate_at_html: "<span>Νέα συζήτηση στο %{link}</span>"
-      models:
-        debate:
-          fields:
-            end_time: Ημερομηνία λήξης
-            official_debate: Επίσημη συζήτηση
-            start_time: Ημερομηνία έναρξης
-            title: Τίτλος
     events:
       debates:
         create_debate_event:
@@ -229,12 +178,5 @@ el:
           description: Αυτό το σήμα χορηγείται όταν συμμετέχετε ενεργά στις διάφορες συζητήσεις αφήνοντας τα σχόλιά σας.
           description_another: Αυτός ο συμμετέχων έχει λάβει μέρος σε συζητήσεις %{score}.
           description_own: Έχετε συμμετάσχει σε συζητήσεις %{score}.
-          name: Συζητήσεις
           next_level_in: Συμμετέχετε σε %{score} ακόμη συζητήσεις για να φτάσετε στο επόμενο επίπεδο!
           unearned_another: Αυτός ο συμμετέχων δεν έχει λάβει ακόμη μέρος σε καμία συζήτηση.
-          unearned_own: Δεν έχετε συμμετάσχει ακόμα σε καμία συζήτηση.
-    metrics:
-      debates:
-        description: Αριθμός συζητήσεων που δημιουργήθηκαν
-        object: συζητήσεις
-        title: Συζητήσεις

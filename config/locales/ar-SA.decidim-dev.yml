@@ -1,47 +1,8 @@
 ---
 ar-SA:
-  activemodel:
-    attributes:
-      dummy_resource:
-        created_at: أنشئت في
-        field: مجالي
-        start_date: تاريخ البداية
-        title: العنوان
-        translatable_text: نص قابل للترجمة
-        updated_at: تم التحديث في
   decidim:
-    components:
-      dummy:
-        settings:
-          global:
-            test_options:
-              bar: شريط
-              foo: فو
-          step:
-            test_options:
-              bar: شريط
-              foo: فو
-    dummy:
-      admin:
-        exports:
-          dummies: الدمى
     gamification:
       badges:
         test:
           conditions:
-            - استخدام بيئة اختبار ل decidim.
-          description: يحصل المشاركون على هذه الشارة عن طريق إنشاء اختبارات.
-          description_another: قام هذا المشارك بإنشاء %{score} اختبار.
-          description_own: لقد أنشأت %{score} اختبارات.
-          name: الاختبارات
-          next_level_in: إنشاء %{score} اختبارات أخرى للوصول إلى المستوى التالي!
-          unearned_another: لم ينشئ هذا المشارك أي اختبارات حتى الآن.
-          unearned_own: لم تنشئ أية اختبارات بعد.
-    resource_links:
-      test_link:
-        dummy_resource_dummy: الدمية ذات الصلة
-    statistics:
-      bar: شريط
-      dummies_count_high: الدمى عالية
-      dummies_count_medium: الدمى المتوسطة
-      foo: فو
+          - استخدام بيئة اختبار ل decidim.

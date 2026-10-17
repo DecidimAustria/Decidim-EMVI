@@ -13,9 +13,6 @@ sl:
         two: Anketi
       decidim/surveys/survey_answer:
         few: Odgovori
-        one: Odgovor
-        other: Odgovorov
-        two: Odgovora
   decidim:
     components:
       surveys:

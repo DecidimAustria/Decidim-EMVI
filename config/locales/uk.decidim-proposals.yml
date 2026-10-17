@@ -18,22 +18,17 @@ uk:
         answered_at: Відповів о
         automatic_hashtags: Хештеги додаються автоматично
         body: Тіло
-        category_id: Категорія
         decidim_scope_id: Область застосування
-        has_address: Має адресу
         scope_id: Область застосування
         state: Держава
         suggested_hashtags: Запропоновані хештеги
-        title: Назва
-        user_group_id: Створити пропозицію як
       proposal_answer:
         answer: Відповідь
         cost: Вартість
         cost_report: Звіт про витрати
         execution_period: Термін виконання
       proposals_copy:
-        copy_proposals: Я розумію, що це призведе до імпорту всіх пропозицій із вибраного
-          компонента до поточного, і цю дію не можна скасувати.
+        copy_proposals: Я розумію, що це призведе до імпорту всіх пропозицій із вибраного компонента до поточного, і цю дію не можна скасувати.
         origin_component_id: Компонент для копіювання пропозицій
       proposals_import:
         import_proposals: Імпорт пропозицій
@@ -47,8 +42,7 @@ uk:
         participatory_text:
           attributes:
             document:
-              allowed_file_content_types: 'Недійсний тип документа. Дозволяються лише
-                файли з такими розширеннями: %{types}'
+              allowed_file_content_types: 'Недійсний тип документа. Дозволяються лише файли з такими розширеннями: %{types}'
         proposal:
           attributes:
             add_documents:
@@ -71,16 +65,13 @@ uk:
               not_official: Не є офіційними
               supported: Отримали підтримку або схвалення
     models:
-      decidim/proposals/accepted_proposal_event: Пропозиція прийнята
-      decidim/proposals/admin/update_proposal_category_event: Категорія пропозиції
-        змінена
+      decidim/proposals/admin/update_proposal_category_event: Категорія пропозиції змінена
       decidim/proposals/admin/update_proposal_scope_event: Обсяг пропозиції змінено
       decidim/proposals/creation_enabled_event: Створення пропозицій увімкнено
       decidim/proposals/endorsing_enabled_event: Підтвердження пропозицій увімкнено
       decidim/proposals/evaluating_proposal_event: Пропозиція оцінюється
       decidim/proposals/proposal_mentioned_event: Згадана пропозиція
       decidim/proposals/publish_proposal_event: Пропозиція опублікована
-      decidim/proposals/rejected_proposal_event: Пропозицію відхилено
       decidim/proposals/voting_enabled_event: Увімкнено голосування за пропозиції
   activerecord:
     models:
@@ -90,13 +81,9 @@ uk:
         many: Спільні чернетки
         other: Спільні чернетки
       decidim/proposals/proposal:
-        one: Пропозиція
-        few: Пропозиції
         many: Пропозиції
         other: Пропозиції
       decidim/proposals/proposal_note:
-        one: Примітка
-        few: Примітки
         many: Примітки
         other: Примітки
       decidim/proposals/proposal_vote:
@@ -144,25 +131,17 @@ uk:
           vote: Підтримка
           vote_comment: Голосуйте коментар
           withdraw: Вилучити
-        name: Пропозиції
         settings:
           global:
             amendments_enabled: Поправки включені
-            amendments_enabled_help: Якщо активовано, налаштуйте функції поправки
-              для кожного кроку.
+            amendments_enabled_help: Якщо активовано, налаштуйте функції поправки для кожного кроку.
             amendments_wizard_help_text: Текст довідки майстра поправок
-            announcement: Оголошення
-            attachments_allowed: Дозволити вкладення
-            can_accumulate_supports_beyond_threshold: Може накопичувати підтримку
-              понад порогове значення
+            can_accumulate_supports_beyond_threshold: Може накопичувати підтримку понад порогове значення
             collaborative_drafts_enabled: Спільні чернетки ввімкнено
             comments_enabled: Коментарі ввімкнено
-            comments_max_length: Максимальна довжина коментарів (залиште 0 для значення
-              за умовчанням)
+            comments_max_length: Максимальна довжина коментарів (залиште 0 для значення за умовчанням)
             default_sort_order: Сортування пропозицій за замовчуванням
-            default_sort_order_help: За замовчуванням означає, що якщо підтримку ввімкнено,
-              пропозиції відображатимуться у випадковому порядку, а якщо підтримку
-              заблоковано, то вони будуть відсортовані за найбільш підтримуваною.
+            default_sort_order_help: За замовчуванням означає, що якщо підтримку ввімкнено, пропозиції відображатимуться у випадковому порядку, а якщо підтримку заблоковано, то вони будуть відсортовані за найбільш підтримуваною.
             default_sort_order_options:
               default: За замовчуванням
               most_commented: Більшість коментованих
@@ -175,33 +154,24 @@ uk:
             geocoding_enabled: Геокодування ввімкнено
             minimum_votes_per_user: Мінімальна підтримка на користувача
             new_proposal_body_template: Новий основний шаблон пропозиції
-            new_proposal_body_template_help: Ви можете визначити попередньо заповнений
-              текст, який матиме нова Пропозиція
+            new_proposal_body_template_help: Ви можете визначити попередньо заповнений текст, який матиме нова Пропозиція
             new_proposal_help_text: Довідковий текст нової пропозиції
             official_proposals_enabled: Офіційні пропозиції включені
             participatory_texts_enabled: Увімкнено тексти для участі
-            participatory_texts_enabled_readonly: Неможливо взаємодіяти з цим параметром,
-              якщо є пропозиції. Будь ласка, створіть новий `Компонент пропозицій`,
-              якщо ви хочете ввімкнути цю функцію, або відхиліть усі імпортовані пропозиції
-              в меню `Тексти для участі`, якщо ви хочете вимкнути її.
+            participatory_texts_enabled_readonly: Неможливо взаємодіяти з цим параметром, якщо є пропозиції. Будь ласка, створіть новий `Компонент пропозицій`, якщо ви хочете ввімкнути цю функцію, або відхиліть усі імпортовані пропозиції в меню `Тексти для участі`, якщо ви хочете вимкнути її.
             proposal_answering_enabled: Відповідь на пропозиції включено
-            proposal_edit_before_minutes: Пропозиції можуть бути відредаговані авторами
-              до того, як пройде ця кількість хвилин
+            proposal_edit_before_minutes: Пропозиції можуть бути відредаговані авторами до того, як пройде ця кількість хвилин
             proposal_edit_time: Редагування пропозиції
             proposal_edit_time_choices:
               infinite: Дозвольте редагувати пропозиції протягом нескінченного часу
               limited: Дозволити редагувати пропозиції протягом певного періоду часу
             proposal_length: Максимальна довжина тіла пропозиції
             proposal_limit: Ліміт пропозицій на одного учасника
-            proposal_wizard_step_1_help_text: Текст довідки кроку майстра пропозицій
-              «Створити».
-            proposal_wizard_step_2_help_text: Майстер пропозицій «Порівняти» крок
-              довідки
-            proposal_wizard_step_3_help_text: Майстер пропозицій «Завершити» текст
-              довідки кроку
+            proposal_wizard_step_1_help_text: Текст довідки кроку майстра пропозицій «Створити».
+            proposal_wizard_step_2_help_text: Майстер пропозицій «Порівняти» крок довідки
+            proposal_wizard_step_3_help_text: Майстер пропозицій «Завершити» текст довідки кроку
             proposal_wizard_step_4_help_text: Текст довідки майстра пропозицій «Опублікувати».
-            resources_permissions_enabled: Для кожної пропозиції можна встановити
-              дозволи на дії
+            resources_permissions_enabled: Для кожної пропозиції можна встановити дозволи на дії
             scope_id: Область застосування
             scopes_enabled: Області ввімкнено
             threshold_per_proposal: Поріг на пропозицію
@@ -210,29 +180,21 @@ uk:
             amendment_creation_enabled: Створення поправок увімкнено
             amendment_creation_enabled_help: Учасник може вносити зміни до пропозицій.
             amendment_promotion_enabled: Просування поправок увімкнено
-            amendment_promotion_enabled_help: Автори поправки зможуть просувати відхилену
-              поправку до пропозиції.
+            amendment_promotion_enabled_help: Автори поправки зможуть просувати відхилену поправку до пропозиції.
             amendment_reaction_enabled: Реакцію на поправку ввімкнено
-            amendment_reaction_enabled_help: Автори пропозиції зможуть прийняти або
-              відхилити поправки Учасника.
+            amendment_reaction_enabled_help: Автори пропозиції зможуть прийняти або відхилити поправки Учасника.
             amendments_visibility: Видимість поправок
             amendments_visibility_choices:
               all: Поправки видимі всім
               participants: Поправки бачать лише їх автори
-            amendments_visibility_help: Якщо вибрано опцію «Поправки бачать лише їх
-              автори», учасник повинен авторизуватися, щоб побачити внесені поправки.
-            announcement: Оголошення
+            amendments_visibility_help: Якщо вибрано опцію «Поправки бачать лише їх автори», учасник повинен авторизуватися, щоб побачити внесені поправки.
             answers_with_costs: Увімкнути вартість відповідей на пропозиції
             automatic_hashtags: Хештеги додані до всіх пропозицій
             comments_blocked: Коментарі заблоковано
             creation_enabled: Учасники можуть створювати пропозиції
-            creation_enabled_readonly: Цей параметр вимикається, коли ви активуєте
-              функцію «Тексти для участі». Щоб завантажити пропозиції як текст для
-              участі, натисніть кнопку «Тексти для участі» та дотримуйтесь інструкцій.
+            creation_enabled_readonly: Цей параметр вимикається, коли ви активуєте функцію «Тексти для участі». Щоб завантажити пропозиції як текст для участі, натисніть кнопку «Тексти для участі» та дотримуйтесь інструкцій.
             default_sort_order: Сортування пропозицій за замовчуванням
-            default_sort_order_help: За умовчанням це означає, що якщо підтримку ввімкнено,
-              пропозиції відображатимуться у випадковому порядку, а якщо підтримку
-              заблоковано, то вони будуть відсортовані за найбільш підтримуваною.
+            default_sort_order_help: За умовчанням це означає, що якщо підтримку ввімкнено, пропозиції відображатимуться у випадковому порядку, а якщо підтримку заблоковано, то вони будуть відсортовані за найбільш підтримуваною.
             default_sort_order_options:
               default: За замовчуванням
               most_commented: Більшість коментованих
@@ -246,223 +208,152 @@ uk:
             endorsements_enabled: Підтвердження ввімкнено
             proposal_answering_enabled: Відповідь на пропозиції включено
             publish_answers_immediately: Опублікуйте відповіді на пропозиції негайно
-            publish_answers_immediately_help_html: Майте на увазі, що якщо ви відповідаєте
-              на будь-яку пропозицію, не ввімкнувши цю функцію, вам потрібно буде
-              опублікувати їх вручну, вибравши їх і використавши дію для публікації.
-              Щоб дізнатися більше про те, як це працює, перегляньте <a href="https://docs.decidim.org/en/admin/components/proposals/answers#_publication"
-              target="_blank">сторінку документації відповідей на пропозиції</a> .
+            publish_answers_immediately_help_html: Майте на увазі, що якщо ви відповідаєте на будь-яку пропозицію, не ввімкнувши цю функцію, вам потрібно буде опублікувати їх вручну, вибравши їх і використавши дію для публікації. Щоб дізнатися більше про те, як це працює, перегляньте <a href="https://docs.decidim.org/en/admin/components/proposals/answers#_publication" target="_blank">сторінку документації відповідей на пропозиції</a> .
             suggested_hashtags: Хештеги, запропоновані учасникам для нових пропозицій
             votes_blocked: Підтримка заблокована
             votes_enabled: Підтримка включена
-            votes_hidden: Підтримки приховано (якщо підтримку ввімкнено, позначте
-              цей прапорець, щоб приховати кількість опор)
+            votes_hidden: Підтримки приховано (якщо підтримку ввімкнено, позначте цей прапорець, щоб приховати кількість опор)
     events:
       proposals:
         admin:
           proposal_note_created:
-            email_intro: Хтось залишив запис про пропозицію "%{resource_title}". Перевірте
-              це на <a href="%{admin_proposal_info_url}">панелі адміністратора</a>
+            email_intro: Хтось залишив запис про пропозицію "%{resource_title}". Перевірте це на <a href="%{admin_proposal_info_url}">панелі адміністратора</a>
             email_outro: Ви отримали це сповіщення, оскільки можете оцінити пропозицію.
             email_subject: Хтось залишив запис про пропозицію %{resource_title}.
-            notification_title: Хтось залишив нотатку до пропозиції <a href="%{resource_path}">%{resource_title}</a>.
-              Перевірте це на <a href="%{admin_proposal_info_path}">панелі адміністратора</a>
+            notification_title: Хтось залишив нотатку до пропозиції <a href="%{resource_path}">%{resource_title}</a>. Перевірте це на <a href="%{admin_proposal_info_path}">панелі адміністратора</a>
         collaborative_draft_access_accepted:
-          email_intro: '%{requester_name} отримав доступ як учасника спільної чернетки
-            <a href="%{resource_url}">%{resource_title}</a>.'
+          email_intro: '%{requester_name} отримав доступ як учасника спільної чернетки <a href="%{resource_url}">%{resource_title}</a>.'
           email_outro: Ви отримали це сповіщення, оскільки ви є співавтором <a href="%{resource_url}">%{resource_title}</a>.
-          email_subject: "%{requester_name} було прийнято для доступу як учасника
-            %{resource_title}."
-          notification_title: <a href="%{requester_path}">%{requester_name} %{requester_nickname}</a>
-            було <strong>прийнято як учасник</strong> спільної чернетки <a href="%{resource_path}">%{resource_title}</a>.
+          email_subject: "%{requester_name} було прийнято для доступу як учасника %{resource_title}."
+          notification_title: <a href="%{requester_path}">%{requester_name} %{requester_nickname}</a> було <strong>прийнято як учасник</strong> спільної чернетки <a href="%{resource_path}">%{resource_title}</a>.
         collaborative_draft_access_rejected:
-          email_intro: '%{requester_name} було відхилено у доступі як учаснику спільної
-            чернетки <a href="%{resource_url}">%{resource_title}</a>.'
+          email_intro: '%{requester_name} було відхилено у доступі як учаснику спільної чернетки <a href="%{resource_url}">%{resource_title}</a>.'
           email_outro: Ви отримали це сповіщення, оскільки ви є співавтором <a href="%{resource_url}">%{resource_title}</a>.
-          email_subject: "%{requester_name} було відхилено у доступі як учаснику спільної
-            чернетки %{resource_title}."
-          notification_title: <a href="%{requester_path}">%{requester_name} %{requester_nickname}</a>
-            <strong>відмовлено в доступі як учаснику</strong> спільної чернетки <a
-            href="%{resource_path}">%{resource_title}</a>.
+          email_subject: "%{requester_name} було відхилено у доступі як учаснику спільної чернетки %{resource_title}."
+          notification_title: <a href="%{requester_path}">%{requester_name} %{requester_nickname}</a> <strong>відмовлено в доступі як учаснику</strong> спільної чернетки <a href="%{resource_path}">%{resource_title}</a>.
         collaborative_draft_access_requested:
-          email_intro: '%{requester_name} запитав доступ як учасник. Ви можете <strong>прийняти
-            або відхилити запит</strong> на сторінці спільного проекту <a href="%{resource_url}">%{resource_title}</a>.'
+          email_intro: '%{requester_name} запитав доступ як учасник. Ви можете <strong>прийняти або відхилити запит</strong> на сторінці спільного проекту <a href="%{resource_url}">%{resource_title}</a>.'
           email_outro: Ви отримали це сповіщення, оскільки ви є співавтором <a href="%{resource_url}">%{resource_title}</a>.
           email_subject: "%{requester_name} запитав доступ, щоб зробити внесок у %{resource_title}."
-          notification_title: <a href="%{requester_path}">%{requester_name} %{requester_nickname}</a>
-            надіслав запит на доступ до спільної чернетки <a href="%{resource_path}">%{resource_title}</a>.
-            Будь ласка, <strong>прийміть або відхиліть запит</strong>.
+          notification_title: <a href="%{requester_path}">%{requester_name} %{requester_nickname}</a> надіслав запит на доступ до спільної чернетки <a href="%{resource_path}">%{resource_title}</a>. Будь ласка, <strong>прийміть або відхиліть запит</strong>.
         collaborative_draft_access_requester_accepted:
           email_intro: Ви отримали доступ як учасник спільної чернетки <a href="%{resource_url}">%{resource_title}</a>.
-          email_outro: Ви отримали це сповіщення, оскільки подали запит стати співавтором
-            <a href="%{resource_url}">%{resource_title}</a>.
+          email_outro: Ви отримали це сповіщення, оскільки подали запит стати співавтором <a href="%{resource_url}">%{resource_title}</a>.
           email_subject: Вас прийняли як учасника %{resource_title}.
-          notification_title: Вас <strong>прийняли як учасника</strong> спільної чернетки
-            <a href="%{resource_path}">%{resource_title}</a>.
+          notification_title: Вас <strong>прийняли як учасника</strong> спільної чернетки <a href="%{resource_path}">%{resource_title}</a>.
         collaborative_draft_access_requester_rejected:
-          email_intro: Вам було відмовлено в доступі як учаснику спільної чернетки
-            <a href="%{resource_url}">%{resource_title}</a>.
-          email_outro: Ви отримали це сповіщення, оскільки подали запит стати співавтором
-            <a href="%{resource_url}">%{resource_title}</a>.
+          email_intro: Вам було відмовлено в доступі як учаснику спільної чернетки <a href="%{resource_url}">%{resource_title}</a>.
+          email_outro: Ви отримали це сповіщення, оскільки подали запит стати співавтором <a href="%{resource_url}">%{resource_title}</a>.
           email_subject: Вас відхилили як учасника %{resource_title}.
-          notification_title: Вам <strong>відмовлено в доступі як учаснику</strong>
-            спільної чернетки <a href="%{resource_path}">%{resource_title}</a>.
+          notification_title: Вам <strong>відмовлено в доступі як учаснику</strong> спільної чернетки <a href="%{resource_path}">%{resource_title}</a>.
         collaborative_draft_withdrawn:
-          email_intro: <a href="%{author_url}">%{author_name} %{author_nickname}</a>
-            відкликав <a href="%{resource_url}">%{resource_title}</a> спільну чернетку.
+          email_intro: <a href="%{author_url}">%{author_name} %{author_nickname}</a> відкликав <a href="%{resource_url}">%{resource_title}</a> спільну чернетку.
           email_outro: Ви отримали це сповіщення, оскільки ви є співавтором <a href="%{resource_url}">%{resource_title}</a>.
-          email_subject: "%{author_name} %{author_nickname} відкликав спільну чернетку
-            %{resource_title}."
-          notification_title: <a href="%{author_path}">%{author_name} %{author_nickname}</a>
-            <strong>відкликано</strong> спільну чернетку <a href="%{resource_path}">%{resource_title}</a>.
+          email_subject: "%{author_name} %{author_nickname} відкликав спільну чернетку %{resource_title}."
+          notification_title: <a href="%{author_path}">%{author_name} %{author_nickname}</a> <strong>відкликано</strong> спільну чернетку <a href="%{resource_path}">%{resource_title}</a>.
         creation_enabled:
-          email_intro: 'Тепер ви можете створювати нові пропозиції в %{participatory_space_title}!
-            Розпочніть участь на цій сторінці:'
-          email_outro: Ви отримали це сповіщення, оскільки стежите за %{participatory_space_title}.
-            Перейти до сповіщень можна за попереднім посиланням.
+          email_intro: 'Тепер ви можете створювати нові пропозиції в %{participatory_space_title}! Розпочніть участь на цій сторінці:'
+          email_outro: Ви отримали це сповіщення, оскільки стежите за %{participatory_space_title}. Перейти до сповіщень можна за попереднім посиланням.
           email_subject: Пропозиції тепер доступні в %{participatory_space_title}
-          notification_title: Тепер ви можете висувати <a href="%{resource_path}">нові
-            пропозиції</a> в <a href="%{participatory_space_url}">%{participatory_space_title}</a>
+          notification_title: Тепер ви можете висувати <a href="%{resource_path}">нові пропозиції</a> в <a href="%{participatory_space_url}">%{participatory_space_title}</a>
         endorsing_enabled:
-          email_intro: 'Ви можете підтримати пропозиції в %{participatory_space_title}!
-            Розпочніть участь на цій сторінці:'
-          email_outro: Ви отримали це сповіщення, оскільки стежите за %{participatory_space_title}.
-            Перейти до сповіщень можна за попереднім посиланням.
+          email_intro: 'Ви можете підтримати пропозиції в %{participatory_space_title}! Розпочніть участь на цій сторінці:'
+          email_outro: Ви отримали це сповіщення, оскільки стежите за %{participatory_space_title}. Перейти до сповіщень можна за попереднім посиланням.
           email_subject: Розпочато схвалення пропозицій для %{participatory_space_title}
-          notification_title: Тепер ви можете почати <a href="%{resource_path}">схвалювати
-            пропозиції</a> в <a href="%{participatory_space_url}">%{participatory_space_title}</a>
+          notification_title: Тепер ви можете почати <a href="%{resource_path}">схвалювати пропозиції</a> в <a href="%{participatory_space_url}">%{participatory_space_title}</a>
         proposal_accepted:
           affected_user:
-            email_intro: 'Ваша пропозиція "%{resource_title}" була прийнята. Ви можете
-              прочитати відповідь на цій сторінці:'
+            email_intro: 'Ваша пропозиція "%{resource_title}" була прийнята. Ви можете прочитати відповідь на цій сторінці:'
             email_outro: Ви отримали це сповіщення, оскільки ви є автором "%{resource_title}".
             email_subject: Ваша пропозиція була прийнята
-            notification_title: Вашу пропозицію <a href="%{resource_path}">%{resource_title}</a>
-              прийнято.
+            notification_title: Вашу пропозицію <a href="%{resource_path}">%{resource_title}</a> прийнято.
           follower:
-            email_intro: 'Пропозицію «%{resource_title}» прийнято. Ви можете прочитати
-              відповідь на цій сторінці:'
-            email_outro: Ви отримали це сповіщення, тому що стежите за "%{resource_title}".
-              Ви можете скасувати підписку за попереднім посиланням.
+            email_intro: 'Пропозицію «%{resource_title}» прийнято. Ви можете прочитати відповідь на цій сторінці:'
+            email_outro: Ви отримали це сповіщення, тому що стежите за "%{resource_title}". Ви можете скасувати підписку за попереднім посиланням.
             email_subject: Пропозицію, за якою ви стежите, прийнято
-            notification_title: Пропозицію <a href="%{resource_path}">%{resource_title}</a>
-              прийнято.
+            notification_title: Пропозицію <a href="%{resource_path}">%{resource_title}</a> прийнято.
         proposal_evaluating:
           affected_user:
-            email_intro: 'Ваша пропозиція "%{resource_title}" наразі оцінюється. Ви
-              можете перевірити відповідь на цій сторінці:'
+            email_intro: 'Ваша пропозиція "%{resource_title}" наразі оцінюється. Ви можете перевірити відповідь на цій сторінці:'
             email_outro: Ви отримали це сповіщення, оскільки ви є автором "%{resource_title}".
             email_subject: Ваша пропозиція оцінюється
-            notification_title: Ваша пропозиція <a href="%{resource_path}">%{resource_title}</a>
-              оцінюється.
+            notification_title: Ваша пропозиція <a href="%{resource_path}">%{resource_title}</a> оцінюється.
           follower:
-            email_intro: 'Пропозиція "%{resource_title}" наразі оцінюється. Ви можете
-              перевірити відповідь на цій сторінці:'
-            email_outro: Ви отримали це сповіщення, тому що стежите за "%{resource_title}".
-              Ви можете скасувати підписку за попереднім посиланням.
+            email_intro: 'Пропозиція "%{resource_title}" наразі оцінюється. Ви можете перевірити відповідь на цій сторінці:'
+            email_outro: Ви отримали це сповіщення, тому що стежите за "%{resource_title}". Ви можете скасувати підписку за попереднім посиланням.
             email_subject: Пропозиція, за якою ви стежите, оцінюється
-            notification_title: Пропозиція <a href="%{resource_path}">%{resource_title}</a>
-              оцінюється.
+            notification_title: Пропозиція <a href="%{resource_path}">%{resource_title}</a> оцінюється.
         proposal_mentioned:
-          email_intro: Ваша пропозиція "%{mentioned_proposal_title}" була згадана
-            <a href="%{resource_url}">в цьому просторі</a> в коментарях.
+          email_intro: Ваша пропозиція "%{mentioned_proposal_title}" була згадана <a href="%{resource_url}">в цьому просторі</a> в коментарях.
           email_outro: Ви отримали це сповіщення, оскільки ви є автором "%{resource_title}".
           email_subject: Ваша пропозиція "%{mentioned_proposal_title}" була згадана
-          notification_title: Ваша пропозиція "%{mentioned_proposal_title}" була згадана
-            <a href="%{resource_path}">в цьому просторі</a> в коментарях.
+          notification_title: Ваша пропозиція "%{mentioned_proposal_title}" була згадана <a href="%{resource_path}">в цьому просторі</a> в коментарях.
         proposal_published:
-          email_intro: '%{author_name} %{author_nickname}, за оновленнями якого ви
-            стежите, опублікував нову пропозицію під назвою "%{resource_title}". Перевірте
-            це та додайте:'
-          email_outro: Ви отримали це сповіщення, оскільки стежите за %{author_nickname}.
-            Перейти до сповіщень можна за попереднім посиланням.
+          email_intro: '%{author_name} %{author_nickname}, за оновленнями якого ви стежите, опублікував нову пропозицію під назвою "%{resource_title}". Перевірте це та додайте:'
+          email_outro: Ви отримали це сповіщення, оскільки стежите за %{author_nickname}. Перейти до сповіщень можна за попереднім посиланням.
           email_subject: Нова пропозиція "%{resource_title}" від %{author_nickname}
-          notification_title: Пропозицію <a href="%{resource_path}">%{resource_title}</a>
-            опублікував <a href="%{author_path}">%{author_name} %{author_nickname}</a>.
+          notification_title: Пропозицію <a href="%{resource_path}">%{resource_title}</a> опублікував <a href="%{author_path}">%{author_name} %{author_nickname}</a>.
         proposal_published_for_space:
-          email_intro: Пропозицію "%{resource_title}" додано до "%{participatory_space_title}",
-            за якою ви стежите.
-          email_outro: Ви отримали це сповіщення, тому що стежите за "%{participatory_space_title}".
-            Перейти до сповіщень можна за попереднім посиланням.
+          email_intro: Пропозицію "%{resource_title}" додано до "%{participatory_space_title}", за якою ви стежите.
+          email_outro: Ви отримали це сповіщення, тому що стежите за "%{participatory_space_title}". Перейти до сповіщень можна за попереднім посиланням.
           email_subject: Нова пропозиція "%{resource_title}" додана до %{participatory_space_title}
-          notification_title: Пропозицію <a href="%{resource_path}">%{resource_title}</a>
-            до %{participatory_space_title} додав %{author}
-          notification_title_official: Офіційну пропозицію <a href="%{resource_path}">%{resource_title}</a>
-            додано до %{participatory_space_title}
+          notification_title: Пропозицію <a href="%{resource_path}">%{resource_title}</a> до %{participatory_space_title} додав %{author}
+          notification_title_official: Офіційну пропозицію <a href="%{resource_path}">%{resource_title}</a> додано до %{participatory_space_title}
         proposal_rejected:
           affected_user:
-            email_intro: 'Вашу пропозицію "%{resource_title}" відхилено. Ви можете
-              прочитати відповідь на цій сторінці:'
+            email_intro: 'Вашу пропозицію "%{resource_title}" відхилено. Ви можете прочитати відповідь на цій сторінці:'
             email_outro: Ви отримали це сповіщення, оскільки ви є автором "%{resource_title}".
             email_subject: Вашу пропозицію відхилено
-            notification_title: Вашу пропозицію <a href="%{resource_path}">%{resource_title}</a>
-              відхилено.
+            notification_title: Вашу пропозицію <a href="%{resource_path}">%{resource_title}</a> відхилено.
           follower:
-            email_intro: 'Пропозицію "%{resource_title}" відхилено. Ви можете прочитати
-              відповідь на цій сторінці:'
-            email_outro: Ви отримали це сповіщення, тому що стежите за "%{resource_title}".
-              Ви можете скасувати підписку за попереднім посиланням.
+            email_intro: 'Пропозицію "%{resource_title}" відхилено. Ви можете прочитати відповідь на цій сторінці:'
+            email_outro: Ви отримали це сповіщення, тому що стежите за "%{resource_title}". Ви можете скасувати підписку за попереднім посиланням.
             email_subject: Пропозицію, за якою ви стежите, відхилено
-            notification_title: Пропозицію <a href="%{resource_path}">%{resource_title}</a>
-              відхилено.
+            notification_title: Пропозицію <a href="%{resource_path}">%{resource_title}</a> відхилено.
         proposal_update_category:
-          email_intro: 'Адміністратор оновив категорію вашої пропозиції "%{resource_title}",
-            перегляньте це на цій сторінці:'
+          email_intro: 'Адміністратор оновив категорію вашої пропозиції "%{resource_title}", перегляньте це на цій сторінці:'
           email_outro: Ви отримали це сповіщення, оскільки ви є автором пропозиції.
           email_subject: Категорію пропозиції %{resource_title} оновлено
-          notification_title: Категорію пропозиції <a href="%{resource_path}">%{resource_title}</a>
-            оновив адміністратор.
+          notification_title: Категорію пропозиції <a href="%{resource_path}">%{resource_title}</a> оновив адміністратор.
         proposal_update_scope:
-          email_intro: 'Адміністратор оновив обсяг вашої пропозиції "%{resource_title}",
-            перевірте це на цій сторінці:'
+          email_intro: 'Адміністратор оновив обсяг вашої пропозиції "%{resource_title}", перевірте це на цій сторінці:'
           email_outro: Ви отримали це сповіщення, оскільки ви є автором пропозиції.
           email_subject: Обсяг пропозиції %{resource_title} оновлено
-          notification_title: Обсяг пропозиції <a href="%{resource_path}">%{resource_title}</a>
-            оновлено адміністратором.
+          notification_title: Обсяг пропозиції <a href="%{resource_path}">%{resource_title}</a> оновлено адміністратором.
         voting_enabled:
-          email_intro: 'Ви можете підтримати пропозиції в %{participatory_space_title}!
-            Розпочніть участь на цій сторінці:'
-          email_outro: Ви отримали це сповіщення, оскільки стежите за %{participatory_space_title}.
-            Перейти до сповіщень можна за попереднім посиланням.
+          email_intro: 'Ви можете підтримати пропозиції в %{participatory_space_title}! Розпочніть участь на цій сторінці:'
+          email_outro: Ви отримали це сповіщення, оскільки стежите за %{participatory_space_title}. Перейти до сповіщень можна за попереднім посиланням.
           email_subject: Розпочато підтримку пропозицій для %{participatory_space_title}
-          notification_title: Тепер ви можете розпочати <a href="%{resource_path}">підтримку
-            пропозицій</a> у <a href="%{participatory_space_url}">%{participatory_space_title}</a>
+          notification_title: Тепер ви можете розпочати <a href="%{resource_path}">підтримку пропозицій</a> у <a href="%{participatory_space_url}">%{participatory_space_title}</a>
     gamification:
       badges:
         accepted_proposals:
           conditions:
-          - Виберіть простір для участі, який вас цікавить, і ввімкніть надсилання
-            пропозицій
-          - Намагайтеся робити пропозиції, які можна реалізувати. Таким чином вони
-            з більшою ймовірністю будуть прийняті.
-          description: Цей значок надається, коли ви активно берете участь із новими
-            пропозиціями та їх приймаєте.
+          - Виберіть простір для участі, який вас цікавить, і ввімкніть надсилання пропозицій
+          - Намагайтеся робити пропозиції, які можна реалізувати. Таким чином вони з більшою ймовірністю будуть прийняті.
+          description: Цей значок надається, коли ви активно берете участь із новими пропозиціями та їх приймаєте.
           description_another: Цей учасник мав %{score} прийнятих пропозицій.
           description_own: Ви отримали %{score} прийнятих пропозицій.
           name: Прийняті пропозиції
-          next_level_in: Прийміть ще %{score} пропозицій, щоб перейти на наступний
-            рівень!
+          next_level_in: Прийміть ще %{score} пропозицій, щоб перейти на наступний рівень!
           unearned_another: Цей учасник ще не мав прийнятих пропозицій.
           unearned_own: У вас ще немає прийнятих пропозицій.
         proposal_votes:
           conditions:
           - Переглядайте та виділіть деякий час, читаючи пропозиції інших людей
           - Підтримуйте пропозиції, які вам подобаються або здаються цікавими
-          description: Цей значок надається, якщо ви підтримуєте пропозиції інших
-            людей.
+          description: Цей значок надається, якщо ви підтримуєте пропозиції інших людей.
           description_another: Цей учасник підтримав %{score} пропозицій.
           description_own: Ви підтримали %{score} пропозицій.
           name: Підтримує пропозиції
-          next_level_in: Підтримайте ще %{score} пропозицій, щоб досягти наступного
-            рівня!
+          next_level_in: Підтримайте ще %{score} пропозицій, щоб досягти наступного рівня!
           unearned_another: Цей учасник ще не підтримав жодної пропозиції.
           unearned_own: Ви ще не підтримали жодної пропозиції.
         proposals:
           conditions:
-          - Виберіть простір для участі, який вас цікавить, і ввімкніть надсилання
-            пропозицій
+          - Виберіть простір для участі, який вас цікавить, і ввімкніть надсилання пропозицій
           - Створіть нову пропозицію
-          description: Цей значок надається, коли ви активно берете участь із новими
-            пропозиціями.
+          description: Цей значок надається, коли ви активно берете участь із новими пропозиціями.
           description_another: Цей учасник створив %{score} пропозицій.
           description_own: Ви створили %{score} пропозицій.
           name: Пропозиції
@@ -497,13 +388,9 @@ uk:
         new: Нова пропозиція
         participatory_texts: Тексти участі
         show: Показати пропозицію
-        title: Дії
       admin:
-        actions:
-          preview: Попередній перегляд
         exports:
           proposal_comments: Коментарі
-          proposals: Пропозиції
         imports:
           help:
             answers: |
@@ -538,9 +425,6 @@ uk:
           title:
             answers: Імпорт відповідей на пропозиції
             proposals: Імпорт пропозицій
-        models:
-          proposal:
-            name: Пропозиція
         participatory_texts:
           bulk-actions:
             are_you_sure: Ви впевнені, що відкинете всю чернетку спільного тексту?
@@ -550,13 +434,10 @@ uk:
             success: Усі чернетки спільного тексту було відкинуто.
           import:
             invalid: Форма недійсна!
-            invalid_file: Файл містить помилку. Спробуйте відредагувати вміст файлу
-              та повторно завантажити його.
-            success: Вітаємо, наступні розділи перетворено на пропозиції. Тепер ви
-              можете переглядати та коригувати їх перед публікацією.
+            invalid_file: Файл містить помилку. Спробуйте відредагувати вміст файлу та повторно завантажити його.
+            success: Вітаємо, наступні розділи перетворено на пропозиції. Тепер ви можете переглядати та коригувати їх перед публікацією.
           index:
-            info_1: Наступні розділи перетворено на пропозиції. Тепер ви можете переглядати
-              та коригувати їх перед публікацією.
+            info_1: Наступні розділи перетворено на пропозиції. Тепер ви можете переглядати та коригувати їх перед публікацією.
             publish_document: Опублікувати документ
             save_draft: Зберегти чернетку
             title: Попередній перегляд спільного тексту
@@ -565,8 +446,7 @@ uk:
               md: Уцінка
               odt: ODT
             bottom_hint: "(Ви зможете переглядати та сортувати розділи документа)"
-            document_legend: 'Додайте документ розміром менше 2 МБ, кожен розділ до
-              3 рівнів буде розібрано на пропозиції. Підтримувані формати: %{valid_mime_types}'
+            document_legend: 'Додайте документ розміром менше 2 МБ, кожен розділ до 3 рівнів буде розібрано на пропозиції. Підтримувані формати: %{valid_mime_types}'
             title: Додати документ
             upload_document: Завантажити документ
           publish:
@@ -584,15 +464,9 @@ uk:
             answer_proposal: Відповідь
             evaluating: Оцінюючи
             not_answered: Без відповіді
-            rejected: Відхилено
-            title: Відповідь на пропозицію %{title}
         proposal_notes:
           create:
             error: Виникла проблема зі створенням цієї пропозиції
-            success: Примітку до пропозиції успішно створено
-          form:
-            note: Примітка
-            submit: Надіслати
           leave_your_note: Залиште свою записку
           title: Приватні замітки
         proposals:
@@ -612,11 +486,8 @@ uk:
             select_a_category: Виберіть категорію
             select_a_meeting: Виберіть зустріч
           index:
-            actions: Дії
             assign_to_valuator: Призначити оцінювачу
             assign_to_valuator_button: Призначити
-            cancel: Скасувати
-            change_category: Змінити категорію
             change_scope: Змінити обсяг
             merge: Злитися в новий
             merge_button: Об’єднати
@@ -626,14 +497,12 @@ uk:
             selected: вибрано
             split: Розділити пропозиції
             split_button: Спліт
-            title: Пропозиції
             unassign_from_valuator: Скасувати призначення від оцінювача
             unassign_from_valuator_button: Скасувати призначення
             update: оновлення
             update_scope_button: Сфера оновлення
           new:
             create: Створити
-            title: Створити пропозицію
           publish_answers:
             number_of_proposals: Відповіді на %{number} пропозицій будуть опубліковані.
             select_a_proposal: Виберіть пропозицію
@@ -646,7 +515,6 @@ uk:
             comments_negative_count: Проти
             comments_neutral_count: Нейтральний
             comments_positive_count: Фавор
-            created_at: Дата створення
             documents: Документи
             endorsements_count: Підтвердження враховуються
             endorsements_ranking: Рейтинг за підтвердженнями
@@ -658,12 +526,10 @@ uk:
               many: і ще %{count}
               other: і ще %{count}
             photos: Фотографії
-            proposals: Пропозиції
             ranking: "%{ranking} з %{total}"
             related_meetings: Відповідні зустрічі
             remove_assignment: Видалити призначення
-            remove_assignment_confirmation: Ви впевнені, що бажаєте видалити оцінювача
-              з цієї пропозиції?
+            remove_assignment_confirmation: Ви впевнені, що бажаєте видалити оцінювача з цієї пропозиції?
             valuators: Оцінювачі
             votes_count: Підтримує підрахунок
             votes_ranking: Ранжування за опорами
@@ -673,8 +539,7 @@ uk:
             select_a_proposal: Виберіть пропозицію
             success: 'Пропозиції успішно оновлено до категорії %{subject_name}: %{proposals}.'
           update_scope:
-            invalid: 'Ці пропозиції вже мали область застосування %{subject_name}:
-              %{proposals}.'
+            invalid: 'Ці пропозиції вже мали область застосування %{subject_name}: %{proposals}.'
             select_a_proposal: Виберіть пропозицію
             select_a_scope: Будь ласка, виберіть область
             success: 'Пропозиції успішно оновлено до області %{subject_name}: %{proposals}.'
@@ -684,20 +549,17 @@ uk:
             success: "%{number} пропозицій успішно імпортовано"
           new:
             create: Імпорт пропозицій
-            no_components: У цьому спільному просторі немає інших компонентів пропозиції,
-              з яких можна імпортувати пропозиції.
+            no_components: У цьому спільному просторі немає інших компонентів пропозиції, з яких можна імпортувати пропозиції.
             select_component: Будь ласка, виберіть компонент
             select_states: Перевірте статус пропозицій для імпорту
             title: Імпорт пропозицій
         proposals_merges:
           create:
-            invalid: 'Виникла проблема з об’єднанням вибраних пропозицій, оскільки
-              деякі з них:'
+            invalid: 'Виникла проблема з об’єднанням вибраних пропозицій, оскільки деякі з них:'
             success: Пропозиції успішно об’єднано в нову.
         proposals_splits:
           create:
-            invalid: 'Виникла проблема з розділенням вибраних пропозицій, оскільки
-              деякі з них:'
+            invalid: 'Виникла проблема з розділенням вибраних пропозицій, оскільки деякі з них:'
             success: Успішно розділено пропозиції на нові.
         valuation_assignments:
           create:
@@ -709,15 +571,11 @@ uk:
       admin_log:
         proposal:
           answer: "%{user_name} відповів на пропозицію %{resource_name} у місці %{space_name}"
-          create: "%{user_name} створив пропозицію %{resource_name} у просторі %{space_name}
-            як офіційну пропозицію"
-          publish_answer: "%{user_name} опублікував відповідь на пропозицію %{resource_name}
-            у просторі %{space_name}"
-          update: "%{user_name} оновив офіційну пропозицію %{resource_name} щодо простору
-            %{space_name}"
+          create: "%{user_name} створив пропозицію %{resource_name} у просторі %{space_name} як офіційну пропозицію"
+          publish_answer: "%{user_name} опублікував відповідь на пропозицію %{resource_name} у просторі %{space_name}"
+          update: "%{user_name} оновив офіційну пропозицію %{resource_name} щодо простору %{space_name}"
         proposal_note:
-          create: "%{user_name} залишив приватну нотатку щодо пропозиції %{resource_name}
-            у місці %{space_name}"
+          create: "%{user_name} залишив приватну нотатку щодо пропозиції %{resource_name} у місці %{space_name}"
         valuation_assignment:
           create: "%{user_name} передав пропозицію %{resource_name} оцінювачу"
           delete: "%{user_name} скасував призначення оцінювача з пропозиції %{proposal_title}"
@@ -725,7 +583,6 @@ uk:
         accepted: прийнято
         evaluating: Оцінюючи
         not_answered: Без відповіді
-        rejected: Відхилено
         withdrawn: Вилучено
       application_helper:
         filter_category_values:
@@ -753,8 +610,7 @@ uk:
           publish:
             error: Під час публікації спільної чернетки виникла проблема.
             irreversible_action_modal:
-              body: Після публікації чернетки як пропозиції її більше не можна буде
-                редагувати. Пропозиція не прийматиме нових авторів або внески.
+              body: Після публікації чернетки як пропозиції її більше не можна буде редагувати. Пропозиція не прийматиме нових авторів або внески.
               cancel: Скасувати
               ok: Опублікувати як пропозицію
               title: Наступна дія незворотна
@@ -763,8 +619,7 @@ uk:
           withdraw:
             error: Під час закриття спільної чернетки виникла проблема.
             irreversible_action_modal:
-              body: Після закриття чернетки її більше не можна буде редагувати. Чернетка
-                не прийматиме нових авторів або внески.
+              body: Після закриття чернетки її більше не можна буде редагувати. Чернетка не прийматиме нових авторів або внески.
               cancel: Скасувати
               ok: Відкликайте спільну чернетку
               title: Наступна дія незворотна
@@ -835,11 +690,7 @@ uk:
             few: і ще %{count} людей
             many: і ще %{count} людей
             other: і ще %{count} людей
-          info-message: Це <strong>спільний проект</strong> пропозиції. Це означає,
-            що ви можете допомогти їхнім авторам сформувати пропозицію за допомогою
-            розділу коментарів нижче або вдосконалити її безпосередньо, запросивши
-            доступ для редагування. Щойно автори нададуть вам доступ, ви зможете вносити
-            зміни до цієї чернетки.
+          info-message: Це <strong>спільний проект</strong> пропозиції. Це означає, що ви можете допомогти їхнім авторам сформувати пропозицію за допомогою розділу коментарів нижче або вдосконалити її безпосередньо, запросивши доступ для редагування. Щойно автори нададуть вам доступ, ви зможете вносити зміни до цієї чернетки.
           publish: Опублікувати
           publish_info: Опублікувати цю версію чернетки або
           published_proposal: опублікована пропозиція
@@ -864,10 +715,8 @@ uk:
           proposals: Пропозиції
       create:
         error: Під час збереження пропозиції виникла проблема.
-        success: Пропозицію успішно створено. Збережено як чернетку.
       destroy_draft:
         error: Під час видалення спільної чернетки виникла проблема.
-        success: Чернетку пропозиції успішно видалено.
       last_activity:
         new_proposal_at_html: "<span>Нова пропозиція на %{link}</span>"
         proposal_updated_at_html: "<span>Пропозицію оновлено о %{link}</span>"
@@ -879,22 +728,17 @@ uk:
             contributions: Внески
         proposal:
           fields:
-            category: Категорія
-            comments: Коментарі
             id: ID
-            notes: Примітки
             official_proposal: Офіційна пропозиція
             published_answer: Опублікована відповідь
             published_at: Опубліковано на
             scope: Область застосування
             state: Статус
-            title: Назва
             valuator: Оцінювач
             valuators: Оцінювачі
             votes: голосів
       new:
-        limit_reached: Ви не можете створювати нові пропозиції, оскільки ви перевищили
-          ліміт.
+        limit_reached: Ви не можете створювати нові пропозиції, оскільки ви перевищили ліміт.
       participatory_text_proposal:
         alternative_title: На даний момент немає текстів для участі
         buttons:
@@ -908,10 +752,6 @@ uk:
         compare:
           continue: Продовжити
           no_similars_found: молодець! Схожих пропозицій не знайдено
-          title: Подібні пропозиції
-        complete:
-          send: Надіслати
-          title: Завершіть свою пропозицію
         count:
           proposals_count:
             one: "%{count} пропозиція"
@@ -919,8 +759,7 @@ uk:
             many: "%{count} пропозицій"
             other: "%{count} пропозицій"
         dynamic_map_instructions:
-          description: Координати будуть оновлені після натискання кнопки «попередній
-            перегляд». Однак адреса не змінюється.
+          description: Координати будуть оновлені після натискання кнопки «попередній перегляд». Однак адреса не змінюється.
           instructions: Ви можете перемістити точку на карті.
         edit:
           add_documents: Додайте документи
@@ -931,18 +770,12 @@ uk:
           edit_image: Редагувати зображення
           gallery_legend: "(Необов’язково) Додайте зображення до картки пропозиції"
           select_a_category: Виберіть категорію
-          send: Надіслати
-          title: Редагувати пропозицію
         edit_draft:
-          discard: Відкинути цю чернетку
           discard_confirmation: Ви впевнені, що бажаєте відхилити цю чернетку пропозиції?
-          send: Попередній перегляд
-          title: Редагувати чернетку пропозиції
         filters:
           activity: Моя діяльність
           all: все
           amendment_type: Тип
-          category: Категорія
           my_proposals: Мої пропозиції
           origin: Походження
           related_to: Пов'язані з
@@ -955,16 +788,12 @@ uk:
           close_modal: Закрити модальний
           filter: фільтр
           filter_by: Фільтрувати за
-          unfold: Розгорнути
         index:
           click_here: Переглянути всі пропозиції
           collaborative_drafts_list: Доступ до спільних чернеток
           new_proposal: Нова пропозиція
           see_all: Переглянути всі пропозиції
-          see_all_withdrawn: Переглянути всі відкликані пропозиції
-          text_banner: Ви переглядаєте список пропозицій, відкликаних їх авторами.
-            %{go_back_link}.
-          view_proposal: Переглянути пропозицію
+          text_banner: Ви переглядаєте список пропозицій, відкликаних їх авторами. %{go_back_link}.
         linked_proposals:
           proposal_votes:
             one: підтримка
@@ -972,7 +801,6 @@ uk:
             many: підтримує
             other: підтримує
         new:
-          send: Продовжити
           title: Створіть свою пропозицію
         orders:
           label: 'Замовляйте пропозиції за:'
@@ -991,28 +819,18 @@ uk:
         placeholder:
           address: 37 Homewood Drive Brownsburg, IN 46112
         preview:
-          announcement_body: Вашу пропозицію збережено як чернетку. Його потрібно
-            опублікувати, щоб він з’явився на сайті.
+          announcement_body: Вашу пропозицію збережено як чернетку. Його потрібно опублікувати, щоб він з’явився на сайті.
           announcement_title: Ваша пропозиція ще не опублікована
           modify: Змініть пропозицію
           proposal_edit_before_minutes:
-            one: Ви зможете редагувати цю пропозицію протягом першої хвилини після
-              публікації пропозиції. Після закінчення цього періоду ви не зможете
-              редагувати пропозицію.
-            few: Ви зможете редагувати цю пропозицію протягом перших %{count} хвилин
-              після публікації пропозиції. Після закінчення цього періоду ви не зможете
-              редагувати пропозицію.
-            many: Ви зможете редагувати цю пропозицію протягом перших %{count} хвилин
-              після публікації пропозиції. Після закінчення цього періоду ви не зможете
-              редагувати пропозицію.
-            other: Ви зможете редагувати цю пропозицію протягом перших %{count} хвилин
-              після публікації пропозиції. Після закінчення цього періоду ви не зможете
-              редагувати пропозицію.
+            one: Ви зможете редагувати цю пропозицію протягом першої хвилини після публікації пропозиції. Після закінчення цього періоду ви не зможете редагувати пропозицію.
+            few: Ви зможете редагувати цю пропозицію протягом перших %{count} хвилин після публікації пропозиції. Після закінчення цього періоду ви не зможете редагувати пропозицію.
+            many: Ви зможете редагувати цю пропозицію протягом перших %{count} хвилин після публікації пропозиції. Після закінчення цього періоду ви не зможете редагувати пропозицію.
+            other: Ви зможете редагувати цю пропозицію протягом перших %{count} хвилин після публікації пропозиції. Після закінчення цього періоду ви не зможете редагувати пропозицію.
           publish: Опублікувати
           title: Опублікуйте свою пропозицію
         proposal:
           creation_date: 'Створення: %{date}'
-          view_proposal: Переглянути пропозицію
         proposals:
           empty: Пропозицій ще немає
           empty_filters: Немає жодної пропозиції з цим критерієм
@@ -1021,8 +839,6 @@ uk:
           back_to: Повертатися до
           back_to_list: Повернутися до списку
           changes_at_title: Поправка до "%{title}"
-          comments: Коментарі
-          edit_proposal: Редагувати пропозицію
           endorsements_list: Список схвалень
           estimated_cost: Орієнтовна вартість
           hidden_endorsers_count:
@@ -1030,24 +846,18 @@ uk:
             few: і ще %{count} людей
             many: і ще %{count} людей
             other: і ще %{count} людей
-          link_to_collaborative_draft_help_text: Ця пропозиція є результатом спільного
-            проекту. Перегляньте історію
+          link_to_collaborative_draft_help_text: Ця пропозиція є результатом спільного проекту. Перегляньте історію
           link_to_collaborative_draft_text: Перегляньте спільний проект
           link_to_promoted_emendation_help_text: Ця пропозиція є просунутою поправкою
           link_to_promoted_emendation_text: Див. відхилену поправку.
           link_to_proposal_from_emendation_help_text: Це відхилена поправка
           link_to_proposal_from_emendation_text: Див. Пропозицію
           proposal_accepted_reason: 'Ця пропозиція була прийнята, оскільки:'
-          proposal_in_evaluation_reason: Ця пропозиція розглядається
-          proposal_rejected_reason: 'Ця пропозиція була відхилена, оскільки:'
           read_less: Читайте менше
           read_more: Читати далі
           report: звіт
-          withdraw_btn_hint: Ви можете відкликати свою пропозицію, якщо передумаєте,
-            доки ви не отримали жодної підтримки. Пропозиція не видаляється, вона
-            з'явиться в списку відкликаних пропозицій.
-          withdraw_confirmation_html: Ви впевнені, що бажаєте відкликати цю пропозицію?<br><br>
-            <strong>Ця акція не може бути скасована!</strong>
+          withdraw_btn_hint: Ви можете відкликати свою пропозицію, якщо передумаєте, доки ви не отримали жодної підтримки. Пропозиція не видаляється, вона з'явиться в списку відкликаних пропозицій.
+          withdraw_confirmation_html: Ви впевнені, що бажаєте відкликати цю пропозицію?<br><br> <strong>Ця акція не може бути скасована!</strong>
           withdraw_proposal: Відкликати пропозицію
         tags:
           changed_from: "(змінено з <u>%{previous_name}</u> адміністратором)"
@@ -1066,17 +876,14 @@ uk:
             few: Підтримує
             many: Підтримує
             other: Підтримує
-          most_popular_proposal: Найпопулярніша пропозиція
           need_more_votes: Потрібно більше опор
         voting_rules:
           can_accumulate_supports_beyond_threshold:
             description: Кожна пропозиція може накопичувати більше ніж %{limit} підтримок
           minimum_votes_per_user:
-            description: Ви повинні розподілити мінімум %{votes} опор між різними
-              пропозиціями.
+            description: Ви повинні розподілити мінімум %{votes} опор між різними пропозиціями.
             given_enough_votes: Ви надали достатньо підтримки.
-            supports_remaining: Ви повинні підтримати ще %{remaining_votes} пропозицій,
-              щоб вашу підтримку було враховано.
+            supports_remaining: Ви повинні підтримати ще %{remaining_votes} пропозицій, щоб вашу підтримку було враховано.
           proposal_limit:
             description: Ви можете створити до %{limit} пропозицій.
           threshold_per_proposal:
@@ -1106,8 +913,7 @@ uk:
         choose_proposals: Виберіть пропозиції
         close: Закрити
         more_proposals: Є ще %{number} пропозицій. Уточніть пошук, щоб знайти їх.
-        no_proposals: Жодна пропозиція не відповідає вашим критеріям пошуку або немає
-          жодної пропозиції.
+        no_proposals: Жодна пропозиція не відповідає вашим критеріям пошуку або немає жодної пропозиції.
       publish:
         error: Виникла проблема з публікацією пропозиції.
         success: Пропозицію успішно опубліковано.
@@ -1115,10 +921,8 @@ uk:
         success: Відповіді на пропозиції успішно опубліковано.
       update:
         error: Під час збереження пропозиції виникла проблема.
-        success: Пропозицію успішно оновлено.
       update_draft:
         error: Під час збереження спільної чернетки виникла проблема.
-        success: Чернетку пропозиції успішно оновлено.
       versions:
         collaborative_drafts:
           back_to_resource: Повернутися до спільної чернетки

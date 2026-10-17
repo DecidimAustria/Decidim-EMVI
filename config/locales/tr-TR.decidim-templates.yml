@@ -9,45 +9,28 @@ tr-TR:
         name: İsim
   decidim:
     admin:
-      menu:
-        templates: Şablonlar
       templates:
         apply:
           error: Bu şablon uygulanırken bir sorun oluştu.
-          success: Şablon başarıyla uygulandı
         copy:
           error: Bu şablon kopyalanırken bir sorun oluştu.
-          success: Şablon başarıyla kopyalandı
         create:
           error: Bu şablon oluşturulurken bir sorun oluştu.
-          success: Şablon başarıyla oluşturuldu
-        destroy:
-          success: Şablon başarıyla silindi
         empty: Henüz şablon yok.
         update:
           error: Bu şablon güncellenirken bir sorun oluştu.
-          success: Şablon başarıyla güncellendi
-      titles:
-        template_types:
-          questionnaires: Anket şablonları
-        templates: Şablonlar
     models:
       questionnaire_template:
         fields:
           questions: Soru sayısı
-          title: Anket Başlığı
       template:
         fields:
           created_at: oluşturuldu
-        name: Şablon
     templates:
       admin:
         questionnaire_templates:
           choose:
             create_from_template: Şablondan oluştur
-            description: Yeni bir anket oluşturmak üzeresiniz. Önceden tanımlanmış bir şablon seçebilir ve daha sonra değiştirebilirsiniz.
-            label: Şablon seç
-            placeholder: Şablon seç
             skip_template: Atlamak
           edit:
             edit: Düzenlemek
@@ -57,9 +40,6 @@ tr-TR:
             save: Kaydetmek
             template_title: Şablon bilgisi
             title: Anket şablonu %{questionnaire_for}
-          index:
-            confirm_delete: Bu şablonu silmek istediğinizden emin misiniz?
-            title: Anket şablonları
           preview:
             current_step: Adım %{step}
             of_total_steps: "%{total_steps}'ın"
@@ -70,5 +50,3 @@ tr-TR:
           delete: "%{user_name}, %{resource_name} anket şablonunu sildi"
           duplicate: "%{user_name}, %{resource_name} anket şablonunu kopyaladı"
           update: "%{user_name}, %{resource_name} anket şablonunu güncelledi"
-      template_types:
-        questionnaires: Anketler
