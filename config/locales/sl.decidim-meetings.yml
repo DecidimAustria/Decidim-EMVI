@@ -3,7 +3,6 @@ sl:
   activemodel:
     attributes:
       agenda:
-        description: Opis
         duration: Trajanje
         title: Naslov
       close_meeting:
@@ -61,7 +60,6 @@ sl:
               already_invited: Ta e-račun je že povabljen.
     models:
       decidim/meetings/close_meeting_event: Sestanek končan
-      decidim/meetings/create_meeting_event: Sestanek
       decidim/meetings/meeting_registrations_enabled_event: Registracije so omogočene.
       decidim/meetings/meeting_registrations_over_percentage_event: Registracije prek omejitve
       decidim/meetings/upcoming_meeting_event: Prihajajoči sestanek
@@ -229,7 +227,6 @@ sl:
             invalid: Pri posodabljanju tega dnevnega reda se je pojavila težava.
             success: Dnevni red je bil uspešno posodobljen.
         exports:
-          meetings: Sestanki
           registrations: Registracije
         invite_join_meeting_mailer:
           invite:
@@ -277,8 +274,6 @@ sl:
             address_help: 'Naslov: uporabljen s strani aplikacije Geocoder za iskanje lokacije'
             location_help: 'Lokacija: sporočilo, namenjeno uporabnikom, ki nakazuje kraj srečanja ob'
             location_hints_help: 'Namigi o lokaciji: dodatne informacije Primer: pritličje stavbe'
-          index:
-            title: Sestanki
           new:
             create: Objavi svoj dogodek
             title: Ustvari sestanek
@@ -352,7 +347,7 @@ sl:
         export_calendar: Izvozi koledar
       close_meeting_reminder_mailer:
         close_meeting_reminder:
-          body: 'Zahvaljujemo se vam za sodelovanje pri organizaciji dogodka <a href=''%{meeting_path}''>''%{meeting_title}''</a>. Upamo, da ste dogodek uspešno izvedli in da je sledila živahna razprava. Prosimo vas, da dodate poročilo o dogodku, tako da na strani dogodka izberete gumb „Close Event“ (Zaključi dogodek). <br><br>Z objavo poročila o dogodku se zagotavlja, da lahko državljani dostopajo do zamisli, izmenjanih na vašem dogodku, in da se te zamisli lahko upoštevajo pri analizi, kar omogoča ustrezne povratne informacije in nadaljnje spremljanje. <br><br>V poročilo bi bilo koristno vključiti informacije o vrsti dogodka (npr. participativna delavnica, dogodek na prostem, svetovna kavarna), številu udeležencev in njihovem demografskem ozadju (npr. starost, spol), glavnih temah razprave in predloženih zamislih, argumentih, ki so pripeljale do njih, pa tudi o splošnem vzdušju in pričakovanem nadaljnjem spremljanju. <br><br>Pri izpolnjevanju poročila o dogodku navedite število udeležencev v namenskem polju. Vabimo vas tudi, da zamisli z dogodka povežete z zamislimi, ki so že bile objavljene na platformi. <br><br>To je pomembno za analizo. <br><br> <br><br>Zelo smo veseli vašega sodelovanja in v primeru kakršnih koli vprašanj smo vam na voljo.'
+          body: Zahvaljujemo se vam za sodelovanje pri organizaciji dogodka <a href='%{meeting_path}'>'%{meeting_title}'</a>. Upamo, da ste dogodek uspešno izvedli in da je sledila živahna razprava. Prosimo vas, da dodate poročilo o dogodku, tako da na strani dogodka izberete gumb „Close Event“ (Zaključi dogodek). <br><br>Z objavo poročila o dogodku se zagotavlja, da lahko državljani dostopajo do zamisli, izmenjanih na vašem dogodku, in da se te zamisli lahko upoštevajo pri analizi, kar omogoča ustrezne povratne informacije in nadaljnje spremljanje. <br><br>V poročilo bi bilo koristno vključiti informacije o vrsti dogodka (npr. participativna delavnica, dogodek na prostem, svetovna kavarna), številu udeležencev in njihovem demografskem ozadju (npr. starost, spol), glavnih temah razprave in predloženih zamislih, argumentih, ki so pripeljale do njih, pa tudi o splošnem vzdušju in pričakovanem nadaljnjem spremljanju. <br><br>Pri izpolnjevanju poročila o dogodku navedite število udeležencev v namenskem polju. Vabimo vas tudi, da zamisli z dogodka povežete z zamislimi, ki so že bile objavljene na platformi. <br><br>To je pomembno za analizo. <br><br> <br><br>Zelo smo veseli vašega sodelovanja in v primeru kakršnih koli vprašanj smo vam na voljo.
           greetings: Lep pozdrav, <br/>ekipa moderatorjev<br/>
           hello: Spoštovani %{username},
       conference_venues: Lokacija konference
@@ -517,8 +512,6 @@ sl:
     metrics:
       meetings:
         description: Število ustvarjenih sestankov
-        object: sestanki
-        title: Sestanki
     participatory_processes:
       participatory_process_groups:
         highlighted_meetings:

@@ -2,43 +2,26 @@
 el:
   activemodel:
     attributes:
-      agenda:
-        description: Περιγραφή
-        duration: Διάρκεια
-        title: Τίτλος
       close_meeting:
-        attendees_count: Αριθμός συμμετεχόντων
         attending_organizations: Κατάλογος των οργανισμών που παρευρέθηκαν
         audio_url: URL ήχου
         closing_report: Αναφορά
-        closing_visible: Είναι ορατό
         contributions_count: Αριθμός απαντήσεων
         proposal_ids: Προτάσεις που διατυπώθηκαν στη συνεδρίαση
         video_url: URL βίντεο
       meeting:
-        address: Διεύθυνση
         available_slots: Διαθέσιμες θέσεις για αυτήν τη συνεδρίαση
         customize_registration_email: Προσαρμογή email εγγραφής
-        decidim_category_id: Κατηγορία
         decidim_scope_id: Πεδίο
         decidim_user_group_id: Ομάδα χρήστη
-        description: Περιγραφή
-        end_time: Ώρα λήξης
         id: ταυτότητα
-        location: Τοποθεσία
         location_hints: Οδηγίες τοποθεσίας
         organizer_gid: Δημιουργία ως
         organizer_id: Οργανωτής
         private_meeting: Ιδιωτική συνεδρίαση
         registration_email_custom_content: Προσαρμοσμένο περιεχόμενο email εγγραφής
-        registration_form_enabled: Η φόρμα εγγραφής ενεργοποιήθηκε
-        registration_terms: Όροι εγγραφής
         registration_type: Τύπος εγγραφής
-        registrations_enabled: Οι εγγραφές ενεργοποιήθηκαν
         show_embedded_iframe: Εμφάνιση ενσωματωμένου iframe για αυτήν τη διεύθυνση URL
-        start_time: Ώρα έναρξης
-        title: Τίτλος
-        transparent: Διαφανής
         type_of_meeting: Τύπος
       minutes:
         audio_url: URL ήχου
@@ -64,14 +47,9 @@ el:
             base:
               too_many_minutes: Η διάρκεια των στοιχείων υπερβαίνει τη διάρκεια της συνεδρίασης κατά %{count} λεπτά
               too_many_minutes_child: Η διάρκεια των θυγατρικών στοιχείων υπερβαίνει τη διάρκεια του γονικού στοιχείου ημερήσιας διάταξης "%{parent_title}" κατά %{count} λεπτά
-        meeting_registration_invite:
-          attributes:
-            email:
-              already_invited: Αυτός ο λογαριασμός email έχει ήδη προσκληθεί
     models:
       decidim/meetings/close_meeting_event: Η συνεδρίαση έκλεισε
       decidim/meetings/create_meeting_event: Συνεδρίαση
-      decidim/meetings/meeting_registrations_enabled_event: Οι εγγραφές ενεργοποιήθηκαν
       decidim/meetings/meeting_registrations_over_percentage_event: Οι εγγραφές υπερβαίνουν το όριο
       decidim/meetings/upcoming_meeting_event: Προσεχής συνεδρίαση
       decidim/meetings/update_meeting_event: Η συνεδρίαση επικαιροποιήθηκε
@@ -80,12 +58,6 @@ el:
       decidim/meetings/meeting:
         one: Εκδήλωση
         other: Εκδηλώσεις
-      decidim/meetings/minutes:
-        one: Πρακτικά
-        other: Πρακτικά
-      decidim/meetings/registration:
-        one: Εγγραφή
-        other: Εγγραφές
   decidim:
     admin:
       filters:
@@ -121,22 +93,17 @@ el:
           error: Παρουσιάστηκε πρόβλημα κατά τη δημιουργία διπλότυπων για τη συνεδρίαση.
           success: Δημιουργήθηκε διπλότυπο της συνεδρίασης με επιτυχία.
         new:
-          copy: Αντιγραφή
           select: Επιλογή των δεδομένων για τα οποία θέλετε να δημιουργήσετε αντίγραφο
           title: Δημιουργία διπλότυπου συνεδρίασης
     components:
       meetings:
         actions:
           comment: Σχόλιο
-          join: Συμμετοχή
         name: Εκδηλώσεις που συμβαίνουν τώρα
         settings:
           global:
-            announcement: Ανακοίνωση
-            comments_enabled: Τα σχόλια ενεργοποιήθηκαν
             comments_max_length: Μέγιστο μήκος σχολίων (για την προεπιλεγμένη τιμή πληκτρολογήστε «0»)
             creation_enabled_for_participants: Οι συμμετέχοντες μπορούν να δημιουργούν συνεδριάσεις
-            default_registration_terms: Προεπιλεγμένοι όροι εγγραφής
             enable_pads_creation: Ενεργοποίηση δημιουργίας σημειωματάριων
             maps_enabled: Οι χάρτες ενεργοποιήθηκαν
             registration_code_enabled: Ο κωδικός εγγραφής ενεργοποιήθηκε
@@ -145,7 +112,6 @@ el:
             scopes_enabled: Τα πεδία είναι ενεργοποιημένα
             terms_and_conditions_url_for_meeting_creators: Όροι και προϋποθέσεις URL για δημιουργούς συναντήσεων
           step:
-            announcement: Ανακοίνωση
             comments_blocked: Τα σχόλια απενεργοποιήθηκαν
             creation_enabled_for_participants: Η δημιουργία συνεδρίασης από τους συμμετέχοντες ενεργοποιήθηκε
             creation_enabled_for_user_groups: Η δημιουργία συνεδρίασης από ομάδες χρηστών ενεργοποιήθηκε
@@ -217,13 +183,7 @@ el:
           unearned_own: Δεν έχετε παρευρεθεί σε καμία συνεδρίαση ακόμη.
     meetings:
       actions:
-        agenda: Ημερήσια διάταξη
-        attachment_collections: Φάκελοι
-        attachments: Συνημμένα
-        close: Κλείσιμο
         confirm_destroy: Είστε βέβαιοι ότι θέλετε να διαγράψετε αυτήν τη συνεδρίαση;
-        destroy: Διαγραφή
-        edit: Επεξεργασία
         invalid_destroy:
           proposals_count:
             one: 'Η συνεδρίαση δεν μπορεί να διαγραφεί οριστικά, επειδή υπάρχει %{count} πρόταση που είναι συνδεδεμένη με αυτή:'
@@ -231,37 +191,17 @@ el:
         manage_poll: Διαχείριση δημοσκόπησης
         minutes: Πρακτικά
         new: Νέα συνεδρίαση
-        preview: Προεπισκόπηση
-        registrations: Εγγραφές
-        title: Ενέργειες
       admin:
         agenda:
           agenda_item:
             add_agenda_item_child: Προσθήκη υποστοιχείου ημερήσιας διάταξης
-            agenda_item: Στοιχείο ημερήσιας διάταξης
             agenda_item_children: Υποστοιχεία ημερήσιας διάταξης
-            down: Κάτω
-            remove: Κατάργηση
-            up: Επάνω
           agenda_item_child:
             agenda_item_child: Υποστοιχείο ημερήσιας διάταξης
-            down: Κάτω
-            remove: Κατάργηση
-            up: Επάνω
           create:
             invalid: Παρουσιάστηκε πρόβλημα κατά τη δημιουργία αυτής της ημερήσιας διάταξης
-            success: Η ημερήσια διάταξη δημιουργήθηκε με επιτυχία
           edit:
-            title: Επεξεργασία ημερήσιας διάταξης
             update: Επικαιροποίηση
-          form:
-            add_agenda_item: Προσθήκη στοιχείου ημερήσιας διάταξης
-            agenda_items: Στοιχεία ημερήσιας διάταξης
-            end_date: Ημερομηνία λήξης
-            start_date: Ημερομηνία έναρξης
-          new:
-            create: Δημιουργία
-            title: Νέα ημερήσια διάταξη
           update:
             invalid: Παρουσιάστηκε πρόβλημα κατά την επικαιροποίηση αυτής της ημερήσιας διάταξης
             success: Η ημερήσια διάταξη επικαιροποιήθηκε με επιτυχία
@@ -269,10 +209,8 @@ el:
           answers: Απαντήσεις
           meeting_comments: Σχόλια
           meetings: Συνεδριάσεις
-          registrations: Εγγραφές
         invite_join_meeting_mailer:
           invite:
-            decline: Απόρριψη πρόσκλησης
             invited_you_to_join_a_meeting: Ο χρήστης %{invited_by} σας προσκάλεσε να λάβετε μέρος σε μια συνεδρίαση στην εφαρμογή %{application}. Μπορείτε να απορρίψετε ή να αποδεχτείτε την πρόσκληση μέσω των παρακάτω συνδέσμων.
             join: Συμμετοχή στη συνεδρίαση '%{meeting_title}'
         invites:
@@ -282,24 +220,18 @@ el:
           form:
             attendee_type: Τύπος συμμετέχοντος
             existing_user: Υφιστάμενος συμμετέχων
-            invite: Πρόσκληση
             invite_explanation: Ο συμμετέχων θα προσκληθεί να συμμετάσχει στη συνεδρίαση, καθώς και στον οργανισμό.
             non_user: Μη υφιστάμενος συμμετέχων
             select_user: Επιλογή συμμετέχοντος
           index:
             filter:
               accepted: Έγινε δεκτό
-              all: Όλα
               rejected: Έχουν απορριφθεί
               sent: Εστάλη
-            filter_by: Φιλτράρισμα κατά
             invite_attendee: Πρόσκληση συμμετέχοντος
-            invites: Προσκλήσεις
             registrations_disabled: Δεν μπορείτε να προσκαλέσετε έναν συμμετέχοντα, επειδή οι εγγραφές είναι απενεργοποιημένες.
-            search: Αναζήτηση
         meeting_closes:
           edit:
-            close: Κλείσιμο
             title: Κλείσιμο συνεδρίασης
         meeting_copies:
           form:
@@ -337,16 +269,6 @@ el:
           publish:
             invalid: Παρουσιάστηκε πρόβλημα με τη δημοσίευση αυτής της συνάντησης
             success: Η σύσκεψη δημοσιεύτηκε με επιτυχία
-          service:
-            description: Περιγραφή
-            down: Κάτω
-            remove: Κατάργηση
-            service: Υπηρεσία
-            title: Τίτλος
-            up: Επάνω
-          services:
-            add_service: Προσθήκη υπηρεσίας
-            services: Υπηρεσίες
           unpublish:
             invalid: Παρουσιάστηκε πρόβλημα κατά την κατάργηση της δημοσίευσης αυτής της συνάντησης
             success: Η σύσκεψη καταργήθηκε επιτυχώς
@@ -375,28 +297,18 @@ el:
           meeting:
             name: Συνεδρίαση
         registrations:
-          edit:
-            save: Αποθήκευση
-            validate: Επικύρωση
-            validate_registration_code: Επικύρωση κωδικού εγγραφής
           form:
             available_slots_help: Αφήστε την τιμή 0, εάν έχετε στη διάθεσή σας απεριόριστες θέσεις.
-            invites: Προσκλήσεις
             recommendation_message: Για λόγους προστασίας του απορρήτου, συνιστούμε να διαγράψετε αυτήν τη φόρμα εγγραφής όταν δεν τη χρειάζεστε πλέον. Από προεπιλογή, αυτό συμβαίνει 3 μήνες μετά τη λήξη της συνεδρίασης.
             registration_email_help: Αυτό το κείμενο θα εμφανιστεί στη μέση του email επιβεβαίωσης εγγραφής. Αμέσως μετά τον κωδικό εγγραφής.
-            registration_form: Φόρμα εγγραφής
             registrations_count:
               one: Υπάρχει %{count} εγγραφή.
               other: Υπάρχουν %{count} εγγραφές.
             reserved_slots_help: Αφήστε τη στην τιμή 0, εάν δεν έχετε δεσμευμένες θέσεις
             reserved_slots_less_than: Πρέπει να είναι μικρότερη ή ίση του %{count}
-            title: Εγγραφές
           update:
             invalid: Παρουσιάστηκε πρόβλημα κατά την αποθήκευση των ρυθμίσεων εγγραφής.
             success: Οι ρυθμίσεις των εγγραφών στη συνεδρίαση αποθηκεύτηκαν με επιτυχία.
-          validate_registration_code:
-            invalid: Αυτός ο κωδικός εγγραφής δεν είναι έγκυρος.
-            success: Ο κωδικός εγγραφής επικυρώθηκε με επιτυχία.
       admin_log:
         invite:
           create: Ο χρήστης %{user_name} προσκάλεσε τον χρήστη %{attendee_name} να συμμετάσχει στη συνεδρίαση %{resource_name} στον χώρο %{space_name}
@@ -425,14 +337,12 @@ el:
           all: Ολα
       calendar_modal:
         calendar_url: URL ημερολογίου
-        close_window: Κλείσιμο παραθύρου
         copy_calendar_url: αντίγραφο
         copy_calendar_url_clarification: Αντιγραφή διεύθυνσης URL ημερολογίου στο πρόχειρο
         copy_calendar_url_copied: Αντιγράφηκε!
         copy_calendar_url_description: Μπορείτε να δείτε όλες τις δημοσιευμένες συσκέψεις στην εφαρμογή ή στον πάροχο ημερολογίου σας. Αντιγράψτε και επικολλήστε αυτήν τη διεύθυνση URL στο ημερολόγιό σας χρησιμοποιώντας την επιλογή "Προσθήκη νέου ημερολογίου από μια διεύθυνση URL".
         copy_calendar_url_explanation: Λάβετε υπόψη ότι εξάγετε μια επιλογή συσκέψεων, καθώς υπάρχουν ενεργά φίλτρα. Εάν θέλετε να τα εξαγάγετε όλα, επαναφέρετε πρώτα όλα τα φίλτρα.
         copy_calendar_url_message: Η διεύθυνση URL αντιγράφηκε με επιτυχία στο πρόχειρο.
-        export_calendar: Εξαγωγή ημερολογίου
       close_meeting_reminder_mailer:
         close_meeting_reminder:
           body: 'Σας ευχαριστούμε για τη συμμετοχή σας με τη διοργάνωση της εκδήλωσης <a href="%{meeting_path}">"%{meeting_title}"</a>. Ελπίζουμε η εκδήλωσή σας να ήταν επιτυχημένη και να υπήρξε ζωηρή συμμετοχή στη συζήτηση! Παρακαλείστε να προσθέσετε την έκθεση για την εκδήλωση με το κουμπί «Κλείσιμο της εκδήλωσης» στη σελίδα της εκδήλωσης. <br><br>Χάρη στη δημοσίευση της έκθεσης αυτής, οι πολίτες έχουν πρόσβαση στις ιδέες που ανταλλάχθηκαν κατά την εκδήλωσή σας και οι ιδέες αυτές μπορούν να ληφθούν υπόψη στην ανάλυση, ώστε να υπάρξει κατάλληλη ανατροφοδότηση και να δοθεί συνέχεια. <br><br>Στην έκθεση της εκδήλωσης θα ήταν χρήσιμο να συμπεριληφθούν πληροφορίες σχετικά με το είδος της εκδήλωσης (π.χ. συμμετοχικό εργαστήριο, ανοικτός χώρος, παγκόσμιο καφέ), με τον αριθμό των συμμετασχόντων και με το δημογραφικά τους στοιχεία (π.χ. ηλικία, φύλο), με τα κύρια θέματα που συζητήθηκαν και με τις ιδέες που προτάθηκαν, με τα επιχειρήματα που στήριξαν τις ιδέες αυτές, καθώς και με τη γενική ατμόσφαιρα και την αναμενόμενη συνέχεια. <br><br>Παρακαλείστε να αναφέρετε τον αριθμό των συμμετασχόντων στο ειδικό πεδίο κατά τη συμπλήρωση της έκθεσής σας για την εκδήλωση. Σας παροτρύνουμε επίσης να συνδέσετε τις ιδέες που προέκυψαν κατά την εκδήλωση με τις ιδέες που έχουν ήδη δημοσιευτεί στην πλατφόρμα. <br><br>Αυτό είναι σημαντικό για την ανάλυση που θα διεξαχθεί. Για περισσότερες πληροφορίες, ανατρέξτε στο: <a href="https://diaspora-participation.eu/">https://diaspora-participation.eu/</a>. <br>Η συμμετοχή σας εκτιμήθηκε ιδιαίτερα. Μη διστάσετε να επικοινωνήσετε μαζί μας για τυχόν ερωτήσεις σας.'
@@ -448,7 +358,6 @@ el:
         upcoming_meetings:
           name: Προσεχείς συναντήσεις
           upcoming_meetings: Προσεχείς συναντήσεις
-          view_all_meetings: Προβολή όλων
       directory:
         meetings:
           index:
@@ -509,8 +418,6 @@ el:
           title: Επεξεργασία της εκδήλωσης σας
           update: Επικαιροποίηση
         filters:
-          category: Κατηγορία
-          date: Ημερομηνία
           date_values:
             all: Όλες
             past: Προηγούμενες
@@ -522,7 +429,6 @@ el:
             participants: Άλλες
             user_groups: Ομάδες
           scope: Πεδίο
-          search: Αναζήτηση
           type_values:
             all: Ολα
             hybrid: Υβρίδιο
@@ -530,8 +436,6 @@ el:
             online: Σε σύνδεση
         filters_small_view:
           close_modal: Κλείσιμο αποκλειστικού παραθύρου διαλόγου
-          filter: Φίλτρο
-          filter_by: Φιλτράρισμα κατά
           unfold: Ανάπτυξη
         form:
           address_help: 'Πρέπει να εισάγετε μια ταχυδρομική διεύθυνση, ακόμα κι αν πρόκειται για διαδικτυακή εκδήλωση, προκειμένου η εκδήλωσή σας να εμφανίζεται στον χάρτη. Η διεύθυνση μπορεί να περιορίζεται στον ταχυδρομικό κώδικα και στη χώρα Παράδειγμα: "Rue de la Loi 200, 1000 Brussels, Belgium".'
@@ -561,14 +465,10 @@ el:
           back: Πίσω
           create: Δημιουργία
           title: Δημιουργήστε την εκδήλωσή σας
-        registration_confirm:
-          cancel: Ακύρωση
-          confirm: Επιβεβαίωση
         show:
           attendees: Αριθμός συμμετεχόντων
           back: Επιστροφή στον κατάλογο
           contributions: Αριθμός συνεισφορών
-          date: Ημερομηνία
           edit_close_meeting: Επεξεργασία αναφοράς συνάντησης
           edit_meeting: Επεξεργασία εκδήλωσης
           going: Σε εξέλιξη
@@ -581,16 +481,10 @@ el:
           meeting_minutes: Λεπτά συνάντησης
           meeting_report: Αναφορά της εκδήλωσης
           micro_camera_permissions_warning: Όταν κάνετε κλικ στο κουμπί παρακάτω, θα σας ζητηθούν δικαιώματα μικροφώνου ή/και κάμερας και θα συμμετάσχετε στην τηλεδιάσκεψη
-          no_slots_available: Δεν υπάρχουν διαθέσιμες θέσεις
           organizations: Παρευρισκόμενοι οργανισμοί
-          registration_code_help_text: Ο κωδικός εγγραφής σας
-          registration_state:
-            validated: ΕΠΙΚΥΡΩΘΗΚΕ
-            validation_pending: ΕΚΚΡΕΜΕΙ ΕΠΙΚΥΡΩΣΗ
           remaining_slots:
             one: Απομένει %{count} θέση
             other: Απομένουν %{count} θέσεις
-          view: Προβολή
           visit_finished: Δείτε την προηγούμενη συνάντηση
           withdraw_btn_hint: Μπορείτε να ανακαλέσετε την εκδήλωσή σας αν αλλάξετε γνώμη. Η εκδήλωση δεν διαγράφεται, θα εμφανίζεται στον κατάλογο εκδηλώσεων που ανακλήθηκαν.
           withdraw_confirmation_html: Είστε βέβαιοι ότι θέλετε να ανακαλέσετε την πρόταση;<br><br><strong>Αυτή η ενέργεια δεν μπορεί να ακυρωθεί!</strong>
@@ -603,23 +497,15 @@ el:
       models:
         invite:
           fields:
-            email: Email
-            name: Όνομα
             sent_at: Εστάλη στις
-            status: Κατάσταση
           status:
             accepted: Έγινε δεκτό (%{at})
-            rejected: Απορρίφθηκε (%{at})
             sent: Εστάλη
         meeting:
           fields:
             closed: Έχει κλείσει
-            end_time: Ημερομηνία λήξης
             id: ταυτότητα
-            map: Χάρτης
             official_meeting: Κράτη μέλη & θεσμικά όργανα της ΕΕ
-            start_time: Ημερομηνία έναρξης
-            title: Τίτλος
       polls:
         questions:
           closed_question:
@@ -645,12 +531,10 @@ el:
         hidden_participants_count:
           one: και %{count} ακόμη άτομο
           other: και %{count} ακόμη άτομα
-      read_more: "(διαβάστε περισσότερα)"
       registration_mailer:
         confirmation:
           confirmed_html: Η εγγραφή σας στην εκδήλωση <a href="%{url}">%{title}</a> επιβεβαιώθηκε.
           details: Στο συνημμένο θα βρείτε λεπτομέρειες σχετικά με την εκδήλωση.
-          registration_code: Ο κωδικός εγγραφής σας είναι %{code}.
       registration_type:
         on_this_platform: Σε αυτή την πλατφόρμα
       registrations:
@@ -659,13 +543,11 @@ el:
           success: Έχετε συνδεθεί με επιτυχία στην εκδήλωση. Καθώς έχετε εγγραφεί σε αυτήν την εκδήλωση, θα ειδοποιηθείτε εάν επικαιροποιηθεί.
         decline_invitation:
           invalid: Παρουσιάστηκε πρόβλημα κατά την απόρριψη της πρόσκλησης.
-          success: Απορρίψατε την πρόσκληση με επιτυχία.
         destroy:
           invalid: Παρουσιάστηκε πρόβλημα κατά την αποχώρηση από αυτήν τη συνεδρίαση.
           success: Αποχωρήσατε από τη συνεδρίαση με επιτυχία.
       types:
         private_meeting: Ιδιωτική συνεδρίαση
-        transparent: Διαφανής
         withdraw: Αποτραβηγμένος
       versions:
         back_to_resource: Επιστροφή στην εκδήλωση

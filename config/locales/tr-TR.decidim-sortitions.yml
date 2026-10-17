@@ -3,19 +3,14 @@ tr-TR:
   activemodel:
     attributes:
       sortition:
-        additional_info: Sıralama bilgileri
         decidim_category_id: Çekilişi uygulamak istediğiniz teklif setinin kategorileri
         decidim_proposals_component_id: teklifler seti
         dice: Kalıp rulosunun sonucu. 6 kenarlı bir zar atın veya 1'den 6'ya kadar bir sayı üretmenin başka bir rastgele yolunu arayın ve elde edilen sayıyı bazı tanıkların önünde buraya girin. Bu, sonucun rastgeleliğinin kalitesine ve garantilerine katkıda bulunur.
         target_items: Seçilecek teklif sayısı (önceden seçmiş olduğunuz teklif grubundan kura çekilerek seçilmesini istediğiniz teklif sayısını gösterir)
-        title: Başlık
         witnesses: tanıklar
-    models:
-      decidim/sortitions/create_sortition_event: Sıralama
   activerecord:
     models:
       decidim/sortitions/sortition:
-        one: Sıralama
         other: Sıralamalar
   decidim:
     components:
@@ -37,69 +32,36 @@ tr-TR:
     sortitions:
       admin:
         actions:
-          destroy: Sıralamayı iptal et
           edit: Düzenlemek
-          new: Yeni sıralama
           show: Sıralama ayrıntıları
         models:
           sortition:
             fields:
-              category: Kategori
-              created_at: Oluşturulma tarihi
-              decidim_proposals_component: Teklifler bileşeni
-              dice: Zar
-              reference: Referans
               request_timestamp: Beraberlik zamanı
               seed: Tohum
-              target_items: Seçilecek öğeler
-              title: Başlık
             name:
-              one: Sıralama
               other: Sıralamalar
         sortitions:
           confirm_destroy:
             confirm_destroy: Bu sıralamayı iptal etmek istediğinizden emin misiniz?
-            destroy: Sıralamayı iptal et
-            title: Sıralamanın iptali
           create:
             error: Yeni sıralama oluşturulurken bir sorun oluştu.
-            success: Sıralama başarıyla oluşturuldu
-          destroy:
-            error: Sıralama iptal edilemez.
-            success: Sıralama başarıyla iptal edildi
           edit:
             title: Sıralamayla ilgili bilgileri güncelleyin
             update: Güncelleme
-          form:
-            all_categories: Tüm Kategoriler
-            select_proposal_component: Teklif kümesini seçin
-            title: Teklifler için yeni sıralama
           index:
             title: Sıralamalar
           new:
             confirm: Bir sonraki düğmeye basıldığında platform tarih ve saati (saniye hassasiyetinde) kaydedecek ve zar atışıyla birlikte bu bilgi rastgele bir seçim oluşturmak için kullanılacaktır. İşlem geri alınamaz, butona tıklandığında bu çekilişin sonucu bu forma girilen verilerle birlikte yayınlanır ve değiştirilemez, lütfen içeriği dikkatlice kontrol edin
             create: Yaratmak
-            title: Yeni sıralama
-          show:
-            selected_proposals: Çekiliş için seçilen teklifler
-          update:
-            error: Sıralama güncellenirken bir sorun oluştu.
-            success: Sıralama başarıyla güncellendi
       admin_log:
         sortition:
           create: "%{user_name}, %{resource_name} sıralamasını %{space_name}'de oluşturdu"
           delete: "%{user_name}, %{space_name}'deki %{resource_name} sıralamasını iptal etti"
           update: "%{user_name}, %{resource_name} sıralamasını %{space_name}'de güncelledi"
       sortitions:
-        count:
-          proposals_count:
-            one: 1 teklif
-            other: "%{count} teklif"
         filters:
-          active: Aktif
           all: Tüm
-          cancelled: İptal edildi
-          category: Kategori
           category_prompt: bir kategori seç
           search: Aramak
           state: Durum
@@ -112,40 +74,27 @@ tr-TR:
           selected_proposals: Seçilmiş teklifler
         orders:
           label: 'Sıralamaları şuna göre sırala:'
-          random: Rastgele
           recent: Son
         results_count:
           count:
             one: seçilmiş teklif
             other: seçilmiş teklifler
         show:
-          algorithm: Sıralamanın algoritma kodu
-          any_category: tüm kategorilerden
-          back: Listeye geri dön
           cancelled: Sıralama iptal edildi
           candidate_proposal_ids: Sıralama teklifleri siparişi ve kimlikleri
           candidate_proposals_info: Sıralama, aşağıdaki kimliklerle (seçilen teklifler kalın harflerle) aşağıdaki teklifler (%{category_label}) arasında gerçekleştirildi.
           category: "%{category} kategorisinden"
-          dice_result: "(1) Zar sonucu"
           introduction: Bu sayfa, %{reference} sıralamasının sonuçlarını içerir. Bu sıralama sayesinde aşağıda gösterilen önermeler kümesinden rastgele ve eşit olasılık dağılımı ile %{target_items} sayıda sonuç seçilmiştir. Sonuçlarla birlikte, bu sayfada görüntülenen bilgiler, garantileri en üst düzeye çıkarmak ve sonuçları yeniden oluşturmak için gereken tüm bilgileri sağlar. Bu sıralamanın kalitesinin anahtarı, bir zarın yuvarlanmasıyla sağlanan (tanıklar tarafından doğrulanan) çifte rastgelelik ve rastgele bir seçim oluşturan bir algoritma için girdi sağlayan sıralamanın kesin zamanıdır. Ayıklama için zaman çekirdeği o kadar kesindir (saniye), insanlar tarafından kontrol edilmesi imkansızdır, bu nedenle adil bir sonucu garanti etmek için çift "kontrol edilemez" girdi sağlar.
-          mathematical_result: Sonuç (1) x (2)
-          proposals_selected_by_sortition: Sıralamaya göre seçilen teklifler
           sortition_reproducibility_details: Sıralama tekrar üretilebilirlik ayrıntıları
-          time_seed: "(2) Zaman tohumu"
           witnesses: tanıklar
         sortition:
           random_seed: rastgele tohum
           selected_proposals:
-            one: teklif seçildi
             other: teklifler seçildi
           view: Görüş
         sortition_author:
           deleted: Silinen katılımcı
         sortition_cancel_author:
           deleted: Silinen katılımcı
-        sortitions_count:
-          count:
-            one: 1 sıralama
-            other: "%{count} sıralama"
     statistics:
       sortitions_count: Sıralamalar

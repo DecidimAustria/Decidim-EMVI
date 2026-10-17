@@ -2,20 +2,12 @@
 el:
   activemodel:
     models:
-      decidim/comments/comment_by_followed_user_event: Σχόλιο
-      decidim/comments/comment_created_event: Σχόλιο
       decidim/comments/comment_upvoted_event: Το σχόλιο υπερψηφίστηκε
       decidim/comments/reply_created_event: Απάντηση σε σχόλιο
-      decidim/comments/user_group_mentioned_event: Αναφορά
-      decidim/comments/user_mentioned_event: Αναφορά
   activerecord:
     models:
-      decidim/comments/comment:
-        one: Σχόλιο
-        other: Σχόλια
       decidim/comments/comment_vote:
         one: Ψήφος
-        other: Ψήφοι
   decidim:
     comments:
       admin:
@@ -27,11 +19,8 @@ el:
       comments:
         create:
           error: Παρουσιάστηκε πρόβλημα με τη δημιουργία του σχολίου.
-      comments_count: Αριθμός σχολίων
-      comments_title: Σχόλια
       last_activity:
         new_comment_at_html: "<span>Νέο σχόλιο σε %{link}</span>"
-      view: Προβολή
       votes:
         create:
           error: Παρουσιάστηκε πρόβλημα κατά την ψήφιση του σχολίου.
@@ -40,10 +29,8 @@ el:
         account_message: <a href="%{sign_in_url}">Συνδεθείτε με τον λογαριασμό σας</a> ή <a href="%{sign_up_url}">εγγραφείτε</a>, για να προσθέσετε το σχόλιό σας.
         form:
           body:
-            label: Σχόλιο
             placeholder: Ποια είναι η γνώμη σας;
           form_error: Το κείμενο είναι υποχρεωτικό και δεν μπορεί να υπερβαίνει τους %{length} χαρακτήρες.
-          submit: Αποστολή
           user_group_id:
             label: 'Προσθήκη σχολίου ως:'
         opinion:
@@ -58,24 +45,15 @@ el:
         remaining_characters_1: Απομένουν %{count} χαρακτήρες
         title: Ανάρτηση
       comment:
-        alignment:
-          against: Κατά
-          in_favor: Υπέρ
-        deleted_user: Διαγραμμένος συμμετέχων
-        hide_replies: Απόκρυψη απαντήσεων
         moderated_at: Το σχόλιο εποπτεύτηκε στο %{date}
-        reply: Απάντηση
         report:
-          action: Αναφορά
           already_reported: Έχει ήδη υποβληθεί αναφορά για το περιεχόμενο, το οποίο θα ελεγχθεί από έναν διαχειριστή.
-          close: Κλείσιμο
           description: Είναι κατάλληλο αυτό το περιεχόμενο;
           details: Επιπλέον σχόλια
           reasons:
             does_not_belong: Περιέχει παράνομη δραστηριότητα, απειλές αυτοκτονίας, προσωπικά στοιχεία ή κάποια άλλη πληροφορία που θεωρείτε ότι δεν θα έπρεπε να βρίσκεται εδώ.
             offensive: Περιέχει ρατσιστικά ή σεξιστικά στοιχεία, συκοφαντίες, προσωπικές επιθέσεις, απειλές κατά ζωής, τάσεις αυτοκτονίας ή οποιαδήποτε μορφή ρητορικής μίσους.
             spam: Περιέχει «δόλωμα για κλικ» (clickbait), διαφημίσεις, απάτες ή bot δέσμης ενεργειών.
-          title: Αναφορά ακατάλληλου περιεχομένου
         show_replies: Εμφάνιση %{count} απαντήσεων
         single_comment_link_title: Δημιουργία συνδέσμου
       comment_order_selector:
@@ -84,7 +62,6 @@ el:
           most_discussed: Συζητήθηκαν περισσότερο
           older: Παλαιότερες
           recent: Τι νεότερο υπάρχει;
-        title: 'Ταξινόμηση κατά:'
       comment_thread:
         title: Συνομιλία
       comments:
@@ -92,30 +69,21 @@ el:
         blocked_comments_for_user_warning: Αυτήν τη στιγμή δεν μπορείτε να σχολιάσετε, αλλά μπορείτε να διαβάσετε τα προηγούμενα σχόλια.
         blocked_comments_warning: Αυτήν τη στιγμή τα σχόλια είναι απενεργοποιημένα, αλλά μπορείτε να διαβάσετε τα προηγούμενα σχόλια.
         comment_details_title: Λεπτομέρειες σχολίου
-        loading: Φόρτωση σχολίων...
         single_comment_warning: Μπορείτε να δείτε τα υπόλοιπα σχόλια <a href="%{url}">εδώ</a>.
-        single_comment_warning_title: Βλέπετε ένα μόνο σχόλιο
         title: "%{count} σχόλια"
       down_vote_button:
         text: Διαφωνώ με αυτό το σχόλιο
-      up_vote_button:
-        text: Συμφωνώ με αυτό το σχόλιο
     events:
       comments:
         comment_by_followed_user:
           email_intro: 'Ο συντάκτης %{author_name} έχει υποβάλει σχόλιο στο στοιχείο %{resource_title}. Μπορείτε να το διαβάσετε σε αυτήν τη σελίδα:'
           email_outro: Λάβατε αυτήν την ειδοποίηση, επειδή ακολουθείτε τον συντάκτη %{author_name}. Μπορείτε να καταργήσετε την παρακολούθηση αυτού του χρήστη από τη σελίδα του προφίλ του.
-          email_subject: Υπάρχει ένα νέο σχόλιο από τον συντάκτη %{author_name} στο στοιχείο %{resource_title}
-          notification_title: Υπάρχει ένα νέο σχόλιο από τον συντάκτη <a href="%{author_path}">%{author_name} %{author_nickname}</a> στο στοιχείο <a href="%{resource_path}">%{resource_title}</a>.
         comment_by_followed_user_group:
           email_intro: 'Η ομάδα %{author_name} έχει υποβάλει σχόλιο στο στοιχείο %{resource_title}. Μπορείτε να το διαβάσετε σε αυτήν τη σελίδα:'
           email_outro: Λάβατε αυτήν την ειδοποίηση, επειδή ακολουθείτε τον συντάκτη %{author_name}. Μπορείτε να καταργήσετε την παρακολούθηση αυτής της ομάδας από τη σελίδα του προφίλ της.
-          email_subject: Υπάρχει ένα νέο σχόλιο από τον συντάκτη %{author_name} στο στοιχείο %{resource_title}
-          notification_title: Υπάρχει ένα νέο σχόλιο από τον συντάκτη <a href="%{author_path}">%{author_name} %{author_nickname}</a> στο στοιχείο <a href="%{resource_path}">%{resource_title}</a>.
         comment_created:
           email_intro: 'Έχει υποβληθεί σχόλιο σε %{resource_title}. Μπορείτε να διαβάσετε το σχόλιο σε αυτήν τη σελίδα:'
           email_outro: Λάβατε αυτήν την ειδοποίηση, επειδή ακολουθείτε τον πόρο "%{resource_title}" ή τον συντάκτη του. Μπορείτε να σταματήσετε να τον ακολουθείτε από τον προηγούμενο σύνδεσμο.
-          email_subject: Υπάρχει ένα νέο σχόλιο από τον συντάκτη %{author_name} στο στοιχείο %{resource_title}
           notification_title: Υπάρχει ένα νέο σχόλιο από τον συντάκτη <a href="%{author_path}">%{author_name} %{author_nickname}</a> στο στοιχείο <a href="%{resource_path}">%{resource_title}</a>.
         comment_downvoted:
           email_intro: Το σχόλιό σας στο "%{resource_title}" καταψηφίστηκε. Τώρα έχει συνολικά %{upvotes} υπέρ και %{downvotes} ψήφους κατά.
@@ -129,7 +97,6 @@ el:
           notification_title: Το <a href="%{resource_path}">σχόλιο</a> σας στο "%{resource_title}" υπερψηφίστηκε. Τώρα έχει συνολικά %{upvotes} υπέρ και %{downvotes} αρνητικές ψήφους.
         reply_created:
           email_intro: 'Ο συντάκτης %{author_name} έχει απαντήσει στο σχόλιο που υποβάλατε στο στοιχείο %{resource_title}. Μπορείτε να το διαβάσετε σε αυτήν τη σελίδα:'
-          email_outro: Λάβατε αυτήν την ειδοποίηση, επειδή το σχόλιό σας απαντήθηκε.
           email_subject: Ο συντάκτης %{author_name} έχει απαντήσει στο σχόλιο που υποβάλατε στο στοιχείο %{resource_title}
           notification_title: Ο χρήστης <a href="%{author_path}">%{author_name} %{author_nickname}</a> απάντησε στο σχόλιό σας στο στοιχείο <a href="%{resource_path}">%{resource_title}</a>
         user_group_mentioned:
@@ -145,8 +112,3 @@ el:
     metrics:
       comments:
         description: Αριθμός σχολίων που υποβλήθηκαν από τους συμμετέχοντες
-        object: σχόλια
-        title: Σχόλια
-  errors:
-    messages:
-      cannot_have_comments: δεν μπορεί να έχει σχόλια

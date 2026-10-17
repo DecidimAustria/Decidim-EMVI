@@ -7,68 +7,29 @@ el:
         available_slots: Διαθέσιμες κουλοχέρηδες
         banner_image: Εικόνα πανό
         consultations_ids: Σχετικές Διαβουλεύσεις
-        copy_categories: Αντιγραφή κατηγοριών
-        copy_components: Αντιγραφή στοιχείων
         copy_features: Χαρακτηριστικά αντιγραφής
-        decidim_scope_id: Πεδίο εφαρμογής
-        description: Περιγραφή
-        end_date: Ημερομηνία λήξης
-        hashtag: Hashtag
         hero_image: Αρχική εικόνα
-        location: Τοποθεσία
-        main_logo: Κύριο λογότυπο
-        objectives: Στόχοι
         participatory_processes_ids: Σχετικές συμμετοχικές διαδικασίες
         promoted: Επισημαίνεται
         published_at: Δημοσιεύθηκε στο
-        registration_terms: Όροι εγγραφής
         registrations_enabled: Οι εγγραφές ενεργοποιήθηκαν
-        scope_id: Πεδίο εφαρμογής
         scopes_enabled: Τα πεδία είναι ενεργοποιημένα
-        short_description: Σύντομη περιγραφή
-        show_statistics: Εμφάνιση στατιστικών
-        sign_date: Ημερομηνία υπογραφής
-        signature: Υπογραφή
-        signature_name: όνομα υπογραφής
-        slogan: Σύνθημα
         slug: URL γυμνοσάλιαγκος
-        start_date: Ημερομηνία έναρξης
-        title: Τίτλος
-      conference_media_link:
-        date: Ημερομηνία
-        link: Σύνδεσμος
-        title: Τίτλος
-        weight: Βάρος
       conference_partner:
-        link: Σύνδεσμος
-        logo: Λογότυπο
         name: Ονομα
         partner_type: Τύπος συνεργάτη
-        weight: Βάρος
       conference_registration_invite:
         email: ΗΛΕΚΤΡΟΝΙΚΗ ΔΙΕΥΘΥΝΣΗ
         name: Ονομα
-        registration_type_id: Τύπος εγγραφής
-        user_id: Χρήστης
-      conference_registration_type:
-        description: Περιγραφή
-        price: Τιμή
-        title: Τίτλος
-        weight: Βάρος
       conference_speaker:
-        affiliation: Δεσμός
         avatar: Avatar
-        conference_meeting_ids: Σχετικές συναντήσεις
         full_name: Πλήρες όνομα
         personal_url: Προσωπική διεύθυνση URL
-        position: Θέση
         short_bio: Σύντομο Βιογραφικό
         twitter_handle: Λαβή Twitter
-        user_id: Χρήστης
       conference_user_role:
         email: ΗΛΕΚΤΡΟΝΙΚΗ ΔΙΕΥΘΥΝΣΗ
         name: Ονομα
-        role: Ρόλος
     errors:
       models:
         conference_registration_invite:
@@ -78,7 +39,6 @@ el:
   activerecord:
     models:
       decidim/conference:
-        one: Διάσκεψη
         other: συνέδρια
       decidim/conference_speaker:
         one: Ομιλητής συνεδρίου
@@ -95,7 +55,6 @@ el:
       conference_copies:
         new:
           copy: αντίγραφο
-          select: Επιλέξτε ποια δεδομένα θέλετε να αντιγράψετε
           title: Διπλό συνέδριο
       conference_publications:
         create:
@@ -115,7 +74,6 @@ el:
         destroy:
           success: Ο ομιλητής της διάσκεψης διαγράφηκε με επιτυχία.
         edit:
-          title: Ενημέρωση ομιλητή διάσκεψης.
           update: Εκσυγχρονίζω
         index:
           conference_speakers_title: Ομιλητές του συνεδρίου
@@ -145,22 +103,15 @@ el:
       conferences:
         create:
           error: Παρουσιάστηκε πρόβλημα κατά τη δημιουργία αυτής της διάσκεψης.
-          success: Η διάσκεψη δημιουργήθηκε με επιτυχία.
         edit:
           update: Εκσυγχρονίζω
-        exports:
-          registrations: Εγγραφές
-        form:
-          title: Γενικές πληροφορίες
         index:
           not_published: Δεν δημοσιεύτηκε
           published: Δημοσίευσε
         new:
           create: Δημιουργώ
-          title: Διάσκεψη
         update:
           error: Παρουσιάστηκε πρόβλημα κατά την ενημέρωση αυτής της διάσκεψης.
-          success: Η διάσκεψη ενημερώθηκε με επιτυχία.
       conferences_copies:
         create:
           error: Παρουσιάστηκε πρόβλημα κατά την αντιγραφή αυτής της διάσκεψης.
@@ -168,38 +119,22 @@ el:
       media_links:
         create:
           error: Παρουσιάστηκε πρόβλημα με τη δημιουργία ενός νέου συνδέσμου πολυμέσων.
-          success: Ο σύνδεσμος πολυμέσων δημιουργήθηκε με επιτυχία.
         destroy:
           success: Ο σύνδεσμος πολυμέσων διαγράφηκε επιτυχώς.
         edit:
-          title: Ενημέρωση συνδέσμου πολυμέσων.
           update: Εκσυγχρονίζω
-        index:
-          media_links_title: Σύνδεσμοι πολυμέσων
         new:
           create: Δημιουργώ
-          title: Σύνδεσμος πολυμέσων
         update:
           error: Παρουσιάστηκε πρόβλημα κατά την ενημέρωση αυτού του συνδέσμου πολυμέσων.
-          success: Ο σύνδεσμος πολυμέσων ενημερώθηκε με επιτυχία.
       menu:
         conferences: συνέδρια
         conferences_submenu:
-          attachment_collections: Φάκελοι
-          attachment_files: Αρχεία
-          attachments: Συνημμένα
-          categories: Κατηγορίες
           components: Συστατικά
           conference_admins: Διαχειριστές συνεδρίου
           conference_invites: Προσκαλεί
           conference_speakers: Ηχεία
-          diploma: Πιστοποιητικό παρακολούθησης
-          info: Πληροφορίες
-          media_links: Σύνδεσμοι πολυμέσων
           moderations: Μετριασμούς
-          partners: Συνεργάτες
-          registration_types: Τύποι εγγραφής
-          registrations: Εγγραφές
           user_registrations: Εγγραφές χρηστών
       models:
         conference:
@@ -207,67 +142,43 @@ el:
             created_at: Δημιουργήθηκε στο
             promoted: Επισημαίνεται
             published: Δημοσίευσε
-            title: Τίτλος
         conference_speaker:
           fields:
             affiliation: Δεσμός
             full_name: Πλήρες όνομα
-            position: Θέση
           name: Ομιλητής Συνεδρίου
         conference_user_role:
           fields:
             email: ΗΛΕΚΤΡΟΝΙΚΗ ΔΙΕΥΘΥΝΣΗ
             name: Ονομα
-            role: Ρόλος
           name: Διαχειριστής Συνεδρίου
           roles:
-            admin: Διαχειριστής
-            collaborator: Συνεργάτης
             moderator: Μεσολαβητής
-            valuator: Εκτιμητής
-        media_link:
-          fields:
-            date: Ημερομηνία
-            link: Σύνδεσμος
-            title: Τίτλος
-          name: Σύνδεσμος πολυμέσων
         partner:
           fields:
-            link: Σύνδεσμος
-            logo: Λογότυπο
             name: Ονομα
-            partner_type: Τύπος
           name: Εταίρος
           types:
-            collaborator: Συνεργάτης
             main_promotor: Κύριος προωθητής
         registration_type:
           fields:
             conference_meetings: Συνεδριάσεις συνεδρίων
-            price: Τιμή
             registrations_count: Οι εγγραφές μετράνε
-            title: Τίτλος
             weight: Θέση παραγγελίας
-          name: Τύπος εγγραφής
       partners:
         create:
           error: Παρουσιάστηκε πρόβλημα με την προσθήκη συνεργάτη για αυτό το συνέδριο.
           success: Ο συνεργάτης του συνεδρίου προστέθηκε με επιτυχία.
-        destroy:
-          success: Ο συνεργάτης διάσκεψης καταργήθηκε με επιτυχία.
         edit:
-          title: Ενημέρωση συνεργάτη.
           update: Εκσυγχρονίζω
         new:
           create: Δημιουργώ
-          title: Νέος συνεργάτης
         update:
           error: Παρουσιάστηκε πρόβλημα κατά την ενημέρωση ενός συνεργάτη για αυτό το συνέδριο.
           success: Ο συνεργάτης του συνεδρίου ενημερώθηκε με επιτυχία.
       registration_type_publications:
         create:
           error: Παρουσιάστηκε πρόβλημα με τη δημοσίευση αυτού του τύπου εγγραφής.
-          success: Ο τύπος εγγραφής δημοσιεύτηκε με επιτυχία.
         destroy:
           error: Παρουσιάστηκε πρόβλημα κατά την κατάργηση της δημοσίευσης αυτού του τύπου εγγραφής.
           success: Ο τύπος εγγραφής καταργήθηκε επιτυχώς.
@@ -278,11 +189,9 @@ el:
         destroy:
           success: Ο τύπος εγγραφής συνεδρίου καταργήθηκε με επιτυχία.
         edit:
-          title: Ενημέρωση τύπου εγγραφής.
           update: Εκσυγχρονίζω
         new:
           create: Δημιουργώ
-          title: Νέος τύπος εγγραφής
         update:
           error: Παρουσιάστηκε πρόβλημα κατά την ενημέρωση ενός τύπου εγγραφής για αυτό το συνέδριο.
           success: Ο τύπος εγγραφής συνεδρίου ενημερώθηκε με επιτυχία.
@@ -320,9 +229,6 @@ el:
         create: Ο %{user_name} δημιούργησε τον σύνδεσμο πολυμέσων %{resource_name} στη διάσκεψη %{space_name}
         delete: Ο %{user_name} αφαίρεσε τον σύνδεσμο πολυμέσων %{resource_name} από τη διάσκεψη %{space_name}
         update: Ο %{user_name} ενημέρωσε τον σύνδεσμο πολυμέσων %{resource_name} στη διάσκεψη %{space_name}
-    conference_program:
-      index:
-        title: Πρόγραμμα
     conference_speakers:
       index:
         title: Ηχεία
@@ -337,35 +243,19 @@ el:
             success: Ο συμμετέχων προσκλήθηκε επιτυχώς να συμμετάσχει στο συνέδριο.
           form:
             attendee_type: Τύπος παρευρισκομένου
-            existing_user: Υπάρχων συμμετέχων
             invite_explanation: Ο συμμετέχων θα προσκληθεί να συμμετάσχει στο συνέδριο και στον οργανισμό επίσης.
             non_user: Μη υπάρχων συμμετέχων
-            select_user: Επιλέξτε συμμετέχοντα
           index:
             filter:
               accepted: Αποδεκτό
               all: Ολα
-              rejected: Απορρίφθηκε
               sent: Απεσταλμένα
-            filter_by: Φιλτράρισμα κατά
             invite_attendee: Προσκαλέστε τον συμμετέχοντα
             invites: Προσκαλεί
-            search: Αναζήτηση
           new:
             explanation: Ο συμμετέχων θα προσκληθεί να συμμετάσχει σε ένα συνέδριο. Εάν το email τους δεν είναι καταχωρημένο, θα προσκληθούν επίσης στον οργανισμό.
             invite: Καλώ
             new_invite: Προσκαλέστε τον συμμετέχοντα
-        conference_registrations:
-          index:
-            registrations: Εγγραφές
-        conference_speakers:
-          form:
-            existing_user: Υπάρχων συμμετέχων
-            non_user: Μη συμμετέχων
-            select_user: Επιλέξτε συμμετέχοντα
-            user_type: Τύπος συμμετέχοντα
-          index:
-            search: Αναζήτηση
         conferences:
           form:
             available_slots_help: Αφήστε το στο 0 αν έχετε απεριόριστους διαθέσιμους κουλοχέρηδες.
@@ -376,27 +266,20 @@ el:
         diplomas:
           edit:
             save: Σώσει
-            title: Πιστοποιητικό παρακολούθησης
         invite_join_conference_mailer:
           invite:
             decline: Απόρριψη πρόσκλησης "%{conference_title}"
             invited_existing_user_to_join_a_conference: Ο %{invited_by} σας προσκάλεσε να συμμετάσχετε σε ένα συνέδριο στο %{application}. Μπορείτε να το απορρίψετε ή να το αποδεχτείτε μέσω των παρακάτω συνδέσμων.
             invited_user_to_join_a_conference: Ο %{invited_by} σας προσκάλεσε να συμμετάσχετε σε ένα συνέδριο στο %{application}. Μπορείτε να το αποδεχτείτε μέσω του παρακάτω συνδέσμου.
             registration: Εγγραφή για '%{conference_title}'
-        partners:
-          index:
-            title: Συνεργάτες
         registration_types:
           form:
             select_conference_meetings: Επιλέξτε συναντήσεις συνεδρίων
-          index:
-            title: Τύποι εγγραφής
         send_conference_diploma_mailer:
           diploma:
             diploma_html: Το πιστοποιητικό παρακολούθησης του συνεδρίου <a href="%{url}">%{title}</a> θα το βρείτε στα συνημμένα.
           diploma_user:
             attendance_verified_by: Η συμμετοχή επαληθεύτηκε από
-            certificate_of_attendance: Πιστοποιητικό παρακολούθησης
             certificate_of_attendance_description: Αυτό γίνεται για να πιστοποιηθεί ότι ο <strong>%{user}</strong> παρακολούθησε και έλαβε μέρος στο <strong>%{title}</strong> που πραγματοποιήθηκε στο <strong>%{location}</strong> στις <strong>%{start} - %{end}</strong>
         send_diploma:
           error: Παρουσιάστηκε πρόβλημα με την αποστολή των πιστοποιητικών παρακολούθησης του συνεδρίου.
@@ -409,23 +292,15 @@ el:
           free: Ελεύθερος
           going: Παρακολούθηση
           no_slots_available: Δεν υπάρχουν διαθέσιμοι κουλοχέρηδες
-          registration: Εγγραφή
       conference_program:
         program_meeting:
-          content: Περιεχόμενο
-          location: Τοποθεσία
           speakers: Ηχεία
-          streaming: Ροή
-        show:
-          day: Ημέρα
-          program: Πρόγραμμα
       conference_registration_mailer:
         confirmation:
           confirmed_html: Η εγγραφή σας για το συνέδριο <a href="%{url}">%{title}</a> έχει επιβεβαιωθεί.
           details_1: 'Είστε εγγεγραμμένοι στο συνέδριο με τον τύπο %{registration_type}. Έχει κόστος %{price} και μπορείτε να παρακολουθήσετε τις ακόλουθες εκδηλώσεις:'
           details_2: Θα βρείτε λεπτομέρειες για το συνέδριο στο συνημμένο.
         pending_validation:
-          confirmation_pending: Θα λάβετε την επιβεβαίωση σύντομα
           details: 'Έχετε εγγραφεί στον τύπο %{registration_type} με κόστος %{price} και μπορείτε να παρακολουθήσετε τις ακόλουθες εκδηλώσεις:'
           pending_html: Η εγγραφή σας για το συνέδριο <a href="%{url}">%{title}</a> εκκρεμεί επιβεβαίωση.
       conference_registrations:
@@ -442,11 +317,7 @@ el:
           success: Αποχωρήσατε επιτυχώς από το συνέδριο.
       conference_speaker:
         go_to_twitter: Μεταβείτε στο Twitter
-        more_info: περισσότερες πληροφορίες
         personal_website: Προσωπική ιστοσελίδα
-        show:
-          more_info: περισσότερες πληροφορίες
-          speaking_at: Μιλώντας στο
       conference_speaker_cell:
         personal_url:
           personal_website: Προσωπική ιστοσελίδα
@@ -456,11 +327,7 @@ el:
         index:
           speakers: Ηχεία
       conferences:
-        partners:
-          collaborators: Συνεργάτες
-          main_promotors: Διοργανωτές
         show:
-          login_as: Έχετε συνδεθεί ως %{name} <%{email}>
           make_conference_registration: 'Κάντε την εγγραφή σας στο συνέδριο:'
           register: Κανω ΕΓΓΡΑΦΗ
       content_blocks:
@@ -485,19 +352,14 @@ el:
           fields:
             email: ΗΛΕΚΤΡΟΝΙΚΗ ΔΙΕΥΘΥΝΣΗ
             name: Ονομα
-            registration_type: Τύπος εγγραφής
             sent_at: Στάλθηκε στο
-            status: Κατάσταση
           status:
             accepted: Αποδεκτό (%{at})
-            rejected: Απορρίφθηκε (%{at})
             sent: Απεσταλμένα
         conference_registration:
           fields:
             email: ΗΛΕΚΤΡΟΝΙΚΗ ΔΙΕΥΘΥΝΣΗ
             name: Ονομα
-            registration_type: Τύπος εγγραφής
-            state: Κατάσταση
             states:
               confirmed: Επιβεβαιωμένος
               pending: εκκρεμής
@@ -507,33 +369,23 @@ el:
             active_conferences: Ενεργά συνέδρια
             see_all_conferences: Δείτε όλα τα συνέδρια
       photo:
-        image:
-          attributes:
-            alt: Εικόνα πολυμέσων
         show:
           close_modal: Κλείστε το modal
-          photo: Εικόνα
       photos_list:
         show:
           related_photos: εικόνες
       registration_types:
         index:
           choose_an_option: 'Επιλέξτε την επιλογή εγγραφής σας:'
-          login_as: Έχετε συνδεθεί ως %{name} <%{email}>
           no_registrations: Χωρίς εγγραφές
           register: Κανω ΕΓΓΡΑΦΗ
-          title: Τύποι εγγραφής
       shared:
         conference_user_login:
-          already_account: Έχετε ήδη λογαριασμό στο decidim;
           new_user: Νέος χρήστης?
           sign_in: Συνδεθείτε για να εγγραφείτε στο συνέδριο
           sign_up: Δημιουργήστε έναν λογαριασμό in decidim για να εγγραφείτε στο συνέδριο
       show:
         details: Λεπτομέριες
-        introduction: Εισαγωγή
-        objectives: Στόχοι
-        related_assemblies: Σχετικές συνελεύσεις
         related_consultations: Σχετικές Διαβουλεύσεις
         related_participatory_processes: Σχετικές συμμετοχικές διαδικασίες
     events:
@@ -551,7 +403,6 @@ el:
           email_intro: 'Το συνέδριο "%{resource_title}" ενημερώθηκε. Μπορείτε να διαβάσετε τη νέα έκδοση από τη σελίδα του:'
           email_outro: Έχετε λάβει αυτήν την ειδοποίηση επειδή παρακολουθείτε τη διάσκεψη "%{resource_title}". Μπορείτε να το καταργήσετε από τον προηγούμενο σύνδεσμο.
           email_subject: Το συνέδριο "%{resource_title}" ενημερώθηκε
-          notification_title: Η διάσκεψη <a href="%{resource_path}">%{resource_title}</a> ενημερώθηκε.
         registrations_enabled:
           email_intro: 'Το συνέδριο "%{resource_title}" έχει ενεργοποιήσει τις εγγραφές. Μπορείτε να εγγραφείτε στη σελίδα του:'
           email_outro: Έχετε λάβει αυτήν την ειδοποίηση επειδή παρακολουθείτε τη διάσκεψη "%{resource_title}". Μπορείτε να το καταργήσετε από τον προηγούμενο σύνδεσμο.
@@ -598,7 +449,6 @@ el:
           take_part: Συμμετέχω
       conferences:
         conference:
-          more_info: Περισσότερες πληροφορίες
           take_part: Συμμετέχω
         index:
           promoted_conferences: Επισημασμένα συνέδρια
@@ -607,11 +457,8 @@ el:
             one: "%{count} συνέδριο"
             other: "%{count} συνέδρια"
         promoted_conference:
-          more_info: Περισσότερες πληροφορίες
           take_part: Συμμετέχω
       conferences_nav:
-        conference_menu_item: Πληροφορίες
-        conference_partners_menu_item: Συνεργάτες
         conference_speaker_menu_item: Ηχεία
         media: Μεσο ΜΑΖΙΚΗΣ ΕΝΗΜΕΡΩΣΗΣ
         venues: Χώροι διεξαγωγής

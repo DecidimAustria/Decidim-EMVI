@@ -6,16 +6,12 @@ tr-TR:
         description: Tanım
         image: resim
         proposals: ilgili teklifler
-        title: Başlık
       election:
         description: Tanım
         end_time: oylama biter
         start_time: oylama başlar
-        title: Başlık
       question:
-        max_selections: Maksimum seçim sayısı
         min_selections: Yukarıdaki seçeneklerin hiçbiri
-        title: Başlık
       voting:
         banner_image: Afiş resmi
         census_contact_information: Nüfus sayımı iletişim bilgileri
@@ -42,8 +38,6 @@ tr-TR:
           attributes:
             name:
               cant_be_changed: değiştirilemez
-            public_key:
-              cant_be_changed: değiştirilemez
         voting:
           attributes:
             voting_type:
@@ -63,14 +57,9 @@ tr-TR:
               different_voting: Sandık görevlisi, sandık görevlisi ile aynı oy verme yerinde bulunmalıdır.
     models:
       decidim/elections/answer:
-        one: Cevap
         other: Yanıtlar
       decidim/elections/election:
-        one: Seçim
         other: seçimler
-      decidim/elections/question:
-        one: Soru
-        other: Sorular
       decidim/voting:
         one: oylama
         other: oylamalar
@@ -122,24 +111,15 @@ tr-TR:
         actions:
           vote: Oy
         name: seçimler
-        settings:
-          global:
-            announcement: Duyuru
-          step:
-            announcement: Duyuru
     elections:
       actions:
-        confirm_destroy: Emin misin?
         destroy: Tahrip etmek
         edit: Düzenlemek
         feedback: seçmen geri bildirimi
         import: Teklifleri yanıtlara aktar
         manage_answers: Yanıtları yönet
-        manage_questions: Soruları yönet
         manage_steps: Adımları yönet
-        new: Yeni %{name}
         preview: Ön izleme
-        publish: Yayınla
         title: Hareketler
         unpublish: yayından kaldır
       admin:
@@ -149,19 +129,13 @@ tr-TR:
             success: Yanıt başarıyla oluşturuldu
           destroy:
             invalid: Bu yanıt silinirken bir sorun oluştu
-            success: Yanıt başarıyla silindi
-          edit:
-            title: Cevabı düzenle
-            update: Cevabı güncelle
           index:
             invalid_max_selections: Maksimum seçimi eşleştirmek için %{missing_answers} yanıta daha ihtiyacınız var
             title: Yanıtlar
           new:
-            create: Cevap oluştur
             title: yeni cevap
           not_selected: Seçili değil
           select:
-            disable: Cevabın seçimini kaldır
             enable: Cevabı seçili olarak işaretle
             invalid: Bu yanıt seçilirken bir sorun oluştu
             success: Yanıt başarıyla seçildi
@@ -175,26 +149,11 @@ tr-TR:
         elections:
           create:
             invalid: Bu seçim oluşturulurken bir sorun oluştu
-            success: Seçim başarıyla oluşturuldu
-          destroy:
-            invalid: Bu seçim silinirken bir sorun oluştu
-            success: Seçim başarıyla silindi
-          edit:
-            title: Seçimi düzenle
-            update: Seçimi güncelle
           index:
             no_bulletin_board: Bu modülü kullanmak için gerekli olan yapılandırılmış bir <a href="https://github.com/decidim/decidim-bulletin-board">Bülten Tahtası sunucusu</a> yok. Bu görev Sistem Yöneticisi tarafından yapılmalıdır.
             title: seçimler
-          new:
-            create: Seçim oluştur
-            title: Yeni seçim
-          publish:
-            success: Seçim başarıyla yayınlandı.
           unpublish:
             success: Seçim başarıyla yayından kaldırıldı.
-          update:
-            invalid: Bu seçim güncellenirken bir sorun oluştu
-            success: Seçim başarıyla güncellendi
         exports:
           elections: seçimler
           feedback_form_answers: Geri bildirim formu yanıtları
@@ -206,42 +165,25 @@ tr-TR:
         menu:
           trustees: mütevelliler
         models:
-          answer:
-            name: Cevap
-          election:
-            name: Seçim
-          question:
-            name: Soru
           trustee:
             name: mütevelli
         proposals_imports:
           create:
             invalid: Teklifler yanıtlara aktarılırken bir sorun oluştu
-            success: "%{number} teklif başarıyla yanıtlara aktarıldı"
           new:
             create: Teklifleri yanıtlara aktar
-            no_components: Bu katılımcı alanda, teklifleri yanıtlara aktarmak için başka teklif bileşeni yoktur.
             select_component: Lütfen bir bileşen seçin
-            title: Teklifleri içe aktar
         questions:
           create:
             election_started: Seçim çoktan başladı
             invalid: Bu soru oluşturulurken bir sorun oluştu
-            success: Soru başarıyla oluşturuldu
-          destroy:
-            invalid: Bu soru silinirken bir sorun oluştu
-            success: Soru başarıyla silindi
           edit:
             title: Soruyu düzenle
-            update: Soruyu güncelle
-          index:
-            title: Sorular
           new:
             create: Soru oluştur
             title: yeni soru
           update:
             invalid: Bu soru güncellenirken bir sorun oluştu
-            success: Soru başarıyla güncellendi
         steps:
           create_election:
             census: nüfus sayımı
@@ -359,7 +301,6 @@ tr-TR:
             title: mütevelliler
           new:
             create: Mütevelli Oluştur
-            title: Yeni Vekil
           update:
             invalid: "%{trustee} mütevellisi güncellenirken bir sorun oluştu"
             success: Trustee %{trustee} başarıyla güncellendi
@@ -388,8 +329,6 @@ tr-TR:
             title: Bir şeyler yanlış gitti
       election_m:
         badge_name:
-          finished: Bitti
-          ongoing: Aktif
           upcoming: Yaklaşan
         end_date: biter
         footer:
@@ -403,7 +342,6 @@ tr-TR:
           date: Tarih
         questions: Sorular %{count}
         start_date: başlar
-        unspecified: Belirtilmemiş
       elections:
         count:
           elections_count:
@@ -455,10 +393,8 @@ tr-TR:
             started: Oylama süreci başladı.
           vote_title: oylama süreci
         filters:
-          active: Aktif
           all: Tüm
           date: Tarih
-          finished: Bitti
           search: Aramak
           upcoming: Yaklaşan
         filters_small_view:
@@ -469,22 +405,17 @@ tr-TR:
         preview:
           available_answers: 'Mevcut cevaplar:'
           description: 'Oylama sürecinde bulacağınız sorular şunlardır:'
-          title: Seçim soruları
         results:
           description: 'Her soru için yapılan oylamanın sonuçları şöyle:'
           percentage: "%{count}%"
           selected: Seçilmiş
-          title: Seçim sonuçları
           votes:
-            one: "%{count} oy"
-            other: "%{count} oy"
             zero: "%{count} oy"
         show:
           action_button:
             change_vote: Oyunuzu değiştirin
             vote: Oylamaya başla
             vote_again: Tekrar oyla
-          back: Mevcut seçimler
           callout:
             already_voted: Bu seçimde zaten oy kullandınız. Oyunuzu değiştirebilir veya doğrulayabilirsiniz.
             pending_vote: Oyunuz sunucuda kullanılıyor.
@@ -496,38 +427,31 @@ tr-TR:
             verify_here: Oyunuzu buradan kontrol edin.
             will_verify: Seçim başladıktan sonra oyunuzu doğrulayabileceksiniz.
           voting_period_status:
-            finished: Oylama %{start_time} tarihinde başladı ve %{end_time} tarihinde sona erdi
             ongoing: 'Şu tarihe kadar aktif oylama: %{end_time}'
-            upcoming: Oylama %{start_time} tarihinde başlıyor
       feedback:
         answer:
           invalid: Geri bildiriminiz gönderilirken bir sorun oluştu.
           spam_detected: Form yanıtlanırken bir sorun oluştu. Belki çok hızlı oldun, tekrar deneyebilir misin?
-          success: Geri bildirim başarıyla gönderildi.
       models:
         answer:
           fields:
             proposals: teklifler
             selected: Seçildi
-            title: Başlık
             votes: oylar
         election:
           fields:
             bb_status: Bülten Tahtası durumu
             end_time: Sonunda
             start_time: başlar
-            title: Başlık
             verifiable_results_file_hash: Dosya SHA256 sağlama toplamı
             verifiable_results_file_url: Doğrulanabilir seçim dosyası
         question:
           fields:
             answers: Yanıtlar
             max_selections: Maks. seçimler
-            title: Başlık
         trustees_participatory_space:
           fields:
             considered: dikkate alınan
-            email: E-posta
             inactive: etkin değil
             name: İsim
             notification: bildirim gönderildi
@@ -535,7 +459,6 @@ tr-TR:
             status: Durum
       orders:
         label: 'Seçimleri şuna göre sırala:'
-        older: Daha eski
         recent: Son
       trustee_zone:
         elections:
@@ -604,7 +527,6 @@ tr-TR:
                   name: Eylem Gerekli?
                   'true': Eylem gerçekleştir
                 bb_status: Durum
-                election: Seçim
                 voting_period: oylama dönemi
               no_elections: Kayyum olarak hareket ettiğiniz bir seçim yoktur.
               title: seçimler
@@ -614,14 +536,11 @@ tr-TR:
               generate_error: Tanımlama anahtarları oluşturulurken bir hata oluştu.
               generate_legend: Seçimlere Mütevelli olarak katılmak için bir kimlik anahtarı çifti oluşturmanız gerekir.
               generate_legend_1: Düğmeye bastıktan sonra, oluşturulan tanımlama anahtarlarını içeren dosyayı indirmelisiniz.
-              generate_legend_2: İndirilen dosyayı temiz bir USB cihazına kopyalayın
               generate_legend_3: Bilgisayarınızda dosyanın bir kopyası olmadığından emin olun (örn. İndirilenler ve Masaüstü klasörlerini kontrol edin).
               generate_legend_4: Dosyanın başka bir kopyasını farklı bir harici aygıtta oluşturun ve çok güvenli bir yerde saklayın.
               submit: Göndermek
               submit_legend: Yukarıda açıklanan tüm adımları izledikten sonra, genel tanımlama anahtarını sunucuya gönderme işlemini tamamlayın.
-              submit_title: Genel kimlik anahtarını gönderin
               title: Yediemin kimlik anahtarları
-              upload: Kimlik anahtarlarınızı yükleyin
               upload_error:
                 invalid_format: Yüklenen dosya herhangi bir tanımlama anahtarı içermiyor.
                 invalid_key: Yüklenen dosyadaki tanımlama anahtarları yüklenemiyor.
@@ -644,7 +563,6 @@ tr-TR:
           header: Oy vermek...
           text: Oylarınız sandıkta atılıyor.
         confirm:
-          answer: Cevap
           answer_number: cevap %{number}
           confirm: Onaylamak
           edit: düzenlemek
@@ -685,9 +603,7 @@ tr-TR:
           proposal_header: 'teklifler:'
         new:
           answer_choices: En fazla %{choices} yanıt seçebilirsiniz
-          more_information: Daha fazla bilgi
           nota_option: Boş/Yukarıdakilerin hiçbiri
-          preview_alert: Bu, oylama kabininin bir önizlemesidir.
           question_steps: Soru %{current_step} / %{total_steps}
           selections: "%{selected} / %{max_selections}<br> seçim"
         onboarding_modal:
@@ -715,12 +631,6 @@ tr-TR:
           success:
             header: Bulunan oy!
             info: Şifreli oyunuzu %{link} sandıkta
-        voting_step:
-          back: Geri
-          continue: Sonraki
-      warnings:
-        no_elections_warning: Arama kriterlerinize uyan seçim yok veya planlanmış bir seçim yok.
-        no_scheduled_elections_warning: Şu anda planlanmış bir seçim yok, ancak burada listelenen tüm geçmiş seçimleri bulabilirsiniz.
     events:
       elections:
         election_published:

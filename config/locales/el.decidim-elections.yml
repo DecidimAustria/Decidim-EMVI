@@ -2,20 +2,10 @@
 el:
   activemodel:
     attributes:
-      answer:
-        description: Περιγραφή
-        image: Εικόνα
-        proposals: Σχετικές προτάσεις
-        title: Τίτλος
       election:
-        description: Περιγραφή
-        end_time: Η ψηφοφορία λήγει στις
         start_time: Έναρξη ψηφοφορίας στις
-        title: Τίτλος
       question:
-        max_selections: Μέγιστος αριθμός επιλογών
         min_selections: Καμία από τις παραπάνω επιλογές
-        title: Τίτλος
       voting:
         banner_image: Εικόνα πανό
         census_contact_information: Στοιχεία επικοινωνίας απογραφής
@@ -62,15 +52,8 @@ el:
             polling_station_president:
               different_voting: Ο εκλογικός υπάλληλος πρέπει να έχει την ίδια ψηφοφορία με το εκλογικό τμήμα
     models:
-      decidim/elections/answer:
-        one: Απάντηση
-        other: Απαντήσεις
       decidim/elections/election:
-        one: Εκλογή
         other: Αρχαιρεσίες
-      decidim/elections/question:
-        one: Ερώτηση
-        other: Ερωτήσεις
       decidim/voting:
         one: Ψηφοφορία
         other: Ψηφοφορίες
@@ -122,43 +105,25 @@ el:
         actions:
           vote: Ψήφος
         name: Αρχαιρεσίες
-        settings:
-          global:
-            announcement: Ανακοίνωση
-          step:
-            announcement: Ανακοίνωση
     elections:
       actions:
         confirm_destroy: Είσαι σίγουρος?
         destroy: Καταστρέφω
-        edit: Επεξεργασία
         feedback: Σχόλια ψηφοφόρων
-        import: Εισαγωγή προτάσεων σε απαντήσεις
         manage_answers: Διαχειριστείτε τις απαντήσεις
         manage_questions: Διαχειριστείτε ερωτήσεις
         manage_steps: Διαχείριση βημάτων
         new: Νέο %{name}
-        preview: Προεπισκόπηση
         publish: Δημοσιεύω
-        title: Ενέργειες
         unpublish: Κατάργηση δημοσίευσης
       admin:
         answers:
           create:
             invalid: Παρουσιάστηκε πρόβλημα κατά τη δημιουργία αυτής της απάντησης
-            success: Η απάντηση δημιουργήθηκε με επιτυχία
           destroy:
             invalid: Παρουσιάστηκε πρόβλημα κατά τη διαγραφή αυτής της απάντησης
-            success: Η απάντηση διαγράφηκε με επιτυχία
-          edit:
-            title: Επεξεργασία απάντησης
-            update: Ενημέρωση απάντησης
           index:
             invalid_max_selections: Χρειάζεστε %{missing_answers} περισσότερες απαντήσεις για να ταιριάξετε τις μέγιστες επιλογές
-            title: Απαντήσεις
-          new:
-            create: Δημιουργία απάντησης
-            title: Νέα απάντηση
           not_selected: Μη επιλεγμένο
           select:
             disable: Καταργήστε την επιλογή απάντησης
@@ -171,14 +136,11 @@ el:
             success: Η απάντηση καταργήθηκε με επιτυχία
           update:
             invalid: Παρουσιάστηκε πρόβλημα με την ενημέρωση αυτής της απάντησης
-            success: Η απάντηση ενημερώθηκε με επιτυχία
         elections:
           create:
             invalid: Παρουσιάστηκε πρόβλημα κατά τη δημιουργία αυτών των εκλογών
-            success: Η εκλογή δημιουργήθηκε με επιτυχία
           destroy:
             invalid: Παρουσιάστηκε πρόβλημα κατά τη διαγραφή αυτών των εκλογών
-            success: Η εκλογή διαγράφηκε με επιτυχία
           edit:
             title: Επεξεργασία εκλογών
             update: Ενημέρωση εκλογών
@@ -194,7 +156,6 @@ el:
             success: Οι εκλογές δεν δημοσιεύθηκαν με επιτυχία.
           update:
             invalid: Παρουσιάστηκε πρόβλημα με την ενημέρωση αυτών των εκλογών
-            success: Η εκλογή ενημερώθηκε με επιτυχία
         exports:
           elections: Αρχαιρεσίες
           feedback_form_answers: Απαντήσεις από τη φόρμα ανατροφοδότησης
@@ -206,12 +167,6 @@ el:
         menu:
           trustees: Διαχειριστές
         models:
-          answer:
-            name: Απάντηση
-          election:
-            name: Εκλογή
-          question:
-            name: Ερώτηση
           trustee:
             name: Θεματοφύλακας
         proposals_imports:
@@ -219,29 +174,17 @@ el:
             invalid: Παρουσιάστηκε πρόβλημα κατά την εισαγωγή των προτάσεων στις απαντήσεις
             success: "%{number} προτάσεις εισήχθησαν με επιτυχία στις απαντήσεις"
           new:
-            create: Εισαγωγή προτάσεων σε απαντήσεις
             no_components: Δεν υπάρχουν άλλα στοιχεία πρότασης σε αυτόν τον συμμετοχικό χώρο για την εισαγωγή των προτάσεων σε απαντήσεις.
-            select_component: Επιλέξτε ένα στοιχείο
             title: Εισαγωγικές προτάσεις
         questions:
           create:
             election_started: Οι εκλογές έχουν ήδη ξεκινήσει
             invalid: Παρουσιάστηκε πρόβλημα κατά τη δημιουργία αυτής της ερώτησης
-            success: Η ερώτηση δημιουργήθηκε με επιτυχία
           destroy:
             invalid: Παρουσιάστηκε πρόβλημα κατά τη διαγραφή αυτής της ερώτησης
             success: Η ερώτηση διαγράφηκε επιτυχώς
-          edit:
-            title: Επεξεργασία ερώτησης
-            update: Ενημέρωση ερώτησης
-          index:
-            title: Ερωτήσεις
-          new:
-            create: Δημιουργία ερώτησης
-            title: Νέα ερώτηση
           update:
             invalid: Παρουσιάστηκε πρόβλημα κατά την ενημέρωση αυτής της ερώτησης
-            success: Η ερώτηση ενημερώθηκε με επιτυχία
         steps:
           create_election:
             census: Απογραφή
@@ -507,23 +450,18 @@ el:
       models:
         answer:
           fields:
-            proposals: Προτάσεις
             selected: Επιλεγμένο
-            title: Τίτλος
             votes: Ψήφοι
         election:
           fields:
             bb_status: Κατάσταση πίνακα ανακοινώσεων
             end_time: Τέλος στο
             start_time: Αρχίζει στις
-            title: Τίτλος
             verifiable_results_file_hash: Αρχείο SHA256 checksum
             verifiable_results_file_url: Επαληθεύσιμο εκλογικό αρχείο
         question:
           fields:
-            answers: Απαντήσεις
             max_selections: Μέγιστη. επιλογές
-            title: Τίτλος
         trustees_participatory_space:
           fields:
             considered: λαμβάνονται υπόψη

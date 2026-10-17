@@ -59,7 +59,6 @@ sr-CS:
       posts:
         show:
           back: Povratak na popis
-          comments: Komentari
           view: Pogled
         sidebar_blog:
           comments: komentari
@@ -76,8 +75,7 @@ sr-CS:
           global:
             announcement: Obavijest
             comments_enabled: Komentari omogućeni
-            comments_max_length: Maksimalna duljina komentara (ostavite 0 za zadanu
-              vrijednost)
+            comments_max_length: Maksimalna duljina komentara (ostavite 0 za zadanu vrijednost)
           step:
             announcement: Obavijest
             comments_blocked: Komentari blokirani
@@ -86,12 +84,9 @@ sr-CS:
     events:
       blogs:
         post_created:
-          email_intro: Post "%{resource_title}" objavljen je u "%{participatory_space_title}"
-            koji pratite.
-          email_outro: Primili ste ovu obavijest jer pratite "%{participatory_space_title}".
-            Možete ga prestati pratiti s prethodne poveznice.
+          email_intro: Post "%{resource_title}" objavljen je u "%{participatory_space_title}" koji pratite.
+          email_outro: Primili ste ovu obavijest jer pratite "%{participatory_space_title}". Možete ga prestati pratiti s prethodne poveznice.
           email_subject: Novi post objavljen u %{participatory_space_title}
-          notification_title: Post <a href="%{resource_path}">%{resource_title}</a>
-            je objavljen u %{participatory_space_title}
+          notification_title: Post <a href="%{resource_path}">%{resource_title}</a> je objavljen u %{participatory_space_title}
     statistics:
       posts_count: Postovi

@@ -1,17 +1,11 @@
 ---
 tr-TR:
-  activerecord:
-    models:
-      decidim/pages/page:
-        one: Sayfa
-        other: Sayfalar
   decidim:
     admin_log:
       page:
         update: "%{user_name}, %{resource_name} sayfasını %{space_name}'de güncelledi"
     components:
       pages:
-        name: Sayfa
         settings:
           global:
             announcement: Duyuru
@@ -19,16 +13,9 @@ tr-TR:
             announcement: Duyuru
     pages:
       admin:
-        models:
-          components:
-            body: Vücut
         pages:
           edit:
             save: Güncelleme
-            title: Sayfayı düzenle
-          update:
-            invalid: Sayfa kaydedilirken bir sorun oluştu.
-            success: Sayfa başarıyla kaydedildi.
       home:
         hero:
           participate_title: Platformun süreçlerine katılın

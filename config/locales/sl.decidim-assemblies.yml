@@ -9,62 +9,36 @@ sl:
         banner_image: Slika pasice
         closing_date: Zaključni datum
         closing_date_reason: Razlog zaključnega datuma
-        composition: Sestava
-        copy_categories: Kopiraj kategorije
         copy_components: Kopiraj komponente
-        copy_features: Kopiraj značilnosti
-        created_by: Ustvaril
         created_by_other: Ustvaril drug
         creation_date: Ustvarjeno dne
         decidim_area_id: Območje
         decidim_assemblies_type_id: Vrsta skupščine
         decidim_scope_id: Področje
-        description: Opis
         developer_group: Skupina promotorjev
-        domain: Domena
-        duration: Trajanje
-        facebook: Facebook
-        github: GitHub
-        hashtag: Ključnik
         hero_image: Vhodna slika
         included_at: Vključeno dne
-        instagram: Instagram
-        internal_organisation: Notranja organizacija
         is_transparent: Je pregledna
-        local_area: Območje organizacije
         meta_scope: Metapodatki področja
         parent_id: Nadrejena skupščina
-        participatory_processes_ids: Povezani participativni procesi
         participatory_scope: O čem se odloča
         participatory_structure: Kako se odloča
-        private_space: Zasebni prostor
         promoted: Izpostavljeno
         published_at: Objavljeno ob
         purpose_of_action: Namen dejanja
         scope_id: Področje
         scopes_enabled: Področja omogočena
-        short_description: Kratek opis
         show_statistics: Prikaži statistiko
         slug: Polje dinamičnih podatkov URL
         special_features: Posebne značilnosti
         subtitle: Podnaslov
         target: Kdo sodeluje
         title: Naslov
-        twitter: Twitter
-        youtube: YouTube
       assembly_member:
-        birthday: Rojstni dan
-        birthplace: Rojstni kraj
-        ceased_date: Datum prenehanja
-        designation_date: Datum imenovanja
         designation_mode: Način imenovanja
         full_name: Ime in priimek
-        gender: Spol
-        position: Položaj
       assembly_user_role:
         email: E-naslov
-        name: Ime
-        role: Vloga
     errors:
       models:
         assembly:
@@ -91,22 +65,13 @@ sl:
   decidim:
     admin:
       actions:
-        import_assembly: Uvozi
         new_assembly: Nova skupščina
         new_assembly_type: Nova vrsta skupščine
       assemblies:
         create:
           error: Pri ustvarjanju nove skupščine se je pojavila težava.
           success: Skupščina je bila uspešno ustvarjena.
-        edit:
-          update: Posodobi
-        index:
-          not_published: Ni objavljeno
-          private: Zasebno
-          public: Javno
-          published: Objavljeno
         new:
-          create: Ustvari
           title: Nova skupščina
         update:
           error: Pri posodobitvi te skupščine se je pojavila težava.
@@ -126,14 +91,12 @@ sl:
         destroy:
           success: Vrsta skupščina je bila uspešno izbrisana.
         new:
-          create: Ustvari
           title: Nova vrsta skupščine
         update:
           error: Pri posodobitvi te vrste skupščine se je pojavila težava.
           success: Vrsta skupščine je bila uspešno posodobljena.
       assembly_copies:
         new:
-          copy: Kopiraj
           select: Izberite podatke, ki jih želite podvojiti.
           title: Podvoji skupščino
       assembly_imports:
@@ -141,7 +104,6 @@ sl:
           error: Pri uvozu te skupščine se je pojavila težava.
           success: Skupščina je bil uspešno uvožena.
         new:
-          import: Uvozi
           select: Izberite podatke, ki jih želite uvoziti.
           title: Uvozi skupščino
       assembly_members:
@@ -187,16 +149,9 @@ sl:
           success: Skrbnik je bil uspešno posodobljen za to skupščino.
       menu:
         assemblies: Skupščine
-        assemblies_settings: Nastavitve
         assemblies_submenu:
           assembly_admins: Skrbniki skupščine
-          assembly_members: Člani
-          attachment_collections: Mape
-          attachment_files: Datoteke
           attachments: Priloge
-          categories: Kategorije
-          components: Komponente
-          info: Informacije
           moderations: Moderiranja
           private_users: Zasebni uporabniki
         assemblies_types: Vrste skupščin
@@ -264,13 +219,9 @@ sl:
       admin:
         assemblies:
           form:
-            duration: Trajanje
             duration_help: Če je trajanje te skupščine omejeno, izberite končni datum. V nasprotnem primeru bo prikazan kot nedoločen.
-            filters: Filtri
-            images: Slike
             included_at_help: Izberite datum, ko je bila ta skupščina dodana v platformo Decidim. Ni potrebno, da je isti kot datum ustvarjenja.
             metadata: Metapodatki
-            other: Drugo
             select_a_created_by: Izberi avtorja
             select_an_area: Izberi območje
             select_an_assembly_type: Izberi vrsto skupščine
@@ -278,10 +229,7 @@ sl:
             slug_help: 'S polji dinamičnih podatkov URL se ustvarijo URL-ji, ki kažejo na to skupščino. Sprejema samo črke, številke in črte, mora pa se začeti s črko. Primer: %{url}'
             social_handlers: Družbeno
             title: Splošne informacije
-            visbility: Vidljivost
         assemblies_settings:
-          edit:
-            update: Posodobi
           form:
             title: Nastavitve za skupščine
         assemblies_types:
@@ -292,7 +240,6 @@ sl:
             slug_help: 'S polji dinamičnih podatkov URL se ustvarijo URL-ji, ki kažejo na to skupščino. Sprejema samo črke, številke in črte, mora pa se začeti s črko. Primer: %{url}'
         assembly_imports:
           form:
-            document_legend: Dodaj dokument
             slug_help: 'S polji dinamičnih podatkov URL se ustvarijo URL-ji, ki kažejo na to skupščino. Sprejema samo črke, številke in črte, mora pa se začeti s črko. Primer: %{url}'
         assembly_members:
           form:
@@ -307,13 +254,9 @@ sl:
               ceased: Prenehal
               not_ceased: Ni prenehal
             filter_by: Filtriraj po
-            search: Išči
         content_blocks:
           highlighted_assemblies:
             max_results: Največja količina elementov za prikaz
-      assembly_members:
-        index:
-          members: Člani
       assembly_types:
         commission: Komisija
         consultative_advisory: Posvetovalen/svetovalen
@@ -328,9 +271,7 @@ sl:
       created_by:
         city_council: Mestni svet
         others: Drugi
-        public: Javno
       filter:
-        all: Vse vrste
         commission: Komisija
         consultative_advisory: Posvetovalen/svetovalen
         executive: Izvršen
@@ -359,11 +300,8 @@ sl:
         assembly_type: Vrsta skupščine
         children: Skupščine
         closing_date: Zaključni datum
-        composition: Sestava
-        created_by: Ustvaril
         creation_date: Ustvarjeno dne
         developer_group: Skupina promotorjev
-        duration: Trajanje
         included_at: Vključeno dne
         indefinite_duration: Nedoločeno
         internal_organisation: Notranja organizacija
@@ -377,8 +315,6 @@ sl:
         purpose_of_action: Namen dejanja
         read_less: Manj
         read_more: Več
-        related_participatory_processes: Povezani participativni procesi
-        scope: Področje
         social_networks: Družbena omrežja
         social_networks_title: Deli to skupščino na
         target: Kdo sodeluje
@@ -461,13 +397,11 @@ sl:
     decidim:
       assemblies:
         assembly:
-          more_info: Več informacij
           take_part: Sodeluj
         index:
           children: 'Skupščine:'
           organizational_chart: Organizacijski diagram
           promoted_assemblies: Označene skupščine
-          reset_chart: Ponastavi
         order_by_assemblies:
           assemblies:
             few: "%{count} skupščine"
@@ -475,7 +409,6 @@ sl:
             other: "%{count} skupščin"
             two: "%{count} skupščini"
         promoted_assembly:
-          more_info: Več informacij
           take_part: Sodeluj
       assembly_navigation:
         assembly_member_menu_item: Člani

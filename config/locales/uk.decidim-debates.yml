@@ -3,17 +3,14 @@ uk:
   activemodel:
     attributes:
       debate:
-        category_id: Категорія
         closed_at: Закрито о
         conclusions: Висновки
-        decidim_category_id: Категорія
         description: опис
         end_time: Закінчується о
         information_updates: Оновлення інформації
         instructions: Інструкція для участі
         scope_id: Область застосування
         start_time: Починається о
-        title: Назва
         user_group_id: Створіть дискусію як
     models:
       decidim/debates/close_debate_event: Дебати закриті
@@ -37,14 +34,11 @@ uk:
         name: Дебати
         settings:
           global:
-            announcement: Оголошення
             comments_enabled: Коментарі ввімкнено
-            comments_max_length: Максимальна довжина коментарів (залиште 0 для значення
-              за умовчанням)
+            comments_max_length: Максимальна довжина коментарів (залиште 0 для значення за умовчанням)
             scope_id: Область застосування
             scopes_enabled: Області ввімкнено
           step:
-            announcement: Оголошення
             comments_blocked: Коментарі заблоковано
             creation_enabled: Учасники можуть створювати дебати
             endorsements_blocked: Підтримки заблоковано
@@ -53,10 +47,7 @@ uk:
       actions:
         close: Закрити
         confirm_destroy: Ти впевнений?
-        destroy: Видалити
-        edit: Редагувати
         new: Новий %{name}
-        title: Дії
       admin:
         debate_closes:
           edit:
@@ -66,8 +57,6 @@ uk:
           create:
             invalid: Виникла проблема під час обговорення.
             success: Обговорення успішно створено.
-          destroy:
-            success: Обговорення успішно видалено.
           edit:
             title: Редагувати дебати
             update: Актуальна дискусія
@@ -82,7 +71,6 @@ uk:
             title: Нові дебати
           update:
             invalid: Виникла проблема з оновленням цього обговорення.
-            success: Обговорення успішно оновлено.
         exports:
           comments: Коментарі
         models:
@@ -122,7 +110,6 @@ uk:
         filters:
           activity: Моя діяльність
           all: все
-          category: Категорія
           category_prompt: Виберіть категорію
           commented: Прокоментував
           my_debates: Мої дебати
@@ -140,7 +127,6 @@ uk:
           close_modal: Закрити модальний
           filter: фільтр
           filter_by: Фільтрувати за
-          unfold: Розгорнути
         form:
           select_a_category: Виберіть категорію
         index:
@@ -184,10 +170,7 @@ uk:
       models:
         debate:
           fields:
-            end_time: Дата закінчення
             official_debate: Офіційні дебати
-            start_time: Дата початку
-            title: Назва
     events:
       debates:
         create_debate_event:
@@ -195,64 +178,47 @@ uk:
             email_intro: |-
               Привіт,
               Нове обговорення "%{resource_title}" було створено на просторі для участі %{space_title}, перегляньте його та додайте:
-            email_outro: Ви отримали це сповіщення, оскільки стежите за простором
-              участі %{space_title}. Перейти до сповіщень можна за попереднім посиланням.
+            email_outro: Ви отримали це сповіщення, оскільки стежите за простором участі %{space_title}. Перейти до сповіщень можна за попереднім посиланням.
             email_subject: Нові дебати "%{resource_title}" на %{space_title}
-            notification_title: Обговорення <a href="%{resource_path}">%{resource_title}</a>
-              було створено <a href="%{space_path}">%{space_title}</a>.
+            notification_title: Обговорення <a href="%{resource_path}">%{resource_title}</a> було створено <a href="%{space_path}">%{space_title}</a>.
           user_followers:
             email_intro: |-
               Привіт,
               %{author_name} %{author_nickname}, за оновленнями якого ви стежите, створив нову дискусію "%{resource_title}". Перевірте це та додайте:
-            email_outro: Ви отримали це сповіщення, оскільки стежите за %{author_nickname}.
-              Перейти до сповіщень можна за попереднім посиланням.
+            email_outro: Ви отримали це сповіщення, оскільки стежите за %{author_nickname}. Перейти до сповіщень можна за попереднім посиланням.
             email_subject: Нова дискусія "%{resource_title}" від %{author_nickname}
-            notification_title: <a href="%{author_path}">%{author_name} %{author_nickname}</a>
-              створив <a href="%{resource_path}">%{resource_title}</a> дискусію.
+            notification_title: <a href="%{author_path}">%{author_name} %{author_nickname}</a> створив <a href="%{resource_path}">%{resource_title}</a> дискусію.
         creation_disabled:
-          email_intro: 'Створення дебатів більше не активне в %{participatory_space_title}.
-            Ви все ще можете брати участь у відкритих дебатах на цій сторінці:'
-          email_outro: Ви отримали це сповіщення, оскільки стежите за %{participatory_space_title}.
-            Перейти до сповіщень можна за попереднім посиланням.
+          email_intro: 'Створення дебатів більше не активне в %{participatory_space_title}. Ви все ще можете брати участь у відкритих дебатах на цій сторінці:'
+          email_outro: Ви отримали це сповіщення, оскільки стежите за %{participatory_space_title}. Перейти до сповіщень можна за попереднім посиланням.
           email_subject: Створення дебатів вимкнено в %{participatory_space_title}
           notification_title: Створення дебатів тепер вимкнено в <a href="%{participatory_space_url}">%{participatory_space_title}</a>
         creation_enabled:
-          email_intro: 'Тепер ви можете почати нові дебати в %{participatory_space_title}!
-            Розпочніть участь на цій сторінці:'
-          email_outro: Ви отримали це сповіщення, оскільки стежите за %{participatory_space_title}.
-            Перейти до сповіщень можна за попереднім посиланням.
+          email_intro: 'Тепер ви можете почати нові дебати в %{participatory_space_title}! Розпочніть участь на цій сторінці:'
+          email_outro: Ви отримали це сповіщення, оскільки стежите за %{participatory_space_title}. Перейти до сповіщень можна за попереднім посиланням.
           email_subject: Дебати тепер доступні в %{participatory_space_title}
-          notification_title: Тепер ви можете почати <a href="%{resource_path}">нові
-            дебати</a> в <a href="%{participatory_space_url}">%{participatory_space_title}</a>
+          notification_title: Тепер ви можете почати <a href="%{resource_path}">нові дебати</a> в <a href="%{participatory_space_url}">%{participatory_space_title}</a>
         debate_closed:
           affected_user:
-            email_intro: 'Дискусію "%{resource_title}" закрито. Ви можете прочитати
-              висновки на його сторінці:'
-            email_outro: Ви отримали це сповіщення, оскільки стежите за обговоренням
-              "%{resource_title}". Ви можете скасувати підписку за попереднім посиланням.
+            email_intro: 'Дискусію "%{resource_title}" закрито. Ви можете прочитати висновки на його сторінці:'
+            email_outro: Ви отримали це сповіщення, оскільки стежите за обговоренням "%{resource_title}". Ви можете скасувати підписку за попереднім посиланням.
             email_subject: Дискусію "%{resource_title}" закрито
-            notification_title: Обговорення <a href="%{resource_path}">%{resource_title}</a>
-              закрито.
+            notification_title: Обговорення <a href="%{resource_path}">%{resource_title}</a> закрито.
           follower:
-            email_intro: 'Дискусію "%{resource_title}" закрито. Ви можете прочитати
-              висновки на його сторінці:'
-            email_outro: Ви отримали це сповіщення, оскільки стежите за обговоренням
-              "%{resource_title}". Ви можете скасувати підписку за попереднім посиланням.
+            email_intro: 'Дискусію "%{resource_title}" закрито. Ви можете прочитати висновки на його сторінці:'
+            email_outro: Ви отримали це сповіщення, оскільки стежите за обговоренням "%{resource_title}". Ви можете скасувати підписку за попереднім посиланням.
             email_subject: Дискусію "%{resource_title}" закрито
-            notification_title: Обговорення <a href="%{resource_path}">%{resource_title}</a>
-              закрито.
+            notification_title: Обговорення <a href="%{resource_path}">%{resource_title}</a> закрито.
     gamification:
       badges:
         commented_debates:
           conditions:
           - Виберіть відкриту дискусію для участі
-          description: Цей значок надається, коли ви активно берете участь у різних
-            дебатах, залишаючи свої коментарі.
+          description: Цей значок надається, коли ви активно берете участь у різних дебатах, залишаючи свої коментарі.
           description_another: Цей учасник брав участь у %{score} дебатах.
           description_own: Ви брали участь у %{score} дебатах.
           name: Дебати
-          next_level_in: Візьміть участь у ще %{score} дебатах, щоб досягти наступного
-            рівня!
+          next_level_in: Візьміть участь у ще %{score} дебатах, щоб досягти наступного рівня!
           unearned_another: Цей учасник ще не брав участі в жодних дебатах.
           unearned_own: Ви ще не брали участі в жодних дебатах.
     metrics:

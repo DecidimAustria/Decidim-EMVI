@@ -3,11 +3,7 @@ el:
   activemodel:
     attributes:
       dummy_resource:
-        created_at: Δημιουργήθηκε στις
         decidim_scope_id: Πεδίο
-        field: Το πεδίο μου
-        start_date: Ημερομηνία έναρξης
-        title: Τίτλος
         translatable_text: Μεταφράσιμο κείμενο
         updated_at: Επικαιροποιήθηκε στις
   decidim:
@@ -15,7 +11,6 @@ el:
       dummy:
         settings:
           global:
-            readonly_attribute: Χαρακτηριστικό μόνο για ανάγνωση
             test: Δοκιμασία
             test_choices:
               a: Επιλογή Α
@@ -24,7 +19,6 @@ el:
           step:
             endorsements_blocked: Οι εγκρίσεις απενεργοποιήθηκαν
             endorsements_enabled: Οι εγκρίσεις ενεργοποιήθηκαν
-            readonly_step_attribute: Χαρακτηριστικό βήματος μόνο για ανάγνωση
     dummy:
       admin:
         exports:

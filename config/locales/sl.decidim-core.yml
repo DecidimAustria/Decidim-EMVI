@@ -375,7 +375,6 @@ sl:
         name: Slika glavne pasice
       hero_settings_form:
         background_image: Slika ozadja
-        welcome_text: Pozdravno besedilo
       highlighted_content_banner:
         name: Pasica označene vsebine
       how_to_participate:
@@ -423,7 +422,6 @@ sl:
           newsletter_title: Dovoljenje za stik
           nickname_help: Vaš vzdevek v %{organization}
           password_help: Najmanj %{minimum_characters} znakov, ne sme biti preveč predvidljivo (npr. 123456) ter biti mora drugačno od vašega vzdevka in vašega elektronskega naslova.
-          sign_in: Prijava
           sign_up: Vpis
           sign_up_as:
             legend: Vpišite se kot
@@ -838,7 +836,6 @@ sl:
     members:
       no_members: Ta skupina še nima članov.
     menu:
-      help: Pomoč
       proceses: Teme
     messaging:
       conversation_mailer:
@@ -1005,7 +1002,6 @@ sl:
           debates: Razprave
           debates_explanation: Debatirajte in razpravljajte, delite svoja stališča in obogatite ustrezne teme.
           how_to_participate: Kako lahko sodelujem v procesu?
-          meetings: Sestanki
           meetings_explanation: Ugotovite, kje in kdaj lahko sodelujete na javnih sestankih.
           more_info: Več informacij o %{resource_name}
           proposals: Zamisli
@@ -1015,7 +1011,6 @@ sl:
           footer_sub_hero_headline: Dobrodošli na participativni platformi %{organization}.
           register: Registriraj se
         hero:
-          participate: Sodeluj
           welcome: Dobrodošli v %{organization}!
         metrics:
           headline: Metrika
@@ -1144,14 +1139,12 @@ sl:
     search:
       results: Rezultati iskanja
       results_found_for_term: '%{count} Rezultati za iskanje: "%{term}"'
-      term_input_placeholder: Išči
     searches:
       filters:
         back: Nazaj na rezultate
         jump_to: 'Pojdi na:'
         state:
           active: Aktivni
-          all: Vsi
           future: Prihodnji
           past: Pretekli
       filters_small_view:
@@ -1424,8 +1417,6 @@ sl:
       updated: Vaš račun je bil uspešno posodobljen.
     sessions:
       already_signed_out: Uspešno ste se odjavili.
-      new:
-        sign_in: Prijava
       signed_in: Uspešno ste se prijavili.
       signed_out: Uspešno ste se odjavili.
     shared:
@@ -1434,7 +1425,6 @@ sl:
         didn_t_receive_confirmation_instructions: Niste prejeli navodil za potrditev?
         didn_t_receive_unlock_instructions: Niste prejeli navodil za odklepanje?
         forgot_your_password: Ste pozabili geslo?
-        sign_in: Prijava
         sign_in_with_provider: Prijava s/z %{provider}.
         sign_up: Vpis
       minimum_password_length:
@@ -1493,8 +1483,6 @@ sl:
         description_html: To mesto uporablja piškotke. Z nadaljnjim brskanjem po spletnem mestu se strinjate z uporabo piškotkov. %{link}.
         link_label: Več o piškotkih
         ok: Strinjam se.
-      edit_link:
-        edit: Uredi
       footer:
         cc_by_license: Dovoljenja „Creative commons“
         decidim_logo: Logotip Decidim
@@ -1503,7 +1491,6 @@ sl:
       header:
         close_menu: Zapri meni
         navigation: Krmarjenje
-        sign_in: Prijava
         sign_up: Vpis
       impersonation_warning:
         close_session: Zapri sejo

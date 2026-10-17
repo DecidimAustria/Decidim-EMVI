@@ -5,9 +5,6 @@ uk:
       decidim/comments/comment_by_followed_user_event: коментар
       decidim/comments/comment_created_event: коментар
       decidim/comments/comment_upvoted_event: За коментар підтримано
-      decidim/comments/reply_created_event: Відповідь на коментар
-      decidim/comments/user_group_mentioned_event: Згадка
-      decidim/comments/user_mentioned_event: Згадка
   activerecord:
     models:
       decidim/comments/comment:
@@ -45,15 +42,12 @@ uk:
           error: Під час голосування за коментар виникла проблема.
     components:
       add_comment_form:
-        account_message: <a href="%{sign_in_url}">Увійдіть за допомогою свого облікового
-          запису</a> або <a href="%{sign_up_url}">зареєструйтеся</a>, щоб додати свій
-          коментар.
+        account_message: <a href="%{sign_in_url}">Увійдіть за допомогою свого облікового запису</a> або <a href="%{sign_up_url}">зареєструйтеся</a>, щоб додати свій коментар.
         form:
           body:
             label: коментар
             placeholder: Що ти думаєш про це?
           form_error: Текст є обов’язковим і не може містити більше %{length} символів.
-          submit: Надіслати
           user_group_id:
             label: Прокоментувати як
         opinion:
@@ -69,28 +63,21 @@ uk:
         title: Додайте свій коментар
       comment:
         alignment:
-          against: Проти
           in_favor: На користь
         confirm_destroy: Ви впевнені, що хочете видалити цей коментар?
         delete: Видалити
         deleted_at: Коментар видалено на %{date}
-        deleted_user: Видалений учасник
         edit: Редагувати
         edited: Відредаговано
         hide_replies: Сховати відповіді
         moderated_at: Коментар модеровано %{date}
-        reply: Відповісти
         report:
           action: звіт
           already_reported: На цей вміст уже повідомлено, і він буде розглянутий адміністратором.
-          close: Закрити
           description: Цей вміст неприйнятний?
-          details: Додаткові коментарі
           reasons:
-            does_not_belong: Містить незаконну діяльність, погрози самогубством, особисту
-              інформацію чи щось інше, що, на вашу думку, не належить до %{organization_name}.
-            offensive: Містить расизм, сексизм, образи, особисті напади, погрози вбивством,
-              прохання про самогубство чи будь-яку форму ненависті.
+            does_not_belong: Містить незаконну діяльність, погрози самогубством, особисту інформацію чи щось інше, що, на вашу думку, не належить до %{organization_name}.
+            offensive: Містить расизм, сексизм, образи, особисті напади, погрози вбивством, прохання про самогубство чи будь-яку форму ненависті.
             spam: Містить клікбейт, рекламу, шахрайство або скрипт-ботів.
           title: Повідомити про невідповідний вміст
         show_replies:
@@ -107,14 +94,10 @@ uk:
       comment_thread:
         title: Розмова з %{authorName}
       comments:
-        blocked_comments_for_unauthorized_user_warning: На даний момент вам потрібно
-          пройти верифікацію, щоб коментувати, але ви можете прочитати попередні.
-        blocked_comments_for_user_warning: На даний момент ви не можете коментувати,
-          але ви можете прочитати попередні.
-        blocked_comments_warning: Наразі коментарі вимкнені, але ви можете прочитати
-          попередні.
+        blocked_comments_for_unauthorized_user_warning: На даний момент вам потрібно пройти верифікацію, щоб коментувати, але ви можете прочитати попередні.
+        blocked_comments_for_user_warning: На даний момент ви не можете коментувати, але ви можете прочитати попередні.
+        blocked_comments_warning: Наразі коментарі вимкнені, але ви можете прочитати попередні.
         comment_details_title: Деталі коментаря
-        loading: Завантаження коментарів...
         single_comment_warning: <a href="%{url}">Переглянути всі коментарі</a>
         single_comment_warning_title: Ви бачите один коментар
         title:
@@ -137,66 +120,40 @@ uk:
     events:
       comments:
         comment_by_followed_user:
-          email_intro: "%{author_name} залишив коментар у %{resource_title}. Ви можете
-            прочитати це на цій сторінці:"
-          email_outro: Ви отримали це сповіщення, оскільки стежите за %{author_name}.
-            Ви можете скасувати підписку на цього користувача зі сторінки його профілю.
+          email_intro: "%{author_name} залишив коментар у %{resource_title}. Ви можете прочитати це на цій сторінці:"
+          email_outro: Ви отримали це сповіщення, оскільки стежите за %{author_name}. Ви можете скасувати підписку на цього користувача зі сторінки його профілю.
           email_subject: У %{resource_title} є новий коментар від %{author_name}
-          notification_title: Є новий коментар від <a href="%{author_path}">%{author_name}
-            %{author_nickname}</a> у <a href="%{resource_path}">%{resource_title}</a>.
+          notification_title: Є новий коментар від <a href="%{author_path}">%{author_name} %{author_nickname}</a> у <a href="%{resource_path}">%{resource_title}</a>.
         comment_by_followed_user_group:
-          email_intro: 'Група %{author_name} залишила коментар у %{resource_title}.
-            Ви можете прочитати це на цій сторінці:'
-          email_outro: Ви отримали це сповіщення, оскільки стежите за %{author_name}.
-            Ви можете скасувати підписку на цю групу зі сторінки її профілю.
+          email_intro: 'Група %{author_name} залишила коментар у %{resource_title}. Ви можете прочитати це на цій сторінці:'
+          email_outro: Ви отримали це сповіщення, оскільки стежите за %{author_name}. Ви можете скасувати підписку на цю групу зі сторінки її профілю.
           email_subject: У %{resource_title} є новий коментар від %{author_name}
-          notification_title: Є новий коментар від <a href="%{author_path}">%{author_name}
-            %{author_nickname}</a> у <a href="%{resource_path}">%{resource_title}</a>.
+          notification_title: Є новий коментар від <a href="%{author_path}">%{author_name} %{author_nickname}</a> у <a href="%{resource_path}">%{resource_title}</a>.
         comment_created:
-          email_intro: "%{resource_title} прокоментовано. Ви можете прочитати коментар
-            на цій сторінці:"
-          email_outro: Ви отримали це сповіщення, тому що стежите за "%{resource_title}"
-            або його автором. Ви можете скасувати підписку за попереднім посиланням.
+          email_intro: "%{resource_title} прокоментовано. Ви можете прочитати коментар на цій сторінці:"
+          email_outro: Ви отримали це сповіщення, тому що стежите за "%{resource_title}" або його автором. Ви можете скасувати підписку за попереднім посиланням.
           email_subject: У %{resource_title} є новий коментар від %{author_name}
-          notification_title: Є новий коментар від <a href="%{author_path}">%{author_name}
-            %{author_nickname}</a> у <a href="%{resource_path}">%{resource_title}</a>
+          notification_title: Є новий коментар від <a href="%{author_path}">%{author_name} %{author_nickname}</a> у <a href="%{resource_path}">%{resource_title}</a>
         comment_downvoted:
-          email_intro: Ваш коментар у "%{resource_title}" було відхилено. Зараз у
-            нього %{upvotes} голосів «за» та %{downvotes} «против».
+          email_intro: Ваш коментар у "%{resource_title}" було відхилено. Зараз у нього %{upvotes} голосів «за» та %{downvotes} «против».
           email_outro: Ви отримали це сповіщення, оскільки ви є автором цього коментаря.
           email_subject: Ваш коментар у "%{resource_title}" було відхилено.
-          notification_title: Ваш <a href="%{resource_path}">коментар</a> у "%{resource_title}"
-            було відхилено. Тепер він має %{upvotes} голосів «за» та %{downvotes}
-            «против».
+          notification_title: Ваш <a href="%{resource_path}">коментар</a> у "%{resource_title}" було відхилено. Тепер він має %{upvotes} голосів «за» та %{downvotes} «против».
         comment_upvoted:
-          email_intro: Ваш коментар у "%{resource_title}" отримав підтримку. Зараз
-            у нього %{upvotes} голосів «за» та %{downvotes} «против».
+          email_intro: Ваш коментар у "%{resource_title}" отримав підтримку. Зараз у нього %{upvotes} голосів «за» та %{downvotes} «против».
           email_outro: Ви отримали це сповіщення, оскільки ви є автором цього коментаря.
           email_subject: Ваш коментар у "%{resource_title}" отримав підтримку.
-          notification_title: Ваш <a href="%{resource_path}">коментар</a> у "%{resource_title}"
-            отримав підтримку. Тепер він має %{upvotes} голосів «за» та %{downvotes}
-            «против».
+          notification_title: Ваш <a href="%{resource_path}">коментар</a> у "%{resource_title}" отримав підтримку. Тепер він має %{upvotes} голосів «за» та %{downvotes} «против».
         reply_created:
-          email_intro: "%{author_name} відповів на ваш коментар у %{resource_title}.
-            Ви можете прочитати це на цій сторінці:"
-          email_outro: Ви отримали це сповіщення, оскільки на ваш коментар відповіли.
-          email_subject: "%{author_name} відповів на ваш коментар у %{resource_title}"
-          notification_title: <a href="%{author_path}">%{author_name} %{author_nickname}</a>
-            відповів на ваш коментар у <a href="%{resource_path}">%{resource_title}</a>
+          email_intro: "%{author_name} відповів на ваш коментар у %{resource_title}. Ви можете прочитати це на цій сторінці:"
         user_group_mentioned:
           email_intro: Згадано групу, до якої ви належите
-          email_outro: Ви отримали це сповіщення, оскільки ви є членом групи %{group_name},
-            яка була згадана в %{resource_title}.
+          email_outro: Ви отримали це сповіщення, оскільки ви є членом групи %{group_name}, яка була згадана в %{resource_title}.
           email_subject: Ви були згадані в %{resource_title} як член %{group_name}
-          notification_title: Вас згадали в <a href="%{resource_path}">%{resource_title}</a>
-            <a href="%{author_path}">%{author_name} %{author_nickname}</a> як члена
-            <a href="%{group_path}">%{group_name} %{group_nickname}</a >
+          notification_title: Вас згадали в <a href="%{resource_path}">%{resource_title}</a> <a href="%{author_path}">%{author_name} %{author_nickname}</a> як члена <a href="%{group_path}">%{group_name} %{group_nickname}</a >
         user_mentioned:
-          email_intro: Вас згадали
-          email_outro: Ви отримали це сповіщення, оскільки вас згадали в %{resource_title}.
           email_subject: Вас згадали в %{resource_title}
-          notification_title: Вас згадали в <a href="%{resource_path}">%{resource_title}</a>
-            <a href="%{author_path}">%{author_name} %{author_nickname}</a>
+          notification_title: Вас згадали в <a href="%{resource_path}">%{resource_title}</a> <a href="%{author_path}">%{author_name} %{author_nickname}</a>
     metrics:
       comments:
         description: Кількість коментарів, створених учасниками

@@ -3,7 +3,6 @@ sl:
   activemodel:
     attributes:
       collaborative_draft:
-        address: Naslov
         body: Telo
         category_id: Kategorija
         decidim_scope_id: Področje
@@ -94,16 +93,13 @@ sl:
           is_emendation_true:
             label: Vrsta
             values:
-              'false': Predlogi
               'true': Spremembe
           scope_id_eq:
             label: Področje
           state_eq:
             label: Stanje
             values:
-              accepted: Sprejeto
               evaluating: V ocenjevanju
-              published: Objavljeno
               rejected: Zavrnjeno
               validating: Tehnična potrditev
               withdrawn: Umik

@@ -3,16 +3,10 @@ tr-TR:
   activemodel:
     attributes:
       result:
-        decidim_accountability_status_id: Durum
-        decidim_category_id: Kategori
         decidim_scope_id: Kapsam
         description: Tanım
-        end_date: Bitiş tarihi
         progress: İlerlemek
         project_ids: Dahil olan projeler
-        proposals: Dahil edilen teklifler
-        start_date: Başlangıç tarihi
-        title: Başlık
         updated_at: 'Şurada güncellendi:'
       status:
         description: Tanım
@@ -25,29 +19,14 @@ tr-TR:
         title: Başlık
     models:
       decidim/accountability/proposal_linked_event: Bir sonuca dahil edilen teklif
-      decidim/accountability/result_progress_updated_event: Sonuç ilerlemesi güncellendi
-  activerecord:
-    models:
-      decidim/accountability/result:
-        one: Sonuç
-        other: Sonuçlar
   decidim:
     accountability:
       actions:
-        attachment_collections: Klasörler
-        attachments: Ekler
         confirm_destroy: Bu %{name}'ı silmek istediğinizden emin misiniz?
         destroy: Silmek
         edit: Düzenlemek
-        import_csv: CSV'yi içe aktar
-        new: Yeni %{name}
-        preview: Ön izleme
-        timeline_entries: Proje evrimi
         title: Hareketler
       admin:
-        exports:
-          result_comments: Yorumlar
-          results: Sonuçlar
         import_results:
           new:
             download_export: CSV formatında Dışa Aktar'ı indirin
@@ -73,71 +52,30 @@ tr-TR:
                 </ul>
               </li>
               </ol>
-            title: Sonuçları CSV'den içe aktar
         imports:
           create:
             success: Dosya içe aktarılmaya başlandı. Önümüzdeki birkaç dakika içinde içe aktarma işleminin sonucunu içeren bir e-posta alacaksınız.
         models:
-          result:
-            name: Sonuç
           status:
             name: Durum
-          timeline_entry:
-            name: Zaman çizelgesi girişi
         results:
-          create:
-            invalid: Bu sonucu oluştururken bir sorun oluştu
-            success: Sonuç başarıyla oluşturuldu
-          destroy:
-            success: Sonuç başarıyla silindi
           edit:
-            title: Sonucu düzenle
             update: Sonucu güncelle
-          index:
-            title: Sonuçlar
-          new:
-            create: Sonuç oluştur
-            title: Yeni sonuç
           update:
             invalid: Bu sonuç güncellenirken bir sorun oluştu
-            success: Sonuç başarıyla güncellendi
         shared:
           subnav:
             statuses: Durumlar
         statuses:
           create:
             invalid: Bu durum oluşturulurken bir sorun oluştu
-            success: Durum başarıyla oluşturuldu
-          destroy:
-            success: Durum başarıyla silindi
-          edit:
-            title: Durumu düzenle
-            update: Güncelleme durumu
           index:
             title: Durumlar
-          new:
-            create: Durum oluştur
-            title: Yeni statü
           update:
             invalid: Bu durum güncellenirken bir sorun oluştu
-            success: Durum başarıyla güncellendi
         timeline_entries:
           create:
             invalid: Bu giriş oluşturulurken bir sorun oluştu
-            success: Giriş başarıyla oluşturuldu
-          destroy:
-            success: Giriş başarıyla silindi
-          edit:
-            title: Girişi düzenle
-            update: Girişi güncelle
-          index:
-            title: Proje zaman çizelgesi girişleri
-          new:
-            create: Giriş oluştur
-            title: Yeni giriş
-          update:
-            invalid: Bu giriş güncellenirken bir sorun oluştu
-            success: Giriş başarıyla güncellendi
       admin_log:
         result:
           create: "%{user_name}, %{space_name}'de %{resource_name} sonucunu oluşturdu"
@@ -156,12 +94,9 @@ tr-TR:
             not_found: 'Ebeveyn veritabanında bulunamadı (ID: %{id})'
       content_blocks:
         highlighted_results:
-          dates: Tarih
           results: Sonuçlar
-          unspecified: Belirtilmemiş
       import_mailer:
         import:
-          errors: Hatalar
           errors_present: Sonuçlar içe aktarılırken bir sorun oluştu
           row_number: Sıra
           subject: Sonuçların başarıyla içe aktarılması
@@ -171,15 +106,10 @@ tr-TR:
       models:
         result:
           fields:
-            category: Kategori
             created_at: oluşturuldu
-            end_date: Bitiş tarihi
             id: İD
             progress: İlerlemek
-            scope: Kapsam
-            start_date: Başlangıç tarihi
             status: Durum
-            title: Başlık
         status:
           fields:
             description: Tanım
@@ -194,18 +124,11 @@ tr-TR:
         executed: Uygulanmış
         view: Görüş
       results:
-        count:
-          results_count:
-            one: 1 sonuç
-            other: "%{count} sonuç"
         filters:
           all: Tüm
           scopes: Kapsamlar
         home:
-          categories_label: Kategoriler
           subcategories_label: Alt kategoriler
-        home_header:
-          global_status: Genel yürütme durumu
         nav_breadcrumb:
           global: Küresel yürütme
         search:
@@ -214,24 +137,12 @@ tr-TR:
           stats:
             attendees: katılımcılar
             back_to_resource: sonuca geri dön
-            comments: Yorumlar
             contributions: katkılar
-            last_edited_by: Son düzenleyen
             last_updated_at: 'Son güncelleme:'
-            meetings: Toplantılar
             proposals: teklifler
             votes: destekler
         timeline:
           title: Proje evrimi
-    admin:
-      filters:
-        results:
-          category_id_eq:
-            label: Kategori
-          scope_id_eq:
-            label: Kapsam
-          status_id_eq:
-            label: Durum
     components:
       accountability:
         actions:
@@ -242,15 +153,9 @@ tr-TR:
             categories_label: '"Kategoriler" için ad'
             comments_enabled: Yorumlar etkinleştirildi
             comments_max_length: Açıklamaların maksimum uzunluğu (Varsayılan değer olarak 0 bırakın)
-            display_progress_enabled: İlerlemeyi göster
-            heading_leaf_level_results: '"Projeler" için isim'
             heading_parent_level_results: '"Sonuçlar"ın adı'
             intro: Giriş
-            scope_id: Kapsam
-            scopes_enabled: Kapsamlar etkinleştirildi
             subcategories_label: '"Alt kategoriler" için ad'
-          step:
-            comments_blocked: Yorumlar engellendi
     events:
       accountability:
         proposal_linked:
@@ -266,8 +171,6 @@ tr-TR:
     metrics:
       results:
         description: Oluşturulan sonuç sayısı
-        object: sonuçlar
-        title: Sonuçlar
     participatory_spaces:
       highlighted_results:
         see_all: Tüm sonuçları görün

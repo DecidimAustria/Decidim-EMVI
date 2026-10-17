@@ -15,10 +15,7 @@ uk:
       actions:
         author_id: Створити публікацію як
         confirm_destroy: Ви впевнені, що хочете видалити цю публікацію?
-        destroy: Видалити
-        edit: Редагувати
         new: Новий пост
-        title: Дії
       admin:
         models:
           components:
@@ -37,7 +34,6 @@ uk:
           index:
             title: Пости
           new:
-            create: Створити
             title: Створити пост
           update:
             invalid: Під час збереження публікації виникла проблема.
@@ -52,7 +48,6 @@ uk:
       models:
         post:
           fields:
-            author: Автор
             body: Тіло
             created_at: Створено в
             official_blog_post: Офіційний пост
@@ -61,38 +56,27 @@ uk:
         show:
           back: Повернутися до списку
           comments: Коментарі
-          view: Переглянути
         sidebar_blog:
-          comments: коментарі
           most_commented_posts: Найбільш коментовані пости
-      read_more: Читати далі
     components:
       blogs:
         actions:
           create: Створити
           destroy: Видалити
           update: оновлення
-        name: Блог
         settings:
           global:
-            announcement: Оголошення
-            comments_enabled: Коментарі ввімкнено
-            comments_max_length: Максимальна довжина коментарів (залиште 0 для значення
-              за умовчанням)
+            comments_max_length: Максимальна довжина коментарів (залиште 0 для значення за умовчанням)
           step:
-            announcement: Оголошення
             comments_blocked: Коментарі заблоковано
             endorsements_blocked: Підтримки заблоковано
             endorsements_enabled: Підтвердження ввімкнено
     events:
       blogs:
         post_created:
-          email_intro: Допис "%{resource_title}" опубліковано в "%{participatory_space_title}",
-            за яким ви стежите.
-          email_outro: Ви отримали це сповіщення, тому що стежите за "%{participatory_space_title}".
-            Ви можете скасувати підписку за попереднім посиланням.
+          email_intro: Допис "%{resource_title}" опубліковано в "%{participatory_space_title}", за яким ви стежите.
+          email_outro: Ви отримали це сповіщення, тому що стежите за "%{participatory_space_title}". Ви можете скасувати підписку за попереднім посиланням.
           email_subject: Нова публікація опублікована в %{participatory_space_title}
-          notification_title: Повідомлення <a href="%{resource_path}">%{resource_title}</a>
-            опубліковано в %{participatory_space_title}
+          notification_title: Повідомлення <a href="%{resource_path}">%{resource_title}</a> опубліковано в %{participatory_space_title}
     statistics:
       posts_count: Пости

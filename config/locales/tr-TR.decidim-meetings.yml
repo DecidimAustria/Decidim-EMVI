@@ -5,25 +5,15 @@ tr-TR:
       agenda:
         description: Tanım
         duration: Süre
-        title: Başlık
       close_meeting:
         attendees_count: katılımcı sayısı
-        attending_organizations: Katılan kuruluşların listesi
-        audio_url: Ses URL'si
-        closing_report: Dakika
         closing_visible: görünür
-        contributions_count: Katkı sayısı
-        proposal_ids: Toplantıda oluşturulan teklifler
         video_url: Video linki
       meeting:
-        address: Adres
         available_slots: Bu toplantı için kullanılabilir alanlar
         customize_registration_email: Kayıt e-postasını özelleştir
-        decidim_category_id: Kategori
         decidim_scope_id: Kapsam
-        decidim_user_group_id: Kullanıcı grubu
         description: Tanım
-        end_time: Bitiş zamanı
         id: İD
         location: Konum
         location_hints: Konum ipuçları
@@ -33,13 +23,9 @@ tr-TR:
         private_meeting: özel toplantı
         registration_email_custom_content: Kayıt e-postası özel içeriği
         registration_form_enabled: Kayıt formu etkinleştirildi
-        registration_terms: Kayıt şartları
         registration_url: Kayıt URL'si
-        registrations_enabled: Kayıtlar etkinleştirildi
         show_embedded_iframe: Bu URL için katıştırılmış iframe'i göster
         start_time: Başlangıç saati
-        title: Başlık
-        transparent: Şeffaf
         type_of_meeting: Tip
     errors:
       models:
@@ -52,27 +38,12 @@ tr-TR:
             base:
               too_many_minutes: Öğelerin süresi, toplantı süresini %{count} dakika aşıyor
               too_many_minutes_child: Alt öğenin süresi, "%{parent_title}" gündem maddesi ebeveyn süresini %{count} dakika aşıyor
-        meeting_registration_invite:
-          attributes:
-            email:
-              already_invited: Bu e-posta hesabı zaten davet edildi
     models:
       decidim/meetings/close_meeting_event: toplantı kapalı
-      decidim/meetings/create_meeting_event: Toplantı
-      decidim/meetings/meeting_registrations_enabled_event: Kayıtlar etkinleştirildi
       decidim/meetings/meeting_registrations_over_percentage_event: Sınırı aşan kayıtlar
-      decidim/meetings/upcoming_meeting_event: Yaklaşan toplantı
-      decidim/meetings/update_meeting_event: Toplantı güncellendi
   activerecord:
     models:
-      decidim/meetings/meeting:
-        one: Toplantı
-        other: Toplantılar
-      decidim/meetings/minutes:
-        one: Dakika
-        other: Dakika
       decidim/meetings/registration:
-        one: Kayıt
         other: kayıtlar
   decidim:
     admin:
@@ -107,49 +78,32 @@ tr-TR:
       meeting_copies:
         create:
           error: Bu toplantı çoğaltılırken bir sorun oluştu.
-          success: Toplantı başarıyla kopyalandı.
         new:
-          copy: Kopyala
           select: Hangi verileri çoğaltmak istediğinizi seçin
-          title: Yinelenen toplantı
     components:
       meetings:
         actions:
           comment: Yorum
           join: Katılmak
-        name: Toplantılar
         settings:
           global:
-            announcement: Duyuru
             comments_enabled: Yorumlar etkinleştirildi
             comments_max_length: Açıklamaların maksimum uzunluğu (Varsayılan değer olarak 0 bırakın)
-            creation_enabled_for_participants: Katılımcılar toplantı oluşturabilir
             default_registration_terms: Varsayılan kayıt koşulları
             enable_pads_creation: Ped oluşturmayı etkinleştir
             maps_enabled: Haritalar etkin
-            registration_code_enabled: Kayıt kodu etkinleştirildi
             resources_permissions_enabled: Eylem izinleri her toplantı için ayarlanabilir
-            scope_id: Kapsam
-            scopes_enabled: Kapsamlar etkinleştirildi
             terms_and_conditions_url_for_meeting_creators: Toplantıyı oluşturanlar için şartlar ve koşullar URL'si
           step:
-            announcement: Duyuru
-            comments_blocked: Yorumlar engellendi
-            creation_enabled_for_participants: Katılımcılar tarafından toplantı oluşturma etkinleştirildi
             creation_enabled_for_user_groups: Kullanıcı gruplarına göre toplantı oluşturma etkinleştirildi
     events:
       meetings:
         meeting_closed:
           affected_user:
-            email_intro: '"%{resource_title}" toplantınız kapatıldı. Sonuçları sayfasından okuyabilirsiniz:'
             email_outro: Bu bildirimi "%{resource_title}" toplantısını düzenlediğiniz için aldınız.
-            email_subject: '"%{resource_title}" toplantısı kapatıldı'
-            notification_title: <a href="%{resource_path}">%{resource_title}</a> toplantısı kapatıldı.
           follower:
             email_intro: '"%{resource_title}" toplantısı kapatıldı. Sonuçları sayfasından okuyabilirsiniz:'
             email_outro: Bu bildirimi "%{resource_title}" toplantısını takip ettiğiniz için aldınız. Bir önceki linkten takibi bırakabilirsiniz.
-            email_subject: '"%{resource_title}" toplantısı kapatıldı'
-            notification_title: <a href="%{resource_path}">%{resource_title}</a> toplantısı kapatıldı.
         meeting_created:
           button_text: toplantıya kayıt ol
           email_intro: '"%{resource_title}" toplantısı takip ettiğiniz "%{participatory_space_title}"e eklendi.'
@@ -160,14 +114,11 @@ tr-TR:
           notification_title: <a href="%{resource_url}">%{resource_title}</a> toplantısı için kaydınız onaylandı. Kayıt kodunuz %{registration_code}.
         meeting_registrations_over_percentage:
           email_intro: '"%{resource_title}" toplantısı için ayrılan alanlar %%{percentage}''in üzerinde.'
-          email_outro: Bu bildirimi, toplantının katılımcı alanının yöneticisi olduğunuz için aldınız.
           email_subject: '"%{resource_title}" toplantısı için ayrılan alanlar %%{percentage}''in üzerinde'
           notification_title: <a href="%{resource_path}">%{resource_title}</a> toplantısı için ayrılan alanlar %%{percentage}'nin üzerinde.
         meeting_updated:
           email_intro: '"%{resource_title}" toplantısı güncellendi. Yeni halini sayfasından okuyabilirsiniz:'
           email_outro: Bu bildirimi "%{resource_title}" toplantısını takip ettiğiniz için aldınız. Bir önceki linkten takibi bırakabilirsiniz.
-          email_subject: '"%{resource_title}" toplantısı güncellendi'
-          notification_title: <a href="%{resource_path}">%{resource_title}</a> toplantısı güncellendi.
         registration_code_validated:
           email_intro: '"%{resource_title}" toplantısı için "%{registration_code}" kayıt kodunuz doğrulandı.'
           email_outro: Bu bildirimi, "%{resource_title}" toplantısı için kayıt kodunuz doğrulandığı için aldınız.
@@ -177,7 +128,6 @@ tr-TR:
           email_intro: '"%{resource_title}" toplantısı, kayıtları etkinleştirdi. Kendinizi sayfasından kaydedebilirsiniz:'
           email_outro: Bu bildirimi "%{resource_title}" toplantısını takip ettiğiniz için aldınız. Bir önceki linkten takibi bırakabilirsiniz.
           email_subject: '"%{resource_title}" toplantısı, kayıtları etkinleştirdi.'
-          notification_title: <a href="%{resource_path}">%{resource_title}</a> toplantısı kayıtları etkinleştirdi.
         upcoming_meeting:
           email_intro: '"%{resource_title}" toplantısı 48 saatten daha kısa sürede başlayacak.'
           email_outro: Bu bildirimi "%{resource_title}" toplantısını takip ettiğiniz için aldınız. Bir önceki linkten takibi bırakabilirsiniz.
@@ -192,19 +142,12 @@ tr-TR:
           conditions:
           - Katılmak istediğiniz toplantılar için kayıt olun
           description: Bu rozet, birkaç yüz yüze toplantıya katıldığınızda verilir.
-          description_another: Bu katılımcı %{score} toplantıya katılmıştır.
-          description_own: "%{score} toplantıya katıldınız."
-          name: Katıldığı toplantılar
           next_level_in: Bir sonraki seviyeye geçmek için %{score} toplantıya daha katılın!
           unearned_another: Bu katılımcı henüz herhangi bir toplantıya katılmadı.
           unearned_own: Henüz herhangi bir toplantıya katılmadınız.
     meetings:
       actions:
-        agenda: Gündem
-        attachment_collections: Klasörler
-        attachments: Ekler
         close: Kapalı
-        confirm_destroy: Bu toplantıyı silmek istediğinizden emin misiniz?
         destroy: Silmek
         edit: Düzenlemek
         invalid_destroy:
@@ -213,8 +156,6 @@ tr-TR:
             other: 'Toplantı, kendisiyle ilişkilendirilmiş %{count} teklife sahip olduğu için yok edilemez:'
         manage_poll: Anketi yönet
         new: yeni toplantı
-        preview: Ön izleme
-        registrations: Kayıtlar
         title: Hareketler
       admin:
         agenda:
@@ -222,25 +163,14 @@ tr-TR:
             add_agenda_item_child: Gündem alt maddesi ekle
             agenda_item: Gündem Maddesi
             agenda_item_children: Gündem alt maddeleri
-            down: Aşağı
             remove: Kaldırmak
-            up: Yukarı
           agenda_item_child:
-            agenda_item_child: Gündem alt maddesi
-            down: Aşağı
             remove: Kaldırmak
-            up: Yukarı
           create:
             invalid: Bu ajanda oluşturulurken bir sorun oluştu
-            success: Ajanda başarıyla oluşturuldu
           edit:
             title: gündemi düzenle
             update: Güncelleme
-          form:
-            add_agenda_item: Gündem maddesi ekle
-            agenda_items: Gündem maddeleri
-            end_date: Bitiş tarihi
-            start_date: Başlangıç tarihi
           new:
             create: Yaratmak
             title: yeni gündem
@@ -249,32 +179,22 @@ tr-TR:
             success: Ajanda başarıyla güncellendi
         exports:
           answers: Yanıtlar
-          meeting_comments: Yorumlar
-          meetings: Toplantılar
-          registrations: Kayıtlar
         invite_join_meeting_mailer:
           invite:
             decline: Daveti reddet
             invited_you_to_join_a_meeting: "%{invited_by} sizi %{application}'deki bir toplantıya davet etti. Aşağıdaki bağlantılardan reddedebilir veya kabul edebilirsiniz."
             join: '"%{meeting_title}" toplantısına katılın'
         invites:
-          create:
-            error: Katılımcıyı toplantıya katılmaya davet ederken bir sorun oluştu.
-            success: Katılımcı başarıyla toplantıya katılmaya davet edildi.
           form:
-            attendee_type: Katılımcı Tipi
             existing_user: mevcut katılımcı
             invite: Davet etmek
             invite_explanation: Katılımcı toplantıya ve organizasyona da davet edilecektir.
-            non_user: Mevcut olmayan katılımcı
             select_user: katılımcı seçin
           index:
             filter:
-              accepted: Kabul edilmiş
               all: Tüm
               rejected: Reddedilmiş
               sent: Gönderilmiş
-            filter_by: Tarafından filtre
             invite_attendee: katılımcı davet et
             invites: Davet etmek
             registrations_disabled: Kayıtlar devre dışı bırakıldığı için katılımcı davet edemezsiniz.
@@ -282,14 +202,12 @@ tr-TR:
         meeting_closes:
           edit:
             close: Kapalı
-            title: Toplantıyı kapat
         meeting_copies:
           form:
             select_a_meeting_type: Lütfen bir toplantı türü seçin
         meetings:
           close:
             invalid: Bu toplantı kapatılırken bir sorun oluştu
-            success: Toplantı başarıyla kapatıldı
           create:
             invalid: Bu toplantı oluşturulurken bir sorun oluştu
             success: Toplantı başarıyla oluşturuldu. Bunun henüz yayınlanmadığına dikkat edin, manuel olarak yayınlamanız gerekir.
@@ -298,87 +216,59 @@ tr-TR:
               proposals_count:
                 one: Toplantı, kendisiyle ilişkilendirilmiş %{count} teklife sahip olduğu için yok edilemez
                 other: Toplantı, kendisiyle ilişkilendirilmiş %{count} teklife sahip olduğu için yok edilemez
-            success: Toplantı başarıyla silindi
           edit:
             title: Toplantıyı düzenle
             update: Güncelleme
           form:
-            address_help: 'Adres: Geocoder tarafından konumu bulmak için kullanılır'
             disclaimer: 'Feragatname: Harici bir kayıt sistemi kullanarak, %{organization} düzenleyicilerinin, kullanıcılar tarafından harici hizmete sağlanan verilerden sorumlu olmadığının farkındasınız.'
             location_help: 'Yer: buluşma noktasını ima eden kullanıcılara yönelik mesaj'
             location_hints_help: 'Konum ipuçları: ek bilgi. Örnek: yüz yüze bir toplantı ise binanın katı veya kısıtlı erişime sahip çevrimiçi bir toplantı ise toplantı şifresi.'
             online_meeting_url_help: 'Bağlantı: katılımcıların doğrudan toplantınıza bağlanmasına izin verin'
             registration_url_help: 'Bağlantı: katılımcıların, kayıtlar için kullandığınız harici hizmete girmesine izin verin'
-            select_a_meeting_type: Lütfen bir toplantı türü seçin
-            select_a_registration_type: Lütfen bir kayıt türü seçin
             select_an_iframe_access_level: Lütfen bir iframe erişim düzeyi seçin
             show_embedded_iframe_help: 'Yalnızca birkaç hizmet, aşağıdaki alanlardan toplantıya veya canlı etkinliğe yerleştirmeye izin verir: %{domains}'
-          index:
-            title: Toplantılar
           new:
             create: Yaratmak
-            title: Toplantı oluştur
           publish:
             invalid: Bu toplantı yayınlanırken bir sorun oluştu
             success: Toplantı başarıyla yayınlandı
           service:
             description: Tanım
-            down: Aşağı
             remove: Kaldırmak
             service: Hizmet
-            title: Başlık
-            up: Yukarı
           services:
             add_service: hizmet ekle
             services: Hizmetler
           unpublish:
             invalid: Bu toplantı yayından kaldırılırken bir sorun oluştu
             success: Toplantı başarıyla yayından kaldırıldı
-          update:
-            invalid: Bu toplantı güncellenirken bir sorun oluştu
-            success: Toplantı başarıyla güncellendi
         meetings_poll:
           form:
             title: "%{questionnaire_for} için anket anketini düzenleyin"
           update:
             invalid: Bu toplantı anketi güncellenirken bir sorun oluştu
             success: Toplantı anketi başarıyla güncellendi
-        models:
-          meeting:
-            name: Toplantı
         registrations:
           edit:
             save: Kaydetmek
-            validate: Doğrula
-            validate_registration_code: Kayıt kodunu doğrula
           form:
             available_slots_help: Sınırsız slotunuz varsa 0 olarak bırakın.
-            invites: Davetiyeler
             recommendation_message: Gizlilik nedeniyle, artık ihtiyacınız kalmadığında bu yazı formunu silmenizi öneririz. Varsayılan olarak bu, toplantının sona ermesinden sonraki 3 aydır.
             registration_email_help: Bu metin, kayıt onay e-postasının ortasında görünecektir. Kayıt kodundan hemen sonra.
-            registration_form: Kayıt formu
             registrations_count:
               one: "%{count} kaydı var."
-              other: "%{count} kayıt oldu."
             reserved_slots_help: Ayrılmış yuvanız yoksa 0 olarak bırakın
             reserved_slots_less_than: "%{count}'dan küçük veya ona eşit olmalıdır"
-            title: Kayıtlar
           update:
-            invalid: Kayıt ayarları kaydedilirken bir sorun oluştu.
             success: Toplantı kayıt ayarları başarıyla kaydedildi.
-          validate_registration_code:
-            invalid: Bu kayıt kodu geçersiz.
-            success: Kayıt kodu başarıyla doğrulandı.
       admin_log:
         invite:
           create: "%{user_name}, %{attendee_name}'i %{space_name} alanındaki %{resource_name} toplantısına katılmaya davet etti"
           deleted: "%{user_name} davetsiz %{attendee_name}, %{space_name} alanındaki %{resource_name} toplantısına katılmaktan"
           update: "%{user_name}, %{attendee_name}'i %{space_name} alanındaki %{resource_name} toplantısına katılmaya davet etti"
         meeting:
-          close: "%{user_name}, %{space_name} alanındaki %{resource_name} toplantısını kapattı"
           create: "%{user_name}, %{resource_name} toplantısını %{space_name} alanında oluşturdu"
           delete: "%{user_name}, %{space_name} alanındaki %{resource_name} toplantısını sildi"
-          export_registrations: "%{user_name}, %{resource_name} toplantısının kayıtlarını %{space_name} alanında dışa aktardı"
           update: "%{user_name}, %{space_name} alanındaki %{resource_name} toplantısını güncelledi"
           value_types:
             organizer_presenter:
@@ -393,31 +283,25 @@ tr-TR:
         filter_scope_values:
           all: Tüm
       calendar_modal:
-        calendar_url: Takvim URL'si
-        close_window: Pencereyi kapat
         copy_calendar_url: Kopyala
         copy_calendar_url_clarification: Takvim URL'sini panoya kopyala
         copy_calendar_url_copied: Kopyalandı!
         copy_calendar_url_description: Yayınlanan tüm toplantıları takvim uygulamanızda veya sağlayıcınızda görebilirsiniz. "Bir URL'den yeni takvim ekle" seçeneğini kullanarak bu URL'yi kopyalayıp takviminize yapıştırın.
         copy_calendar_url_explanation: Etkin filtreler olduğundan, bir dizi toplantıyı dışa aktardığınızı lütfen unutmayın. Hepsini dışa aktarmak isterseniz, önce tüm filtreleri sıfırlayın.
         copy_calendar_url_message: URL başarıyla panoya kopyalandı.
-        export_calendar: Takvimi dışa aktar
       close_meeting_reminder_mailer:
         close_meeting_reminder:
           body: <a href="%{meeting_path}">"%{meeting_title}"</a> toplantısı kapatılmayı bekliyor. Lütfen "Toplantıyı kapat" düğmesini kullanarak toplantının bir raporunu ekleyin.
           greetings: Selamlar,<br/>%{organization_name}<br/><a href="%{organization_url}">%{organization_url}</a>
           hello: Merhaba %{username},
           subject: Artık toplantınızı %{organization_name} platformunda bir raporla kapatabilirsiniz.
-      conference_venues: Konferans Mekanları
       content_blocks:
         upcoming_meetings:
           name: Yaklaşan toplantılar
           upcoming_meetings: Yaklaşan toplantılar
-          view_all_meetings: Hepsini gör
       directory:
         meetings:
           index:
-            meetings: Toplantılar
             space_type: katılımcı alan
       iframe_access_level:
         all: Tüm ziyaretçiler
@@ -436,20 +320,8 @@ tr-TR:
           administrate: yönetmek
           close: kapalı
           questions: Sorular
-      mailer:
-        invite_join_meeting_mailer:
-          invite:
-            subject: Bir toplantıya katılma daveti
-        registration_mailer:
-          confirmation:
-            subject: Toplantınızın kaydı onaylandı
       meeting:
         not_allowed: Bu toplantıyı görüntüleme izniniz yok
-      meeting_closes:
-        edit:
-          back: Geri
-          close: Toplantıyı kapat
-          title: Toplantıyı kapat
       meetings:
         calendar_modal:
           add_to_calendar: Takvime ekle
@@ -461,45 +333,32 @@ tr-TR:
         count:
           meetings_count:
             one: X_0 toplantı
-            other: "%{count} toplantı"
         create:
           invalid: Bu toplantı oluşturulurken bir sorun oluştu.
-          success: Toplantıyı başarıyla oluşturdunuz.
         edit:
-          back: Geri
           title: Toplantınızı Düzenleyin
           update: Güncelleme
         filters:
           activity: Benim etkinliğim
           all: Tüm
-          category: Kategori
-          date: Tarih
           date_values:
             all: Tüm
-            past: Geçmiş
-            upcoming: Yaklaşan
           my_meetings: toplantılarım
           origin: Menşei
           origin_values:
             all: Tüm
-            official: Resmi
             participants: Katılımcılar
-            user_groups: Gruplar
-          scope: Kapsam
           search: Aramak
           type: Tip
           type_values:
             all: Tüm
             hybrid: Hibrit
-            in_person: Şahsen
-            online: Çevrimiçi
         filters_small_view:
           close_modal: Modeli kapat
           filter: filtre
           filter_by: Tarafından filtre
           unfold: açmak
         form:
-          address_help: 'Adres: Geocoder tarafından konumu bulmak için kullanılır'
           available_slots_help: Sınırsız slotunuz varsa 0 olarak bırakın
           create_as: 'Toplantıyı şu şekilde oluştur:'
           disclaimer: 'Feragatname: Harici bir kayıt sistemi kullanarak, %{organization} düzenleyicilerinin, kullanıcılar tarafından harici hizmete sağlanan verilerden sorumlu olmadığının farkındasınız.'
@@ -507,9 +366,6 @@ tr-TR:
           location_hints_help: 'Konum ipuçları: ek bilgi. Örnek: yüz yüze bir toplantı ise binanın katı veya kısıtlı erişime sahip çevrimiçi bir toplantı ise toplantı şifresi.'
           online_meeting_url_help: 'Bağlantı: katılımcıların doğrudan toplantınıza bağlanmasına izin verin'
           registration_url_help: 'Bağlantı: katılımcıların, kayıtlar için kullandığınız harici hizmete girmesine izin verin'
-          select_a_category: Lütfen bir kategori seçin
-          select_a_meeting_type: Lütfen bir toplantı türü seçin
-          select_a_registration_type: Lütfen bir kayıt türü seçin
           select_an_iframe_access_level: Lütfen bir iframe erişim düzeyi seçin
           show_embedded_iframe_help: 'Yalnızca birkaç hizmet, aşağıdaki alanlardan toplantıya veya canlı etkinliğe yerleştirmeye izin verir: %{domains}'
         index:
@@ -518,13 +374,9 @@ tr-TR:
           see_all: Tüm toplantıları görün
           see_all_withdrawn: Geri çekilen tüm toplantıları görün
           text_banner: Yazarları tarafından geri çekilen toplantıların listesini görüntülüyorsunuz. %{go_back_link}.
-        meeting_minutes:
-          related_information: İlgili bilgi
         meetings:
           no_meetings_warning: Arama kriterlerinize uyan toplantı yok veya planlanmış toplantı yok.
-          upcoming_meetings_warning: Şu anda planlanmış bir toplantı yok, ancak burada listelenen tüm geçmiş toplantıları bulabilirsiniz.
         new:
-          back: Geri
           create: Yaratmak
           title: Toplantınızı Oluşturun
         registration_confirm:
@@ -532,27 +384,19 @@ tr-TR:
           confirm: Onaylamak
         show:
           attendees: katılımcı sayısı
-          back: Listeye geri dön
-          close_meeting: Toplantıyı kapat
           contributions: Katkı sayısı
-          date: Tarih
           edit_close_meeting: Toplantı raporunu düzenle
           edit_meeting: Toplantıyı düzenle
           going: Bu toplantı için kaydoldunuz
-          join: Toplantıya katıl
           leave: Kaydınızı iptal edin
           leave_confirmation: Bu toplantı için kaydınızı iptal etmek istediğinizden emin misiniz?
           link_available_soon: Bağlantı yakında mevcut
           link_closed: Toplantıya katılma bağlantısı, başlamadan birkaç dakika önce hazır olacaktır.
           live_event: Bu toplantı şu anda oluyor
-          meeting_minutes: Görüşme süreleri
           micro_camera_permissions_warning: Aşağıdaki butona tıkladığınızda sizden mikrofon ve/veya kamera izinleri istenecek ve video konferansa katılacaksınız.
           no_slots_available: Kullanılabilir yuva yok
-          organizations: Katılan kuruluşlar
-          registration_code_help_text: Kayıt kodunuz
           registration_state:
             validated: ONAYLANMIŞ
-            validation_pending: DOĞRULAMA BEKLİYOR
           remaining_slots:
             one: Kalan %{count} yuva
             other: "%{count} yuva kaldı"
@@ -564,28 +408,18 @@ tr-TR:
         update:
           invalid: Toplantı güncellenirken bir sorun oluştu.
           success: Toplantıyı başarıyla güncellediniz.
-      meetings_map:
-        view_meeting: Toplantıyı görüntüle
       models:
         invite:
           fields:
-            email: E-posta
             name: İsim
             sent_at: gönderildi
             status: Durum
           status:
-            accepted: Kabul edildi (%{at})
-            rejected: Reddedildi (%{at})
             sent: Gönderilmiş
         meeting:
           fields:
-            closed: Kapalı
-            end_time: Bitiş tarihi
             id: İD
-            map: Harita
             official_meeting: resmi toplantı
-            start_time: Başlangıç tarihi
-            title: Başlık
       polls:
         questions:
           closed_question:
@@ -615,10 +449,7 @@ tr-TR:
       registration_mailer:
         confirmation:
           confirmed_html: <a href="%{url}">%{title}</a> toplantısı için kaydınız onaylandı.
-          details: Toplantı detaylarını ekte bulabilirsiniz.
-          registration_code: Kayıt kodunuz %{code}.
       registration_type:
-        on_different_platform: Farklı bir platformda
         on_this_platform: bu platformda
         registration_disabled: Kayıt devre dışı
       registrations:
@@ -626,46 +457,19 @@ tr-TR:
           invalid: Bu toplantıya katılınırken bir sorun oluştu.
           success: Toplantıya başarıyla katıldınız. Bu toplantıya kaydolduğunuz için, toplantıyla ilgili güncellemeler olup olmadığı size bildirilecektir.
         decline_invitation:
-          invalid: Davet reddedilirken bir sorun oluştu.
           success: Daveti başarıyla reddettiniz.
-        destroy:
-          invalid: Bu toplantıdan ayrılırken bir sorun oluştu.
-          success: Toplantıdan başarıyla ayrıldınız.
       type_of_meeting:
         hybrid: Hibrit
-        in_person: Şahsen
-        online: Çevrimiçi
       types:
         private_meeting: özel toplantı
-        transparent: Şeffaf
         withdraw: geri çekildi
       versions:
         back_to_resource: Toplantıya geri dön
       withdraw:
         error: Toplantı geri çekilirken bir hata oluştu
         success: Toplantı başarıyla geri çekildi
-    metrics:
-      meetings:
-        description: Oluşturulan toplantı sayısı
-        object: toplantılar
-        title: Toplantılar
     participatory_spaces:
       highlighted_meetings:
-        past_meetings: Geçmiş toplantılar
         see_all: Tüm toplantıları görün
-        upcoming_meetings: Yaklaşan toplantılar
-      upcoming_meeting_for_card:
-        upcoming_meeting: Yaklaşan toplantı
-    resource_links:
-      meetings_through_proposals:
-        meeting_result: 'İlgili sonuçlar:'
-        result_meeting: 'İlgili toplantılar:'
-      proposals_from_meeting:
-        meeting_proposal: 'İlgili teklifler:'
-        proposal_meeting: 'İlgili toplantılar:'
     statistics:
       meetings_count: Toplantılar
-  devise:
-    mailer:
-      join_meeting:
-        subject: Bir toplantıya katılma daveti

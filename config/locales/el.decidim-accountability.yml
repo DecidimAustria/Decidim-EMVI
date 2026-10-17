@@ -3,55 +3,27 @@ el:
   activemodel:
     attributes:
       result:
-        decidim_accountability_status_id: Κατάσταση
-        decidim_category_id: Κατηγορία
-        decidim_scope_id: Πεδίο εφαρμογής
-        description: Περιγραφή
-        end_date: Ημερομηνία λήξης
-        progress: Πρόοδος
         project_ids: Συμπεριλαμβανόμενα έργα
         proposals: Συμπεριλαμβανόμενες προτάσεις
-        start_date: Ημερομηνία έναρξης
-        title: Τίτλος
-        updated_at: Ενημερώθηκε στις
       status:
-        description: Περιγραφή
-        key: Κλειδί
         name: Ονομα
-        progress: Πρόοδος
       timeline_entry:
-        description: Περιγραφή
-        entry_date: Ημερομηνία
         title: Τίτλος
     models:
       decidim/accountability/proposal_linked_event: Η πρόταση περιλαμβάνεται σε αποτέλεσμα
       decidim/accountability/result_progress_updated_event: Η πρόοδος του αποτελέσματος ενημερώθηκε
-  activerecord:
-    models:
-      decidim/accountability/result:
-        one: Αποτέλεσμα
-        other: Αποτελέσματα
   decidim:
     accountability:
       actions:
-        attachment_collections: Φάκελοι
-        attachments: Συνημμένα
         confirm_destroy: Είστε βέβαιοι ότι θέλετε να διαγράψετε αυτό το %{name};
         destroy: Διαγράφω
-        edit: Επεξεργασία
         import_csv: Εισαγωγή CSV
         new: Νέο %{name}
-        preview: Προεπισκόπηση
         timeline_entries: Εξέλιξη του έργου
-        title: Ενέργειες
       admin:
-        exports:
-          result_comments: Σχόλια
-          results: Αποτελέσματα
         import_results:
           new:
             download_export: Κατεβάστε την Εξαγωγή σε μορφή CSV
-            import: Εισαγωγή
             info: |
               <p>Συνιστούμε να ακολουθήσετε αυτά τα βήματα:</p>
               <ol>
@@ -78,49 +50,22 @@ el:
           create:
             success: Το αρχείο έχει αρχίσει να εισάγεται. Θα λάβετε ένα email μέσα στα επόμενα λεπτά με το αποτέλεσμα της εισαγωγής
         models:
-          result:
-            name: Αποτέλεσμα
-          status:
-            name: Κατάσταση
           timeline_entry:
             name: Καταχώριση χρονολογίου
         results:
           create:
             invalid: Παρουσιάστηκε πρόβλημα κατά τη δημιουργία αυτού του αποτελέσματος
-            success: Το αποτέλεσμα δημιουργήθηκε με επιτυχία
           destroy:
             success: Το αποτέλεσμα διαγράφηκε επιτυχώς
-          edit:
-            title: Επεξεργασία αποτελέσματος
-            update: Ενημέρωση αποτελέσματος
-          index:
-            title: Αποτελέσματα
-          new:
-            create: Δημιουργία αποτελέσματος
-            title: Νέο αποτέλεσμα
           update:
             invalid: Παρουσιάστηκε πρόβλημα κατά την ενημέρωση αυτού του αποτελέσματος
-            success: Το αποτέλεσμα ενημερώθηκε με επιτυχία
-        shared:
-          subnav:
-            statuses: Καταστάσεις
         statuses:
           create:
             invalid: Παρουσιάστηκε πρόβλημα με τη δημιουργία αυτής της κατάστασης
-            success: Η κατάσταση δημιουργήθηκε με επιτυχία
           destroy:
             success: Η κατάσταση διαγράφηκε επιτυχώς
-          edit:
-            title: Επεξεργασία κατάστασης
-            update: Ενημέρωση κατάστασης
-          index:
-            title: Καταστάσεις
-          new:
-            create: Δημιουργία κατάστασης
-            title: Νέα κατάσταση
           update:
             invalid: Παρουσιάστηκε πρόβλημα κατά την ενημέρωση αυτής της κατάστασης
-            success: Η κατάσταση ενημερώθηκε με επιτυχία
         timeline_entries:
           create:
             invalid: Παρουσιάστηκε πρόβλημα με τη δημιουργία αυτής της καταχώρισης
@@ -134,7 +79,6 @@ el:
             title: Εγγραφές στο χρονοδιάγραμμα του έργου
           new:
             create: Δημιουργία καταχώρισης
-            title: Νέα καταχώρηση
           update:
             invalid: Παρουσιάστηκε πρόβλημα κατά την ενημέρωση αυτής της καταχώρισης
             success: Η καταχώριση ενημερώθηκε με επιτυχία
@@ -156,54 +100,29 @@ el:
             not_found: 'Ο γονέας δεν βρέθηκε στη βάση δεδομένων (ID: %{id})'
       content_blocks:
         highlighted_results:
-          dates: Ημερομηνίες
-          results: Αποτελέσματα
           unspecified: Δεν διευκρινίζεται
       import_mailer:
         import:
-          errors: Σφάλματα
           errors_present: Παρουσιάστηκε πρόβλημα κατά την εισαγωγή αποτελεσμάτων
           row_number: Σειρά
-          subject: Επιτυχής εισαγωγή αποτελεσμάτων
           success: Επιτυχής εισαγωγή αποτελεσμάτων. Μπορείτε να δείτε τα αποτελέσματα στη διεπαφή διαχείρισης.
-      last_activity:
-        new_result_at_html: "<span>Νέο αποτέλεσμα στο %{link}</span>"
       models:
         result:
           fields:
-            category: Κατηγορία
-            created_at: Δημιουργήθηκε
-            end_date: Ημερομηνία λήξης
             id: ταυτότητα
-            progress: Πρόοδος
-            scope: Πεδίο εφαρμογής
-            start_date: Ημερομηνία έναρξης
-            status: Κατάσταση
-            title: Τίτλος
         status:
           fields:
-            description: Περιγραφή
-            key: Κλειδί
             name: Ονομα
-            progress: Πρόοδος
         timeline_entry:
           fields:
-            entry_date: Ημερομηνία
             title: Τίτλος
       result_m:
         executed: Εκτελέστηκε
         view: Θέα
       results:
-        count:
-          results_count:
-            one: 1 αποτέλεσμα
-            other: "%{count} αποτελέσματα"
         filters:
           all: Ολα
           scopes: Πεδίο εφαρμογής
-        home:
-          categories_label: Κατηγορίες
-          subcategories_label: Υποκατηγορίες
         home_header:
           global_status: Παγκόσμια κατάσταση εκτέλεσης
         nav_breadcrumb:
@@ -214,50 +133,27 @@ el:
           stats:
             attendees: παρευρισκόμενοι
             back_to_resource: Επιστρέψτε στο αποτέλεσμα
-            comments: Σχόλια
-            contributions: Συνεισφορές
-            last_edited_by: Τελευταία επεξεργασία από
-            last_updated_at: Τελευταία ενημέρωση στις
             meetings: Συναντήσεις
-            proposals: Προτάσεις
             votes: Υποστηρίζει
         timeline:
           title: Εξέλιξη του έργου
-    admin:
-      filters:
-        results:
-          category_id_eq:
-            label: Κατηγορία
-          scope_id_eq:
-            label: Πεδίο εφαρμογής
-          status_id_eq:
-            label: Κατάσταση
     components:
       accountability:
-        actions:
-          comment: Σχόλιο
         name: Ευθύνη
         settings:
           global:
             categories_label: Όνομα για "Κατηγορίες"
-            comments_enabled: Τα σχόλια ενεργοποιήθηκαν
             comments_max_length: Μέγιστο μήκος σχολίων (Αφήστε 0 για την προεπιλεγμένη τιμή)
-            display_progress_enabled: Εμφάνιση προόδου
             heading_leaf_level_results: Όνομα για "Έργα"
             heading_parent_level_results: Όνομα για "Αποτελέσματα"
-            intro: Εισαγωγή
-            scope_id: Πεδίο εφαρμογής
             scopes_enabled: Τα πεδία είναι ενεργοποιημένα
             subcategories_label: Όνομα για "Υποκατηγορίες"
-          step:
-            comments_blocked: Τα σχόλια αποκλείστηκαν
     events:
       accountability:
         proposal_linked:
           email_intro: 'Η πρόταση "%{proposal_title}" έχει συμπεριληφθεί σε ένα αποτέλεσμα. Μπορείτε να το δείτε από αυτή τη σελίδα:'
           email_outro: Έχετε λάβει αυτήν την ειδοποίηση επειδή ακολουθείτε το "%{proposal_title}". Μπορείτε να σταματήσετε να λαμβάνετε ειδοποιήσεις ακολουθώντας τον προηγούμενο σύνδεσμο.
           email_subject: Μια ενημέρωση για το %{proposal_title}
-          notification_title: Η πρόταση <a href="%{proposal_path}">%{proposal_title}</a> έχει συμπεριληφθεί στο αποτέλεσμα <a href="%{resource_path}">%{resource_title}</a>.
         result_progress_updated:
           email_intro: 'Το αποτέλεσμα "%{resource_title}", το οποίο περιλαμβάνει την πρόταση "%{proposal_title}", είναι πλέον %{progress}% ολοκληρωμένο. Μπορείτε να το δείτε από αυτή τη σελίδα:'
           email_outro: Λάβατε αυτήν την ειδοποίηση επειδή ακολουθείτε το "%{proposal_title}" και αυτή η πρόταση περιλαμβάνεται στο αποτέλεσμα "%{resource_title}". Μπορείτε να σταματήσετε να λαμβάνετε ειδοποιήσεις ακολουθώντας τον προηγούμενο σύνδεσμο.
@@ -265,14 +161,7 @@ el:
           notification_title: Το αποτέλεσμα <a href="%{resource_path}">%{resource_title}</a>, το οποίο περιλαμβάνει την πρόταση <a href="%{proposal_path}">%{proposal_title}</a>, είναι πλέον %{progress}% ολοκληρωμένο.
     metrics:
       results:
-        description: Αριθμός αποτελεσμάτων που δημιουργήθηκαν
         object: Αποτελέσματα
-        title: Αποτελέσματα
     participatory_spaces:
       highlighted_results:
         see_all: Δείτε όλα τα αποτελέσματα
-    resource_links:
-      included_projects:
-        result_project: Έργα που περιλαμβάνονται σε αυτό το αποτέλεσμα
-      included_proposals:
-        result_proposal: Προτάσεις που περιλαμβάνονται σε αυτό το αποτέλεσμα

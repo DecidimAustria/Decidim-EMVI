@@ -7,24 +7,16 @@ uk:
   activerecord:
     models:
       decidim/surveys/survey:
-        one: Опитування
-        few: Опитування
         many: Опитування
         other: Опитування
       decidim/surveys/survey_answer:
-        one: Відповідь
-        few: Відповіді
         many: Відповіді
         other: Відповіді
   decidim:
     components:
       surveys:
-        actions:
-          answer: Відповідь
-        name: Опитування
         settings:
           global:
-            announcement: Оголошення
             clean_after_publish: Видалити відповіді під час публікації опитування
             ends_at: Відповіді приймаються до
             ends_at_help: Залиште поле порожнім, якщо немає конкретної дати
@@ -33,36 +25,19 @@ uk:
             starts_at: Відповіді прийняті від
             starts_at_help: Залиште поле порожнім, якщо немає конкретної дати
           step:
-            allow_answers: Дозволити відповіді
-            allow_unregistered: Дозволити незареєстрованим користувачам відповідати
-              на опитування
-            allow_unregistered_help: Якщо активовано, для відповіді на опитування
-              не потрібно буде входити в систему. Це може призвести до неякісних або
-              ненадійних даних, і він стане більш вразливим до автоматизованих атак.
-              Використовуйте з обережністю! Пам’ятайте, що учасник може відповідати
-              на те саме опитування кілька разів, використовуючи різні браузери або
-              функцію «приватного перегляду» свого веб-браузера.
-            announcement: Оголошення
+            allow_unregistered: Дозволити незареєстрованим користувачам відповідати на опитування
+            allow_unregistered_help: Якщо активовано, для відповіді на опитування не потрібно буде входити в систему. Це може призвести до неякісних або ненадійних даних, і він стане більш вразливим до автоматизованих атак. Використовуйте з обережністю! Пам’ятайте, що учасник може відповідати на те саме опитування кілька разів, використовуючи різні браузери або функцію «приватного перегляду» свого веб-браузера.
     events:
       surveys:
         survey_closed:
-          email_intro: Опитування %{resource_title} в %{participatory_space_title}
-            було закрито.
-          email_outro: Ви отримали це сповіщення, оскільки стежите за %{participatory_space_title}.
-            Перейти до сповіщень можна за попереднім посиланням.
+          email_intro: Опитування %{resource_title} в %{participatory_space_title} було закрито.
+          email_outro: Ви отримали це сповіщення, оскільки стежите за %{participatory_space_title}. Перейти до сповіщень можна за попереднім посиланням.
           email_subject: Опитування завершено в %{participatory_space_title}
-          notification_title: Опитування <a href="%{resource_path}">%{resource_title}</a>
-            в <a href="%{participatory_space_url}">%{participatory_space_title}</a>
-            завершено.
+          notification_title: Опитування <a href="%{resource_path}">%{resource_title}</a> в <a href="%{participatory_space_url}">%{participatory_space_title}</a> завершено.
         survey_opened:
-          email_intro: 'Опитування %{resource_title} у %{participatory_space_title}
-            відкрито. Ви можете взяти участь у ньому з цієї сторінки:'
-          email_outro: Ви отримали це сповіщення, оскільки стежите за %{participatory_space_title}.
-            Перейти до сповіщень можна за попереднім посиланням.
-          email_subject: Нове опитування в %{participatory_space_title}
-          notification_title: Опитування <a href="%{resource_path}">%{resource_title}</a>
-            у <a href="%{participatory_space_url}">%{participatory_space_title}</a>
-            відкрито.
+          email_intro: 'Опитування %{resource_title} у %{participatory_space_title} відкрито. Ви можете взяти участь у ньому з цієї сторінки:'
+          email_outro: Ви отримали це сповіщення, оскільки стежите за %{participatory_space_title}. Перейти до сповіщень можна за попереднім посиланням.
+          notification_title: Опитування <a href="%{resource_path}">%{resource_title}</a> у <a href="%{participatory_space_url}">%{participatory_space_title}</a> відкрито.
     metrics:
       survey_answers:
         description: Кількість опитувань, на які відповіли учасники
@@ -77,12 +52,10 @@ uk:
         surveys:
           update:
             invalid: Під час збереження опитування виникла проблема.
-            success: Опитування успішно збережено.
       last_activity:
         new_survey_at_html: "<span>Нове опитування на %{link}</span>"
       surveys:
         answer:
           invalid: Під час опитування виникла проблема.
-          spam_detected: Під час відповіді на форму виникла проблема. Можливо, ви
-            поспішили, можете спробувати ще раз?
+          spam_detected: Під час відповіді на форму виникла проблема. Можливо, ви поспішили, можете спробувати ще раз?
           success: Відповіли на опитування.
