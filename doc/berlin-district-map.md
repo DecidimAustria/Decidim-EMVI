@@ -1,14 +1,14 @@
 # Berlin district map
 
-The 0.30.9 HTML-block sanitization backport strips style, script, SVG and dialog tags from the old Berlin homepage block. CSS then appears as text and the map disappears. Keep the upstream sanitizer in place. The replacement is a dedicated `berlin_district_map` content block, with reviewed static SVG/list templates and local, versioned CSS/JavaScript.
+The 0.30.9 HTML-block sanitization backport strips style, script, SVG and dialog tags from the old Berlin homepage block. CSS then appears as text and the map disappears. Keep the upstream sanitizer in place. The replacement is a dedicated `berlin_district_map` content block, with reviewed static SVG/list templates and local, versioned CSS.
 
 ## Isolation and translated content
 
-Only the organization with stored host `www.berlinmitallengestalten.de` can create/use the block. The admin homepage menu hides it elsewhere, the create command rejects other organizations, and rendering checks both the current organization and block owner. No database ID is hard-coded. Other organizations' existing HTML cells and sanitizer remain unchanged. Public static files can be requested directly, but only the Berlin block includes their URLs in a page. Increase `map-v1` filenames and both template references when changing asset content to avoid stale browser caches.
+Only the organization with stored host `www.berlinmitallengestalten.de` can create/use the block. The admin homepage menu hides it elsewhere, the create command rejects other organizations, and rendering checks both the current organization and block owner. No database ID is hard-coded. Other organizations' existing HTML cells and sanitizer remain unchanged. Public static files can be requested directly, but only the Berlin block includes their URLs in a page. The current template loads `map-v2.css`. Increase the CSS filename and its template reference when changing asset content to avoid stale browser caches. Original v1 CSS/JS files remain available for cached pages, but the current block no longer includes the JavaScript.
 
 Heading and introduction remain translated settings editable in the normal block editor. The conversion copies all eight nonempty existing locales: de, en, es, fr, pl, ar-SA, fa-IR and tr-TR. Heading text is escaped; introduction HTML retains standard admin sanitization. The eight source variants have identical CSS, JavaScript, SVG and link-list structure. Only the reviewed map/list markup is checked into the repository; the full production export and conversion backups stay private.
 
-Desktop/tablet uses the existing 13 native SVG links (12 districts and the state council); mobile uses the existing list. Links work without JavaScript. Small JavaScript enhancement hides matching map labels on hover and supports Turbo navigation without duplicate link listeners. The old mobile dialog was redundant because the small-screen layout uses links directly; its broken handler with an undefined `viewportWidth` is not retained. CSS selectors are confined to `#berlin-district-map`; keyboard focus stays visible and motion honors reduced-motion preferences. Existing organization header snippets are not changed.
+Desktop/tablet uses the existing 13 native SVG links (12 districts and the state council). The list is visible at every screen width: below the map on desktop/tablet, and on its own on mobile. Links work without JavaScript, and district labels stay visible during hover/focus. The old mobile dialog was redundant because the small-screen layout uses links directly; its broken handler with an undefined `viewportWidth` is not retained. CSS selectors are confined to `#berlin-district-map`; keyboard focus stays visible and motion honors reduced-motion preferences. Existing organization header snippets are not changed.
 
 ## Rollout
 
@@ -43,6 +43,12 @@ kubectl --context kubernetes-admin@cluster1 --namespace decidim-emvi-production 
 ```
 
 Add `APPLY=1` to execute. Restore verifies the host, owner, scope, current manifest, converted-settings digest, weight and publication timestamp. It refuses to overwrite later editorial changes. Only original manifest/settings are restored; position/publication are untouched. Restoring the old HTML does **not** repair its rendering under 0.30.9: the sanitizer still strips its custom markup. This is an exact content rollback, not an application downgrade. Never remove the registered manifest from code while converted records still exist.
+
+## Persistent labels and district list
+
+Alex requested that district names stay visible while hovering and that the list appear below the map. The original pasted HTML contains the same 12 district links and state-council link retained in the component, but its media query hides the list above 47.9rem. The v2 stylesheet removes that desktop hiding rule. The component no longer includes the v1 JavaScript that hid matching labels on mouseenter. Native SVG link hover highlighting and keyboard focus remain CSS-only. Existing converted blocks pick up these changes on the next application deployment; no conversion or database change is required.
+
+Verified locally: 8 tests / 127 assertions passed. At desktop width 1280, the Mitte path had its hover fill while its label remained visible, and the district list was displayed below the map. At mobile width 390, all 13 list links were displayed with no horizontal overflow. The preview browser reported no script errors. Production was not changed for this follow-up.
 
 ## Validation
 

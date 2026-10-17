@@ -66,8 +66,8 @@ class BerlinMapTest < Minitest::Test
       assert_equal converted.settings.title.fetch(locale), doc.at_css("h2").text
       assert_equal 13, doc.css("svg#berlinCard a[href^='/assemblies/']").length
       assert_equal 12, doc.css(".districtList li a").length
-      assert_equal 1, doc.css("link[href='/berlin-district-map/map-v1.css']").length
-      assert_equal 1, doc.css("script[src='/berlin-district-map/map-v1.js']").length
+      assert_equal 1, doc.css("link[href='/berlin-district-map/map-v2.css']").length
+      assert_empty doc.css("script")
       assert_empty doc.css("style, dialog")
       refute_includes doc.text, "position: relative"
     end

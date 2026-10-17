@@ -1,5 +1,5 @@
 include:
-  - component: gitlab.webface.at/components/rails-deploy/pipeline@4407075d811337c775f4512d696d50cdcd7aade5
+  - component: gitlab.webface.at/components/rails-deploy/pipeline@buildkit
     inputs:
       ruby-version: "3.3.12"
       node-version: "22.14.0"
