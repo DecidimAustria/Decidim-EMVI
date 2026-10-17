@@ -62,6 +62,10 @@ cs:
         see_all: Zobrazit všechny výsledky
 de:
   decidim:
+    pages:
+      home:
+        statistics:
+          headline: Aktueller Zustand von %{organization}
     admin:
       imports:
         notice: "%{count} %{resource_name} erfolgreich importiert."
