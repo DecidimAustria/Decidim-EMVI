@@ -6,5 +6,6 @@ include:
       eslint-command: npx --no-install eslint --config packages/eslint-config/index.js app/packs config/webpack --format json --output-file tmp/code-quality/eslint.json
       stylelint-command: npx --no-install stylelint --config packages/stylelint-config/index.js "app/**/*.{css,scss}" --formatter json --output-file tmp/code-quality/stylelint.json
       build-engine: buildkit
+      buildkit-webpack-cache: true
       build-feature-branches: true
       deploy: true
