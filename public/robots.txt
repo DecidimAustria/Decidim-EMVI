@@ -1,5 +1,9 @@
 # See https://www.robotstxt.org/robotstxt.html for documentation on how to use the robots.txt file
 
+User-agent: *
+Disallow: /profiles/
+Disallow: /search
+
 User-agent: Amazonbot               # Amazon's user agent
 Disallow: /            # disallow this directory
 
