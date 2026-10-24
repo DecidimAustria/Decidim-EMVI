@@ -1024,7 +1024,7 @@ DEPENDENCIES
   wicked_pdf (~> 2.1)
 
 RUBY VERSION
-   ruby 3.3.12p206
+   ruby 3.3.13p207
 
 BUNDLED WITH
    2.4.19
