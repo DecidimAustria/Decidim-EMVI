@@ -5,4 +5,7 @@ ENV["SHAKAPACKER_USE_PACKAGE_JSON_GEM"] ||= "true"
 ENV["PACKAGE_JSON_FALLBACK_MANAGER"] ||= "npm"
 
 require "bundler/setup" # Set up gems listed in the Gemfile.
+# Rails commands load ActiveSupport before the application entrypoint.
+# concurrent-ruby no longer requires Logger on behalf of Rails 7.0.
+require "logger"
 require "bootsnap/setup" # Speed up boot time by caching expensive operations.
