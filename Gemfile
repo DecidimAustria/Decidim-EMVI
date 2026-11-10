@@ -3,11 +3,36 @@
 source "https://rubygems.org"
 
 ruby '3.3.13'
- DECIDIM_VERSION = { git: "https://github.com/DecidimAustria/decidim", branch: '0.30-live' }
+ DECIDIM_VERSION = { git: "https://github.com/DecidimAustria/decidim", branch: 'security/0.30-concurrent-ruby-20261110' }
 #DECIDIM_VERSION = { git: "https://github.com/DecidimAustria/decidim", branch: '0.28.4-live' }
 # DECIDIM_VERSION = "0.28.4"
 
 gem "decidim", DECIDIM_VERSION
+
+# Keep all bundled framework components on the same patched Git revision.
+%w[
+  decidim-accountability
+  decidim-admin
+  decidim-api
+  decidim-assemblies
+  decidim-blogs
+  decidim-budgets
+  decidim-comments
+  decidim-core
+  decidim-debates
+  decidim-forms
+  decidim-generators
+  decidim-meetings
+  decidim-pages
+  decidim-participatory_processes
+  decidim-proposals
+  decidim-sortitions
+  decidim-surveys
+  decidim-system
+  decidim-verifications
+].each do |component|
+  gem component, DECIDIM_VERSION.merge(require: false)
+end
 #gem "decidim-alternative_landing", git: "https://github.com/DecidimAustria/decidim-module-alternative_landing", branch: 'update-to-decidim-0.27'
 # alternative_landing was disabled because it is not compatible with decidim 0.29
 # gem "decidim-alternative_landing", git: "https://github.com/Platoniq/decidim-module-alternative_landing.git", branch: 'release/0.27-stable'
@@ -54,7 +79,7 @@ group :development, :test do
   gem "byebug", "~> 11.0", platform: :mri
 
   gem "brakeman"
-  gem "net-imap", "~> 0.4.25"
+  gem "net-imap", "~> 0.5.15"
   gem "net-pop", "~> 0.1.1"
   gem "net-smtp", "~> 0.5.0"
   gem "decidim-dev", DECIDIM_VERSION
