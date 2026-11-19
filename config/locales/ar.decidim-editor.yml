@@ -1,0 +1,41 @@
+---
+ar:
+  editor:
+    extensions:
+      image:
+        altLabel: النص البديل للصورة
+        nodeView:
+          resizer:
+            control:
+              resize: تغيير حجم الصورة (%position%)
+            position:
+              bottomLeft: الزاوية السفلية اليسرى
+              bottomRight: الزاوية السفلية اليمنى
+              topLeft: الزاوية العلوية اليسرى
+              topRight: الزاوية العلوية اليمنى
+        uploadError: تعذّر رفع الملف.
+      link:
+        targets:
+          default: افتراضي (في علامة التبويب نفسها)
+    toolbar:
+      control:
+        bulletList: قائمة نقطية
+        codeBlock: كتلة تعليمات برمجية
+        common:
+          eraseStyles: إزالة التنسيق
+        hardBreak: سطر جديد
+        heading: نمط النص
+        image: صورة
+        indent:
+          indent: زيادة المسافة البادئة
+          outdent: تقليل المسافة البادئة
+        italic: مائل
+        link: رابط
+        orderedList: قائمة مرقّمة
+        underline: تسطير
+        videoEmbed: تضمين فيديو
+      textStyle:
+        heading: عنوان من المستوى %level%
+        normal: نص عادي
+    upload:
+      uploadedFile: الملف المرفوع

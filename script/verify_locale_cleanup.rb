@@ -161,6 +161,20 @@ class EmviLocaleCleanupTest < Minitest::Test
     refute_equal I18n.t(key, locale: :en, organization: "EMVI"), I18n.t(key, locale: :"ar-SA", organization: "EMVI")
   end
 
+  def test_arabic_editor_messages_include_all_keys_and_javascript_placeholders
+    english = A.flatten(I18n.t("editor", locale: :en))
+    arabic = A.flatten(I18n.t("editor", locale: :"ar-SA"))
+
+    assert_empty english.keys - arabic.keys
+    assert_equal "عنوان من المستوى %level%", arabic.fetch("toolbar.textStyle.heading")
+    english.each do |key, text|
+      translation = arabic.fetch(key)
+      assert_kind_of String, translation, key
+      refute_empty translation, key
+      assert_equal text.scan(/%\w+%/).sort, translation.scan(/%\w+%/).sort, key
+    end
+  end
+
   def test_german_homepage_statistics_heading
     assert_equal "Aktueller Zustand von graz", I18n.t("decidim.pages.home.statistics.headline", locale: :de, organization: "graz")
   end
