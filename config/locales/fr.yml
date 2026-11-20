@@ -19,3 +19,6 @@ fr:
         made_with_open_source: Site réalisé grâce au <a target="_blank" href="https://github.com/decidim/decidim"> logiciel libre Decidim</a>.
   emvi:
     eu: Cofinancé par l'Union européenne. Les points de vue et opinions exprimés sont cependant ceux de l'auteur(s) uniquement et ne reflètent pas nécessairement ceux de l'Union européenne. L'Union européenne ne peut être tenue responsable de ceux-ci.
+  time:
+    buttons:
+      select: Sélectionner
