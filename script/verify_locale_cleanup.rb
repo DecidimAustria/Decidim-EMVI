@@ -175,6 +175,12 @@ class EmviLocaleCleanupTest < Minitest::Test
     end
   end
 
+  def test_french_time_picker_messages_include_select_label
+    messages = I18n.t("time", locale: :fr)
+
+    assert_equal "Sélectionner", messages.dig(:buttons, :select)
+  end
+
   def test_german_homepage_statistics_heading
     assert_equal "Aktueller Zustand von graz", I18n.t("decidim.pages.home.statistics.headline", locale: :de, organization: "graz")
   end
