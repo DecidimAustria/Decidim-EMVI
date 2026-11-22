@@ -2,7 +2,7 @@
 
 source "https://rubygems.org"
 
-ruby '3.3.13'
+ruby '3.3.14'
  DECIDIM_VERSION = { git: "https://github.com/DecidimAustria/decidim", branch: 'security/0.30-concurrent-ruby-20261110' }
 #DECIDIM_VERSION = { git: "https://github.com/DecidimAustria/decidim", branch: '0.28.4-live' }
 # DECIDIM_VERSION = "0.28.4"
