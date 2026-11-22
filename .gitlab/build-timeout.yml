@@ -1,0 +1,11 @@
+build:
+  extends: .build_timeout_override
+  # A cold BuildKit run can reach the 50-minute default during image export.
+  timeout: 75 minutes
+
+.build_timeout_override:
+  # The planner omits build for documentation-only changes.
+  rules:
+    - when: never
+  script:
+    - exit 1

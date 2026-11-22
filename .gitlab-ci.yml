@@ -9,3 +9,10 @@ include:
       buildkit-webpack-cache: true
       build-feature-branches: true
       deploy: true
+
+application_pipeline:
+  trigger:
+    include:
+      - artifact: ci-child.yml
+        job: plan_pipeline
+      - local: .gitlab/build-timeout.yml
