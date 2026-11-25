@@ -15,7 +15,13 @@ Bundler.require(*Rails.groups)
 module DecidimApplication
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
-    config.load_defaults 6.1
+    config.load_defaults 7.2
+
+    # Run after Decidim sets its selectable catalog and before I18n loads files.
+    initializer "emvi.regional_locale_roots", after: "decidim_core.setup_i18n" do |app|
+      locales = Decidim.available_locales.map(&:to_s)
+      app.config.i18n.available_locales = (locales + locales.map { |locale| locale.split("-").first }).uniq
+    end
 
     # Configuration for the application, engines, and railties goes here.
     #

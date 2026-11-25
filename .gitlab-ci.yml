@@ -3,16 +3,32 @@ include:
     inputs:
       ruby-version: "3.3.14"
       node-version: "22.14.0"
-      eslint-command: npx --no-install eslint --config packages/eslint-config/index.js app/packs config/webpack --format json --output-file tmp/code-quality/eslint.json
-      stylelint-command: npx --no-install stylelint --config packages/stylelint-config/index.js "app/**/*.{css,scss}" --formatter json --output-file tmp/code-quality/stylelint.json
+      eslint-command: npx --no-install eslint --config node_modules/@decidim/eslint-config/index.js app/packs config/webpack --format json --output-file tmp/code-quality/eslint.json
+      stylelint-command: npx --no-install stylelint --config node_modules/@decidim/stylelint-config/index.js "app/**/*.{css,scss}" --formatter json --output-file tmp/code-quality/stylelint.json
       build-engine: buildkit
       buildkit-webpack-cache: true
       build-feature-branches: true
       deploy: true
 
+# Temporary fail-closed gate for the initial schema-changing staging rollout.
+upgrade_gate:
+  stage: prepare
+  image: python:3.13-alpine
+  needs:
+    - job: plan_pipeline
+      artifacts: true
+  script:
+    - python3 .gitlab/prepare-upgrade-gate.py
+  artifacts:
+    paths: [ci-upgrade-gate.yml]
+    expire_in: 1 week
+
 application_pipeline:
+  needs: [plan_pipeline, upgrade_gate]
   trigger:
     include:
       - artifact: ci-child.yml
         job: plan_pipeline
+      - artifact: ci-upgrade-gate.yml
+        job: upgrade_gate
       - local: .gitlab/build-timeout.yml

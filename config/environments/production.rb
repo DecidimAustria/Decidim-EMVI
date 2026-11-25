@@ -32,7 +32,6 @@ Rails.application.configure do
   # config.action_dispatch.x_sendfile_header = 'X-Accel-Redirect' # for NGINX
 
   # Store uploaded files on the local file system (see config/storage.yml for options).
-  #config.active_storage.service = Rails.application.secrets.dig(:storage, :provider) || :local
   config.active_storage.service = ENV.fetch("STORAGE_PROVIDER", "minio").to_sym
 
   # Mount Action Cable outside main process or domain.
@@ -90,13 +89,14 @@ Rails.application.configure do
   # Use default logging formatter so that PID and timestamp are not suppressed.
   config.log_formatter = ::Logger::Formatter.new
   config.action_mailer.smtp_settings = {
-    :address        => Rails.application.secrets.smtp_address,
-    :port           => Rails.application.secrets.smtp_port,
-    :authentication => Rails.application.secrets.smtp_authentication,
-    :user_name      => Rails.application.secrets.smtp_username,
-    :password       => Rails.application.secrets.smtp_password,
-    :domain         => Rails.application.secrets.smtp_domain,
-    :enable_starttls_auto => Rails.application.secrets.smtp_starttls_auto,
+    :address        => Decidim::Env.new("SMTP_ADDRESS").to_s,
+    :port           => Decidim::Env.new("SMTP_PORT", 587).to_i,
+    :authentication => Decidim::Env.new("SMTP_AUTHENTICATION", "plain").to_s,
+    :user_name      => Decidim::Env.new("SMTP_USERNAME").to_s,
+    :password       => Decidim::Env.new("SMTP_PASSWORD").to_s,
+    :domain         => Decidim::Env.new("SMTP_DOMAIN").to_s,
+    :enable_starttls_auto => Decidim::Env.new("SMTP_STARTTLS_AUTO", true).present?,
+    :read_timeout => Integer(ENV.fetch("SMTP_READ_TIMEOUT", "15"), 10),
     :openssl_verify_mode => 'none'
   }
 
