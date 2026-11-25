@@ -8,6 +8,7 @@ require "nokogiri"
 abort "Only reviewed for Decidim 0.31.9" unless Decidim.version == "0.31.9"
 
 contracts = {
+  "decidim.pages.home.statistics.headline" => [],
   "decidim.admin.imports.notice" => %w[count resource_name],
   "decidim.debates.actions.new" => [],
   "decidim.admin.organization.form.colors.colors_warning_html" => [],
@@ -48,7 +49,11 @@ locales.each do |locale|
     next if extra.empty?
 
     fixed = value.dup
-    if key == "decidim.admin.imports.notice"
+    if key == "decidim.pages.home.statistics.headline"
+      # The 0.31 homepage cell supplies no organization interpolation anymore.
+      # Reuse the translated statistics label instead of leaving a dangling phrase.
+      fixed = I18n.t("decidim.statistics.headline", locale: locale, raise: true)
+    elsif key == "decidim.admin.imports.notice"
       fixed.gsub!("%{number}", "%{count}")
     elsif key.start_with?("decidim.events.debates.create_debate_event.")
       fixed.gsub!("%{space_title}", "%{participatory_space_title}")

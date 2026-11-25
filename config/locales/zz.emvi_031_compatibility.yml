@@ -26,6 +26,10 @@ ar-SA:
             email_outro: لقد تلقيت هذا الإشعار لأنك تتابع مساحة المشاركة %{participatory_space_title} . يمكنك إيقاف تلقي الإخطارات باتباع الرابط السابق.
             email_subject: مناقشة جديدة "%{resource_title}" في %{participatory_space_title}
             notification_title: تم إنشاء المناقشة <a href="%{resource_path}">%{resource_title}</a> في <a href="%{participatory_space_url}">%{participatory_space_title}</a>.
+    pages:
+      home:
+        statistics:
+          headline: الإحصائيات
 bs:
   decidim:
     debates:
@@ -168,6 +172,10 @@ fa-IR:
             success:
               selected: 'این پروژه ها با موفقیت برای اجرا انتخاب شدند: %{successful}.'
               unselected: 'این پروژه ها با موفقیت از پیاده سازی حذف شدند: %{successful}.'
+    pages:
+      home:
+        statistics:
+          headline: آمار
 hr:
   decidim:
     debates:
@@ -335,6 +343,10 @@ tr-TR:
             success:
               selected: 'Bu projeler uygulama için başarıyla seçildi: %{successful}.'
               unselected: 'Bu projelerin uygulamadaki seçimi başarıyla kaldırıldı: %{successful}.'
+    pages:
+      home:
+        statistics:
+          headline: İstatistik
 uk:
   decidim:
     debates:

@@ -169,6 +169,7 @@ class Upgrade031Test < Minitest::Test
 
   def test_reviewed_translation_calls_for_every_configured_locale
     contracts = {
+      "decidim.pages.home.statistics.headline" => {},
       "decidim.admin.imports.notice" => { count: 3, resource_name: "items" },
       "decidim.admin.organization.form.colors.colors_warning_html" => {},
       "decidim.components.add_comment_form.account_message" => {},
@@ -197,6 +198,7 @@ class Upgrade031Test < Minitest::Test
   end
 
   def test_public_homepage_in_every_production_language
+    Decidim::ContentBlock.create!(organization: @organization, scope_name: "homepage", manifest_name: "stats", published_at: Time.current)
     @organization.update_columns(available_locales: %w(bs ca cs de en es fr hr it nl pl pt ro ru el sl sr-CS tr-TR ar-SA fa-IR uk zh-TW))
     session = ActionDispatch::Integration::Session.new(Rails.application)
     session.host!(@organization.host)
@@ -204,6 +206,9 @@ class Upgrade031Test < Minitest::Test
       session.get("/", params: { locale: locale })
       assert_equal 200, session.response.status, locale
       refute_includes session.response.body, "translation_missing", locale
+      headline = Nokogiri::HTML(session.response.body).at_css("#statistics .home__section-title")
+      refute_nil headline, locale
+      refute_match(/%\{[^}]+\}/, headline.text, locale)
     end
   end
 

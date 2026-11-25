@@ -26,7 +26,7 @@ The populated fixture contains two tenants, nested categories/scopes and typed a
 
 Keep the existing maintenance-only taxonomy adapter enabled for 0.31.9. The synthetic repeat-import test reproduces duplicate filters without the adapter's omitted-manifest normalization. The adapter also retains earlier component filters; regression checks explicitly inspect the proposals component. Actual production classification import is a separate prerequisite below. 0.31 no longer provides the old `decidim:taxonomies:update_metrics` task; do that work on 0.30, not by replaying the old runbook after upgrade.
 
-Replace generated 0.30 interpolation repairs with 117 reviewed 0.31 repairs across 18 languages; the generator is idempotent. Preserve customer wording and the Polish terms override. The target upstream German statistics heading is `Statistiken`, rather than the defective Romanian value in 0.30.9. The nil-query translation-bar guard remains necessary through 0.31.9.
+Replace generated 0.30 interpolation repairs with 120 reviewed 0.31 repairs across 18 languages; the generator is idempotent. Preserve customer wording and the Polish terms override. The target upstream German statistics heading is `Statistiken`, rather than the defective Romanian value in 0.30.9. The nil-query translation-bar guard remains necessary through 0.31.9.
 
 ## Local checks
 
@@ -46,7 +46,7 @@ mise exec -- bin/rails runner script/verify_031_upgrade.rb
 mise exec -- bin/rails runner script/verify_berlin_map.rb
 ```
 
-**22 upgrade tests/7,947 assertions and eight Berlin map tests/127 assertions pass.** Production assets/API documentation, Zeitwerk eager loading and clean npm ci pass with dummy credentials and an unreachable database. Four production-config scenarios pass six tests/38 assertions each: default settings, disabled STARTTLS/translation, explicit timeout `037` and explicitly enabled STARTTLS. The SMTP transport object's timeout is checked without connecting. Invalid SMTP_READ_TIMEOUT is rejected. npm audit reports 74 findings (2 low, 42 moderate, 30 high, zero critical); no broad audit fix is applied. CI image scans must still be reviewed.
+**22 upgrade tests/8,079 assertions and eight Berlin map tests/127 assertions pass.** Production assets/API documentation, Zeitwerk eager loading and clean npm ci pass with dummy credentials and an unreachable database. Four production-config scenarios pass six tests/38 assertions each: default settings, disabled STARTTLS/translation, explicit timeout `037` and explicitly enabled STARTTLS. The SMTP transport object's timeout is checked without connecting. Invalid SMTP_READ_TIMEOUT is rejected. npm audit reports 74 findings (2 low, 42 moderate, 30 high, zero critical); no broad audit fix is applied. CI image scans must still be reviewed.
 
 ## Initial staging rollout (schema migration)
 
@@ -74,3 +74,8 @@ The first attempt, job 29369, failed rendering Helm YAML because an extra one-of
 The live configuration comparison identified an unintended STARTTLS default change from false to true. This follow-up restores the legacy false default in production.rb while retaining explicit ENV overrides and the requested 15-second read timeout. Rails 7.2 also exposes `open_timeout: 5` explicitly; Mail 2.9.1, used before and after, already had that effective connection timeout. SMTP credentials and mailer identity digests are unchanged. The corrective image still needs its staging pipeline/runtime verification; no test email or failed-mail retry is performed.
 
 The temporary first-upgrade staging gate is removed in this follow-up. Schema/data migrations are already applied, so normal automatic staging is restored; production remains manual and is not authorized by this task. Further rollout results are recorded below when independently checked. Alex retains login/upload acceptance. The eight critical Debian scanner findings use the same versions as the old staging image; they remain a separate base-image follow-up. Report collection succeeded, with a legacy RuboCop style backlog rather than a zero-offense result.
+
+
+### Homepage statistics compatibility
+
+Anonymous browser verification found that the 0.31 statistics cell no longer passes `organization` to its headline. Retained Arabic, Persian and Turkish text exposed the raw placeholder. The compatibility generator now reuses each language’s existing translated generic statistics label for these three entries. The regression suite renders the actual statistics block in all 22 configured languages and rejects unexpanded placeholders, in addition to testing the no-argument translation contract. Customer wording elsewhere is preserved.
