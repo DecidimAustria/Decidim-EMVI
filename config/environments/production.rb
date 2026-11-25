@@ -95,7 +95,7 @@ Rails.application.configure do
     :user_name      => Decidim::Env.new("SMTP_USERNAME").to_s,
     :password       => Decidim::Env.new("SMTP_PASSWORD").to_s,
     :domain         => Decidim::Env.new("SMTP_DOMAIN").to_s,
-    :enable_starttls_auto => Decidim::Env.new("SMTP_STARTTLS_AUTO", true).present?,
+    :enable_starttls_auto => Decidim::Env.new("SMTP_STARTTLS_AUTO", false).present?,
     :read_timeout => Integer(ENV.fetch("SMTP_READ_TIMEOUT", "15"), 10),
     :openssl_verify_mode => 'none'
   }

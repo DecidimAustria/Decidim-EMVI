@@ -16,7 +16,7 @@ Production-mode SMTP configuration now includes:
 :read_timeout => Integer(ENV.fetch("SMTP_READ_TIMEOUT", "15"), 10),
 ```
 
-The default is 15 seconds; an explicit environment value overrides it. Base 10 permits `037` as 37 seconds. Invalid input fails boot. No Terraform variable is needed for the default. Both Kubernetes staging and production use Rails production mode. This is a read timeout, not a delivery guarantee; historical failed mail is not retried or resent. No SMTP connection or test message is used in validation.
+The default is 15 seconds; an explicit environment value overrides it. Preserve the previous application default `SMTP_STARTTLS_AUTO=false`; explicit `true` still enables STARTTLS. The actual SMTP transport mode and unchanged five-second connection timeout are tested without connecting. Base 10 permits `037` as 37 seconds. Invalid input fails boot. No Terraform variable is needed for the default. Both Kubernetes staging and production use Rails production mode. This is a read timeout, not a delivery guarantee; historical failed mail is not retried or resent. No SMTP connection or test message is used in validation.
 
 ## Data and application compatibility
 
@@ -46,11 +46,11 @@ mise exec -- bin/rails runner script/verify_031_upgrade.rb
 mise exec -- bin/rails runner script/verify_berlin_map.rb
 ```
 
-**22 upgrade tests/7,947 assertions and eight Berlin map tests/127 assertions pass.** Production assets/API documentation, Zeitwerk eager loading and clean npm ci pass with dummy credentials and an unreachable database. Three production-config scenarios pass six tests/36 assertions each: default timeout, disabled STARTTLS/translation and explicit timeout `037`. The SMTP transport object's timeout is checked without connecting. Invalid SMTP_READ_TIMEOUT is rejected. npm audit reports 74 findings (2 low, 42 moderate, 30 high, zero critical); no broad audit fix is applied. CI image scans must still be reviewed.
+**22 upgrade tests/7,947 assertions and eight Berlin map tests/127 assertions pass.** Production assets/API documentation, Zeitwerk eager loading and clean npm ci pass with dummy credentials and an unreachable database. Four production-config scenarios pass six tests/38 assertions each: default settings, disabled STARTTLS/translation, explicit timeout `037` and explicitly enabled STARTTLS. The SMTP transport object's timeout is checked without connecting. Invalid SMTP_READ_TIMEOUT is rejected. npm audit reports 74 findings (2 low, 42 moderate, 30 high, zero critical); no broad audit fix is applied. CI image scans must still be reviewed.
 
-## Staging rollout
+## Initial staging rollout (schema migration)
 
-1. The companion Terraform [MR !7](https://gitlab.webface.at/mitgestalten/projects_tf/-/merge_requests/7) changes only EMVI's DB_MIGRATE to `RAILS_ENV=production bundle exec rails db:migrate data:migrate`. The full refreshed plan has one in-place update and no additions/deletions. Merge/apply only once the new application image passes. Do not rerun old 0.30 deployment jobs after apply.
+1. The companion Terraform [MR !7](https://gitlab.webface.at/mitgestalten/projects_tf/-/merge_requests/7) changes only EMVI's DB_MIGRATE to `RAILS_ENV=production bundle exec rails db:migrate data:migrate`. The full refreshed plan has one in-place update and no additions/deletions. Apply only once the new application image passes; the protected-main read-only plan can run earlier. Do not rerun old 0.30 deployment jobs after apply.
 2. Publish and review the app MR image/scans. The temporary `upgrade_gate` parent job emits a fail-closed main-only manual staging overlay only when the planner schedules an image build. MR and documentation-only pipelines emit no staging job. Parent, MR, main and docs-only main CI lint pass. Production remains manual. Remove this temporary gate after initial technical staging acceptance.
 3. Build protected main before pausing the old application. Check the immutable image, assets, runtime, SMTP default and PNG/MSL policy using a disposable probe with dummy environment values and no application secrets/service-account token.
 4. Recheck staging counts/jobs and record preservation digests. Baseline on 2026-11-25 is 0.30.9/Ruby 3.3.14/Rails 7.0.10, three users, zero groups/memberships/responses/registrations/templates/classifications, 43 versions and no active/failed GoodJob jobs. The single organization has hero/banner blocks. Login/uploads are Alex's checks.
@@ -64,3 +64,13 @@ Production remains on the patched 0.30.9 baseline until separately agreed. On 20
 Berlin has **one user group and one membership**. Review its email/ownership/authorship and coordinate notifications/password-reset handling; the aggregate `decidim:upgrade:user_groups:remove` can email owners/members and must not run casually. Production has **643 form answers and six registrations**; preserve content/identity digests before the form-table renames. Check Templates and all seven organizations, Berlin map/locales/Polish text, integrations, snippets and storage links.
 
 All 178 previously observed failed jobs are MailDeliveryJob / Net::ReadTimeout, with no unfinished jobs. They remain historical failures; the timeout change does not resend them. A later production rollout requires a separate fresh backup and coordinated migration window, staging login/upload acceptance and explicit production authorization.
+
+## Staging verification and SMTP follow-up — 2026-11-25
+
+Initial app MR !274 merged as `13b654df`. Main build 29368 and its isolated immutable-image probe passed; the main-image digest is `04a5bfb72084a11e065fd5725af479e9fc9c2db97e4fab947e427cef7eb92655`. Terraform !7 merged as `470e6207`; plan 29363/apply 29364 changed exactly the one migration-command variable. Fresh backup `pre-0319-upgrade-20261125205535` completed before staging retry 29374. All 39 schema/ten data migrations completed without errors, and both new-image Deployments became ready.
+
+The first attempt, job 29369, failed rendering Helm YAML because an extra one-off database guard was quoted incorrectly. No migration Job was created; the original 0.30.9 pods were restored, their unchanged schema/counts verified, then a second fresh backup was made. The successful retry used the standard managed migration command. The earlier backup `pre-0319-upgrade-20261125205002` is also retained. Neither attempt touched production.
+
+The live configuration comparison identified an unintended STARTTLS default change from false to true. This follow-up restores the legacy false default in production.rb while retaining explicit ENV overrides and the requested 15-second read timeout. Rails 7.2 also exposes `open_timeout: 5` explicitly; Mail 2.9.1, used before and after, already had that effective connection timeout. SMTP credentials and mailer identity digests are unchanged. The corrective image still needs its staging pipeline/runtime verification; no test email or failed-mail retry is performed.
+
+The temporary first-upgrade staging gate is removed in this follow-up. Schema/data migrations are already applied, so normal automatic staging is restored; production remains manual and is not authorized by this task. Further rollout results are recorded below when independently checked. Alex retains login/upload acceptance. The eight critical Debian scanner findings use the same versions as the old staging image; they remain a separate base-image follow-up. Report collection succeeded, with a legacy RuboCop style backlog rather than a zero-offense result.

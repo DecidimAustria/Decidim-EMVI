@@ -14,13 +14,15 @@ class Upgrade031RuntimeTest < Minitest::Test
     # Construct transport only; never start/connect/send.
     smtp = Mail::SMTP.new(ActionMailer::Base.smtp_settings).send(:build_smtp_session)
     assert_equal expected, smtp.read_timeout
+    assert_equal 5, smtp.open_timeout
+    assert_equal(ENV["SMTP_STARTTLS_AUTO"] == "true", smtp.starttls_auto?)
     assert_equal "smtp.example.org", settings[:address]
     assert_equal 2525, settings[:port]
     assert_equal "plain", settings[:authentication]
     assert_equal "runtime-user", settings[:user_name]
     assert_equal "runtime-password", settings[:password]
     assert_equal "example.org", settings[:domain]
-    assert_equal(ENV["SMTP_STARTTLS_AUTO"] != "false", settings[:enable_starttls_auto])
+    assert_equal(ENV["SMTP_STARTTLS_AUTO"] == "true", settings[:enable_starttls_auto])
   end
 
   def test_redis_and_job_configuration
