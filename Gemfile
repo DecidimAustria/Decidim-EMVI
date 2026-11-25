@@ -3,42 +3,20 @@
 source "https://rubygems.org"
 
 ruby '3.3.14'
- DECIDIM_VERSION = { git: "https://github.com/DecidimAustria/decidim", branch: 'security/0.30-concurrent-ruby-20261110' }
+DECIDIM_VERSION = "0.31.9"
 #DECIDIM_VERSION = { git: "https://github.com/DecidimAustria/decidim", branch: '0.28.4-live' }
 # DECIDIM_VERSION = "0.28.4"
 
 gem "decidim", DECIDIM_VERSION
+# Keep the Rails patch level validated for the 0.31 rollout.
+gem "rails", "~> 7.2.4"
 
-# Keep all bundled framework components on the same patched Git revision.
-%w[
-  decidim-accountability
-  decidim-admin
-  decidim-api
-  decidim-assemblies
-  decidim-blogs
-  decidim-budgets
-  decidim-comments
-  decidim-core
-  decidim-debates
-  decidim-forms
-  decidim-generators
-  decidim-meetings
-  decidim-pages
-  decidim-participatory_processes
-  decidim-proposals
-  decidim-sortitions
-  decidim-surveys
-  decidim-system
-  decidim-verifications
-].each do |component|
-  gem component, DECIDIM_VERSION.merge(require: false)
-end
 #gem "decidim-alternative_landing", git: "https://github.com/DecidimAustria/decidim-module-alternative_landing", branch: 'update-to-decidim-0.27'
 # alternative_landing was disabled because it is not compatible with decidim 0.29
 # gem "decidim-alternative_landing", git: "https://github.com/Platoniq/decidim-module-alternative_landing.git", branch: 'release/0.27-stable'
 #gem "decidim-decidim_awesome", git: "https://github.com/DecidimAustria/decidim-module-decidim_awesome", branch: 'update-to-decidim-0.27'
 #gem "decidim-decidim_awesome", git: "https://github.com/DecidimAustria/decidim-module-decidim_awesome", branch: 'update-to-decidim-0.27', :ref => 'df40b3691a64a2'
-gem "decidim-decidim_awesome", "~> 0.13.0"
+gem "decidim-decidim_awesome", "~> 0.14.0"
 # gem "decidim-conferences", DECIDIM_VERSION
 # consultations does not exist from 0.28
 # gem "decidim-consultations", DECIDIM_VERSION

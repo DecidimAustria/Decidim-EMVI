@@ -3,7 +3,7 @@
 require "decidim/maintenance"
 
 module Emvi
-  # 0.30.9 maintenance-only fixes: retain filters from earlier import sections
+  # 0.30.9/0.31.9 maintenance-only fixes: retain filters from earlier import sections
   # and match component filters consistently when the plan omits manifests.
   # Keep the nonempty import regression tests when moving to another release.
   module TaxonomyImportCompatibility
@@ -30,6 +30,6 @@ module Emvi
   end
 end
 
-if Gem.loaded_specs.fetch("decidim-core").version.to_s == "0.30.9"
+if %w[0.30.9 0.31.9].include?(Gem.loaded_specs.fetch("decidim-core").version.to_s)
   Decidim::Maintenance::TaxonomyImporter.prepend(Emvi::TaxonomyImportCompatibility)
 end

@@ -2,7 +2,7 @@
 
 module Emvi
   # Error pages can retain the translation toggle without a query string.
-  # Upstream 0.30.9 calls query.gsub unconditionally in that case.
+  # Upstream through 0.31.9 calls query.gsub unconditionally in that case.
   # Remove this adapter when upstream handles a nil query.
   module TranslationBarQueryGuard
     def link

@@ -2,9 +2,9 @@
   "name": "decidim-application",
   "private": true,
   "dependencies": {
-    "@decidim/browserslist-config": "file:packages/browserslist-config",
-    "@decidim/core": "file:packages/core",
-    "@decidim/webpacker": "file:packages/webpacker",
+    "@decidim/browserslist-config": "0.31.9",
+    "@decidim/core": "0.31.9",
+    "@decidim/webpacker": "0.31.9",
     "@fullcalendar/core": "^4.4.2",
     "@fullcalendar/daygrid": "^4.4.2",
     "@fullcalendar/timegrid": "^4.4.2",
@@ -23,7 +23,7 @@
     "leaflet.featuregroup.subgroup": "^1.0.2",
     "marked": "^5.1.2",
     "select2": "^4.1.0-rc.0",
-    "tom-select": "^2.2.2"
+    "tom-select": "2.2.2"
   },
   "version": "0.1.0",
   "browserslist": [
@@ -36,13 +36,14 @@
     "@babel/plugin-transform-runtime": "^7.27.1",
     "@babel/preset-env": "^7.27.1",
     "@babel/preset-react": "^7.27.1",
-    "@decidim/dev": "file:packages/dev",
-    "@decidim/eslint-config": "file:packages/eslint-config",
-    "@decidim/prettier-config": "file:packages/prettier-config",
-    "@decidim/stylelint-config": "file:packages/stylelint-config",
+    "@decidim/dev": "0.31.9",
+    "@decidim/eslint-config": "0.31.9",
+    "@decidim/prettier-config": "0.31.9",
+    "@decidim/stylelint-config": "0.31.9",
     "@tarekraafat/autocomplete.js": "^10.2.7",
     "postcss-scss": "^4.0.9",
-    "sass-embedded": "~1.57.1"
+    "sass-embedded": "~1.57.1",
+    "shakapacker": "8.3.0"
   },
   "engines": {
     "node": "22.14.0",

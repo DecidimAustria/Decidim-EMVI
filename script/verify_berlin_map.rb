@@ -7,7 +7,7 @@ require "tmpdir"
 require "json"
 
 config = ActiveRecord::Base.connection_db_config.configuration_hash
-abort "Use only the synthetic rehearsal DB" unless Rails.env.test? && config[:database] == "emvi_030_data_rehearsal" && config[:host] == "/private/tmp/decidim-0297-pg/socket"
+abort "Use only the synthetic rehearsal DB" unless Rails.env.test? && config[:database] == "emvi_031_data_rehearsal" && config[:host] == "/private/tmp/emvi031-pg/socket"
 LEGACY_BERLIN_CONTENT = JSON.parse(File.read(ENV.fetch("BERLIN_LEGACY_FIXTURE"))).fetch("content")
 
 class BerlinMapTest < Minitest::Test
