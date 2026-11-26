@@ -1,5 +1,9 @@
 # EMVI 0.31 production preparation
 
+**Production completed on 2026-11-26 with Alex’s explicit authorization.** See [the production result](production-0.31-result.md) for both backups, migration/import results, data preservation and remaining manual login/upload acceptance.
+
+The preparation below is historical. Public combined-filter testing required Berlin’s levels and districts to use separate roots. The locally rehearsed transactional split preserves leaf taxonomy, filter and assignment IDs and public filter labels; all 24 combinations match legacy intersections. This supersedes the earlier shared-root recommendation. Do not replay the old plans.
+
 Prepared 2026-11-25 on `prepare/emvi-0.31-production`. This request covers preparation. Production database changes, deployment and notification/password emails have not been authorized or executed. Alex accepted staging login/uploads on 0.31.9.
 
 ## Production baseline and release blocker
